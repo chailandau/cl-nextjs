@@ -8,7 +8,7 @@ const config: StorybookConfig = {
       nextConfigPath: path.resolve(__dirname, '../next.config.js'),
     },
   },
-  stories: ["../src/**/storybook/*.stories.@(js|jsx|ts|tsx)", "../src/**/storybook/*.mdx"],
+  stories: ["../src/**/*.stories.@(js|jsx|ts|tsx)", "../src/**/*.mdx"],
   addons: [
     "@storybook/addon-essentials",
     "storybook-css-modules-preset",
