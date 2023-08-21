@@ -41,7 +41,8 @@
     "**/*.tsx",
     "**/*.gql",
     "setupTests.js",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "loki.config.js"
   ],
   "exclude": [
     "node_modules"
