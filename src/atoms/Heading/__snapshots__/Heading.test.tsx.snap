@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Default heading matches snapshot 1`] = `
+<DocumentFragment>
+  <h2
+    class="heading md green"
+  >
+    Default heading
+  </h2>
+</DocumentFragment>
+`;
+
+exports[`Extra large heading matches snapshot 1`] = `
+<DocumentFragment>
+  <h2
+    class="heading xl green"
+  >
+    Extra large heading
+  </h2>
+</DocumentFragment>
+`;
+
+exports[`Extra small heading matches snapshot 1`] = `
+<DocumentFragment>
+  <h2
+    class="heading xs green"
+  >
+    Extra small heading
+  </h2>
+</DocumentFragment>
+`;
+
+exports[`Large heading matches snapshot 1`] = `
+<DocumentFragment>
+  <h2
+    class="heading lg green"
+  >
+    Large heading
+  </h2>
+</DocumentFragment>
+`;
+
+exports[`Small heading matches snapshot 1`] = `
+<DocumentFragment>
+  <h2
+    class="heading sm green"
+  >
+    Small heading
+  </h2>
+</DocumentFragment>
+`;
