@@ -64,5 +64,5 @@ jobs:
               with:
                   message: |
                       ## ✅ No visual regressions detected in Storybook!
-                      | View report | https://chailandau.github.io/lilt-nextjs/ |
+                      | View report | https://chailandau.github.io/cl-nextjs/ |
                       |---|---|
