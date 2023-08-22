@@ -1,0 +1,6 @@
+.link {
+    @include paddingX(4);
+    color: color(common, 'primary');
+    @include font-ibm-plex-mono-bold;
+    @include expandUnderlineHover;
+}

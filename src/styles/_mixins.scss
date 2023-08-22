@@ -94,7 +94,7 @@
 @mixin transition($properties...) {
     $transition: ();
     @each $property in $properties {
-        $transition: append($transition, ($property 0.5s ease-in-out), comma);
+        $transition: append($transition, ($property 0.25s ease-in-out), comma);
     }
     transition: $transition;
 }
@@ -111,24 +111,36 @@
     }
 }
 
-@mixin underlineSlideHover($color: color(neutral, white), $padding: 14) {
+@mixin expandUnderlineHover($padding: 4) {
     position: relative;
+    @include transition(color);
     &:before {
         content: '';
         position: absolute;
-        width: calc(100% - rem($padding * 2));
-        height: rem(1);
-        border-radius: rem(2);
-        background-color: color(neutral, white);
-        left: rem($padding);
-        bottom: rem(math.div($padding, 2.25));
-        transform-origin: right;
-        transform: scaleX(0);
-        transition: transform 0.3s ease-in-out;
+        width: calc(100% + rem(30));
+        height: calc(100% + rem($padding * 1.75));
+        background-color: color(common, 'primary');
+        left: rem(-$padding);
+        bottom: rem(-$padding);
+        transform-origin: left bottom;
+        transform: scaleY(0);
+        @include transition(transform);
+        z-index: -1;
+    }
+    &:after {
+        display: block;
+        content: '>';
+        position: absolute;
+        width: auto;
+        height: 100%;
+        top: 0;
+        right: rem(-18);
+        z-index: -1;
     }
     @include hover {
+        color: color(common, 'white');
         &:before {
-            transform-origin: left;
+            transform-origin: bottom;
             transform: scaleX(1);
         }
     }
