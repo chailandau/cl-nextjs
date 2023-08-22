@@ -49,7 +49,14 @@
 @mixin font($font-size, $leading, $tracking: 0) {
     font-size: calc($font-size / $base-font-size) + rem;
     line-height: calc($leading / $base-font-size) + rem;
-    letter-spacing: $tracking + px;
+    @if $tracking != 0 {
+        letter-spacing: $tracking + px;
+    }
+}
+
+// visual
+@function color($group, $color) {
+    @return map-get(map-get($colors, $group), $color);
 }
 
 // spacing
@@ -142,38 +149,42 @@
 }
 
 // media queries
+@function breakpoint($size) {
+    @return map-get($breakpoints, $size);
+}
+
 @mixin mobile-lg {
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: breakpoint('mobile-lg')) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: breakpoint('tablet')) {
         @content;
     }
 }
 
 @mixin tablet-lg {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: breakpoint('tablet-lg')) {
         @content;
     }
 }
 
 @mixin laptop {
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: breakpoint('laptop')) {
         @content;
     }
 }
 
 @mixin desktop-sm {
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: breakpoint('desktop-sm')) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media screen and (min-width: 1600) {
+    @media screen and (min-width: breakpoint('desktop')) {
         @content;
     }
 }

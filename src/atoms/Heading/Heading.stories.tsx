@@ -28,18 +28,9 @@ type Story = StoryObj<typeof Heading>;
 export const Default: Story = {
     args: {
         as: 'h2',
-        size: 'md',
-        children: 'Default heading',
-        color: 'green'
-    }
-};
-
-export const ExtraSmall: Story = {
-    args: {
-        as: 'h2',
-        size: 'xs',
-        children: 'Extra small heading',
-        color: 'green'
+        size: 'lg',
+        children: 'Default heading (Large)',
+        color: 'primary'
     }
 };
 
@@ -48,16 +39,16 @@ export const Small: Story = {
         as: 'h2',
         size: 'sm',
         children: 'Small heading',
-        color: 'green'
+        color: 'black'
     }
 };
 
-export const Large: Story = {
+export const Medium: Story = {
     args: {
         as: 'h2',
-        size: 'lg',
-        children: 'Large heading',
-        color: 'green'
+        size: 'md',
+        children: 'Medium heading',
+        color: 'primary'
     }
 };
 
@@ -66,6 +57,6 @@ export const ExtraLarge: Story = {
         as: 'h2',
         size: 'xl',
         children: 'Extra large heading',
-        color: 'green'
+        color: 'primary'
     }
 };

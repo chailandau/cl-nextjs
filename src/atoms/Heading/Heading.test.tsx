@@ -2,13 +2,7 @@ import { composeStory } from '@storybook/react';
 import { render, screen } from '@testing-library/react';
 
 import { headingColors, headingSizes, headingTags } from './Heading';
-import Meta, {
-    Default,
-    ExtraLarge,
-    ExtraSmall,
-    Large,
-    Small
-} from './Heading.stories';
+import Meta, { Default, ExtraLarge, Medium, Small } from './Heading.stories';
 
 import {
     testAxeAndSnapshot,
@@ -24,9 +18,8 @@ const getHeadingInfo = (Variant: typeof Default) => ({
 
 const headingVariants = [
     getHeadingInfo(Default),
-    getHeadingInfo(ExtraSmall),
     getHeadingInfo(Small),
-    getHeadingInfo(Large),
+    getHeadingInfo(Medium),
     getHeadingInfo(ExtraLarge)
 ];
 
@@ -49,7 +42,7 @@ headingVariants.forEach(({ variant: Heading, text }) => {
             render(
                 <Heading as={undefined} color={undefined} size={undefined} />
             );
-            expect(screen.getByRole('heading')).toHaveClass('black', 'md');
+            expect(screen.getByRole('heading')).toHaveClass('primary', 'lg');
             expect(screen.getByRole('heading', { level: 2 })).toBeDefined;
         });
         testTags({ ...headingComponent, tags: headingTags });
