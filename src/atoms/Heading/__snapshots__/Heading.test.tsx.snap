@@ -23,7 +23,7 @@ exports[`Extra large heading matches snapshot 1`] = `
 exports[`Medium heading matches snapshot 1`] = `
 <DocumentFragment>
   <h2
-    class="heading md primary"
+    class="heading md black"
   >
     Medium heading
   </h2>
