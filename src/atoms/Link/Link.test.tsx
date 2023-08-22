@@ -1,10 +1,12 @@
 import { composeStory } from '@storybook/react';
+import { render, screen } from '@testing-library/react';
 
 import Meta, { Default } from './Link.stories';
 
 import {
     testAxeAndSnapshot,
     testKeyDown,
+    testPropOptions,
     testRenderText
 } from '@/utils/testHelpers';
 
@@ -14,6 +16,16 @@ const linkComponent = {
 };
 
 describe('Link', () => {
+    it('defaults correctly', () => {
+        render(<Link href={''} />);
+        expect(screen.getByRole('link')).toHaveAttribute('href', '');
+    });
+    testPropOptions({
+        ...linkComponent,
+        propName: 'className',
+        propOptions: ['test'],
+        htmlTag: 'a'
+    });
     testRenderText({
         ...linkComponent,
         text: Link.args?.children as string,
