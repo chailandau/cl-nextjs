@@ -1,0 +1,179 @@
+@use 'sass:math';
+
+// typography
+
+@mixin font-ibm-plex-mono {
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-weight: 400;
+}
+
+@mixin font-ibm-plex-mono-md {
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-weight: 500;
+}
+
+@mixin font-ibm-plex-mono-semibold {
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-weight: 600;
+}
+
+@mixin font-ibm-plex-mono-bold {
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-weight: 700;
+}
+
+@mixin font-inter-md {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+@mixin font-inter-semibold {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+@mixin font-inter-bold {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+@mixin font-inter-extrabold {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+}
+
+@function rem($val) {
+    @return calc($val/$base-font-size) + rem;
+}
+
+@mixin font($font-size, $leading, $tracking: 0) {
+    font-size: calc($font-size / $base-font-size) + rem;
+    line-height: calc($leading / $base-font-size) + rem;
+    letter-spacing: $tracking + px;
+}
+
+// spacing
+@mixin paddingX($padding) {
+    padding-left: rem($padding);
+    padding-right: rem($padding);
+}
+
+@mixin paddingY($padding) {
+    padding-top: rem($padding);
+    padding-bottom: rem($padding);
+}
+
+@mixin marginX($margin) {
+    @if $margin == 'auto' {
+        margin-left: auto;
+        margin-right: auto;
+    } @else {
+        margin-left: rem($margin);
+        margin-right: rem($margin);
+    }
+}
+
+@mixin marginY($margin) {
+    @if $margin == 'auto' {
+        margin-top: auto;
+        margin-bottom: auto;
+    } @else {
+        margin-top: rem($margin);
+        margin-bottom: rem($margin);
+    }
+}
+
+// animation
+@mixin transition($properties...) {
+    $transition: ();
+    @each $property in $properties {
+        $transition: append($transition, ($property 0.5s ease-in-out), comma);
+    }
+    transition: $transition;
+}
+
+@mixin bgSlideHover($color1, $color2) {
+    background: $color2;
+    background: linear-gradient(to right, $color2 50%, $color1 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0%;
+    @include transition(background-position);
+
+    @include hover {
+        background-position: 0% 0%;
+    }
+}
+
+@mixin underlineSlideHover($color: color(neutral, white), $padding: 14) {
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        width: calc(100% - rem($padding * 2));
+        height: rem(1);
+        border-radius: rem(2);
+        background-color: color(neutral, white);
+        left: rem($padding);
+        bottom: rem(math.div($padding, 2.25));
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+    }
+    @include hover {
+        &:before {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+    }
+}
+
+// accessibility
+@mixin addTargetArea($amount: 14) {
+    display: block;
+    padding: rem($amount);
+    margin: rem(-$amount);
+}
+
+@mixin hover {
+    &:hover,
+    &:focus-visible {
+        @content;
+    }
+}
+
+// media queries
+@mixin mobile-lg {
+    @media screen and (min-width: 480px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin tablet-lg {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin desktop-sm {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1600) {
+        @content;
+    }
+}
