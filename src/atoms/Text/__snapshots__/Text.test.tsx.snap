@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text matches snapshot 1`] = `
+<DocumentFragment>
+  <p
+    class="text sm"
+  >
+    This is default text (small).
+  </p>
+</DocumentFragment>
+`;

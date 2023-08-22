@@ -48,7 +48,7 @@ export const Medium: Story = {
         as: 'h2',
         size: 'md',
         children: 'Medium heading',
-        color: 'primary'
+        color: 'black'
     }
 };
 
