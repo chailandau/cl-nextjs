@@ -10,8 +10,9 @@ const customJestConfig = {
         'node_modules',
         '<rootDir>/.*.stories.tsx$',
         'codegen.ts',
-        '<rootDir>/src/*',
-        '<rootDir>/src/test-utils/*'
+        '<rootDir>/.next/*',
+        '<rootDir>/.storybook/*',
+        'index.ts'
     ],
     coverageReporters: ['html', 'json', 'json-summary', 'text', 'text-summary'],
     moduleNameMapper: {
