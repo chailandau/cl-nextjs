@@ -1,18 +1,37 @@
 $base-font-size: 16;
 
 $colors: (
-    'white': #f7f9ff,
-    'black': #0a1109,
-    'md-gray': #656a7c,
-    'primary': #3422ff
+    common: (
+        'white': #f7f9ff,
+        'black': #0a1109,
+        'md-gray': #656a7c,
+        'primary': #3422ff
+    ),
+    pastel: (
+        'aqua': #a6ffea,
+        'pink': #ffcfef,
+        'purple': #eae7ff,
+        'blue': #d7efff,
+        'green': #efffd9,
+        'blurple': #b4baff,
+        'gray': #f3f4ff
+    )
 );
 
-$colors-pastel: (
-    'aqua': #a6ffea,
-    'pink': #ffcfef,
-    'purple': #eae7ff,
-    'blue': #d7efff,
-    'green': #efffd9,
-    'blurple': #b4baff,
-    'gray': #f3f4ff
+$breakpoints: (
+    'mobile-lg': 480px,
+    'tablet': 600px,
+    'tablet-lg': 768px,
+    'laptop': 992px,
+    'desktop-sm': 1200px,
+    'desktop': 1600px
 );
+
+:export {
+    mobileLg: map-get($breakpoints, 'mobile-lg');
+    tablet: map-get($breakpoints, 'tablet');
+    tabletLg: map-get($breakpoints, 'tablet-lg');
+    laptop: map-get($breakpoints, 'laptop');
+    desktopSm: map-get($breakpoints, 'desktop-sm');
+    desktop: map-get($breakpoints, 'desktop');
+}
