@@ -28,7 +28,7 @@ describe('Link', () => {
     });
     testRenderText({
         ...linkComponent,
-        text: Link.args?.children as string,
+        text: (Link.args?.children as string) + '>',
         role: 'link'
     });
     testKeyDown({ ...linkComponent, role: 'link' });
