@@ -39,7 +39,8 @@ const Link: FC<LinkProps> = ({
             target={target}
             onKeyDown={(e) => onKeyDown && onKeyDown(e)}
         >
-            {children}
+            <span className={styles['link-text']}>{children}</span>
+            <span className={styles['link-icon']}>{'>'}</span>
         </NextLink>
     );
 };

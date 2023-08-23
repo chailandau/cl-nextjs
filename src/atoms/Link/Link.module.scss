@@ -1,6 +1,11 @@
 .link {
-    @include paddingX(4);
     color: color(common, 'primary');
     @include font-ibm-plex-mono-bold;
+    @include font(20, 26);
+    @include paddingX(4);
     @include expandUnderlineHover;
+    &-text {
+        display: inline-block;
+        margin-right: rem(10);
+    }
 }
