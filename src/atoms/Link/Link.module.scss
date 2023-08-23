@@ -3,7 +3,10 @@
     @include font-ibm-plex-mono-bold;
     @include font(20, 26);
     @include paddingX(4);
-    @include expandUnderlineHover;
+    @include underlineOnHover;
+    &.underline {
+        @include underlineHighlightHover;
+    }
     &-text {
         display: inline-block;
         margin-right: rem(10);

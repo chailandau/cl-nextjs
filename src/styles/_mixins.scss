@@ -111,11 +111,12 @@
     }
 }
 
-@mixin expandUnderlineHover($padding: 4) {
+@mixin underlineHighlightHover($padding: 4) {
     @include transition(color);
     .link-text {
         position: relative;
         &:before {
+            display: block;
             content: '';
             position: absolute;
             width: 100%;
@@ -142,6 +143,30 @@
         .link-text {
             &:after {
                 height: calc(100% + rem(5));
+            }
+        }
+    }
+}
+
+@mixin underlineOnHover($padding: 4) {
+    .link-text {
+        position: relative;
+        &:before {
+            display: none;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: rem(2);
+            bottom: rem(-$padding);
+            left: 0;
+            z-index: -1;
+            background: color(common, 'primary');
+        }
+    }
+    @include hover {
+        .link-text {
+            &:before {
+                display: block;
             }
         }
     }

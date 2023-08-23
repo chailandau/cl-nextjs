@@ -33,6 +33,7 @@ type Story = StoryObj<typeof Link>;
 export const Default: Story = {
     args: {
         children: 'This is a link',
-        href: 'http://localhost:6006/'
+        href: 'http://localhost:6006/',
+        underline: true
     }
 };

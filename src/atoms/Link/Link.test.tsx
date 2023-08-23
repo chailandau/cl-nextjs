@@ -17,7 +17,8 @@ const linkComponent = {
 
 describe('Link', () => {
     it('defaults correctly', () => {
-        render(<Link href={''} />);
+        render(<Link underline={undefined} href={''} />);
+        expect(screen.getByRole('link')).toHaveClass('underline');
         expect(screen.getByRole('link')).toHaveAttribute('href', '');
     });
     testPropOptions({

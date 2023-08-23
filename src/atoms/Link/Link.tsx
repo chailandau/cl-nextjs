@@ -13,6 +13,8 @@ interface LinkProps {
     href: string;
     /** CSS class name */
     className?: string;
+    /** Enables underline */
+    underline?: boolean;
     /** `onKeyDown` event */
     onKeyDown?: (e: KeyboardEvent<HTMLAnchorElement>) => void;
 }
@@ -21,9 +23,14 @@ const Link: FC<LinkProps> = ({
     href: destination,
     children,
     className,
+    underline = true,
     onKeyDown
 }) => {
-    const classList = classNames(styles['link'], className && className);
+    const classList = classNames(
+        styles['link'],
+        underline && styles['underline'],
+        className && className
+    );
 
     const {
         href = '',
