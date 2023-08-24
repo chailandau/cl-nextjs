@@ -3,28 +3,40 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "dev": "next dev",
     "lint": "next lint",
-    "prepare": "husky install",
-    "storybook": "storybook dev -p 6006",
-    "storybook:build": "storybook build",
-    "test": "jest --watch",
-    "test:coverage": "jest --coverage",
     "loki:ci": "yarn run storybook:build; yarn run loki:test",
-    "loki:test": "loki test --requireReference --chromeTolerance 10 --reactUri file:./storybook-static; yarn run loki:report",
     "loki:report": "yarn run reg-cli ./.loki/current ./.loki/reference ./.loki/diff --extendedErrors --enableAntialias --matchingThreshold .2 --report ./.loki/index.html --json ./.loki/report.json",
+    "loki:test": "loki test --requireReference --chromeTolerance 10 --reactUri file:./storybook-static; yarn run loki:report",
     "loki:update": "loki update; yarn run reg-cli:update;",
-    "reg-cli:update": "yarn run reg-cli ./.loki/current ./.loki/reference ./.loki/diff --json ./.loki/report.json -U"
+    "prepare": "husky install",
+    "reg-cli:update": "yarn run reg-cli ./.loki/current ./.loki/reference ./.loki/diff --json ./.loki/report.json -U",
+    "start": "next start",
+    "storybook:build": "storybook build",
+    "storybook": "storybook dev -p 6006",
+    "test:coverage": "jest --coverage",
+    "test:update": "jest --update",
+    "test": "jest --watch",
+    "update-types": "graphql-codegen"
   },
   "dependencies": {
+    "graphql": "^16.8.0",
+    "graphql-request": "^6.1.0",
+    "lint-staged": "^14.0.1",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "storybook": "^7.3.2"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/client-preset": "^4.1.0",
+    "@graphql-codegen/schema-ast": "^4.0.0",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-operations": "^4.0.1",
+    "@graphql-tools/jest-transform": "^2.0.0",
+    "@graphql-tools/mock": "^9.0.0",
     "@storybook/addon-essentials": "^7.3.2",
     "@storybook/addon-styling": "^1.3.6",
     "@storybook/blocks": "^7.3.2",
@@ -40,6 +52,7 @@
     "@typescript-eslint/eslint-plugin": "^6.4.1",
     "@typescript-eslint/parser": "^6.4.1",
     "classnames": "^2.3.2",
+    "encoding": "^0.1.13",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.19",
     "eslint-config-prettier": "^9.0.0",
@@ -61,5 +74,11 @@
   },
   "resolutions": {
     "jackspeak": "2.1.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,mjs,mts,ts,tsx,mdx}": [
+      "eslint --fix",
+      "prettier --write --loglevel silent"
+    ]
   }
 }
