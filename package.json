@@ -16,7 +16,7 @@
     "storybook:build": "storybook build",
     "storybook": "storybook dev -p 6006",
     "test:coverage": "jest --coverage",
-    "test:update": "jest --update",
+    "test:update": "jest --u",
     "test": "jest --watch",
     "update-types": "graphql-codegen"
   },
