@@ -22,10 +22,10 @@ Some of the tech used behind the scenes, unnoticed, but super useful
 
 -   <strong>[CapRover](https://caprover.com/)</strong> - Open source Docker-based app and database deployment manager that handles automatic deployments (with backups) when the main branch is updated
 -   <strong>[GitHub Actions](https://github.com/features/actions)</strong> - Runs Jest tests and Loki / reg-cli visual regression tests on open pull requests
--   <strong>[Husky](https://typicode.github.io/husky/)</strong> - Enforces linter rules prior to allowing a push
-
+-   <strong>Linting</strong> - Comprehensive [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) rule sets automatically run with each commit through [Husky](https://typicode.github.io/husky/) and [lint-staged](https://github.com/okonet/lint-staged).
 ## Getting started
 
+- [Node version](#node-version)
 - [Dependencies](#dependencies)
 - [Secrets](#secrets)
 - [Next.js](#nextjs)
@@ -45,6 +45,15 @@ Some of the tech used behind the scenes, unnoticed, but super useful
   - [Generate report](#generate-report)
   - [Update references](#update-references)
 - [Deploy](#deploy)
+
+### Node version
+
+This project uses Node v18.10.0. 
+
+If you're using nvm, you can run `nvm use` to switch to the right version.
+
+If you don't have nvm installed yet, you can get it [here](https://github.com/nvm-sh/nvm).
+
 ### Dependencies
 
 Install all necessary dependencies using yarn.
@@ -165,4 +174,4 @@ yarn loki:update
 
 ### Deploy
 
-The repo is 
+The repo is connected to CapRover via webhook. Anytime the main branch updates, the site will be automatically updated and deployed.
