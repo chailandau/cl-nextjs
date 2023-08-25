@@ -1,6 +1,6 @@
 import { gql } from 'graphql-request';
 
-import { MENU_ITEMS_FRAGMENT } from './graphqlFragments';
+import { INTERNAL_LINK_FRAGMENT } from './graphqlFragments';
 
 export const PAGES_QUERY = gql`
     query PagesQuery {
@@ -18,10 +18,11 @@ export const NAV_QUERY = gql`
     query NavQuery  {
             Nav {
                 menuItems {
-                    ${MENU_ITEMS_FRAGMENT}
-                    submenuItems {
-                        ${MENU_ITEMS_FRAGMENT}
+                    page {
+                        ${INTERNAL_LINK_FRAGMENT}
                     }
+                    overridePageName
+                    customLabel
                 }
                 footerCopyrightText
         }

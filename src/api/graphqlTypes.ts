@@ -4308,14 +4308,10 @@ export type NavDocAccessFields_MenuItems_Delete = {
 
 export type NavDocAccessFields_MenuItems_Fields = {
     __typename?: 'NavDocAccessFields_menuItems_Fields';
-    externalLink?: Maybe<NavDocAccessFields_MenuItems_ExternalLink>;
+    customLabel?: Maybe<NavDocAccessFields_MenuItems_CustomLabel>;
     id?: Maybe<NavDocAccessFields_MenuItems_Id>;
-    internalCustomLabel?: Maybe<NavDocAccessFields_MenuItems_InternalCustomLabel>;
-    internalLink?: Maybe<NavDocAccessFields_MenuItems_InternalLink>;
-    label?: Maybe<NavDocAccessFields_MenuItems_Label>;
-    linkType?: Maybe<NavDocAccessFields_MenuItems_LinkType>;
     overridePageName?: Maybe<NavDocAccessFields_MenuItems_OverridePageName>;
-    submenuItems?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems>;
+    page?: Maybe<NavDocAccessFields_MenuItems_Page>;
 };
 
 export type NavDocAccessFields_MenuItems_Read = {
@@ -4328,31 +4324,31 @@ export type NavDocAccessFields_MenuItems_Update = {
     permission: Scalars['Boolean']['output'];
 };
 
-export type NavDocAccessFields_MenuItems_ExternalLink = {
-    __typename?: 'NavDocAccessFields_menuItems_externalLink';
-    create?: Maybe<NavDocAccessFields_MenuItems_ExternalLink_Create>;
-    delete?: Maybe<NavDocAccessFields_MenuItems_ExternalLink_Delete>;
-    read?: Maybe<NavDocAccessFields_MenuItems_ExternalLink_Read>;
-    update?: Maybe<NavDocAccessFields_MenuItems_ExternalLink_Update>;
+export type NavDocAccessFields_MenuItems_CustomLabel = {
+    __typename?: 'NavDocAccessFields_menuItems_customLabel';
+    create?: Maybe<NavDocAccessFields_MenuItems_CustomLabel_Create>;
+    delete?: Maybe<NavDocAccessFields_MenuItems_CustomLabel_Delete>;
+    read?: Maybe<NavDocAccessFields_MenuItems_CustomLabel_Read>;
+    update?: Maybe<NavDocAccessFields_MenuItems_CustomLabel_Update>;
 };
 
-export type NavDocAccessFields_MenuItems_ExternalLink_Create = {
-    __typename?: 'NavDocAccessFields_menuItems_externalLink_Create';
+export type NavDocAccessFields_MenuItems_CustomLabel_Create = {
+    __typename?: 'NavDocAccessFields_menuItems_customLabel_Create';
     permission: Scalars['Boolean']['output'];
 };
 
-export type NavDocAccessFields_MenuItems_ExternalLink_Delete = {
-    __typename?: 'NavDocAccessFields_menuItems_externalLink_Delete';
+export type NavDocAccessFields_MenuItems_CustomLabel_Delete = {
+    __typename?: 'NavDocAccessFields_menuItems_customLabel_Delete';
     permission: Scalars['Boolean']['output'];
 };
 
-export type NavDocAccessFields_MenuItems_ExternalLink_Read = {
-    __typename?: 'NavDocAccessFields_menuItems_externalLink_Read';
+export type NavDocAccessFields_MenuItems_CustomLabel_Read = {
+    __typename?: 'NavDocAccessFields_menuItems_customLabel_Read';
     permission: Scalars['Boolean']['output'];
 };
 
-export type NavDocAccessFields_MenuItems_ExternalLink_Update = {
-    __typename?: 'NavDocAccessFields_menuItems_externalLink_Update';
+export type NavDocAccessFields_MenuItems_CustomLabel_Update = {
+    __typename?: 'NavDocAccessFields_menuItems_customLabel_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -4384,118 +4380,6 @@ export type NavDocAccessFields_MenuItems_Id_Update = {
     permission: Scalars['Boolean']['output'];
 };
 
-export type NavDocAccessFields_MenuItems_InternalCustomLabel = {
-    __typename?: 'NavDocAccessFields_menuItems_internalCustomLabel';
-    create?: Maybe<NavDocAccessFields_MenuItems_InternalCustomLabel_Create>;
-    delete?: Maybe<NavDocAccessFields_MenuItems_InternalCustomLabel_Delete>;
-    read?: Maybe<NavDocAccessFields_MenuItems_InternalCustomLabel_Read>;
-    update?: Maybe<NavDocAccessFields_MenuItems_InternalCustomLabel_Update>;
-};
-
-export type NavDocAccessFields_MenuItems_InternalCustomLabel_Create = {
-    __typename?: 'NavDocAccessFields_menuItems_internalCustomLabel_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_InternalCustomLabel_Delete = {
-    __typename?: 'NavDocAccessFields_menuItems_internalCustomLabel_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_InternalCustomLabel_Read = {
-    __typename?: 'NavDocAccessFields_menuItems_internalCustomLabel_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_InternalCustomLabel_Update = {
-    __typename?: 'NavDocAccessFields_menuItems_internalCustomLabel_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_InternalLink = {
-    __typename?: 'NavDocAccessFields_menuItems_internalLink';
-    create?: Maybe<NavDocAccessFields_MenuItems_InternalLink_Create>;
-    delete?: Maybe<NavDocAccessFields_MenuItems_InternalLink_Delete>;
-    read?: Maybe<NavDocAccessFields_MenuItems_InternalLink_Read>;
-    update?: Maybe<NavDocAccessFields_MenuItems_InternalLink_Update>;
-};
-
-export type NavDocAccessFields_MenuItems_InternalLink_Create = {
-    __typename?: 'NavDocAccessFields_menuItems_internalLink_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_InternalLink_Delete = {
-    __typename?: 'NavDocAccessFields_menuItems_internalLink_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_InternalLink_Read = {
-    __typename?: 'NavDocAccessFields_menuItems_internalLink_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_InternalLink_Update = {
-    __typename?: 'NavDocAccessFields_menuItems_internalLink_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_Label = {
-    __typename?: 'NavDocAccessFields_menuItems_label';
-    create?: Maybe<NavDocAccessFields_MenuItems_Label_Create>;
-    delete?: Maybe<NavDocAccessFields_MenuItems_Label_Delete>;
-    read?: Maybe<NavDocAccessFields_MenuItems_Label_Read>;
-    update?: Maybe<NavDocAccessFields_MenuItems_Label_Update>;
-};
-
-export type NavDocAccessFields_MenuItems_Label_Create = {
-    __typename?: 'NavDocAccessFields_menuItems_label_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_Label_Delete = {
-    __typename?: 'NavDocAccessFields_menuItems_label_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_Label_Read = {
-    __typename?: 'NavDocAccessFields_menuItems_label_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_Label_Update = {
-    __typename?: 'NavDocAccessFields_menuItems_label_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_LinkType = {
-    __typename?: 'NavDocAccessFields_menuItems_linkType';
-    create?: Maybe<NavDocAccessFields_MenuItems_LinkType_Create>;
-    delete?: Maybe<NavDocAccessFields_MenuItems_LinkType_Delete>;
-    read?: Maybe<NavDocAccessFields_MenuItems_LinkType_Read>;
-    update?: Maybe<NavDocAccessFields_MenuItems_LinkType_Update>;
-};
-
-export type NavDocAccessFields_MenuItems_LinkType_Create = {
-    __typename?: 'NavDocAccessFields_menuItems_linkType_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_LinkType_Delete = {
-    __typename?: 'NavDocAccessFields_menuItems_linkType_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_LinkType_Read = {
-    __typename?: 'NavDocAccessFields_menuItems_linkType_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_LinkType_Update = {
-    __typename?: 'NavDocAccessFields_menuItems_linkType_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
 export type NavDocAccessFields_MenuItems_OverridePageName = {
     __typename?: 'NavDocAccessFields_menuItems_overridePageName';
     create?: Maybe<NavDocAccessFields_MenuItems_OverridePageName_Create>;
@@ -4524,248 +4408,33 @@ export type NavDocAccessFields_MenuItems_OverridePageName_Update = {
     permission: Scalars['Boolean']['output'];
 };
 
-export type NavDocAccessFields_MenuItems_SubmenuItems = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems';
-    create?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_Create>;
-    delete?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_Delete>;
-    fields?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_Fields>;
-    read?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_Read>;
-    update?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_Update>;
+export type NavDocAccessFields_MenuItems_Page = {
+    __typename?: 'NavDocAccessFields_menuItems_page';
+    create?: Maybe<NavDocAccessFields_MenuItems_Page_Create>;
+    delete?: Maybe<NavDocAccessFields_MenuItems_Page_Delete>;
+    read?: Maybe<NavDocAccessFields_MenuItems_Page_Read>;
+    update?: Maybe<NavDocAccessFields_MenuItems_Page_Update>;
 };
 
-export type NavDocAccessFields_MenuItems_SubmenuItems_Create = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_Create';
+export type NavDocAccessFields_MenuItems_Page_Create = {
+    __typename?: 'NavDocAccessFields_menuItems_page_Create';
     permission: Scalars['Boolean']['output'];
 };
 
-export type NavDocAccessFields_MenuItems_SubmenuItems_Delete = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_Delete';
+export type NavDocAccessFields_MenuItems_Page_Delete = {
+    __typename?: 'NavDocAccessFields_menuItems_page_Delete';
     permission: Scalars['Boolean']['output'];
 };
 
-export type NavDocAccessFields_MenuItems_SubmenuItems_Fields = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_Fields';
-    externalLink?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_ExternalLink>;
-    id?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_Id>;
-    internalCustomLabel?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_InternalCustomLabel>;
-    internalLink?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_InternalLink>;
-    label?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_Label>;
-    linkType?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_LinkType>;
-    overridePageName?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_OverridePageName>;
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_Read = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_Read';
+export type NavDocAccessFields_MenuItems_Page_Read = {
+    __typename?: 'NavDocAccessFields_menuItems_page_Read';
     permission: Scalars['Boolean']['output'];
 };
 
-export type NavDocAccessFields_MenuItems_SubmenuItems_Update = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_Update';
+export type NavDocAccessFields_MenuItems_Page_Update = {
+    __typename?: 'NavDocAccessFields_menuItems_page_Update';
     permission: Scalars['Boolean']['output'];
 };
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_ExternalLink = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_externalLink';
-    create?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_ExternalLink_Create>;
-    delete?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_ExternalLink_Delete>;
-    read?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_ExternalLink_Read>;
-    update?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_ExternalLink_Update>;
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_ExternalLink_Create = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_externalLink_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_ExternalLink_Delete = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_externalLink_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_ExternalLink_Read = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_externalLink_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_ExternalLink_Update = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_externalLink_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_Id = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_id';
-    create?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_Id_Create>;
-    delete?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_Id_Delete>;
-    read?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_Id_Read>;
-    update?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_Id_Update>;
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_Id_Create = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_id_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_Id_Delete = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_id_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_Id_Read = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_id_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_Id_Update = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_id_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_InternalCustomLabel = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_internalCustomLabel';
-    create?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_InternalCustomLabel_Create>;
-    delete?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_InternalCustomLabel_Delete>;
-    read?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_InternalCustomLabel_Read>;
-    update?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_InternalCustomLabel_Update>;
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_InternalCustomLabel_Create =
-    {
-        __typename?: 'NavDocAccessFields_menuItems_submenuItems_internalCustomLabel_Create';
-        permission: Scalars['Boolean']['output'];
-    };
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_InternalCustomLabel_Delete =
-    {
-        __typename?: 'NavDocAccessFields_menuItems_submenuItems_internalCustomLabel_Delete';
-        permission: Scalars['Boolean']['output'];
-    };
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_InternalCustomLabel_Read =
-    {
-        __typename?: 'NavDocAccessFields_menuItems_submenuItems_internalCustomLabel_Read';
-        permission: Scalars['Boolean']['output'];
-    };
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_InternalCustomLabel_Update =
-    {
-        __typename?: 'NavDocAccessFields_menuItems_submenuItems_internalCustomLabel_Update';
-        permission: Scalars['Boolean']['output'];
-    };
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_InternalLink = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_internalLink';
-    create?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_InternalLink_Create>;
-    delete?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_InternalLink_Delete>;
-    read?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_InternalLink_Read>;
-    update?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_InternalLink_Update>;
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_InternalLink_Create = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_internalLink_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_InternalLink_Delete = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_internalLink_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_InternalLink_Read = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_internalLink_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_InternalLink_Update = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_internalLink_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_Label = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_label';
-    create?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_Label_Create>;
-    delete?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_Label_Delete>;
-    read?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_Label_Read>;
-    update?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_Label_Update>;
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_Label_Create = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_label_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_Label_Delete = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_label_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_Label_Read = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_label_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_Label_Update = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_label_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_LinkType = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_linkType';
-    create?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_LinkType_Create>;
-    delete?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_LinkType_Delete>;
-    read?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_LinkType_Read>;
-    update?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_LinkType_Update>;
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_LinkType_Create = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_linkType_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_LinkType_Delete = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_linkType_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_LinkType_Read = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_linkType_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_LinkType_Update = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_linkType_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_OverridePageName = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_overridePageName';
-    create?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_OverridePageName_Create>;
-    delete?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_OverridePageName_Delete>;
-    read?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_OverridePageName_Read>;
-    update?: Maybe<NavDocAccessFields_MenuItems_SubmenuItems_OverridePageName_Update>;
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_OverridePageName_Create =
-    {
-        __typename?: 'NavDocAccessFields_menuItems_submenuItems_overridePageName_Create';
-        permission: Scalars['Boolean']['output'];
-    };
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_OverridePageName_Delete =
-    {
-        __typename?: 'NavDocAccessFields_menuItems_submenuItems_overridePageName_Delete';
-        permission: Scalars['Boolean']['output'];
-    };
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_OverridePageName_Read = {
-    __typename?: 'NavDocAccessFields_menuItems_submenuItems_overridePageName_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavDocAccessFields_MenuItems_SubmenuItems_OverridePageName_Update =
-    {
-        __typename?: 'NavDocAccessFields_menuItems_submenuItems_overridePageName_Update';
-        permission: Scalars['Boolean']['output'];
-    };
 
 export type NavDocAccessFields_UpdatedAt = {
     __typename?: 'NavDocAccessFields_updatedAt';
@@ -4880,14 +4549,10 @@ export type NavFields_MenuItems_Delete = {
 
 export type NavFields_MenuItems_Fields = {
     __typename?: 'NavFields_menuItems_Fields';
-    externalLink?: Maybe<NavFields_MenuItems_ExternalLink>;
+    customLabel?: Maybe<NavFields_MenuItems_CustomLabel>;
     id?: Maybe<NavFields_MenuItems_Id>;
-    internalCustomLabel?: Maybe<NavFields_MenuItems_InternalCustomLabel>;
-    internalLink?: Maybe<NavFields_MenuItems_InternalLink>;
-    label?: Maybe<NavFields_MenuItems_Label>;
-    linkType?: Maybe<NavFields_MenuItems_LinkType>;
     overridePageName?: Maybe<NavFields_MenuItems_OverridePageName>;
-    submenuItems?: Maybe<NavFields_MenuItems_SubmenuItems>;
+    page?: Maybe<NavFields_MenuItems_Page>;
 };
 
 export type NavFields_MenuItems_Read = {
@@ -4900,31 +4565,31 @@ export type NavFields_MenuItems_Update = {
     permission: Scalars['Boolean']['output'];
 };
 
-export type NavFields_MenuItems_ExternalLink = {
-    __typename?: 'NavFields_menuItems_externalLink';
-    create?: Maybe<NavFields_MenuItems_ExternalLink_Create>;
-    delete?: Maybe<NavFields_MenuItems_ExternalLink_Delete>;
-    read?: Maybe<NavFields_MenuItems_ExternalLink_Read>;
-    update?: Maybe<NavFields_MenuItems_ExternalLink_Update>;
+export type NavFields_MenuItems_CustomLabel = {
+    __typename?: 'NavFields_menuItems_customLabel';
+    create?: Maybe<NavFields_MenuItems_CustomLabel_Create>;
+    delete?: Maybe<NavFields_MenuItems_CustomLabel_Delete>;
+    read?: Maybe<NavFields_MenuItems_CustomLabel_Read>;
+    update?: Maybe<NavFields_MenuItems_CustomLabel_Update>;
 };
 
-export type NavFields_MenuItems_ExternalLink_Create = {
-    __typename?: 'NavFields_menuItems_externalLink_Create';
+export type NavFields_MenuItems_CustomLabel_Create = {
+    __typename?: 'NavFields_menuItems_customLabel_Create';
     permission: Scalars['Boolean']['output'];
 };
 
-export type NavFields_MenuItems_ExternalLink_Delete = {
-    __typename?: 'NavFields_menuItems_externalLink_Delete';
+export type NavFields_MenuItems_CustomLabel_Delete = {
+    __typename?: 'NavFields_menuItems_customLabel_Delete';
     permission: Scalars['Boolean']['output'];
 };
 
-export type NavFields_MenuItems_ExternalLink_Read = {
-    __typename?: 'NavFields_menuItems_externalLink_Read';
+export type NavFields_MenuItems_CustomLabel_Read = {
+    __typename?: 'NavFields_menuItems_customLabel_Read';
     permission: Scalars['Boolean']['output'];
 };
 
-export type NavFields_MenuItems_ExternalLink_Update = {
-    __typename?: 'NavFields_menuItems_externalLink_Update';
+export type NavFields_MenuItems_CustomLabel_Update = {
+    __typename?: 'NavFields_menuItems_customLabel_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -4956,118 +4621,6 @@ export type NavFields_MenuItems_Id_Update = {
     permission: Scalars['Boolean']['output'];
 };
 
-export type NavFields_MenuItems_InternalCustomLabel = {
-    __typename?: 'NavFields_menuItems_internalCustomLabel';
-    create?: Maybe<NavFields_MenuItems_InternalCustomLabel_Create>;
-    delete?: Maybe<NavFields_MenuItems_InternalCustomLabel_Delete>;
-    read?: Maybe<NavFields_MenuItems_InternalCustomLabel_Read>;
-    update?: Maybe<NavFields_MenuItems_InternalCustomLabel_Update>;
-};
-
-export type NavFields_MenuItems_InternalCustomLabel_Create = {
-    __typename?: 'NavFields_menuItems_internalCustomLabel_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_InternalCustomLabel_Delete = {
-    __typename?: 'NavFields_menuItems_internalCustomLabel_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_InternalCustomLabel_Read = {
-    __typename?: 'NavFields_menuItems_internalCustomLabel_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_InternalCustomLabel_Update = {
-    __typename?: 'NavFields_menuItems_internalCustomLabel_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_InternalLink = {
-    __typename?: 'NavFields_menuItems_internalLink';
-    create?: Maybe<NavFields_MenuItems_InternalLink_Create>;
-    delete?: Maybe<NavFields_MenuItems_InternalLink_Delete>;
-    read?: Maybe<NavFields_MenuItems_InternalLink_Read>;
-    update?: Maybe<NavFields_MenuItems_InternalLink_Update>;
-};
-
-export type NavFields_MenuItems_InternalLink_Create = {
-    __typename?: 'NavFields_menuItems_internalLink_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_InternalLink_Delete = {
-    __typename?: 'NavFields_menuItems_internalLink_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_InternalLink_Read = {
-    __typename?: 'NavFields_menuItems_internalLink_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_InternalLink_Update = {
-    __typename?: 'NavFields_menuItems_internalLink_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_Label = {
-    __typename?: 'NavFields_menuItems_label';
-    create?: Maybe<NavFields_MenuItems_Label_Create>;
-    delete?: Maybe<NavFields_MenuItems_Label_Delete>;
-    read?: Maybe<NavFields_MenuItems_Label_Read>;
-    update?: Maybe<NavFields_MenuItems_Label_Update>;
-};
-
-export type NavFields_MenuItems_Label_Create = {
-    __typename?: 'NavFields_menuItems_label_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_Label_Delete = {
-    __typename?: 'NavFields_menuItems_label_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_Label_Read = {
-    __typename?: 'NavFields_menuItems_label_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_Label_Update = {
-    __typename?: 'NavFields_menuItems_label_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_LinkType = {
-    __typename?: 'NavFields_menuItems_linkType';
-    create?: Maybe<NavFields_MenuItems_LinkType_Create>;
-    delete?: Maybe<NavFields_MenuItems_LinkType_Delete>;
-    read?: Maybe<NavFields_MenuItems_LinkType_Read>;
-    update?: Maybe<NavFields_MenuItems_LinkType_Update>;
-};
-
-export type NavFields_MenuItems_LinkType_Create = {
-    __typename?: 'NavFields_menuItems_linkType_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_LinkType_Delete = {
-    __typename?: 'NavFields_menuItems_linkType_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_LinkType_Read = {
-    __typename?: 'NavFields_menuItems_linkType_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_LinkType_Update = {
-    __typename?: 'NavFields_menuItems_linkType_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
 export type NavFields_MenuItems_OverridePageName = {
     __typename?: 'NavFields_menuItems_overridePageName';
     create?: Maybe<NavFields_MenuItems_OverridePageName_Create>;
@@ -5096,239 +4649,31 @@ export type NavFields_MenuItems_OverridePageName_Update = {
     permission: Scalars['Boolean']['output'];
 };
 
-export type NavFields_MenuItems_SubmenuItems = {
-    __typename?: 'NavFields_menuItems_submenuItems';
-    create?: Maybe<NavFields_MenuItems_SubmenuItems_Create>;
-    delete?: Maybe<NavFields_MenuItems_SubmenuItems_Delete>;
-    fields?: Maybe<NavFields_MenuItems_SubmenuItems_Fields>;
-    read?: Maybe<NavFields_MenuItems_SubmenuItems_Read>;
-    update?: Maybe<NavFields_MenuItems_SubmenuItems_Update>;
+export type NavFields_MenuItems_Page = {
+    __typename?: 'NavFields_menuItems_page';
+    create?: Maybe<NavFields_MenuItems_Page_Create>;
+    delete?: Maybe<NavFields_MenuItems_Page_Delete>;
+    read?: Maybe<NavFields_MenuItems_Page_Read>;
+    update?: Maybe<NavFields_MenuItems_Page_Update>;
 };
 
-export type NavFields_MenuItems_SubmenuItems_Create = {
-    __typename?: 'NavFields_menuItems_submenuItems_Create';
+export type NavFields_MenuItems_Page_Create = {
+    __typename?: 'NavFields_menuItems_page_Create';
     permission: Scalars['Boolean']['output'];
 };
 
-export type NavFields_MenuItems_SubmenuItems_Delete = {
-    __typename?: 'NavFields_menuItems_submenuItems_Delete';
+export type NavFields_MenuItems_Page_Delete = {
+    __typename?: 'NavFields_menuItems_page_Delete';
     permission: Scalars['Boolean']['output'];
 };
 
-export type NavFields_MenuItems_SubmenuItems_Fields = {
-    __typename?: 'NavFields_menuItems_submenuItems_Fields';
-    externalLink?: Maybe<NavFields_MenuItems_SubmenuItems_ExternalLink>;
-    id?: Maybe<NavFields_MenuItems_SubmenuItems_Id>;
-    internalCustomLabel?: Maybe<NavFields_MenuItems_SubmenuItems_InternalCustomLabel>;
-    internalLink?: Maybe<NavFields_MenuItems_SubmenuItems_InternalLink>;
-    label?: Maybe<NavFields_MenuItems_SubmenuItems_Label>;
-    linkType?: Maybe<NavFields_MenuItems_SubmenuItems_LinkType>;
-    overridePageName?: Maybe<NavFields_MenuItems_SubmenuItems_OverridePageName>;
-};
-
-export type NavFields_MenuItems_SubmenuItems_Read = {
-    __typename?: 'NavFields_menuItems_submenuItems_Read';
+export type NavFields_MenuItems_Page_Read = {
+    __typename?: 'NavFields_menuItems_page_Read';
     permission: Scalars['Boolean']['output'];
 };
 
-export type NavFields_MenuItems_SubmenuItems_Update = {
-    __typename?: 'NavFields_menuItems_submenuItems_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_ExternalLink = {
-    __typename?: 'NavFields_menuItems_submenuItems_externalLink';
-    create?: Maybe<NavFields_MenuItems_SubmenuItems_ExternalLink_Create>;
-    delete?: Maybe<NavFields_MenuItems_SubmenuItems_ExternalLink_Delete>;
-    read?: Maybe<NavFields_MenuItems_SubmenuItems_ExternalLink_Read>;
-    update?: Maybe<NavFields_MenuItems_SubmenuItems_ExternalLink_Update>;
-};
-
-export type NavFields_MenuItems_SubmenuItems_ExternalLink_Create = {
-    __typename?: 'NavFields_menuItems_submenuItems_externalLink_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_ExternalLink_Delete = {
-    __typename?: 'NavFields_menuItems_submenuItems_externalLink_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_ExternalLink_Read = {
-    __typename?: 'NavFields_menuItems_submenuItems_externalLink_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_ExternalLink_Update = {
-    __typename?: 'NavFields_menuItems_submenuItems_externalLink_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_Id = {
-    __typename?: 'NavFields_menuItems_submenuItems_id';
-    create?: Maybe<NavFields_MenuItems_SubmenuItems_Id_Create>;
-    delete?: Maybe<NavFields_MenuItems_SubmenuItems_Id_Delete>;
-    read?: Maybe<NavFields_MenuItems_SubmenuItems_Id_Read>;
-    update?: Maybe<NavFields_MenuItems_SubmenuItems_Id_Update>;
-};
-
-export type NavFields_MenuItems_SubmenuItems_Id_Create = {
-    __typename?: 'NavFields_menuItems_submenuItems_id_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_Id_Delete = {
-    __typename?: 'NavFields_menuItems_submenuItems_id_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_Id_Read = {
-    __typename?: 'NavFields_menuItems_submenuItems_id_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_Id_Update = {
-    __typename?: 'NavFields_menuItems_submenuItems_id_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_InternalCustomLabel = {
-    __typename?: 'NavFields_menuItems_submenuItems_internalCustomLabel';
-    create?: Maybe<NavFields_MenuItems_SubmenuItems_InternalCustomLabel_Create>;
-    delete?: Maybe<NavFields_MenuItems_SubmenuItems_InternalCustomLabel_Delete>;
-    read?: Maybe<NavFields_MenuItems_SubmenuItems_InternalCustomLabel_Read>;
-    update?: Maybe<NavFields_MenuItems_SubmenuItems_InternalCustomLabel_Update>;
-};
-
-export type NavFields_MenuItems_SubmenuItems_InternalCustomLabel_Create = {
-    __typename?: 'NavFields_menuItems_submenuItems_internalCustomLabel_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_InternalCustomLabel_Delete = {
-    __typename?: 'NavFields_menuItems_submenuItems_internalCustomLabel_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_InternalCustomLabel_Read = {
-    __typename?: 'NavFields_menuItems_submenuItems_internalCustomLabel_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_InternalCustomLabel_Update = {
-    __typename?: 'NavFields_menuItems_submenuItems_internalCustomLabel_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_InternalLink = {
-    __typename?: 'NavFields_menuItems_submenuItems_internalLink';
-    create?: Maybe<NavFields_MenuItems_SubmenuItems_InternalLink_Create>;
-    delete?: Maybe<NavFields_MenuItems_SubmenuItems_InternalLink_Delete>;
-    read?: Maybe<NavFields_MenuItems_SubmenuItems_InternalLink_Read>;
-    update?: Maybe<NavFields_MenuItems_SubmenuItems_InternalLink_Update>;
-};
-
-export type NavFields_MenuItems_SubmenuItems_InternalLink_Create = {
-    __typename?: 'NavFields_menuItems_submenuItems_internalLink_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_InternalLink_Delete = {
-    __typename?: 'NavFields_menuItems_submenuItems_internalLink_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_InternalLink_Read = {
-    __typename?: 'NavFields_menuItems_submenuItems_internalLink_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_InternalLink_Update = {
-    __typename?: 'NavFields_menuItems_submenuItems_internalLink_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_Label = {
-    __typename?: 'NavFields_menuItems_submenuItems_label';
-    create?: Maybe<NavFields_MenuItems_SubmenuItems_Label_Create>;
-    delete?: Maybe<NavFields_MenuItems_SubmenuItems_Label_Delete>;
-    read?: Maybe<NavFields_MenuItems_SubmenuItems_Label_Read>;
-    update?: Maybe<NavFields_MenuItems_SubmenuItems_Label_Update>;
-};
-
-export type NavFields_MenuItems_SubmenuItems_Label_Create = {
-    __typename?: 'NavFields_menuItems_submenuItems_label_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_Label_Delete = {
-    __typename?: 'NavFields_menuItems_submenuItems_label_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_Label_Read = {
-    __typename?: 'NavFields_menuItems_submenuItems_label_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_Label_Update = {
-    __typename?: 'NavFields_menuItems_submenuItems_label_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_LinkType = {
-    __typename?: 'NavFields_menuItems_submenuItems_linkType';
-    create?: Maybe<NavFields_MenuItems_SubmenuItems_LinkType_Create>;
-    delete?: Maybe<NavFields_MenuItems_SubmenuItems_LinkType_Delete>;
-    read?: Maybe<NavFields_MenuItems_SubmenuItems_LinkType_Read>;
-    update?: Maybe<NavFields_MenuItems_SubmenuItems_LinkType_Update>;
-};
-
-export type NavFields_MenuItems_SubmenuItems_LinkType_Create = {
-    __typename?: 'NavFields_menuItems_submenuItems_linkType_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_LinkType_Delete = {
-    __typename?: 'NavFields_menuItems_submenuItems_linkType_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_LinkType_Read = {
-    __typename?: 'NavFields_menuItems_submenuItems_linkType_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_LinkType_Update = {
-    __typename?: 'NavFields_menuItems_submenuItems_linkType_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_OverridePageName = {
-    __typename?: 'NavFields_menuItems_submenuItems_overridePageName';
-    create?: Maybe<NavFields_MenuItems_SubmenuItems_OverridePageName_Create>;
-    delete?: Maybe<NavFields_MenuItems_SubmenuItems_OverridePageName_Delete>;
-    read?: Maybe<NavFields_MenuItems_SubmenuItems_OverridePageName_Read>;
-    update?: Maybe<NavFields_MenuItems_SubmenuItems_OverridePageName_Update>;
-};
-
-export type NavFields_MenuItems_SubmenuItems_OverridePageName_Create = {
-    __typename?: 'NavFields_menuItems_submenuItems_overridePageName_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_OverridePageName_Delete = {
-    __typename?: 'NavFields_menuItems_submenuItems_overridePageName_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_OverridePageName_Read = {
-    __typename?: 'NavFields_menuItems_submenuItems_overridePageName_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type NavFields_MenuItems_SubmenuItems_OverridePageName_Update = {
-    __typename?: 'NavFields_menuItems_submenuItems_overridePageName_Update';
+export type NavFields_MenuItems_Page_Update = {
+    __typename?: 'NavFields_menuItems_page_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -5386,37 +4731,11 @@ export type NavUpdateDocAccess = {
 
 export type Nav_MenuItems = {
     __typename?: 'Nav_MenuItems';
-    externalLink?: Maybe<Scalars['String']['output']>;
+    customLabel?: Maybe<Scalars['String']['output']>;
     id?: Maybe<Scalars['String']['output']>;
-    internalCustomLabel?: Maybe<Scalars['String']['output']>;
-    internalLink?: Maybe<Page>;
-    label?: Maybe<Scalars['String']['output']>;
-    linkType?: Maybe<Nav_MenuItems_LinkType>;
     overridePageName?: Maybe<Scalars['Boolean']['output']>;
-    submenuItems?: Maybe<Array<Nav_MenuItems_SubmenuItems>>;
+    page?: Maybe<Page>;
 };
-
-export type Nav_MenuItems_SubmenuItems = {
-    __typename?: 'Nav_MenuItems_SubmenuItems';
-    externalLink?: Maybe<Scalars['String']['output']>;
-    id?: Maybe<Scalars['String']['output']>;
-    internalCustomLabel?: Maybe<Scalars['String']['output']>;
-    internalLink?: Maybe<Page>;
-    label?: Maybe<Scalars['String']['output']>;
-    linkType?: Maybe<Nav_MenuItems_SubmenuItems_LinkType>;
-    overridePageName?: Maybe<Scalars['Boolean']['output']>;
-};
-
-export type Nav_MenuItems_SubmenuItems_LinkType =
-    | 'external'
-    | 'internal'
-    | '%future added value';
-
-export type Nav_MenuItems_LinkType =
-    | 'external'
-    | 'internal'
-    | 'submenu'
-    | '%future added value';
 
 export type Page = {
     __typename?: 'Page';
@@ -10626,26 +9945,10 @@ export type MutationNavInput = {
 };
 
 export type MutationNav_MenuItemsInput = {
-    externalLink?: InputMaybe<Scalars['String']['input']>;
+    customLabel?: InputMaybe<Scalars['String']['input']>;
     id?: InputMaybe<Scalars['String']['input']>;
-    internalCustomLabel?: InputMaybe<Scalars['String']['input']>;
-    internalLink?: InputMaybe<Scalars['String']['input']>;
-    label?: InputMaybe<Scalars['String']['input']>;
-    linkType?: InputMaybe<Scalars['String']['input']>;
     overridePageName?: InputMaybe<Scalars['Boolean']['input']>;
-    submenuItems?: InputMaybe<
-        Array<InputMaybe<MutationNav_MenuItems_SubmenuItemsInput>>
-    >;
-};
-
-export type MutationNav_MenuItems_SubmenuItemsInput = {
-    externalLink?: InputMaybe<Scalars['String']['input']>;
-    id?: InputMaybe<Scalars['String']['input']>;
-    internalCustomLabel?: InputMaybe<Scalars['String']['input']>;
-    internalLink?: InputMaybe<Scalars['String']['input']>;
-    label?: InputMaybe<Scalars['String']['input']>;
-    linkType?: InputMaybe<Scalars['String']['input']>;
-    overridePageName?: InputMaybe<Scalars['Boolean']['input']>;
+    page?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type MutationPageInput = {
@@ -10949,19 +10252,4 @@ export type UsersResetPassword = {
     __typename?: 'usersResetPassword';
     token?: Maybe<Scalars['String']['output']>;
     user?: Maybe<User>;
-};
-
-export type PagesQueryQueryVariables = Exact<{ [key: string]: never }>;
-
-export type PagesQueryQuery = {
-    __typename?: 'Query';
-    Pages?: {
-        __typename?: 'Pages';
-        docs?: Array<{
-            __typename?: 'Page';
-            id?: string | null;
-            slug?: string | null;
-            title?: string | null;
-        } | null> | null;
-    } | null;
 };

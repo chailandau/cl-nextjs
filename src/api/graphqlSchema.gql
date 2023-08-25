@@ -3588,14 +3588,10 @@ type NavDocAccessFields_menuItems_Delete {
 }
 
 type NavDocAccessFields_menuItems_Fields {
-  externalLink: NavDocAccessFields_menuItems_externalLink
+  customLabel: NavDocAccessFields_menuItems_customLabel
   id: NavDocAccessFields_menuItems_id
-  internalCustomLabel: NavDocAccessFields_menuItems_internalCustomLabel
-  internalLink: NavDocAccessFields_menuItems_internalLink
-  label: NavDocAccessFields_menuItems_label
-  linkType: NavDocAccessFields_menuItems_linkType
   overridePageName: NavDocAccessFields_menuItems_overridePageName
-  submenuItems: NavDocAccessFields_menuItems_submenuItems
+  page: NavDocAccessFields_menuItems_page
 }
 
 type NavDocAccessFields_menuItems_Read {
@@ -3606,26 +3602,26 @@ type NavDocAccessFields_menuItems_Update {
   permission: Boolean!
 }
 
-type NavDocAccessFields_menuItems_externalLink {
-  create: NavDocAccessFields_menuItems_externalLink_Create
-  delete: NavDocAccessFields_menuItems_externalLink_Delete
-  read: NavDocAccessFields_menuItems_externalLink_Read
-  update: NavDocAccessFields_menuItems_externalLink_Update
+type NavDocAccessFields_menuItems_customLabel {
+  create: NavDocAccessFields_menuItems_customLabel_Create
+  delete: NavDocAccessFields_menuItems_customLabel_Delete
+  read: NavDocAccessFields_menuItems_customLabel_Read
+  update: NavDocAccessFields_menuItems_customLabel_Update
 }
 
-type NavDocAccessFields_menuItems_externalLink_Create {
+type NavDocAccessFields_menuItems_customLabel_Create {
   permission: Boolean!
 }
 
-type NavDocAccessFields_menuItems_externalLink_Delete {
+type NavDocAccessFields_menuItems_customLabel_Delete {
   permission: Boolean!
 }
 
-type NavDocAccessFields_menuItems_externalLink_Read {
+type NavDocAccessFields_menuItems_customLabel_Read {
   permission: Boolean!
 }
 
-type NavDocAccessFields_menuItems_externalLink_Update {
+type NavDocAccessFields_menuItems_customLabel_Update {
   permission: Boolean!
 }
 
@@ -3652,98 +3648,6 @@ type NavDocAccessFields_menuItems_id_Update {
   permission: Boolean!
 }
 
-type NavDocAccessFields_menuItems_internalCustomLabel {
-  create: NavDocAccessFields_menuItems_internalCustomLabel_Create
-  delete: NavDocAccessFields_menuItems_internalCustomLabel_Delete
-  read: NavDocAccessFields_menuItems_internalCustomLabel_Read
-  update: NavDocAccessFields_menuItems_internalCustomLabel_Update
-}
-
-type NavDocAccessFields_menuItems_internalCustomLabel_Create {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_internalCustomLabel_Delete {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_internalCustomLabel_Read {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_internalCustomLabel_Update {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_internalLink {
-  create: NavDocAccessFields_menuItems_internalLink_Create
-  delete: NavDocAccessFields_menuItems_internalLink_Delete
-  read: NavDocAccessFields_menuItems_internalLink_Read
-  update: NavDocAccessFields_menuItems_internalLink_Update
-}
-
-type NavDocAccessFields_menuItems_internalLink_Create {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_internalLink_Delete {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_internalLink_Read {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_internalLink_Update {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_label {
-  create: NavDocAccessFields_menuItems_label_Create
-  delete: NavDocAccessFields_menuItems_label_Delete
-  read: NavDocAccessFields_menuItems_label_Read
-  update: NavDocAccessFields_menuItems_label_Update
-}
-
-type NavDocAccessFields_menuItems_label_Create {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_label_Delete {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_label_Read {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_label_Update {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_linkType {
-  create: NavDocAccessFields_menuItems_linkType_Create
-  delete: NavDocAccessFields_menuItems_linkType_Delete
-  read: NavDocAccessFields_menuItems_linkType_Read
-  update: NavDocAccessFields_menuItems_linkType_Update
-}
-
-type NavDocAccessFields_menuItems_linkType_Create {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_linkType_Delete {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_linkType_Read {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_linkType_Update {
-  permission: Boolean!
-}
-
 type NavDocAccessFields_menuItems_overridePageName {
   create: NavDocAccessFields_menuItems_overridePageName_Create
   delete: NavDocAccessFields_menuItems_overridePageName_Delete
@@ -3767,198 +3671,26 @@ type NavDocAccessFields_menuItems_overridePageName_Update {
   permission: Boolean!
 }
 
-type NavDocAccessFields_menuItems_submenuItems {
-  create: NavDocAccessFields_menuItems_submenuItems_Create
-  delete: NavDocAccessFields_menuItems_submenuItems_Delete
-  fields: NavDocAccessFields_menuItems_submenuItems_Fields
-  read: NavDocAccessFields_menuItems_submenuItems_Read
-  update: NavDocAccessFields_menuItems_submenuItems_Update
+type NavDocAccessFields_menuItems_page {
+  create: NavDocAccessFields_menuItems_page_Create
+  delete: NavDocAccessFields_menuItems_page_Delete
+  read: NavDocAccessFields_menuItems_page_Read
+  update: NavDocAccessFields_menuItems_page_Update
 }
 
-type NavDocAccessFields_menuItems_submenuItems_Create {
+type NavDocAccessFields_menuItems_page_Create {
   permission: Boolean!
 }
 
-type NavDocAccessFields_menuItems_submenuItems_Delete {
+type NavDocAccessFields_menuItems_page_Delete {
   permission: Boolean!
 }
 
-type NavDocAccessFields_menuItems_submenuItems_Fields {
-  externalLink: NavDocAccessFields_menuItems_submenuItems_externalLink
-  id: NavDocAccessFields_menuItems_submenuItems_id
-  internalCustomLabel: NavDocAccessFields_menuItems_submenuItems_internalCustomLabel
-  internalLink: NavDocAccessFields_menuItems_submenuItems_internalLink
-  label: NavDocAccessFields_menuItems_submenuItems_label
-  linkType: NavDocAccessFields_menuItems_submenuItems_linkType
-  overridePageName: NavDocAccessFields_menuItems_submenuItems_overridePageName
-}
-
-type NavDocAccessFields_menuItems_submenuItems_Read {
+type NavDocAccessFields_menuItems_page_Read {
   permission: Boolean!
 }
 
-type NavDocAccessFields_menuItems_submenuItems_Update {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_externalLink {
-  create: NavDocAccessFields_menuItems_submenuItems_externalLink_Create
-  delete: NavDocAccessFields_menuItems_submenuItems_externalLink_Delete
-  read: NavDocAccessFields_menuItems_submenuItems_externalLink_Read
-  update: NavDocAccessFields_menuItems_submenuItems_externalLink_Update
-}
-
-type NavDocAccessFields_menuItems_submenuItems_externalLink_Create {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_externalLink_Delete {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_externalLink_Read {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_externalLink_Update {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_id {
-  create: NavDocAccessFields_menuItems_submenuItems_id_Create
-  delete: NavDocAccessFields_menuItems_submenuItems_id_Delete
-  read: NavDocAccessFields_menuItems_submenuItems_id_Read
-  update: NavDocAccessFields_menuItems_submenuItems_id_Update
-}
-
-type NavDocAccessFields_menuItems_submenuItems_id_Create {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_id_Delete {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_id_Read {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_id_Update {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_internalCustomLabel {
-  create: NavDocAccessFields_menuItems_submenuItems_internalCustomLabel_Create
-  delete: NavDocAccessFields_menuItems_submenuItems_internalCustomLabel_Delete
-  read: NavDocAccessFields_menuItems_submenuItems_internalCustomLabel_Read
-  update: NavDocAccessFields_menuItems_submenuItems_internalCustomLabel_Update
-}
-
-type NavDocAccessFields_menuItems_submenuItems_internalCustomLabel_Create {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_internalCustomLabel_Delete {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_internalCustomLabel_Read {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_internalCustomLabel_Update {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_internalLink {
-  create: NavDocAccessFields_menuItems_submenuItems_internalLink_Create
-  delete: NavDocAccessFields_menuItems_submenuItems_internalLink_Delete
-  read: NavDocAccessFields_menuItems_submenuItems_internalLink_Read
-  update: NavDocAccessFields_menuItems_submenuItems_internalLink_Update
-}
-
-type NavDocAccessFields_menuItems_submenuItems_internalLink_Create {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_internalLink_Delete {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_internalLink_Read {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_internalLink_Update {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_label {
-  create: NavDocAccessFields_menuItems_submenuItems_label_Create
-  delete: NavDocAccessFields_menuItems_submenuItems_label_Delete
-  read: NavDocAccessFields_menuItems_submenuItems_label_Read
-  update: NavDocAccessFields_menuItems_submenuItems_label_Update
-}
-
-type NavDocAccessFields_menuItems_submenuItems_label_Create {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_label_Delete {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_label_Read {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_label_Update {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_linkType {
-  create: NavDocAccessFields_menuItems_submenuItems_linkType_Create
-  delete: NavDocAccessFields_menuItems_submenuItems_linkType_Delete
-  read: NavDocAccessFields_menuItems_submenuItems_linkType_Read
-  update: NavDocAccessFields_menuItems_submenuItems_linkType_Update
-}
-
-type NavDocAccessFields_menuItems_submenuItems_linkType_Create {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_linkType_Delete {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_linkType_Read {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_linkType_Update {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_overridePageName {
-  create: NavDocAccessFields_menuItems_submenuItems_overridePageName_Create
-  delete: NavDocAccessFields_menuItems_submenuItems_overridePageName_Delete
-  read: NavDocAccessFields_menuItems_submenuItems_overridePageName_Read
-  update: NavDocAccessFields_menuItems_submenuItems_overridePageName_Update
-}
-
-type NavDocAccessFields_menuItems_submenuItems_overridePageName_Create {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_overridePageName_Delete {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_overridePageName_Read {
-  permission: Boolean!
-}
-
-type NavDocAccessFields_menuItems_submenuItems_overridePageName_Update {
+type NavDocAccessFields_menuItems_page_Update {
   permission: Boolean!
 }
 
@@ -4055,14 +3787,10 @@ type NavFields_menuItems_Delete {
 }
 
 type NavFields_menuItems_Fields {
-  externalLink: NavFields_menuItems_externalLink
+  customLabel: NavFields_menuItems_customLabel
   id: NavFields_menuItems_id
-  internalCustomLabel: NavFields_menuItems_internalCustomLabel
-  internalLink: NavFields_menuItems_internalLink
-  label: NavFields_menuItems_label
-  linkType: NavFields_menuItems_linkType
   overridePageName: NavFields_menuItems_overridePageName
-  submenuItems: NavFields_menuItems_submenuItems
+  page: NavFields_menuItems_page
 }
 
 type NavFields_menuItems_Read {
@@ -4073,26 +3801,26 @@ type NavFields_menuItems_Update {
   permission: Boolean!
 }
 
-type NavFields_menuItems_externalLink {
-  create: NavFields_menuItems_externalLink_Create
-  delete: NavFields_menuItems_externalLink_Delete
-  read: NavFields_menuItems_externalLink_Read
-  update: NavFields_menuItems_externalLink_Update
+type NavFields_menuItems_customLabel {
+  create: NavFields_menuItems_customLabel_Create
+  delete: NavFields_menuItems_customLabel_Delete
+  read: NavFields_menuItems_customLabel_Read
+  update: NavFields_menuItems_customLabel_Update
 }
 
-type NavFields_menuItems_externalLink_Create {
+type NavFields_menuItems_customLabel_Create {
   permission: Boolean!
 }
 
-type NavFields_menuItems_externalLink_Delete {
+type NavFields_menuItems_customLabel_Delete {
   permission: Boolean!
 }
 
-type NavFields_menuItems_externalLink_Read {
+type NavFields_menuItems_customLabel_Read {
   permission: Boolean!
 }
 
-type NavFields_menuItems_externalLink_Update {
+type NavFields_menuItems_customLabel_Update {
   permission: Boolean!
 }
 
@@ -4119,98 +3847,6 @@ type NavFields_menuItems_id_Update {
   permission: Boolean!
 }
 
-type NavFields_menuItems_internalCustomLabel {
-  create: NavFields_menuItems_internalCustomLabel_Create
-  delete: NavFields_menuItems_internalCustomLabel_Delete
-  read: NavFields_menuItems_internalCustomLabel_Read
-  update: NavFields_menuItems_internalCustomLabel_Update
-}
-
-type NavFields_menuItems_internalCustomLabel_Create {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_internalCustomLabel_Delete {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_internalCustomLabel_Read {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_internalCustomLabel_Update {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_internalLink {
-  create: NavFields_menuItems_internalLink_Create
-  delete: NavFields_menuItems_internalLink_Delete
-  read: NavFields_menuItems_internalLink_Read
-  update: NavFields_menuItems_internalLink_Update
-}
-
-type NavFields_menuItems_internalLink_Create {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_internalLink_Delete {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_internalLink_Read {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_internalLink_Update {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_label {
-  create: NavFields_menuItems_label_Create
-  delete: NavFields_menuItems_label_Delete
-  read: NavFields_menuItems_label_Read
-  update: NavFields_menuItems_label_Update
-}
-
-type NavFields_menuItems_label_Create {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_label_Delete {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_label_Read {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_label_Update {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_linkType {
-  create: NavFields_menuItems_linkType_Create
-  delete: NavFields_menuItems_linkType_Delete
-  read: NavFields_menuItems_linkType_Read
-  update: NavFields_menuItems_linkType_Update
-}
-
-type NavFields_menuItems_linkType_Create {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_linkType_Delete {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_linkType_Read {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_linkType_Update {
-  permission: Boolean!
-}
-
 type NavFields_menuItems_overridePageName {
   create: NavFields_menuItems_overridePageName_Create
   delete: NavFields_menuItems_overridePageName_Delete
@@ -4234,198 +3870,26 @@ type NavFields_menuItems_overridePageName_Update {
   permission: Boolean!
 }
 
-type NavFields_menuItems_submenuItems {
-  create: NavFields_menuItems_submenuItems_Create
-  delete: NavFields_menuItems_submenuItems_Delete
-  fields: NavFields_menuItems_submenuItems_Fields
-  read: NavFields_menuItems_submenuItems_Read
-  update: NavFields_menuItems_submenuItems_Update
+type NavFields_menuItems_page {
+  create: NavFields_menuItems_page_Create
+  delete: NavFields_menuItems_page_Delete
+  read: NavFields_menuItems_page_Read
+  update: NavFields_menuItems_page_Update
 }
 
-type NavFields_menuItems_submenuItems_Create {
+type NavFields_menuItems_page_Create {
   permission: Boolean!
 }
 
-type NavFields_menuItems_submenuItems_Delete {
+type NavFields_menuItems_page_Delete {
   permission: Boolean!
 }
 
-type NavFields_menuItems_submenuItems_Fields {
-  externalLink: NavFields_menuItems_submenuItems_externalLink
-  id: NavFields_menuItems_submenuItems_id
-  internalCustomLabel: NavFields_menuItems_submenuItems_internalCustomLabel
-  internalLink: NavFields_menuItems_submenuItems_internalLink
-  label: NavFields_menuItems_submenuItems_label
-  linkType: NavFields_menuItems_submenuItems_linkType
-  overridePageName: NavFields_menuItems_submenuItems_overridePageName
-}
-
-type NavFields_menuItems_submenuItems_Read {
+type NavFields_menuItems_page_Read {
   permission: Boolean!
 }
 
-type NavFields_menuItems_submenuItems_Update {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_externalLink {
-  create: NavFields_menuItems_submenuItems_externalLink_Create
-  delete: NavFields_menuItems_submenuItems_externalLink_Delete
-  read: NavFields_menuItems_submenuItems_externalLink_Read
-  update: NavFields_menuItems_submenuItems_externalLink_Update
-}
-
-type NavFields_menuItems_submenuItems_externalLink_Create {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_externalLink_Delete {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_externalLink_Read {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_externalLink_Update {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_id {
-  create: NavFields_menuItems_submenuItems_id_Create
-  delete: NavFields_menuItems_submenuItems_id_Delete
-  read: NavFields_menuItems_submenuItems_id_Read
-  update: NavFields_menuItems_submenuItems_id_Update
-}
-
-type NavFields_menuItems_submenuItems_id_Create {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_id_Delete {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_id_Read {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_id_Update {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_internalCustomLabel {
-  create: NavFields_menuItems_submenuItems_internalCustomLabel_Create
-  delete: NavFields_menuItems_submenuItems_internalCustomLabel_Delete
-  read: NavFields_menuItems_submenuItems_internalCustomLabel_Read
-  update: NavFields_menuItems_submenuItems_internalCustomLabel_Update
-}
-
-type NavFields_menuItems_submenuItems_internalCustomLabel_Create {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_internalCustomLabel_Delete {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_internalCustomLabel_Read {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_internalCustomLabel_Update {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_internalLink {
-  create: NavFields_menuItems_submenuItems_internalLink_Create
-  delete: NavFields_menuItems_submenuItems_internalLink_Delete
-  read: NavFields_menuItems_submenuItems_internalLink_Read
-  update: NavFields_menuItems_submenuItems_internalLink_Update
-}
-
-type NavFields_menuItems_submenuItems_internalLink_Create {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_internalLink_Delete {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_internalLink_Read {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_internalLink_Update {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_label {
-  create: NavFields_menuItems_submenuItems_label_Create
-  delete: NavFields_menuItems_submenuItems_label_Delete
-  read: NavFields_menuItems_submenuItems_label_Read
-  update: NavFields_menuItems_submenuItems_label_Update
-}
-
-type NavFields_menuItems_submenuItems_label_Create {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_label_Delete {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_label_Read {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_label_Update {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_linkType {
-  create: NavFields_menuItems_submenuItems_linkType_Create
-  delete: NavFields_menuItems_submenuItems_linkType_Delete
-  read: NavFields_menuItems_submenuItems_linkType_Read
-  update: NavFields_menuItems_submenuItems_linkType_Update
-}
-
-type NavFields_menuItems_submenuItems_linkType_Create {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_linkType_Delete {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_linkType_Read {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_linkType_Update {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_overridePageName {
-  create: NavFields_menuItems_submenuItems_overridePageName_Create
-  delete: NavFields_menuItems_submenuItems_overridePageName_Delete
-  read: NavFields_menuItems_submenuItems_overridePageName_Read
-  update: NavFields_menuItems_submenuItems_overridePageName_Update
-}
-
-type NavFields_menuItems_submenuItems_overridePageName_Create {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_overridePageName_Delete {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_overridePageName_Read {
-  permission: Boolean!
-}
-
-type NavFields_menuItems_submenuItems_overridePageName_Update {
+type NavFields_menuItems_page_Update {
   permission: Boolean!
 }
 
@@ -4473,35 +3937,10 @@ type NavUpdateDocAccess {
 }
 
 type Nav_MenuItems {
-  externalLink: String
+  customLabel: String
   id: String
-  internalCustomLabel: String
-  internalLink: Page
-  label: String
-  linkType: Nav_MenuItems_linkType
   overridePageName: Boolean
-  submenuItems: [Nav_MenuItems_SubmenuItems!]
-}
-
-type Nav_MenuItems_SubmenuItems {
-  externalLink: String
-  id: String
-  internalCustomLabel: String
-  internalLink: Page
-  label: String
-  linkType: Nav_MenuItems_SubmenuItems_linkType
-  overridePageName: Boolean
-}
-
-enum Nav_MenuItems_SubmenuItems_linkType {
-  external
-  internal
-}
-
-enum Nav_MenuItems_linkType {
-  external
-  internal
-  submenu
+  page: Page
 }
 
 type Page {
@@ -9026,24 +8465,10 @@ input mutationNavInput {
 }
 
 input mutationNav_MenuItemsInput {
-  externalLink: String
+  customLabel: String
   id: String
-  internalCustomLabel: String
-  internalLink: String
-  label: String
-  linkType: String
   overridePageName: Boolean
-  submenuItems: [mutationNav_MenuItems_SubmenuItemsInput]
-}
-
-input mutationNav_MenuItems_SubmenuItemsInput {
-  externalLink: String
-  id: String
-  internalCustomLabel: String
-  internalLink: String
-  label: String
-  linkType: String
-  overridePageName: Boolean
+  page: String
 }
 
 input mutationPageInput {
