@@ -39,7 +39,7 @@ const Header: FC<HeaderProps> = ({ nav }) => {
                     className={styles['logo']}
                     underline={false}
                 >
-                    <Image src={Logo} alt='Long Island Laser Tag' priority />
+                    <Image src={Logo} alt='C.' priority hasBorder={false} />
                 </Link>
 
                 <Flex className={styles['right-content']}>

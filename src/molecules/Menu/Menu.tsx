@@ -27,7 +27,6 @@ const Menu: FC<MenuProps> = ({ menuItems, className = styles['menu'] }) => {
                     key={menuItem?.page?.id}
                     href={`${process.env.NEXT_PUBLIC_BASE_URL}/${menuItem?.page?.slug}`}
                     className={styles['menu-link']}
-                    underline={false}
                 >
                     {menuLabel}
                 </Link>

@@ -22,7 +22,7 @@ const MobileNav: FC<NavProps> = ({ menuItems }) => {
                 initial='closed'
                 exit='closed'
             >
-                <Menu menuItems={menuItems} underline={false} />
+                <Menu menuItems={menuItems} />
             </m.nav>
         </LazyAnimatePresence>
     );

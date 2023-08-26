@@ -7,9 +7,7 @@
     @include laptop {
         display: none;
     }
-    @include hover {
-        opacity: 0.85;
-    }
+    @include hoverOpacity;
     &-container {
         width: rem(36);
         height: rem(24);

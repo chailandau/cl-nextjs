@@ -17,5 +17,13 @@
     .logo {
         width: rem(44);
         padding: unset;
+        @include hover {
+            @include hoverOpacity;
+            & > span {
+                &:before {
+                    display: none !important;
+                }
+            }
+        }
     }
 }
