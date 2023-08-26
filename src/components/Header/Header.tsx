@@ -5,7 +5,7 @@ import { FC, useEffect } from 'react';
 
 import styles from './Header.module.scss';
 
-import { Nav } from '@/api/graphqlTypes';
+import { Nav_MenuItems } from '@/api/graphqlTypes';
 import Logo from '@/assets/svg/Logo.svg';
 import Image from '@/atoms/Image';
 import Link from '@/atoms/Link';
@@ -18,9 +18,9 @@ import { laptopQuery, useMediaQuery } from '@/utils/hooks/useMediaQuery';
 
 export interface HeaderProps {
     /* Nav to pass into header */
-    nav?: Nav | null;
+    menuItems?: Nav_MenuItems[] | null;
 }
-const Header: FC<HeaderProps> = ({ nav }) => {
+const Header: FC<HeaderProps> = ({ menuItems }) => {
     const isLaptop = useMediaQuery(laptopQuery);
 
     const { menuOpen, setMenuOpen } = useStore();
@@ -43,13 +43,11 @@ const Header: FC<HeaderProps> = ({ nav }) => {
                 </Link>
 
                 <Flex className={styles['right-content']}>
-                    {isLaptop && <DesktopNav menuItems={nav?.menuItems} />}
+                    {isLaptop && <DesktopNav menuItems={menuItems} />}
 
                     <MenuToggle />
                 </Flex>
-                {!isLaptop && menuOpen && (
-                    <MobileNav menuItems={nav?.menuItems} />
-                )}
+                {!isLaptop && menuOpen && <MobileNav menuItems={menuItems} />}
             </Section>
         </FocusTrap>
     );

@@ -25,7 +25,10 @@ const customJestConfig = {
         '<rootDir>/setupTests.js'
     ],
     testEnvironment: 'jest-environment-jsdom',
-    testRegex: '(/test/.*|\\.(test|spec))\\.(ts|tsx)$'
+    testRegex: '(/test/.*|\\.(test|spec))\\.(ts|tsx)$',
+    transform: {
+        '\\.(gql|graphql)$': '@graphql-tools/jest-transform'
+    }
 };
 
 export default createJestConfig(customJestConfig);

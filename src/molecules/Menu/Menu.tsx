@@ -19,7 +19,7 @@ const Menu: FC<MenuProps> = ({
     underline
 }) => {
     const menuContent = menuItems?.map((menuItem) => {
-        if (!menuItem.page) {
+        if (!menuItem?.page || Object.keys(menuItem?.page).length === 0) {
             return null;
         }
 

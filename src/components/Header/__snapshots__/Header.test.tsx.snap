@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header DesktopNav matches snapshot 1`] = `
+<DocumentFragment>
+  <nav
+    class="flex desktop-nav"
+  >
+    <ul
+      class="menu"
+    >
+      <li>
+        <a
+          class="link menu-link"
+          href="/"
+          rel=""
+          target=""
+        >
+          <span
+            class="link-text"
+          >
+            Work
+          </span>
+        </a>
+      </li>
+      <li>
+        <a
+          class="link menu-link"
+          href="/about"
+          rel=""
+          target=""
+        >
+          <span
+            class="link-text"
+          >
+            About
+          </span>
+        </a>
+      </li>
+      <li>
+        <a
+          class="link menu-link"
+          href="/contact"
+          rel=""
+          target=""
+        >
+          <span
+            class="link-text"
+          >
+            Contact
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</DocumentFragment>
+`;
+
+exports[`Header Menu Toggle matches snapshot 1`] = `
+<DocumentFragment>
+  <button
+    aria-label="menu toggle"
+    class="menu-toggle open"
+  >
+    <div
+      class="menu-toggle-container"
+    >
+      <div
+        class="menu-toggle-inner"
+      />
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Header Menu matches snapshot 1`] = `
+<DocumentFragment>
+  <ul
+    class="menu"
+  >
+    <li>
+      <a
+        class="link underline menu-link"
+        href="/"
+        rel=""
+        target=""
+      >
+        <span
+          class="link-text"
+        >
+          Work
+        </span>
+        <span
+          class="link-icon"
+        >
+          &gt;
+        </span>
+      </a>
+    </li>
+    <li>
+      <a
+        class="link underline menu-link"
+        href="/about"
+        rel=""
+        target=""
+      >
+        <span
+          class="link-text"
+        >
+          About
+        </span>
+        <span
+          class="link-icon"
+        >
+          &gt;
+        </span>
+      </a>
+    </li>
+    <li>
+      <a
+        class="link underline menu-link"
+        href="/contact"
+        rel=""
+        target=""
+      >
+        <span
+          class="link-text"
+        >
+          Contact
+        </span>
+        <span
+          class="link-icon"
+        >
+          &gt;
+        </span>
+      </a>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
+
+exports[`Header Mobile Nav matches snapshot 1`] = `
+<DocumentFragment>
+  <nav
+    class="mobile-nav"
+    style="opacity: 0; transform: translateY(20%) translateZ(0);"
+  >
+    <ul
+      class="menu"
+    >
+      <li>
+        <a
+          class="link underline menu-link"
+          href="/"
+          rel=""
+          target=""
+        >
+          <span
+            class="link-text"
+          >
+            Work
+          </span>
+          <span
+            class="link-icon"
+          >
+            &gt;
+          </span>
+        </a>
+      </li>
+      <li>
+        <a
+          class="link underline menu-link"
+          href="/about"
+          rel=""
+          target=""
+        >
+          <span
+            class="link-text"
+          >
+            About
+          </span>
+          <span
+            class="link-icon"
+          >
+            &gt;
+          </span>
+        </a>
+      </li>
+      <li>
+        <a
+          class="link underline menu-link"
+          href="/contact"
+          rel=""
+          target=""
+        >
+          <span
+            class="link-text"
+          >
+            Contact
+          </span>
+          <span
+            class="link-icon"
+          >
+            &gt;
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</DocumentFragment>
+`;
