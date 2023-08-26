@@ -3,15 +3,20 @@
     "parser": "@typescript-eslint/parser",
     "plugins": [
         "@typescript-eslint",
-        "import"
+        "import",
+        "mdx"
     ],
     "parserOptions": {
-        "project": "./tsconfig.json"
+        "project": "./tsconfig.json",
+        "extraFileExtensions:": [
+            ".mdx"
+        ]
     },
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:prettier/recommended"
+        "plugin:prettier/recommended",
+        "plugin:mdx/recommended"
     ],
     "rules": {
         "prettier/prettier": "warn",

@@ -1,38 +1,29 @@
 'use client';
 
 import FocusTrap from 'focus-trap-react';
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect } from 'react';
 
-import DesktopNav from './components/DesktopNav';
-import MenuToggle from './components/MenuToggle';
-import MobileNav from './components/MobileNav';
 import styles from './Header.module.scss';
 
-import { Nav, Nav_MenuItems } from '@/api/graphqlTypes';
-// import Logo from '@/assets/svg/Logo.svg';
-// import Image from '@/atoms/Image/Image';
-// import Link from '@/atoms/Link/Link';
+import { Nav } from '@/api/graphqlTypes';
+import Logo from '@/assets/svg/Logo.svg';
+import Image from '@/atoms/Image/Image';
+import Link from '@/atoms/Link/Link';
+import { DesktopNav, MobileNav } from '@/components/Nav';
 import Flex from '@/molecules/Flex/Flex';
-import Section from '@/molecules/Section/Section';
+import { MenuToggle } from '@/molecules/Menu';
+import Section from '@/molecules/Section';
 import useStore from '@/store/useStore';
 import { laptopQuery, useMediaQuery } from '@/utils/hooks/useMediaQuery';
 
 export interface HeaderProps {
     /* Nav to pass into header */
     nav?: Nav | null;
-    /* Menu items to display */
-    menuItems?: Nav_MenuItems[] | null;
 }
 const Header: FC<HeaderProps> = ({ nav }) => {
     const isLaptop = useMediaQuery(laptopQuery);
 
     const { menuOpen, setMenuOpen } = useStore();
-    const [headerEl, setHeaderEl] = useState<HTMLElement | null>(null);
-    useEffect(() => {
-        setHeaderEl(
-            document.querySelector(`.${styles['header']}`) as HTMLElement
-        );
-    }, []);
 
     useEffect(() => {
         if (isLaptop) {
@@ -41,18 +32,15 @@ const Header: FC<HeaderProps> = ({ nav }) => {
     }, [isLaptop]);
 
     return (
-        <>
-            <FocusTrap
-                active={menuOpen}
-                containerElements={headerEl ? [headerEl] : []}
-            />
+        <FocusTrap active={menuOpen}>
             <Section as='header' className={styles['header']}>
-                {/* <Link
+                <Link
                     href={process.env.NEXT_PUBLIC_BASE_URL as string}
                     className={styles['logo']}
+                    underline={false}
                 >
                     <Image src={Logo} alt='Long Island Laser Tag' priority />
-                </Link> */}
+                </Link>
 
                 <Flex className={styles['right-content']}>
                     {isLaptop && <DesktopNav menuItems={nav?.menuItems} />}
@@ -63,7 +51,7 @@ const Header: FC<HeaderProps> = ({ nav }) => {
                     <MobileNav menuItems={nav?.menuItems} />
                 )}
             </Section>
-        </>
+        </FocusTrap>
     );
 };
 

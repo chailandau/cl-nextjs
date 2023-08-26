@@ -1,19 +1,18 @@
 import { FC } from 'react';
 
-import { HeaderProps } from '../Header';
+import { NavProps } from '..';
 
 /**
  * Flex (and its styles) must be imported before
  * current styles for proper Storybook rendering
  */
 // eslint-disable-next-line import/order
-import Flex from '@/molecules/Flex/Flex';
 import styles from './DesktopNav.module.scss';
-import Menu from './Menu';
-
+import Flex from '@/molecules/Flex';
+import { Menu } from '@/molecules/Menu';
 import LazyMotionDom from '@/utils/framer/LazyMotionDom';
 
-const DesktopNav: FC<HeaderProps> = ({ menuItems }) => (
+const DesktopNav: FC<NavProps> = ({ menuItems }) => (
     <LazyMotionDom>
         <Flex as='nav' className={styles['desktop-nav']}>
             <Menu menuItems={menuItems} />

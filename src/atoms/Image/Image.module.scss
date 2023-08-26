@@ -1,0 +1,23 @@
+.container {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    img {
+        position: relative !important;
+        object-fit: contain;
+        width: 100%;
+    }
+    &.border,
+    &.border > img {
+        @include borderRadius;
+    }
+    &.border {
+        position: relative;
+        margin-right: rem(12);
+        @include transition(margin-right);
+        @include mobile-lg {
+            margin-right: rem(20);
+        }
+        @include boxShadow;
+    }
+}

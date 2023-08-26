@@ -38,7 +38,7 @@ const Link: FC<LinkProps> = ({
     return (
         <NextLink className={classList} href={href} rel={rel} target={target}>
             <span className={styles['link-text']}>{children}</span>
-            <span className={styles['link-icon']}>{'>'}</span>
+            {underline && <span className={styles['link-icon']}>{'>'}</span>}
         </NextLink>
     );
 };

@@ -1,8 +1,7 @@
 export const menuAnimations = {
     closed: {
-        y: '-100%',
+        y: '20%',
         opacity: 0,
-        height: 0,
         transition: {
             delay: 0.15,
             length: 1
@@ -11,7 +10,7 @@ export const menuAnimations = {
     open: {
         y: 0,
         opacity: 1,
-        height: '100vh',
+
         transition: {
             type: 'spring',
             duration: 0.4

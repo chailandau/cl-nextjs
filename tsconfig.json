@@ -28,6 +28,9 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@storybookAssets/*": [
+        "./.storybook/public/*"
       ]
     }
   },
@@ -43,9 +46,10 @@
     "setupTests.js",
     ".next/types/**/*.ts",
     "loki.config.js",
-    "**/*.scss"
+    "**/*.scss",
+    ".eslintrc"
   ],
   "exclude": [
-    "node_modules"
-  ]
+    "node_modules",
+  ],
 }

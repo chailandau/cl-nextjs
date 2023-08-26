@@ -1,15 +1,16 @@
 import { FC } from 'react';
 
-import { HeaderProps } from '../Header';
-
 import styles from './Menu.module.scss';
 
-import Link from '@/atoms/Link/Link';
+import Link from '@/atoms/Link';
+import { NavProps } from '@/components/Nav';
 import { getPageLabel } from '@/utils/getPageLabel';
 
-export interface MenuProps extends HeaderProps {
+export interface MenuProps extends NavProps {
     /** Optional classname */
     className?: string;
+    /** Enables underline */
+    underline?: boolean;
 }
 
 const Menu: FC<MenuProps> = ({ menuItems, className = styles['menu'] }) => {
@@ -26,6 +27,7 @@ const Menu: FC<MenuProps> = ({ menuItems, className = styles['menu'] }) => {
                     key={menuItem?.page?.id}
                     href={`${process.env.NEXT_PUBLIC_BASE_URL}/${menuItem?.page?.slug}`}
                     className={styles['menu-link']}
+                    underline={false}
                 >
                     {menuLabel}
                 </Link>

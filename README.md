@@ -6,7 +6,7 @@ This is the frontend for my portfolio. It is a headless build using Next.js coup
 
 This is not an exhaustive list, rather, the main tech stack
 
--   <strong>[Next.js](https://nextjs.org/)</strong> - Using ISR allows incremental updates without the whole site having to be rebuilt (while staying static for SEO).
+-   <strong>[Next.js](https://nextjs.org/) with App Dir</strong> - Using revalidate on demand allows incremental updates without the whole site having to be rebuilt (while staying static for SEO).
 -   <strong>[TypeScript](https://www.typescriptlang.org/)</strong> - Adds type safeties and reduces potential errors further down the road
 -   <strong>[Storybook](https://storybook.js.org/)</strong> - Acts as documentation and serves as a building block for snapshot and visual regression tests
 -   <strong>[Jest](https://jestjs.io/)</strong> - Comprehensive testing library to ensure code is doing what it is supposed to
