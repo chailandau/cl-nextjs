@@ -7,10 +7,10 @@ import styles from './Header.module.scss';
 
 import { Nav } from '@/api/graphqlTypes';
 import Logo from '@/assets/svg/Logo.svg';
-import Image from '@/atoms/Image/Image';
-import Link from '@/atoms/Link/Link';
+import Image from '@/atoms/Image';
+import Link from '@/atoms/Link';
 import { DesktopNav, MobileNav } from '@/components/Nav';
-import Flex from '@/molecules/Flex/Flex';
+import Flex from '@/molecules/Flex';
 import { MenuToggle } from '@/molecules/Menu';
 import Section from '@/molecules/Section';
 import useStore from '@/store/useStore';
