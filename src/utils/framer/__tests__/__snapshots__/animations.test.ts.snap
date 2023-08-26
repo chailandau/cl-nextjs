@@ -24,16 +24,14 @@ exports[`Framer animations iconFlip matches snapshot 1`] = `
 exports[`Framer animations menuAnimations matches snapshot 1`] = `
 {
   "closed": {
-    "height": 0,
     "opacity": 0,
     "transition": {
       "delay": 0.15,
       "length": 1,
     },
-    "y": "-100%",
+    "y": "20%",
   },
   "open": {
-    "height": "100vh",
     "opacity": 1,
     "transition": {
       "duration": 0.4,
