@@ -222,14 +222,14 @@
 
 @mixin hoverOpacity {
     @include hover {
-        opacity: 0.75;
+        opacity: 0.8;
         @include transition(opacity);
     }
 }
 
 // accessibility
-@mixin addTargetArea($amount: 14) {
-    display: block;
+@mixin addTargetArea($amount: 14, $display: block) {
+    display: $display;
     padding: rem($amount);
     margin: rem(-$amount);
 }

@@ -13,7 +13,11 @@ export interface MenuProps extends NavProps {
     underline?: boolean;
 }
 
-const Menu: FC<MenuProps> = ({ menuItems, className = styles['menu'] }) => {
+const Menu: FC<MenuProps> = ({
+    menuItems,
+    className = styles['menu'],
+    underline
+}) => {
     const menuContent = menuItems?.map((menuItem) => {
         if (!menuItem.page) {
             return null;
@@ -27,6 +31,7 @@ const Menu: FC<MenuProps> = ({ menuItems, className = styles['menu'] }) => {
                     key={menuItem?.page?.id}
                     href={`${process.env.NEXT_PUBLIC_BASE_URL}/${menuItem?.page?.slug}`}
                     className={styles['menu-link']}
+                    underline={underline}
                 >
                     {menuLabel}
                 </Link>

@@ -33,11 +33,11 @@
             text-transform: lowercase;
             justify-content: space-between;
             width: auto;
+            @include addTargetArea(14, 'flex');
             @include laptop {
                 @include font(16, 20);
                 justify-content: center;
                 text-align: center;
-                @include paddingX(20);
             }
             &:before {
                 display: none;

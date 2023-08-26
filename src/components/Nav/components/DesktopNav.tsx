@@ -15,7 +15,7 @@ import LazyMotionDom from '@/utils/framer/LazyMotionDom';
 const DesktopNav: FC<NavProps> = ({ menuItems }) => (
     <LazyMotionDom>
         <Flex as='nav' className={styles['desktop-nav']}>
-            <Menu menuItems={menuItems} />
+            <Menu underline={false} menuItems={menuItems} />
         </Flex>
     </LazyMotionDom>
 );

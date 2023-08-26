@@ -15,15 +15,21 @@
         z-index: 101;
     }
     .logo {
-        width: rem(44);
+        width: rem(46);
         padding: unset;
+        @include addTargetArea(7);
         @include hover {
             @include hoverOpacity;
-            & > span {
-                &:before {
-                    display: none !important;
-                }
+            & > span:before {
+                display: none !important;
             }
         }
+        & > span {
+            margin-right: 0;
+            margin-top: rem(3);
+        }
+    }
+    @include laptop {
+        @include paddingY(6);
     }
 }
