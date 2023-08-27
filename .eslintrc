@@ -4,21 +4,36 @@
     "plugins": [
         "@typescript-eslint",
         "import",
-        "mdx"
+        "react",
     ],
     "parserOptions": {
-        "project": "./tsconfig.json",
-        "extraFileExtensions:": [
-            ".mdx"
-        ]
+        "project": "./tsconfig.json"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "mdx/code-blocks": false,
+        "mdx/language-mapper": {}
     },
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:prettier/recommended",
-        "plugin:mdx/recommended"
+        "plugin:react/recommended"
     ],
     "rules": {
+        "react/jsx-filename-extension": [
+            2,
+            {
+                "extensions": [
+                    ".tsx",
+                    ".jsx",
+                    ".mdx"
+                ]
+            }
+        ],
+        "react/react-in-jsx-scope": 0,
         "prettier/prettier": "warn",
         "curly": "error",
         "eqeqeq": [
@@ -142,5 +157,24 @@
                 }
             }
         ]
-    }
+    },
+    "overrides": [
+        {
+            "files": [
+                "*.mdx"
+            ],
+            "extends": "plugin:mdx/recommended",
+            "rules": {
+                "semi": 0
+            }
+        },
+        {
+            "files": [
+                "*.stories.**"
+            ],
+            "rules": {
+                "import/prefer-default-export": "off"
+            }
+        }
+    ]
 }

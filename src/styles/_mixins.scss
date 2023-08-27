@@ -161,6 +161,21 @@
 
 @mixin underlineHighlightHover($padding: 4) {
     @include transition(color);
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        height: 0px;
+        width: calc(100% + rem(8));
+        left: rem(-$padding);
+        background-color: color(common, 'primary');
+        bottom: rem(-$padding);
+        z-index: 0;
+        @include transition(height);
+    }
+    .link-icon {
+        position: relative;
+    }
     .link-text {
         position: relative;
         &:before {
@@ -174,24 +189,11 @@
             bottom: rem(-$padding);
             z-index: 0;
         }
-        &:after {
-            content: '';
-            position: absolute;
-            height: 0px;
-            width: calc(100% + rem(32));
-            left: rem(-$padding);
-            background-color: color(common, 'primary');
-            bottom: rem(-$padding);
-            z-index: -1;
-            @include transition(height);
-        }
     }
     @include hover {
         color: color(common, 'white');
-        .link-text {
-            &:after {
-                height: calc(100% + rem(5));
-            }
+        &:before {
+            height: calc(100% + rem(5));
         }
     }
 }
