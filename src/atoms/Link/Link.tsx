@@ -15,13 +15,16 @@ interface LinkProps {
     className?: string;
     /** Enables underline */
     underline?: boolean;
+    /** Enables icon */
+    icon?: boolean;
 }
 
 const Link: FC<LinkProps> = ({
     href: destination,
     children,
     className,
-    underline = true
+    underline = true,
+    icon = true
 }) => {
     const classList = classNames(
         styles['link'],
@@ -38,7 +41,7 @@ const Link: FC<LinkProps> = ({
     return (
         <NextLink className={classList} href={href} rel={rel} target={target}>
             <span className={styles['link-text']}>{children}</span>
-            {underline && <span className={styles['link-icon']}>{'>'}</span>}
+            {icon && <span className={styles['link-icon']}>{'>'}</span>}
         </NextLink>
     );
 };

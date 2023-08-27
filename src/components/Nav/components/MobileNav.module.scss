@@ -30,21 +30,6 @@
         }
         & > a {
             @include addTargetArea;
-            & > span {
-                &:before {
-                    display: none !important;
-                }
-                &:after {
-                    width: calc(100% + rem(8)) !important;
-                }
-            }
-
-            @include hover {
-                color: color(common, 'primary') !important;
-                & > span:first-child {
-                    color: color(common, 'white');
-                }
-            }
         }
     }
 }

@@ -19,6 +19,8 @@ import { laptopQuery, useMediaQuery } from '@/utils/hooks/useMediaQuery';
 export interface HeaderProps {
     /* Nav to pass into header */
     menuItems?: Nav_MenuItems[] | null;
+    /* Enables icon */
+    icon?: boolean;
 }
 const Header: FC<HeaderProps> = ({ menuItems }) => {
     const isLaptop = useMediaQuery(laptopQuery);
@@ -38,6 +40,7 @@ const Header: FC<HeaderProps> = ({ menuItems }) => {
                     href={process.env.NEXT_PUBLIC_BASE_URL as string}
                     className={styles['logo']}
                     underline={false}
+                    icon={false}
                 >
                     <Image src={Logo} alt='C.' priority hasBorder={false} />
                 </Link>

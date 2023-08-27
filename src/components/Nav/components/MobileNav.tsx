@@ -1,16 +1,15 @@
 import { m } from 'framer-motion';
 import { FC } from 'react';
 
-import { NavProps } from '..';
-
 import styles from './MobileNav.module.scss';
 
+import { HeaderProps } from '@/components/Header';
 import { Menu } from '@/molecules/Menu';
 import useStore from '@/store/useStore';
 import { menuAnimations } from '@/utils/framer/animations';
 import LazyAnimatePresence from '@/utils/framer/LazyAnimatePresence';
 
-const MobileNav: FC<NavProps> = ({ menuItems }) => {
+const MobileNav: FC<HeaderProps> = ({ menuItems }) => {
     const { menuOpen } = useStore();
 
     return (
