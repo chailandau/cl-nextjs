@@ -79,7 +79,7 @@
     background-repeat: repeat-x;
 }
 
-@mixin boxShadow {
+@mixin boxShadow($color: color(common, 'white')) {
     @include border;
     &:before {
         display: block;
@@ -87,11 +87,11 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        background-color: color(common, 'white');
-        @include borderRadius;
+        top: rem(6);
+        left: rem(6);
+        z-index: 0;
+        background-color: color(common, 'black');
+        @include borderRadius(10);
     }
     &:after {
         display: block;
@@ -99,11 +99,11 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        top: rem(6);
-        left: rem(6);
-        z-index: -2;
-        background-color: color(common, 'black');
-        @include borderRadius(10);
+        top: 0;
+        left: 0;
+        z-index: 0;
+        background-color: $color;
+        @include borderRadius;
     }
 }
 
@@ -248,8 +248,8 @@
     @return map-get($breakpoints, $size);
 }
 
-@mixin mobile-lg {
-    @media screen and (min-width: breakpoint('mobile-lg')) {
+@mixin mobileLg {
+    @media screen and (min-width: breakpoint('mobileLg')) {
         @content;
     }
 }
@@ -260,8 +260,8 @@
     }
 }
 
-@mixin tablet-lg {
-    @media screen and (min-width: breakpoint('tablet-lg')) {
+@mixin tabletLg {
+    @media screen and (min-width: breakpoint('tabletLg')) {
         @content;
     }
 }
@@ -272,8 +272,8 @@
     }
 }
 
-@mixin desktop-sm {
-    @media screen and (min-width: breakpoint('desktop-sm')) {
+@mixin desktopSm {
+    @media screen and (min-width: breakpoint('desktopSm')) {
         @content;
     }
 }

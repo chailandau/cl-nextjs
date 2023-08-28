@@ -1,0 +1,38 @@
+.desktop-footer {
+    display: none !important;
+    position: relative;
+    margin: rem(120) rem(-24) 0 rem(-24);
+    padding: rem(12) rem(24);
+    justify-content: space-between;
+    width: 100%;
+    flex: 1;
+    @include boxShadow(color(common, 'primary'));
+    @include tabletLg {
+        display: flex !important;
+    }
+    .nav {
+        ul {
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            row-gap: rem(12);
+            li {
+                width: auto;
+                a {
+                    color: color(common, 'white');
+                    @include font(14, 18);
+                    width: fit-content;
+                    span {
+                        &:before {
+                            background-color: color(common, 'white');
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .copyright {
+        z-index: 1;
+        color: color(common, 'white');
+    }
+}

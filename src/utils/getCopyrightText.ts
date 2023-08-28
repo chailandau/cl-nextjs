@@ -1,0 +1,14 @@
+/**
+ * Replaces all occurrences of "%CURRENT_YEAR%" in the given string with the current year. If the string is empty, returns a default copyright text.
+ *
+ * @param {string} str - The string to be modified.
+ * @return {string} The modified string with all occurrences of "%CURRENT_YEAR%" replaced with the current year.
+ */
+export const getCopyrightText = (str?: string | null): string => {
+    if (!str) {
+        str = 'copyright © chai landau %CURRENT_YEAR%';
+    }
+    const currentYear = new Date().getFullYear().toString();
+
+    return str.replaceAll('%CURRENT_YEAR%', currentYear);
+};

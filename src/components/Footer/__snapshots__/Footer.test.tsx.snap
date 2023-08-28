@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer matches snapshot 1`] = `
+<DocumentFragment>
+  <footer
+    class="flex section"
+  >
+    <div
+      class="flex mobile-footer"
+    >
+      <div
+        class="flex nav"
+      >
+        <ul
+          class="menu"
+        >
+          <li>
+            <a
+              class="link menu-link"
+              href="/"
+              rel=""
+              target=""
+            >
+              <span
+                class="link-text"
+              >
+                Work
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="link menu-link"
+              href="/about"
+              rel=""
+              target=""
+            >
+              <span
+                class="link-text"
+              >
+                About
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="link menu-link"
+              href="/contact"
+              rel=""
+              target=""
+            >
+              <span
+                class="link-text"
+              >
+                Contact
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="flex copyright"
+      >
+        <p
+          class="text xs"
+        >
+          copyright chai landau 2023
+        </p>
+      </div>
+    </div>
+    <div
+      class="flex desktop-footer"
+    >
+      <div
+        class="flex copyright"
+      >
+        <p
+          class="text xs"
+        >
+          copyright chai landau 2023
+        </p>
+      </div>
+      <div
+        class="flex nav"
+      >
+        <ul
+          class="menu"
+        >
+          <li>
+            <a
+              class="link menu-link"
+              href="/"
+              rel=""
+              target=""
+            >
+              <span
+                class="link-text"
+              >
+                Work
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="link menu-link"
+              href="/about"
+              rel=""
+              target=""
+            >
+              <span
+                class="link-text"
+              >
+                About
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="link menu-link"
+              href="/contact"
+              rel=""
+              target=""
+            >
+              <span
+                class="link-text"
+              >
+                Contact
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</DocumentFragment>
+`;

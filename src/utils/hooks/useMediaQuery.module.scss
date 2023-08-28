@@ -1,8 +1,8 @@
 :export {
-    mobileLg: map-get($breakpoints, 'mobile-lg');
+    mobileLg: map-get($breakpoints, 'mobileLg');
     tablet: map-get($breakpoints, 'tablet');
-    tabletLg: map-get($breakpoints, 'tablet-lg');
+    tabletLg: map-get($breakpoints, 'tabletLg');
     laptop: map-get($breakpoints, 'laptop');
-    desktopSm: map-get($breakpoints, 'desktop-sm');
+    desktopSm: map-get($breakpoints, 'desktopSm');
     desktop: map-get($breakpoints, 'desktop');
 }

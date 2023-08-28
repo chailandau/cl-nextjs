@@ -1,0 +1,33 @@
+.mobile-footer {
+    flex-direction: column;
+    margin-top: rem(84);
+    width: 100%;
+    @include tabletLg {
+        display: none !important;
+    }
+    .nav {
+        position: relative;
+        @include boxShadow(color(common, 'primary'));
+        @include marginX(-24);
+        padding: rem(12) rem(24);
+        ul {
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            row-gap: rem(12);
+            li {
+                width: auto;
+                a {
+                    color: color(common, 'white');
+                    @include font(14, 18);
+                    width: fit-content;
+                }
+            }
+        }
+    }
+    .copyright {
+        margin-top: rem(32);
+        justify-content: center;
+        text-align: center;
+    }
+}

@@ -7,7 +7,8 @@
     margin-block-start: 0;
     margin-block-end: 0;
     padding-inline-start: 0;
-    @include laptop {
+    z-index: 1;
+    @include tabletLg {
         gap: rem(44);
         flex-direction: row;
     }
@@ -16,7 +17,7 @@
         position: relative;
         width: 100%;
         flex-direction: column;
-        @include laptop {
+        @include tabletLg {
             display: block;
             width: auto;
         }
@@ -27,14 +28,13 @@
             }
         }
         .menu-link {
-            display: flex;
             @include font(20, 28);
             @include font-ibm-plex-mono-md;
             text-transform: lowercase;
             justify-content: space-between;
             width: auto;
-            @include addTargetArea(14, 'flex');
-            @include laptop {
+            @include addTargetArea(14, flex);
+            @include tabletLg {
                 @include font(16, 20);
                 justify-content: center;
                 text-align: center;
@@ -43,7 +43,7 @@
                 display: none;
                 width: calc(100% - rem(40));
                 left: rem(20);
-                @include laptop {
+                @include tabletLg {
                     display: block;
                 }
             }

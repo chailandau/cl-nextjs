@@ -15,7 +15,7 @@
         position: relative;
         margin-right: rem(12);
         @include transition(margin-right);
-        @include mobile-lg {
+        @include mobileLg {
             margin-right: rem(20);
         }
         @include boxShadow;

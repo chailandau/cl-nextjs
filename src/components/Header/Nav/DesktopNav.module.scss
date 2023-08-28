@@ -1,6 +1,6 @@
 .desktop-nav {
     display: none;
-    @include laptop {
+    @include tabletLg {
         display: block;
     }
 }
