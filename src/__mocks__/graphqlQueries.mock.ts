@@ -1,3 +1,5 @@
 export const mockDefaults = {
-    boolean: () => false
+    Nav_MenuItems: () => ({
+        overridePageName: () => false
+    })
 };
