@@ -5,7 +5,6 @@ import Meta, { Default } from './Link.stories';
 
 import {
     testAxeAndSnapshot,
-    testKeyDown,
     testPropOptions,
     testRenderText
 } from '@/utils/testHelpers';
@@ -32,6 +31,5 @@ describe('Link', () => {
         text: (Link.args?.children as string) + '>',
         role: 'link'
     });
-    testKeyDown({ ...linkComponent, role: 'link' });
     testAxeAndSnapshot(linkComponent);
 });

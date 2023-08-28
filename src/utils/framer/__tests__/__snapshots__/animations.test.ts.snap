@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Framer animations iconFlip matches snapshot 1`] = `
+{
+  "closed": {
+    "rotate": 0,
+    "transition": {
+      "duration": 0.25,
+      "type": "spring",
+    },
+  },
+  "open": {
+    "rotate": 180,
+    "transition": {
+      "duration": 0.25,
+      "type": "spring",
+    },
+  },
+}
+`;
+
+exports[`Framer animations menuAnimations matches snapshot 1`] = `
+{
+  "closed": {
+    "opacity": 0,
+    "transition": {
+      "delay": 0.15,
+      "length": 1,
+    },
+    "y": "20%",
+  },
+  "open": {
+    "opacity": 1,
+    "transition": {
+      "duration": 0.4,
+      "type": "spring",
+    },
+    "y": 0,
+  },
+}
+`;

@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`graphqlQueries mocks NAV_QUERY successfully 1`] = `
+{
+  "data": {
+    "Nav": {
+      "footerCopyrightText": "Hello World",
+      "menuItems": [
+        {
+          "customLabel": "Hello World",
+          "overridePageName": false,
+          "page": {
+            "id": "Hello World",
+            "slug": "Hello World",
+            "title": "Hello World",
+          },
+        },
+        {
+          "customLabel": "Hello World",
+          "overridePageName": false,
+          "page": {
+            "id": "Hello World",
+            "slug": "Hello World",
+            "title": "Hello World",
+          },
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`graphqlQueries mocks PAGES_QUERY successfully 1`] = `
+{
+  "data": {
+    "Pages": {
+      "docs": [
+        {
+          "id": "Hello World",
+          "slug": "Hello World",
+          "title": "Hello World",
+        },
+        {
+          "id": "Hello World",
+          "slug": "Hello World",
+          "title": "Hello World",
+        },
+      ],
+    },
+  },
+}
+`;

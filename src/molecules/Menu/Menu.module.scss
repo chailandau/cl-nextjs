@@ -1,0 +1,52 @@
+.menu {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: rem(44);
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    @include laptop {
+        gap: rem(44);
+        flex-direction: row;
+    }
+    li {
+        display: flex;
+        position: relative;
+        width: 100%;
+        flex-direction: column;
+        @include laptop {
+            display: block;
+            width: auto;
+        }
+
+        &:last-child {
+            &:before {
+                display: none;
+            }
+        }
+        .menu-link {
+            display: flex;
+            @include font(20, 28);
+            @include font-ibm-plex-mono-md;
+            text-transform: lowercase;
+            justify-content: space-between;
+            width: auto;
+            @include addTargetArea(14, 'flex');
+            @include laptop {
+                @include font(16, 20);
+                justify-content: center;
+                text-align: center;
+            }
+            &:before {
+                display: none;
+                width: calc(100% - rem(40));
+                left: rem(20);
+                @include laptop {
+                    display: block;
+                }
+            }
+        }
+    }
+}

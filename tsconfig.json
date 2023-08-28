@@ -28,12 +28,15 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@storybookAssets/*": [
+        "./.storybook/public/*"
       ]
     }
   },
   "include": [
-    "declarations.d.ts",
     "next-env.d.ts",
+    "declarations.d.ts",
     "next.config.js",
     "jest.config.mjs",
     "jest.setup.js",
@@ -42,9 +45,11 @@
     "**/*.gql",
     "setupTests.js",
     ".next/types/**/*.ts",
-    "loki.config.js"
+    "loki.config.js",
+    "**/*.scss",
+    ".eslintrc"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
   ]
 }

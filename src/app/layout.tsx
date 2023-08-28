@@ -1,5 +1,7 @@
 import '@/styles/main.scss';
 
+export const revalidate = 60;
+
 export default function RootLayout({
     children
 }: {

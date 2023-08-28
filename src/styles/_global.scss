@@ -1,4 +1,8 @@
 html {
     @include font-ibm-plex-mono;
     color: color(common, 'black');
+    background-image: url('../assets/svg/Grid.svg');
+    background-position: top left;
+    background-color: color(pastel, 'purple');
+    background-size: rem(50);
 }

@@ -3,13 +3,3 @@ export const INTERNAL_LINK_FRAGMENT = `
     title
     slug
 `;
-
-export const MENU_ITEMS_FRAGMENT = `
-    id
-    label
-    linkType
-    internalLink {
-        ${INTERNAL_LINK_FRAGMENT}
-    }
-    externalLink
-`;

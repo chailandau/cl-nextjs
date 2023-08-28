@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    style="display: flex; max-width: 590px;"
+  >
+    <div
+      class="flex container border"
+    >
+      <img
+        alt="Half Moon Tavern Logo on blue background"
+        data-nimg="1"
+        decoding="async"
+        fetchpriority="high"
+        height="40"
+        src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+        srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+        style="color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+        width="40"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

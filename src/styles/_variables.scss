@@ -26,12 +26,3 @@ $breakpoints: (
     'desktop-sm': 1200px,
     'desktop': 1600px
 );
-
-:export {
-    mobileLg: map-get($breakpoints, 'mobile-lg');
-    tablet: map-get($breakpoints, 'tablet');
-    tabletLg: map-get($breakpoints, 'tablet-lg');
-    laptop: map-get($breakpoints, 'laptop');
-    desktopSm: map-get($breakpoints, 'desktop-sm');
-    desktop: map-get($breakpoints, 'desktop');
-}
