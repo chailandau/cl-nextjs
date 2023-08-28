@@ -1,0 +1,27 @@
+import { ArgTypes, Canvas, Meta } from '@storybook/blocks';
+
+import * as FooterStories from './Footer.stories';
+
+<Meta of={FooterStories} />
+
+# Footer Component
+
+The `Footer` component is on every page. It contains copyright text along with the footer navigation (using the [Menu](?path=/docs/molecules-menu--docs) molecule).
+
+<Canvas of={FooterStories.Default} />
+
+## copyrightText
+
+Footer copyright text to display.
+
+## menuItems
+
+List of navigation links to display.
+
+<br />
+<br />
+<br />
+
+### Props Table
+
+<ArgTypes />

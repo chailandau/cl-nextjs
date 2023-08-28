@@ -79,7 +79,7 @@
     background-repeat: repeat-x;
 }
 
-@mixin boxShadow {
+@mixin boxShadow($color: color(common, 'white')) {
     @include border;
     &:before {
         display: block;
@@ -102,7 +102,7 @@
         top: 0;
         left: 0;
         z-index: 0;
-        background-color: color(common, 'white');
+        background-color: $color;
         @include borderRadius;
     }
 }
@@ -248,8 +248,8 @@
     @return map-get($breakpoints, $size);
 }
 
-@mixin mobile-lg {
-    @media screen and (min-width: breakpoint('mobile-lg')) {
+@mixin mobileLg {
+    @media screen and (min-width: breakpoint('mobileLg')) {
         @content;
     }
 }
@@ -260,8 +260,8 @@
     }
 }
 
-@mixin tablet-lg {
-    @media screen and (min-width: breakpoint('tablet-lg')) {
+@mixin tabletLg {
+    @media screen and (min-width: breakpoint('tabletLg')) {
         @content;
     }
 }
@@ -272,8 +272,8 @@
     }
 }
 
-@mixin desktop-sm {
-    @media screen and (min-width: breakpoint('desktop-sm')) {
+@mixin desktopSm {
+    @media screen and (min-width: breakpoint('desktopSm')) {
         @content;
     }
 }

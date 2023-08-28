@@ -1,4 +1,5 @@
 html {
+    margin: rem(10);
     @include font-ibm-plex-mono;
     color: color(common, 'black');
     background-image: url('../assets/svg/Grid.svg');

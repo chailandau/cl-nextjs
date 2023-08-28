@@ -4,14 +4,13 @@
         @include borderRadius;
     }
     position: relative;
-    margin: rem(10) rem(10) 0 rem(10);
     gap: rem(40);
     justify-content: space-between;
     align-items: center;
     @include boxShadow;
 
     .logo,
-    .right-content {
+    .nav {
         z-index: 101;
     }
     .logo {
@@ -29,7 +28,7 @@
             margin-top: rem(3);
         }
     }
-    @include laptop {
+    @include tabletLg {
         @include paddingY(6);
     }
 }

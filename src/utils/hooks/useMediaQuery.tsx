@@ -35,3 +35,5 @@ export const useMediaQuery = (mediaQueryString: string): MediaQueryMatches => {
     return matches;
 };
 export const laptopQuery = `screen and (min-width: ${breakpoints.laptop})`;
+
+export const tabletLgQuery = `screen and (min-width: ${breakpoints['tabletLg']})`;

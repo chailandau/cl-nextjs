@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 import styles from './Text.module.scss';
 
@@ -10,7 +10,7 @@ interface TextProps {
     /** Semantic tag text is wrapped in */
     as?: (typeof textTags)[number];
     /** Text content */
-    children: string;
+    children: string | ReactNode;
     /** Text size */
     size?: (typeof textSizes)[number];
 }

@@ -24,7 +24,7 @@
             bottom: rem(-22);
             @include dashBorder;
             transform: unset;
-            @include laptop {
+            @include tabletLg {
                 display: none;
             }
         }

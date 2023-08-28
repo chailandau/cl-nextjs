@@ -4,7 +4,7 @@ import { act, fireEvent, render, screen } from '@testing-library/react';
 import HeaderMeta, { Default as HeaderDefault } from './Header.stories';
 
 import { menuItems, menuItemsNullPage } from '@/__mocks__/Header.mock';
-import { mockIsLaptop } from '@/__mocks__/useMediaQuery.mock';
+import { mockIsTabletLg } from '@/__mocks__/useMediaQuery.mock';
 import { DesktopNav, MobileNav } from '@/components/Header/Nav';
 import { Menu, MenuToggle } from '@/molecules/Menu';
 import { testAxeAndSnapshot } from '@/utils/testHelpers';
@@ -36,14 +36,14 @@ describe('Header', () => {
     describe('Mobile Nav', () => {
         beforeEach(async () => {
             act(() => {
-                mockIsLaptop(false);
+                mockIsTabletLg(false);
             });
             render(<Header />);
             fireEvent.click(await screen.findByLabelText('menu toggle'));
         });
-        it('removes mobile nav when isLaptop is true', async () => {
+        it('removes mobile nav when isTabletLg is true', async () => {
             act(() => {
-                mockIsLaptop(true);
+                mockIsTabletLg(true);
             });
             expect(await screen.findByRole('navigation')).not.toHaveClass(
                 'mobile-nav'
@@ -56,7 +56,7 @@ describe('Header', () => {
         beforeEach(() => {
             render(DesktopNavEl);
             act(() => {
-                mockIsLaptop(true);
+                mockIsTabletLg(true);
             });
         });
         it('renders correctly', () => {

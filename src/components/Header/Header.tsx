@@ -14,7 +14,7 @@ import Flex from '@/molecules/Flex';
 import { MenuToggle } from '@/molecules/Menu';
 import Section from '@/molecules/Section';
 import useStore from '@/store/useStore';
-import { laptopQuery, useMediaQuery } from '@/utils/hooks/useMediaQuery';
+import { tabletLgQuery, useMediaQuery } from '@/utils/hooks/useMediaQuery';
 
 export interface HeaderProps {
     /* Nav to pass into header */
@@ -23,15 +23,15 @@ export interface HeaderProps {
     icon?: boolean;
 }
 const Header: FC<HeaderProps> = ({ menuItems }) => {
-    const isLaptop = useMediaQuery(laptopQuery);
+    const isTabletLg = useMediaQuery(tabletLgQuery);
 
     const { menuOpen, setMenuOpen } = useStore();
 
     useEffect(() => {
-        if (isLaptop) {
+        if (isTabletLg) {
             setMenuOpen(false);
         }
-    }, [isLaptop]);
+    }, [isTabletLg]);
 
     return (
         <FocusTrap active={menuOpen}>
@@ -45,12 +45,12 @@ const Header: FC<HeaderProps> = ({ menuItems }) => {
                     <Image src={Logo} alt='C.' priority hasBorder={false} />
                 </Link>
 
-                <Flex className={styles['right-content']}>
-                    {isLaptop && <DesktopNav menuItems={menuItems} />}
+                <Flex className={styles['nav']}>
+                    {isTabletLg && <DesktopNav menuItems={menuItems} />}
 
                     <MenuToggle />
                 </Flex>
-                {!isLaptop && menuOpen && <MobileNav menuItems={menuItems} />}
+                {!isTabletLg && menuOpen && <MobileNav menuItems={menuItems} />}
             </Section>
         </FocusTrap>
     );
