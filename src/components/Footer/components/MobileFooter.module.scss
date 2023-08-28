@@ -3,7 +3,7 @@
     margin-top: rem(84);
     width: 100%;
     @include tabletLg {
-        display: none;
+        display: none !important;
     }
     .nav {
         position: relative;

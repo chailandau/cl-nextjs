@@ -1,5 +1,5 @@
 .desktop-footer {
-    display: none;
+    display: none !important;
     position: relative;
     margin: rem(120) rem(-24) 0 rem(-24);
     padding: rem(12) rem(24);
@@ -8,7 +8,7 @@
     flex: 1;
     @include boxShadow(color(common, 'primary'));
     @include tabletLg {
-        display: flex;
+        display: flex !important;
     }
     .nav {
         ul {
