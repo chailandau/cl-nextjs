@@ -19,7 +19,7 @@ export interface ContainerProps {
     className?: string | undefined;
     /** `onClick` event */
     onClick?: () => void;
-    /** `ref */
+    /** `Forwarded ref */
     ref?: Ref<never>;
     /** Aria label */
     ariaLabel?: string;
