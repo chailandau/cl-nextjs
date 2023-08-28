@@ -79,7 +79,7 @@ exports[`Header Menu matches snapshot 1`] = `
   >
     <li>
       <a
-        class="link underline menu-link"
+        class="link menu-link"
         href="/"
         rel=""
         target=""
@@ -98,7 +98,7 @@ exports[`Header Menu matches snapshot 1`] = `
     </li>
     <li>
       <a
-        class="link underline menu-link"
+        class="link menu-link"
         href="/about"
         rel=""
         target=""
@@ -117,7 +117,7 @@ exports[`Header Menu matches snapshot 1`] = `
     </li>
     <li>
       <a
-        class="link underline menu-link"
+        class="link menu-link"
         href="/contact"
         rel=""
         target=""
@@ -149,7 +149,7 @@ exports[`Header Mobile Nav matches snapshot 1`] = `
     >
       <li>
         <a
-          class="link underline menu-link"
+          class="link menu-link"
           href="/"
           rel=""
           target=""
@@ -168,7 +168,7 @@ exports[`Header Mobile Nav matches snapshot 1`] = `
       </li>
       <li>
         <a
-          class="link underline menu-link"
+          class="link menu-link"
           href="/about"
           rel=""
           target=""
@@ -187,7 +187,7 @@ exports[`Header Mobile Nav matches snapshot 1`] = `
       </li>
       <li>
         <a
-          class="link underline menu-link"
+          class="link menu-link"
           href="/contact"
           rel=""
           target=""

@@ -5,6 +5,8 @@ import { graphql } from 'graphql';
 import * as graphqlQueries from '../graphqlQueries';
 import * as graphqlSchema from '../graphqlSchema.gql';
 
+import { mockDefaults } from '@/__mocks__/graphqlQueries.mock';
+
 describe('graphqlQueries', () => {
     const queries = {
         ...graphqlQueries
@@ -15,7 +17,8 @@ describe('graphqlQueries', () => {
             const schema = makeExecutableSchema({ typeDefs: graphqlSchema });
 
             const schemaWithMocks = addMocksToSchema({
-                schema
+                schema,
+                mocks: mockDefaults
             });
 
             const result = await graphql({
