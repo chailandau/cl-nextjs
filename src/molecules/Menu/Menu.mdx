@@ -1,0 +1,31 @@
+import { ArgTypes, Canvas, Meta } from '@storybook/blocks';
+
+import * as MenuStories from './Menu.stories';
+
+<Meta of={MenuStories} />
+
+# Menu Molecule
+
+The `Menu` molecule is primarily used in the [Header](?path=/docs/components-header--docs) and `Footer` components. It contains a list of navigation [Link](?path=/docs/atoms-link--docs)s.
+
+<Canvas of={MenuStories.Default} />
+
+## menuItems
+
+List of navigation links to display.
+
+## icon
+
+Add an optional arrow icon. Defaults to `false`.
+
+## className
+
+Add an optional CSS class name.
+
+<br />
+<br />
+<br />
+
+### Props Table
+
+<ArgTypes />

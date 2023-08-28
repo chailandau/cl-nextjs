@@ -9,7 +9,7 @@ import { Nav_MenuItems } from '@/api/graphqlTypes';
 import Logo from '@/assets/svg/Logo.svg';
 import Image from '@/atoms/Image';
 import Link from '@/atoms/Link';
-import { DesktopNav, MobileNav } from '@/components/Nav';
+import { DesktopNav, MobileNav } from '@/components/Header/Nav';
 import Flex from '@/molecules/Flex';
 import { MenuToggle } from '@/molecules/Menu';
 import Section from '@/molecules/Section';

@@ -87,11 +87,11 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        background-color: color(common, 'white');
-        @include borderRadius;
+        top: rem(6);
+        left: rem(6);
+        z-index: 0;
+        background-color: color(common, 'black');
+        @include borderRadius(10);
     }
     &:after {
         display: block;
@@ -99,11 +99,11 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        top: rem(6);
-        left: rem(6);
-        z-index: -2;
-        background-color: color(common, 'black');
-        @include borderRadius(10);
+        top: 0;
+        left: 0;
+        z-index: 0;
+        background-color: color(common, 'white');
+        @include borderRadius;
     }
 }
 

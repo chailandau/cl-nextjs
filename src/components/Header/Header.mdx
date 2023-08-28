@@ -1,0 +1,23 @@
+import { ArgTypes, Canvas, Meta } from '@storybook/blocks';
+
+import * as HeaderStories from './Header.stories';
+
+<Meta of={HeaderStories} />
+
+# Header Component
+
+The `Header` component is on every page. It contains the logo along with the main navigation (using the [Menu](?path=/docs/molecules-menu--docs) molecule).
+
+<Canvas of={HeaderStories.Default} />
+
+## menuItems
+
+List of navigation links to display.
+
+<br />
+<br />
+<br />
+
+### Props Table
+
+<ArgTypes />
