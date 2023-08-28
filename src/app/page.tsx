@@ -11,7 +11,7 @@ export default async function Home() {
 
     return (
         <main className={styles.main}>
-            {Nav?.menuItems && <Header menuItems={Nav?.menuItems} />}
+            {Nav?.menuItems && <Header menuItems={Nav.menuItems} />}
         </main>
     );
 }
