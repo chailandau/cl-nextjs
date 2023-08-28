@@ -9,8 +9,7 @@ const preview: Preview = {
             <html
                 style={{
                     padding: '40px',
-                    margin: '-40px',
-                    borderRadius: '8px'
+                    margin: '-40px'
                 }}
             >
                 <Story />
