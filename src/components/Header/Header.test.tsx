@@ -12,31 +12,22 @@ describe('Header', () => {
     describe('Menu', () => {
         it('renders menu items correctly', () => {
             render(<Menu menuItems={menuItems} />);
-
             const menuItemsElements = screen.getAllByRole('listitem');
-
             expect(menuItemsElements).toHaveLength(3);
         });
         it('returns null if page in menuItems is null', () => {
             render(<Menu menuItems={menuItemsNullPage} />);
-
-            screen.debug();
             expect(screen.queryByRole('listitem')).toBeNull();
         });
-
         testAxeAndSnapshot({ component: <Menu menuItems={menuItems} /> });
     });
     describe('Menu Toggle', () => {
         it('opens navigation on click', async () => {
             const header = render(<Header menuItems={menuItems} />);
-
             const menuToggle = await header.findByLabelText('menu toggle');
-
             fireEvent.click(menuToggle);
-
             expect(menuToggle).toHaveClass('open');
         });
-
         testAxeAndSnapshot({ component: <MenuToggle /> });
     });
     describe('Mobile Nav', () => {
@@ -51,12 +42,10 @@ describe('Header', () => {
             act(() => {
                 mockIsLaptop(true);
             });
-
             expect(await screen.findByRole('navigation')).not.toHaveClass(
                 'mobile-nav'
             );
         });
-
         testAxeAndSnapshot({ component: <MobileNav menuItems={menuItems} /> });
     });
     describe('DesktopNav', () => {
@@ -67,11 +56,9 @@ describe('Header', () => {
                 mockIsLaptop(true);
             });
         });
-
         it('renders correctly', () => {
             expect(screen.getByRole('navigation')).toBeInTheDocument();
         });
-
         testAxeAndSnapshot({ component: DesktopNavEl });
     });
 });
