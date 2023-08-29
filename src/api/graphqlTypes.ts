@@ -573,6 +573,14 @@ export type HeroIconArgs = {
     where?: InputMaybe<Hero_Icon_Where>;
 };
 
+export type HeroBlock = {
+    __typename?: 'HeroBlock';
+    blockName?: Maybe<Scalars['String']['output']>;
+    blockType?: Maybe<Scalars['String']['output']>;
+    hero?: Maybe<Hero>;
+    id?: Maybe<Scalars['String']['output']>;
+};
+
 export type Hero_Icon_Alt_Operator = {
     all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     contains?: InputMaybe<Scalars['String']['input']>;
@@ -4741,10 +4749,13 @@ export type Page = {
     __typename?: 'Page';
     createdAt?: Maybe<Scalars['DateTime']['output']>;
     id?: Maybe<Scalars['String']['output']>;
+    sections?: Maybe<Array<Page_Sections>>;
     slug?: Maybe<Scalars['String']['output']>;
     title?: Maybe<Scalars['String']['output']>;
     updatedAt?: Maybe<Scalars['DateTime']['output']>;
 };
+
+export type Page_Sections = HeroBlock;
 
 export type Page_CreatedAt_Operator = {
     equals?: InputMaybe<Scalars['DateTime']['input']>;
@@ -4869,6 +4880,7 @@ export type PagesDeleteDocAccess = {
 export type PagesDocAccessFields = {
     __typename?: 'PagesDocAccessFields';
     createdAt?: Maybe<PagesDocAccessFields_CreatedAt>;
+    sections?: Maybe<PagesDocAccessFields_Sections>;
     slug?: Maybe<PagesDocAccessFields_Slug>;
     title?: Maybe<PagesDocAccessFields_Title>;
     updatedAt?: Maybe<PagesDocAccessFields_UpdatedAt>;
@@ -4899,6 +4911,34 @@ export type PagesDocAccessFields_CreatedAt_Read = {
 
 export type PagesDocAccessFields_CreatedAt_Update = {
     __typename?: 'PagesDocAccessFields_createdAt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type PagesDocAccessFields_Sections = {
+    __typename?: 'PagesDocAccessFields_sections';
+    create?: Maybe<PagesDocAccessFields_Sections_Create>;
+    delete?: Maybe<PagesDocAccessFields_Sections_Delete>;
+    read?: Maybe<PagesDocAccessFields_Sections_Read>;
+    update?: Maybe<PagesDocAccessFields_Sections_Update>;
+};
+
+export type PagesDocAccessFields_Sections_Create = {
+    __typename?: 'PagesDocAccessFields_sections_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type PagesDocAccessFields_Sections_Delete = {
+    __typename?: 'PagesDocAccessFields_sections_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type PagesDocAccessFields_Sections_Read = {
+    __typename?: 'PagesDocAccessFields_sections_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type PagesDocAccessFields_Sections_Update = {
+    __typename?: 'PagesDocAccessFields_sections_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -4989,6 +5029,7 @@ export type PagesDocAccessFields_UpdatedAt_Update = {
 export type PagesFields = {
     __typename?: 'PagesFields';
     createdAt?: Maybe<PagesFields_CreatedAt>;
+    sections?: Maybe<PagesFields_Sections>;
     slug?: Maybe<PagesFields_Slug>;
     title?: Maybe<PagesFields_Title>;
     updatedAt?: Maybe<PagesFields_UpdatedAt>;
@@ -5019,6 +5060,34 @@ export type PagesFields_CreatedAt_Read = {
 
 export type PagesFields_CreatedAt_Update = {
     __typename?: 'PagesFields_createdAt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type PagesFields_Sections = {
+    __typename?: 'PagesFields_sections';
+    create?: Maybe<PagesFields_Sections_Create>;
+    delete?: Maybe<PagesFields_Sections_Delete>;
+    read?: Maybe<PagesFields_Sections_Read>;
+    update?: Maybe<PagesFields_Sections_Update>;
+};
+
+export type PagesFields_Sections_Create = {
+    __typename?: 'PagesFields_sections_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type PagesFields_Sections_Delete = {
+    __typename?: 'PagesFields_sections_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type PagesFields_Sections_Read = {
+    __typename?: 'PagesFields_sections_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type PagesFields_Sections_Update = {
+    __typename?: 'PagesFields_sections_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -9953,6 +10022,7 @@ export type MutationNav_MenuItemsInput = {
 
 export type MutationPageInput = {
     createdAt?: InputMaybe<Scalars['String']['input']>;
+    sections?: InputMaybe<Scalars['JSON']['input']>;
     slug?: InputMaybe<Scalars['String']['input']>;
     title?: InputMaybe<Scalars['String']['input']>;
     updatedAt?: InputMaybe<Scalars['String']['input']>;
@@ -9960,6 +10030,7 @@ export type MutationPageInput = {
 
 export type MutationPageUpdateInput = {
     createdAt?: InputMaybe<Scalars['String']['input']>;
+    sections?: InputMaybe<Scalars['JSON']['input']>;
     slug?: InputMaybe<Scalars['String']['input']>;
     title?: InputMaybe<Scalars['String']['input']>;
     updatedAt?: InputMaybe<Scalars['String']['input']>;

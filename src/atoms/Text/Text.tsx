@@ -13,10 +13,23 @@ interface TextProps {
     children: string | ReactNode;
     /** Text size */
     size?: (typeof textSizes)[number];
+    /** Background block color */
+    backgroundColor?: string;
 }
 
-const Text: FC<TextProps> = ({ as: TextTag = 'p', size = 'sm', children }) => {
-    const classList = classNames(styles['text'], styles[size]);
+export const backgroundColors = ['green', 'white', 'pink'] as const;
+
+const Text: FC<TextProps> = ({
+    as: TextTag = 'p',
+    backgroundColor,
+    size = 'sm',
+    children
+}) => {
+    const classList = classNames(
+        styles['text'],
+        styles[size],
+        backgroundColor && styles[backgroundColor]
+    );
 
     return <TextTag className={classList}>{children}</TextTag>;
 };
