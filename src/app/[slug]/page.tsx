@@ -11,14 +11,19 @@ type Params = {
 export const generateStaticParams = async () => {
     const { Pages } = await getData(SLUG_QUERY);
 
-    // Pages.docs?.map((doc) => console.log(doc?.id));
+    if (!Pages?.docs || Pages.docs.length === 0) {
+        return [];
+    }
 
-    return Pages?.docs?.map((doc) => ({
-        params: {
-            slug: doc?.slug
-        }
-    }));
+    return Pages.docs
+        .filter((doc) => typeof doc?.slug === 'string')
+        .map((doc) => ({
+            params: {
+                slug: doc?.slug
+            }
+        }));
 };
+
 const NextPage = async ({ params: { slug } }: Params) => <Page slug={slug} />;
 
 export default NextPage;
