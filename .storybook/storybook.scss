@@ -1,4 +1,7 @@
 html {
+    max-width: unset;
+    padding: unset;
+    margin: unset;
     &:before {
         display: none;
     }
@@ -13,5 +16,6 @@ html {
 .docs-story {
     & > div {
         padding: 0;
+        overflow: hidden;
     }
 }

@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="flex section hero"
+  >
+    <div
+      class="flex icon"
+    >
+      <div
+        class="flex container"
+      >
+        <img
+          alt="Waving hand emoji"
+          data-nimg="1"
+          decoding="async"
+          height="64"
+          loading="lazy"
+          src="/_next/image?url=http%3A%2F%2Flocalhost%3A3000%2Ficons%2Fwave.png&w=128&q=75"
+          srcset="/_next/image?url=http%3A%2F%2Flocalhost%3A3000%2Ficons%2Fwave.png&w=64&q=75 1x, /_next/image?url=http%3A%2F%2Flocalhost%3A3000%2Ficons%2Fwave.png&w=128&q=75 2x"
+          style="color: transparent;"
+          width="64"
+        />
+      </div>
+    </div>
+    <h1
+      class="heading xl primary"
+    >
+      Hi, I’m  Chai.
+    </h1>
+    <div
+      class="flex subhead"
+    >
+      <span
+        class="text sm secondary"
+      >
+        I’m a 
+      </span>
+      <span
+        class="text sm bg-aqua secondary"
+      >
+        designer-turned-engineer
+      </span>
+      <span
+        class="text sm secondary"
+      >
+         obsessed with 
+      </span>
+      <span
+        class="text sm bg-white secondary"
+      >
+        accessibility
+      </span>
+      <span
+        class="text sm secondary"
+      >
+         and 
+      </span>
+      <span
+        class="text sm bg-pink secondary"
+      >
+        user experience.
+      </span>
+    </div>
+    <a
+      class="link underline cta"
+      href="/about"
+      rel=""
+      target=""
+    >
+      <span
+        class="link-text"
+      >
+        learn more
+      </span>
+      <span
+        class="link-icon"
+      >
+        &gt;
+      </span>
+    </a>
+  </section>
+</DocumentFragment>
+`;

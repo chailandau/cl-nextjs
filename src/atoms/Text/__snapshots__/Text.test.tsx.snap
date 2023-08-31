@@ -3,7 +3,7 @@
 exports[`Text matches snapshot 1`] = `
 <DocumentFragment>
   <p
-    class="text sm"
+    class="text sm primary"
   >
     This is default text (small).
   </p>

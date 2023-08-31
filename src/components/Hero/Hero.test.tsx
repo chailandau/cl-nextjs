@@ -1,67 +1,32 @@
 import { composeStory } from '@storybook/react';
-import { act, fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
-import HeaderMeta, { Default as HeaderDefault } from './Hero.stories';
+import Meta, { Default } from './Hero.stories';
 
-import { menuItems, menuItemsNullPage } from '@/__mocks__/Header.mock';
-import { mockIsTabletLg } from '@/__mocks__/useMediaQuery.mock';
-import { DesktopNav, MobileNav } from '@/components/Header/Nav';
-import { Menu, MenuToggle } from '@/molecules/Menu';
 import { testAxeAndSnapshot } from '@/utils/testHelpers';
 
-const Header = composeStory(HeaderDefault, HeaderMeta);
+const Hero = composeStory(Default, Meta);
 
-describe('Header', () => {
-    describe('Menu', () => {
-        it('renders menu items correctly', () => {
-            render(<Menu menuItems={menuItems} />);
-            const menuItemsElements = screen.getAllByRole('listitem');
-            expect(menuItemsElements).toHaveLength(3);
-        });
-        it('returns null if page in menuItems is null', () => {
-            render(<Menu menuItems={menuItemsNullPage} />);
-            expect(screen.queryByRole('listitem')).toBeNull();
-        });
-        testAxeAndSnapshot({ component: <Menu menuItems={menuItems} /> });
+const HeroComponent = {
+    component: <Hero />
+};
+
+describe('Hero', () => {
+    it('defaults correctly', () => {
+        render(
+            <Hero
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
+                icon={{
+                    url: 'https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                }}
+                cta={{
+                    linkType: 'external'
+                }}
+            />
+        );
+        expect(screen.getByRole('img')).toHaveAttribute('alt', '');
+        expect(screen.getByRole('link')).toHaveAttribute('href', '');
     });
-    describe('Menu Toggle', () => {
-        it('opens navigation on click', async () => {
-            const header = render(<Header />);
-            const menuToggle = await header.findByLabelText('menu toggle');
-            fireEvent.click(menuToggle);
-            expect(menuToggle).toHaveClass('open');
-        });
-        testAxeAndSnapshot({ component: <MenuToggle /> });
-    });
-    describe('Mobile Nav', () => {
-        beforeEach(async () => {
-            act(() => {
-                mockIsTabletLg(false);
-            });
-            render(<Header />);
-            fireEvent.click(await screen.findByLabelText('menu toggle'));
-        });
-        it('removes mobile nav when isTabletLg is true', async () => {
-            act(() => {
-                mockIsTabletLg(true);
-            });
-            expect(await screen.findByRole('navigation')).not.toHaveClass(
-                'mobile-nav'
-            );
-        });
-        testAxeAndSnapshot({ component: <MobileNav menuItems={menuItems} /> });
-    });
-    describe('DesktopNav', () => {
-        const DesktopNavEl = <DesktopNav menuItems={menuItems} />;
-        beforeEach(() => {
-            render(DesktopNavEl);
-            act(() => {
-                mockIsTabletLg(true);
-            });
-        });
-        it('renders correctly', () => {
-            expect(screen.getByRole('navigation')).toBeInTheDocument();
-        });
-        testAxeAndSnapshot({ component: DesktopNavEl });
-    });
+    testAxeAndSnapshot(HeroComponent);
 });
