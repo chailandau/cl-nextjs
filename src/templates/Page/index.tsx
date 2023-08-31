@@ -23,8 +23,6 @@ const Page: FC<PageProps> = async ({ slug }) => {
     }
 
     return <RenderComponents components={sections} />;
-
-    // return <>{slug}</>;
 };
 
 export default Page;

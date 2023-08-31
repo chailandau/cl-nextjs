@@ -8,9 +8,9 @@ interface Sections {
 }
 
 const RenderComponents: FC<Sections> = ({ components }) => {
-    // if (!components || !components.length) {
-    //     return null;
-    // }
+    if (!components || !components.length) {
+        return null;
+    }
     const renderComponent = (component: Page_Sections) => {
         if (component?.hero) {
             return <Hero {...component?.hero} />;

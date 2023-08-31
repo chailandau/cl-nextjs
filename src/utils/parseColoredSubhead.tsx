@@ -31,14 +31,14 @@ export const parseColoredSubhead = (
     return coloredSubhead.flatMap((segment) => {
         const boldIndexes: number[] = [];
 
-        return segment.children.map((child, index) => {
-            const isBold = child.bold;
+        return segment?.children?.map((child, index) => {
+            const isBold = child?.bold;
             let textBgColor;
 
             if (isBold) {
                 boldIndexes.push(index);
-                const position = boldIndexes.indexOf(index);
-                textBgColor = colors[position % colors.length];
+                const position = boldIndexes?.indexOf(index);
+                textBgColor = colors[position % colors?.length];
             }
 
             const textProps = {
@@ -50,7 +50,7 @@ export const parseColoredSubhead = (
 
             return (
                 <Text key={index} {...textProps}>
-                    {child.text}
+                    {child?.text}
                 </Text>
             );
         });
