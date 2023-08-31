@@ -1,0 +1,17 @@
+html {
+    &:before {
+        display: none;
+    }
+}
+.preview {
+    padding: 20px;
+    &:before {
+        display: block;
+    }
+}
+
+.docs-story {
+    & > div {
+        padding: 0;
+    }
+}

@@ -17,6 +17,29 @@ export const PAGES_QUERY = gql`
     }
 `;
 
+export const PAGE_CONTENT_QUERY = gql`
+    query PageContentQuery($slug: String!) {
+        Pages(where:{ slug: { equals: $slug }}) {
+            docs {
+                id
+                slug
+                title
+                sections {
+                    ${HERO_FRAGMENT}
+                }}
+        }
+    }`;
+
+export const SLUG_QUERY = gql`
+    query PagesQuery {
+        Pages {
+            docs {
+                slug
+            }
+        }
+    }
+`;
+
 export const NAV_QUERY = gql`
     query NavQuery  {
             Nav {

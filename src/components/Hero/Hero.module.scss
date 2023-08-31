@@ -1,0 +1,12 @@
+.hero {
+    margin: rem(48) 0 rem(64);
+    .icon {
+        width: rem(64);
+        margin-bottom: rem(32);
+    }
+    .subhead {
+        margin-top: rem(32);
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}

@@ -24,4 +24,30 @@
             @include font(32, 66);
         }
     }
+    &.primary {
+        @include font-ibm-plex-mono;
+    }
+    &.secondary {
+        @include font-inter-md;
+    }
+    &.bg {
+        &-aqua,
+        &-white,
+        &-pink {
+            position: relative;
+            display: inline-block;
+            padding: rem(2) rem(8);
+            margin: rem(8) rem(10) rem(8) rem(6);
+            line-height: rem(24);
+        }
+        &-aqua {
+            @include boxShadow(color(pastel, 'aqua'));
+        }
+        &-white {
+            @include boxShadow(color(common, 'white'));
+        }
+        &-pink {
+            @include boxShadow(color(pastel, 'pink'));
+        }
+    }
 }

@@ -1,17 +1,13 @@
 import '../src/assets/fonts/fonts.css';
 import '../src/styles/main.scss';
+import './storybook.scss';
 
 import type { Preview } from '@storybook/react';
 
 const preview: Preview = {
     decorators: [
         (Story) => (
-            <html
-                style={{
-                    padding: '40px',
-                    margin: '-40px'
-                }}
-            >
+            <html className='preview'>
                 <Story />
             </html>
         )
