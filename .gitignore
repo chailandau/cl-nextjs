@@ -7,6 +7,10 @@
 
 # testing
 /coverage
+/.loki/diff
+/.loki/difference
+/.loki/current
+/.loki/report.json
 
 # next.js
 /.next/
