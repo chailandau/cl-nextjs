@@ -5,6 +5,7 @@ on:
 
 env:
     NEXT_PUBLIC_BASE_PAYLOAD_URL: '${{ secrets.NEXT_PUBLIC_BASE_PAYLOAD_URL }}'
+    NEXT_PUBLIC_BASE_URL: '${{ secrets.NEXT_PUBLIC_BASE_URL }}'
 
 permissions:
     pull-requests: write
