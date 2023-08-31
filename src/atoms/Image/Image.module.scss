@@ -1,7 +1,7 @@
 .container {
     width: 100%;
     height: auto;
-    z-index: 1;
+    @include transition(width);
     img {
         position: relative !important;
         object-fit: contain;

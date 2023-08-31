@@ -1,14 +1,16 @@
 html {
-    margin: rem(10);
+    max-width: rem(1000);
+    padding: rem(24) rem(20);
+    margin: auto;
     @include font-ibm-plex-mono;
     color: color(common, 'black');
 
     &:before {
         display: block;
         content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
         top: 0;
         left: 0;
         z-index: -1;
