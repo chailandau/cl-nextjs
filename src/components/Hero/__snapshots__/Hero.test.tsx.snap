@@ -17,8 +17,8 @@ exports[`Hero matches snapshot 1`] = `
           decoding="async"
           height="64"
           loading="lazy"
-          src="/_next/image?url=http%3A%2F%2Flocalhost%3A3000%2Ficons%2Fwave.png&w=128&q=75"
-          srcset="/_next/image?url=http%3A%2F%2Flocalhost%3A3000%2Ficons%2Fwave.png&w=64&q=75 1x, /_next/image?url=http%3A%2F%2Flocalhost%3A3000%2Ficons%2Fwave.png&w=128&q=75 2x"
+          src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fwave.png&w=128&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fwave.png&w=64&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fwave.png&w=128&q=75 2x"
           style="color: transparent;"
           width="64"
         />
