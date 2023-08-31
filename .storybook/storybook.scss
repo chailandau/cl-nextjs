@@ -7,7 +7,7 @@ html {
     }
 }
 .preview {
-    padding: 20px;
+    padding: rem(20);
     &:before {
         display: block;
     }
