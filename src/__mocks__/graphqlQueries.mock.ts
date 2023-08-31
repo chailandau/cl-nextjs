@@ -5,5 +5,6 @@ export const mockDefaults = {
     Icon: () => ({
         width: () => 64,
         height: () => 64
-    })
+    }),
+    Cta_linkType: () => 'internal'
 };
