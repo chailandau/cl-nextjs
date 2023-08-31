@@ -55,7 +55,7 @@ export const Default: Story = {
         heading: 'Hi, I’m  Chai.',
         icon: {
             alt: 'Waving hand emoji',
-            url: 'http://localhost:3000/icons/wave.png'
+            url: 'https://cl-payload.cr.chailandau.com/icons/wave.png'
         },
         coloredSubhead,
         cta: {
