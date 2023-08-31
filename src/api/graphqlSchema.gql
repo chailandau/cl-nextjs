@@ -6,6 +6,7 @@ schema {
 type Access {
   canAccessAdmin: Boolean!
   case_study_listing: case_study_listingAccess
+  ctas: ctasAccess
   heroes: heroesAccess
   icons: iconsAccess
   images: imagesAccess
@@ -472,6 +473,590 @@ input CaseStudyListing_Icon_width_operator {
   not_equals: Float
 }
 
+type Cta {
+  createdAt: DateTime
+  externalLink: String
+  fullTitle: String
+  id: String
+  internalLink: Page
+  label: String
+  linkType: Cta_linkType
+  updatedAt: DateTime
+}
+
+input Cta_createdAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input Cta_externalLink_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Cta_fullTitle_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Cta_id_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Cta_internalLink_operator {
+  all: [String]
+  equals: String
+  exists: Boolean
+  in: [String]
+  not_equals: String
+  not_in: [String]
+}
+
+input Cta_label_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+enum Cta_linkType {
+  external
+  internal
+}
+
+enum Cta_linkType_Input {
+  external
+  internal
+}
+
+input Cta_linkType_operator {
+  all: [Cta_linkType_Input]
+  equals: Cta_linkType_Input
+  exists: Boolean
+  in: [Cta_linkType_Input]
+  not_equals: Cta_linkType_Input
+  not_in: [Cta_linkType_Input]
+}
+
+input Cta_updatedAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input Cta_where {
+  AND: [Cta_where_and]
+  OR: [Cta_where_or]
+  createdAt: Cta_createdAt_operator
+  externalLink: Cta_externalLink_operator
+  fullTitle: Cta_fullTitle_operator
+  id: Cta_id_operator
+  internalLink: Cta_internalLink_operator
+  label: Cta_label_operator
+  linkType: Cta_linkType_operator
+  updatedAt: Cta_updatedAt_operator
+}
+
+input Cta_where_and {
+  createdAt: Cta_createdAt_operator
+  externalLink: Cta_externalLink_operator
+  fullTitle: Cta_fullTitle_operator
+  id: Cta_id_operator
+  internalLink: Cta_internalLink_operator
+  label: Cta_label_operator
+  linkType: Cta_linkType_operator
+  updatedAt: Cta_updatedAt_operator
+}
+
+input Cta_where_or {
+  createdAt: Cta_createdAt_operator
+  externalLink: Cta_externalLink_operator
+  fullTitle: Cta_fullTitle_operator
+  id: Cta_id_operator
+  internalLink: Cta_internalLink_operator
+  label: Cta_label_operator
+  linkType: Cta_linkType_operator
+  updatedAt: Cta_updatedAt_operator
+}
+
+type Ctas {
+  docs: [Cta]
+  hasNextPage: Boolean
+  hasPrevPage: Boolean
+  limit: Int
+  nextPage: Int
+  offset: Int
+  page: Int
+  pagingCounter: Int
+  prevPage: Int
+  totalDocs: Int
+  totalPages: Int
+}
+
+type CtasCreateAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type CtasCreateDocAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type CtasDeleteAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type CtasDeleteDocAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type CtasDocAccessFields {
+  createdAt: CtasDocAccessFields_createdAt
+  externalLink: CtasDocAccessFields_externalLink
+  fullTitle: CtasDocAccessFields_fullTitle
+  internalLink: CtasDocAccessFields_internalLink
+  label: CtasDocAccessFields_label
+  linkType: CtasDocAccessFields_linkType
+  linksTo: CtasDocAccessFields_linksTo
+  updatedAt: CtasDocAccessFields_updatedAt
+}
+
+type CtasDocAccessFields_createdAt {
+  create: CtasDocAccessFields_createdAt_Create
+  delete: CtasDocAccessFields_createdAt_Delete
+  read: CtasDocAccessFields_createdAt_Read
+  update: CtasDocAccessFields_createdAt_Update
+}
+
+type CtasDocAccessFields_createdAt_Create {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_createdAt_Delete {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_createdAt_Read {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_externalLink {
+  create: CtasDocAccessFields_externalLink_Create
+  delete: CtasDocAccessFields_externalLink_Delete
+  read: CtasDocAccessFields_externalLink_Read
+  update: CtasDocAccessFields_externalLink_Update
+}
+
+type CtasDocAccessFields_externalLink_Create {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_externalLink_Delete {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_externalLink_Read {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_externalLink_Update {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_fullTitle {
+  create: CtasDocAccessFields_fullTitle_Create
+  delete: CtasDocAccessFields_fullTitle_Delete
+  read: CtasDocAccessFields_fullTitle_Read
+  update: CtasDocAccessFields_fullTitle_Update
+}
+
+type CtasDocAccessFields_fullTitle_Create {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_fullTitle_Delete {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_fullTitle_Read {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_fullTitle_Update {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_internalLink {
+  create: CtasDocAccessFields_internalLink_Create
+  delete: CtasDocAccessFields_internalLink_Delete
+  read: CtasDocAccessFields_internalLink_Read
+  update: CtasDocAccessFields_internalLink_Update
+}
+
+type CtasDocAccessFields_internalLink_Create {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_internalLink_Delete {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_internalLink_Read {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_internalLink_Update {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_label {
+  create: CtasDocAccessFields_label_Create
+  delete: CtasDocAccessFields_label_Delete
+  read: CtasDocAccessFields_label_Read
+  update: CtasDocAccessFields_label_Update
+}
+
+type CtasDocAccessFields_label_Create {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_label_Delete {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_label_Read {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_label_Update {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_linkType {
+  create: CtasDocAccessFields_linkType_Create
+  delete: CtasDocAccessFields_linkType_Delete
+  read: CtasDocAccessFields_linkType_Read
+  update: CtasDocAccessFields_linkType_Update
+}
+
+type CtasDocAccessFields_linkType_Create {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_linkType_Delete {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_linkType_Read {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_linkType_Update {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_linksTo {
+  create: CtasDocAccessFields_linksTo_Create
+  delete: CtasDocAccessFields_linksTo_Delete
+  read: CtasDocAccessFields_linksTo_Read
+  update: CtasDocAccessFields_linksTo_Update
+}
+
+type CtasDocAccessFields_linksTo_Create {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_linksTo_Delete {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_linksTo_Read {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_linksTo_Update {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_updatedAt {
+  create: CtasDocAccessFields_updatedAt_Create
+  delete: CtasDocAccessFields_updatedAt_Delete
+  read: CtasDocAccessFields_updatedAt_Read
+  update: CtasDocAccessFields_updatedAt_Update
+}
+
+type CtasDocAccessFields_updatedAt_Create {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_updatedAt_Delete {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_updatedAt_Read {
+  permission: Boolean!
+}
+
+type CtasDocAccessFields_updatedAt_Update {
+  permission: Boolean!
+}
+
+type CtasFields {
+  createdAt: CtasFields_createdAt
+  externalLink: CtasFields_externalLink
+  fullTitle: CtasFields_fullTitle
+  internalLink: CtasFields_internalLink
+  label: CtasFields_label
+  linkType: CtasFields_linkType
+  linksTo: CtasFields_linksTo
+  updatedAt: CtasFields_updatedAt
+}
+
+type CtasFields_createdAt {
+  create: CtasFields_createdAt_Create
+  delete: CtasFields_createdAt_Delete
+  read: CtasFields_createdAt_Read
+  update: CtasFields_createdAt_Update
+}
+
+type CtasFields_createdAt_Create {
+  permission: Boolean!
+}
+
+type CtasFields_createdAt_Delete {
+  permission: Boolean!
+}
+
+type CtasFields_createdAt_Read {
+  permission: Boolean!
+}
+
+type CtasFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type CtasFields_externalLink {
+  create: CtasFields_externalLink_Create
+  delete: CtasFields_externalLink_Delete
+  read: CtasFields_externalLink_Read
+  update: CtasFields_externalLink_Update
+}
+
+type CtasFields_externalLink_Create {
+  permission: Boolean!
+}
+
+type CtasFields_externalLink_Delete {
+  permission: Boolean!
+}
+
+type CtasFields_externalLink_Read {
+  permission: Boolean!
+}
+
+type CtasFields_externalLink_Update {
+  permission: Boolean!
+}
+
+type CtasFields_fullTitle {
+  create: CtasFields_fullTitle_Create
+  delete: CtasFields_fullTitle_Delete
+  read: CtasFields_fullTitle_Read
+  update: CtasFields_fullTitle_Update
+}
+
+type CtasFields_fullTitle_Create {
+  permission: Boolean!
+}
+
+type CtasFields_fullTitle_Delete {
+  permission: Boolean!
+}
+
+type CtasFields_fullTitle_Read {
+  permission: Boolean!
+}
+
+type CtasFields_fullTitle_Update {
+  permission: Boolean!
+}
+
+type CtasFields_internalLink {
+  create: CtasFields_internalLink_Create
+  delete: CtasFields_internalLink_Delete
+  read: CtasFields_internalLink_Read
+  update: CtasFields_internalLink_Update
+}
+
+type CtasFields_internalLink_Create {
+  permission: Boolean!
+}
+
+type CtasFields_internalLink_Delete {
+  permission: Boolean!
+}
+
+type CtasFields_internalLink_Read {
+  permission: Boolean!
+}
+
+type CtasFields_internalLink_Update {
+  permission: Boolean!
+}
+
+type CtasFields_label {
+  create: CtasFields_label_Create
+  delete: CtasFields_label_Delete
+  read: CtasFields_label_Read
+  update: CtasFields_label_Update
+}
+
+type CtasFields_label_Create {
+  permission: Boolean!
+}
+
+type CtasFields_label_Delete {
+  permission: Boolean!
+}
+
+type CtasFields_label_Read {
+  permission: Boolean!
+}
+
+type CtasFields_label_Update {
+  permission: Boolean!
+}
+
+type CtasFields_linkType {
+  create: CtasFields_linkType_Create
+  delete: CtasFields_linkType_Delete
+  read: CtasFields_linkType_Read
+  update: CtasFields_linkType_Update
+}
+
+type CtasFields_linkType_Create {
+  permission: Boolean!
+}
+
+type CtasFields_linkType_Delete {
+  permission: Boolean!
+}
+
+type CtasFields_linkType_Read {
+  permission: Boolean!
+}
+
+type CtasFields_linkType_Update {
+  permission: Boolean!
+}
+
+type CtasFields_linksTo {
+  create: CtasFields_linksTo_Create
+  delete: CtasFields_linksTo_Delete
+  read: CtasFields_linksTo_Read
+  update: CtasFields_linksTo_Update
+}
+
+type CtasFields_linksTo_Create {
+  permission: Boolean!
+}
+
+type CtasFields_linksTo_Delete {
+  permission: Boolean!
+}
+
+type CtasFields_linksTo_Read {
+  permission: Boolean!
+}
+
+type CtasFields_linksTo_Update {
+  permission: Boolean!
+}
+
+type CtasFields_updatedAt {
+  create: CtasFields_updatedAt_Create
+  delete: CtasFields_updatedAt_Delete
+  read: CtasFields_updatedAt_Read
+  update: CtasFields_updatedAt_Update
+}
+
+type CtasFields_updatedAt_Create {
+  permission: Boolean!
+}
+
+type CtasFields_updatedAt_Delete {
+  permission: Boolean!
+}
+
+type CtasFields_updatedAt_Read {
+  permission: Boolean!
+}
+
+type CtasFields_updatedAt_Update {
+  permission: Boolean!
+}
+
+type CtasReadAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type CtasReadDocAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type CtasUpdateAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type CtasUpdateDocAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
 """
 A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar.
 """
@@ -485,6 +1070,7 @@ scalar EmailAddress
 type Hero {
   coloredSubhead(depth: Int): JSON
   createdAt: DateTime
+  cta: Cta
   heading: String!
   headingTag: String!
   icon(where: Hero_Icon_where): Icon
@@ -746,6 +1332,15 @@ input Hero_createdAt_operator {
   not_equals: DateTime
 }
 
+input Hero_cta_operator {
+  all: [String]
+  equals: String
+  exists: Boolean
+  in: [String]
+  not_equals: String
+  not_in: [String]
+}
+
 input Hero_headingTag_operator {
   all: [String]
   contains: String
@@ -799,6 +1394,7 @@ input Hero_where {
   OR: [Hero_where_or]
   coloredSubhead: Hero_coloredSubhead_operator
   createdAt: Hero_createdAt_operator
+  cta: Hero_cta_operator
   heading: Hero_heading_operator
   headingTag: Hero_headingTag_operator
   icon: Hero_icon_operator
@@ -809,6 +1405,7 @@ input Hero_where {
 input Hero_where_and {
   coloredSubhead: Hero_coloredSubhead_operator
   createdAt: Hero_createdAt_operator
+  cta: Hero_cta_operator
   heading: Hero_heading_operator
   headingTag: Hero_headingTag_operator
   icon: Hero_icon_operator
@@ -819,6 +1416,7 @@ input Hero_where_and {
 input Hero_where_or {
   coloredSubhead: Hero_coloredSubhead_operator
   createdAt: Hero_createdAt_operator
+  cta: Hero_cta_operator
   heading: Hero_heading_operator
   headingTag: Hero_headingTag_operator
   icon: Hero_icon_operator
@@ -863,6 +1461,7 @@ type HeroesDeleteDocAccess {
 type HeroesDocAccessFields {
   coloredSubhead: HeroesDocAccessFields_coloredSubhead
   createdAt: HeroesDocAccessFields_createdAt
+  cta: HeroesDocAccessFields_cta
   heading: HeroesDocAccessFields_heading
   headingTag: HeroesDocAccessFields_headingTag
   icon: HeroesDocAccessFields_icon
@@ -912,6 +1511,29 @@ type HeroesDocAccessFields_createdAt_Read {
 }
 
 type HeroesDocAccessFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_cta {
+  create: HeroesDocAccessFields_cta_Create
+  delete: HeroesDocAccessFields_cta_Delete
+  read: HeroesDocAccessFields_cta_Read
+  update: HeroesDocAccessFields_cta_Update
+}
+
+type HeroesDocAccessFields_cta_Create {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_cta_Delete {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_cta_Read {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_cta_Update {
   permission: Boolean!
 }
 
@@ -1010,6 +1632,7 @@ type HeroesDocAccessFields_updatedAt_Update {
 type HeroesFields {
   coloredSubhead: HeroesFields_coloredSubhead
   createdAt: HeroesFields_createdAt
+  cta: HeroesFields_cta
   heading: HeroesFields_heading
   headingTag: HeroesFields_headingTag
   icon: HeroesFields_icon
@@ -1059,6 +1682,29 @@ type HeroesFields_createdAt_Read {
 }
 
 type HeroesFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type HeroesFields_cta {
+  create: HeroesFields_cta_Create
+  delete: HeroesFields_cta_Delete
+  read: HeroesFields_cta_Read
+  update: HeroesFields_cta_Update
+}
+
+type HeroesFields_cta_Create {
+  permission: Boolean!
+}
+
+type HeroesFields_cta_Delete {
+  permission: Boolean!
+}
+
+type HeroesFields_cta_Read {
+  permission: Boolean!
+}
+
+type HeroesFields_cta_Update {
   permission: Boolean!
 }
 
@@ -3479,6 +4125,7 @@ The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](
 scalar JSONObject
 
 type Mutation {
+  createCta(data: mutationCtaInput!, draft: Boolean): Cta
   createHero(data: mutationHeroInput!, draft: Boolean): Hero
   createIcon(data: mutationIconInput!, draft: Boolean): Icon
   createImage(data: mutationImageInput!, draft: Boolean): Image
@@ -3487,6 +4134,7 @@ type Mutation {
   createTestimonial(data: mutationTestimonialInput!, draft: Boolean): Testimonial
   createTool(data: mutationToolInput!, draft: Boolean): Tool
   createUser(data: mutationUserInput!, draft: Boolean): User
+  deleteCta(id: String!): Cta
   deleteHero(id: String!): Hero
   deleteIcon(id: String!): Icon
   deleteImage(id: String!): Image
@@ -3503,6 +4151,7 @@ type Mutation {
   resetPasswordUser(password: String, token: String): usersResetPassword
   unlockUser(email: String!): Boolean!
   updateCaseStudyListing(data: mutationCaseStudyListingInput!, draft: Boolean): CaseStudyListing
+  updateCta(autosave: Boolean, data: mutationCtaUpdateInput!, draft: Boolean, id: String!): Cta
   updateHero(autosave: Boolean, data: mutationHeroUpdateInput!, draft: Boolean, id: String!): Hero
   updateIcon(autosave: Boolean, data: mutationIconUpdateInput!, draft: Boolean, id: String!): Icon
   updateImage(autosave: Boolean, data: mutationImageUpdateInput!, draft: Boolean, id: String!): Image
@@ -5441,6 +6090,8 @@ type ProjectsUpdateDocAccess {
 type Query {
   Access: Access
   CaseStudyListing(draft: Boolean): CaseStudyListing
+  Cta(draft: Boolean, id: String!): Cta
+  Ctas(draft: Boolean, limit: Int, page: Int, sort: String, where: Cta_where): Ctas
   Hero(draft: Boolean, id: String!): Hero
   Heroes(draft: Boolean, limit: Int, page: Int, sort: String, where: Hero_where): Heroes
   Icon(draft: Boolean, id: String!): Icon
@@ -5462,6 +6113,7 @@ type Query {
   User(draft: Boolean, id: String!): User
   Users(draft: Boolean, limit: Int, page: Int, sort: String, where: User_where): Users
   docAccessCaseStudyListing: case_study_listingDocAccess
+  docAccessCta(id: String!): ctasDocAccess
   docAccessHero(id: String!): heroesDocAccess
   docAccessIcon(id: String!): iconsDocAccess
   docAccessImage(id: String!): imagesDocAccess
@@ -8338,6 +8990,22 @@ type case_study_listingDocAccess {
   update: CaseStudyListingUpdateDocAccess
 }
 
+type ctasAccess {
+  create: CtasCreateAccess
+  delete: CtasDeleteAccess
+  fields: CtasFields
+  read: CtasReadAccess
+  update: CtasUpdateAccess
+}
+
+type ctasDocAccess {
+  create: CtasCreateDocAccess
+  delete: CtasDeleteDocAccess
+  fields: CtasDocAccessFields
+  read: CtasReadDocAccess
+  update: CtasUpdateDocAccess
+}
+
 type heroesAccess {
   create: HeroesCreateAccess
   delete: HeroesDeleteAccess
@@ -8393,9 +9061,30 @@ input mutationCaseStudyListingInput {
   updatedAt: String
 }
 
+input mutationCtaInput {
+  createdAt: String
+  externalLink: String
+  fullTitle: String
+  internalLink: String
+  label: String
+  linkType: String
+  updatedAt: String
+}
+
+input mutationCtaUpdateInput {
+  createdAt: String
+  externalLink: String
+  fullTitle: String
+  internalLink: String
+  label: String
+  linkType: String
+  updatedAt: String
+}
+
 input mutationHeroInput {
   coloredSubhead: JSON
   createdAt: String
+  cta: String
   heading: String!
   headingTag: String!
   icon: String
@@ -8405,6 +9094,7 @@ input mutationHeroInput {
 input mutationHeroUpdateInput {
   coloredSubhead: JSON
   createdAt: String
+  cta: String
   heading: String
   headingTag: String
   icon: String

@@ -37,6 +37,7 @@ export type Access = {
     __typename?: 'Access';
     canAccessAdmin: Scalars['Boolean']['output'];
     case_study_listing?: Maybe<Case_Study_ListingAccess>;
+    ctas?: Maybe<CtasAccess>;
     heroes?: Maybe<HeroesAccess>;
     icons?: Maybe<IconsAccess>;
     images?: Maybe<ImagesAccess>;
@@ -554,10 +555,684 @@ export type CaseStudyListing_Icon_Width_Operator = {
     not_equals?: InputMaybe<Scalars['Float']['input']>;
 };
 
+export type Cta = {
+    __typename?: 'Cta';
+    createdAt?: Maybe<Scalars['DateTime']['output']>;
+    externalLink?: Maybe<Scalars['String']['output']>;
+    fullTitle?: Maybe<Scalars['String']['output']>;
+    id?: Maybe<Scalars['String']['output']>;
+    internalLink?: Maybe<Page>;
+    label?: Maybe<Scalars['String']['output']>;
+    linkType?: Maybe<Cta_LinkType>;
+    updatedAt?: Maybe<Scalars['DateTime']['output']>;
+};
+
+export type Cta_CreatedAt_Operator = {
+    equals?: InputMaybe<Scalars['DateTime']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['DateTime']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    like?: InputMaybe<Scalars['DateTime']['input']>;
+    not_equals?: InputMaybe<Scalars['DateTime']['input']>;
+};
+
+export type Cta_ExternalLink_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Cta_FullTitle_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Cta_Id_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Cta_InternalLink_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Cta_Label_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Cta_LinkType = 'external' | 'internal' | '%future added value';
+
+export type Cta_LinkType_Input =
+    | 'external'
+    | 'internal'
+    | '%future added value';
+
+export type Cta_LinkType_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Cta_LinkType_Input>>>;
+    equals?: InputMaybe<Cta_LinkType_Input>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Cta_LinkType_Input>>>;
+    not_equals?: InputMaybe<Cta_LinkType_Input>;
+    not_in?: InputMaybe<Array<InputMaybe<Cta_LinkType_Input>>>;
+};
+
+export type Cta_UpdatedAt_Operator = {
+    equals?: InputMaybe<Scalars['DateTime']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['DateTime']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    like?: InputMaybe<Scalars['DateTime']['input']>;
+    not_equals?: InputMaybe<Scalars['DateTime']['input']>;
+};
+
+export type Cta_Where = {
+    AND?: InputMaybe<Array<InputMaybe<Cta_Where_And>>>;
+    OR?: InputMaybe<Array<InputMaybe<Cta_Where_Or>>>;
+    createdAt?: InputMaybe<Cta_CreatedAt_Operator>;
+    externalLink?: InputMaybe<Cta_ExternalLink_Operator>;
+    fullTitle?: InputMaybe<Cta_FullTitle_Operator>;
+    id?: InputMaybe<Cta_Id_Operator>;
+    internalLink?: InputMaybe<Cta_InternalLink_Operator>;
+    label?: InputMaybe<Cta_Label_Operator>;
+    linkType?: InputMaybe<Cta_LinkType_Operator>;
+    updatedAt?: InputMaybe<Cta_UpdatedAt_Operator>;
+};
+
+export type Cta_Where_And = {
+    createdAt?: InputMaybe<Cta_CreatedAt_Operator>;
+    externalLink?: InputMaybe<Cta_ExternalLink_Operator>;
+    fullTitle?: InputMaybe<Cta_FullTitle_Operator>;
+    id?: InputMaybe<Cta_Id_Operator>;
+    internalLink?: InputMaybe<Cta_InternalLink_Operator>;
+    label?: InputMaybe<Cta_Label_Operator>;
+    linkType?: InputMaybe<Cta_LinkType_Operator>;
+    updatedAt?: InputMaybe<Cta_UpdatedAt_Operator>;
+};
+
+export type Cta_Where_Or = {
+    createdAt?: InputMaybe<Cta_CreatedAt_Operator>;
+    externalLink?: InputMaybe<Cta_ExternalLink_Operator>;
+    fullTitle?: InputMaybe<Cta_FullTitle_Operator>;
+    id?: InputMaybe<Cta_Id_Operator>;
+    internalLink?: InputMaybe<Cta_InternalLink_Operator>;
+    label?: InputMaybe<Cta_Label_Operator>;
+    linkType?: InputMaybe<Cta_LinkType_Operator>;
+    updatedAt?: InputMaybe<Cta_UpdatedAt_Operator>;
+};
+
+export type Ctas = {
+    __typename?: 'Ctas';
+    docs?: Maybe<Array<Maybe<Cta>>>;
+    hasNextPage?: Maybe<Scalars['Boolean']['output']>;
+    hasPrevPage?: Maybe<Scalars['Boolean']['output']>;
+    limit?: Maybe<Scalars['Int']['output']>;
+    nextPage?: Maybe<Scalars['Int']['output']>;
+    offset?: Maybe<Scalars['Int']['output']>;
+    page?: Maybe<Scalars['Int']['output']>;
+    pagingCounter?: Maybe<Scalars['Int']['output']>;
+    prevPage?: Maybe<Scalars['Int']['output']>;
+    totalDocs?: Maybe<Scalars['Int']['output']>;
+    totalPages?: Maybe<Scalars['Int']['output']>;
+};
+
+export type CtasCreateAccess = {
+    __typename?: 'CtasCreateAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type CtasCreateDocAccess = {
+    __typename?: 'CtasCreateDocAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type CtasDeleteAccess = {
+    __typename?: 'CtasDeleteAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type CtasDeleteDocAccess = {
+    __typename?: 'CtasDeleteDocAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type CtasDocAccessFields = {
+    __typename?: 'CtasDocAccessFields';
+    createdAt?: Maybe<CtasDocAccessFields_CreatedAt>;
+    externalLink?: Maybe<CtasDocAccessFields_ExternalLink>;
+    fullTitle?: Maybe<CtasDocAccessFields_FullTitle>;
+    internalLink?: Maybe<CtasDocAccessFields_InternalLink>;
+    label?: Maybe<CtasDocAccessFields_Label>;
+    linkType?: Maybe<CtasDocAccessFields_LinkType>;
+    linksTo?: Maybe<CtasDocAccessFields_LinksTo>;
+    updatedAt?: Maybe<CtasDocAccessFields_UpdatedAt>;
+};
+
+export type CtasDocAccessFields_CreatedAt = {
+    __typename?: 'CtasDocAccessFields_createdAt';
+    create?: Maybe<CtasDocAccessFields_CreatedAt_Create>;
+    delete?: Maybe<CtasDocAccessFields_CreatedAt_Delete>;
+    read?: Maybe<CtasDocAccessFields_CreatedAt_Read>;
+    update?: Maybe<CtasDocAccessFields_CreatedAt_Update>;
+};
+
+export type CtasDocAccessFields_CreatedAt_Create = {
+    __typename?: 'CtasDocAccessFields_createdAt_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_CreatedAt_Delete = {
+    __typename?: 'CtasDocAccessFields_createdAt_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_CreatedAt_Read = {
+    __typename?: 'CtasDocAccessFields_createdAt_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_CreatedAt_Update = {
+    __typename?: 'CtasDocAccessFields_createdAt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_ExternalLink = {
+    __typename?: 'CtasDocAccessFields_externalLink';
+    create?: Maybe<CtasDocAccessFields_ExternalLink_Create>;
+    delete?: Maybe<CtasDocAccessFields_ExternalLink_Delete>;
+    read?: Maybe<CtasDocAccessFields_ExternalLink_Read>;
+    update?: Maybe<CtasDocAccessFields_ExternalLink_Update>;
+};
+
+export type CtasDocAccessFields_ExternalLink_Create = {
+    __typename?: 'CtasDocAccessFields_externalLink_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_ExternalLink_Delete = {
+    __typename?: 'CtasDocAccessFields_externalLink_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_ExternalLink_Read = {
+    __typename?: 'CtasDocAccessFields_externalLink_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_ExternalLink_Update = {
+    __typename?: 'CtasDocAccessFields_externalLink_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_FullTitle = {
+    __typename?: 'CtasDocAccessFields_fullTitle';
+    create?: Maybe<CtasDocAccessFields_FullTitle_Create>;
+    delete?: Maybe<CtasDocAccessFields_FullTitle_Delete>;
+    read?: Maybe<CtasDocAccessFields_FullTitle_Read>;
+    update?: Maybe<CtasDocAccessFields_FullTitle_Update>;
+};
+
+export type CtasDocAccessFields_FullTitle_Create = {
+    __typename?: 'CtasDocAccessFields_fullTitle_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_FullTitle_Delete = {
+    __typename?: 'CtasDocAccessFields_fullTitle_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_FullTitle_Read = {
+    __typename?: 'CtasDocAccessFields_fullTitle_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_FullTitle_Update = {
+    __typename?: 'CtasDocAccessFields_fullTitle_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_InternalLink = {
+    __typename?: 'CtasDocAccessFields_internalLink';
+    create?: Maybe<CtasDocAccessFields_InternalLink_Create>;
+    delete?: Maybe<CtasDocAccessFields_InternalLink_Delete>;
+    read?: Maybe<CtasDocAccessFields_InternalLink_Read>;
+    update?: Maybe<CtasDocAccessFields_InternalLink_Update>;
+};
+
+export type CtasDocAccessFields_InternalLink_Create = {
+    __typename?: 'CtasDocAccessFields_internalLink_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_InternalLink_Delete = {
+    __typename?: 'CtasDocAccessFields_internalLink_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_InternalLink_Read = {
+    __typename?: 'CtasDocAccessFields_internalLink_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_InternalLink_Update = {
+    __typename?: 'CtasDocAccessFields_internalLink_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_Label = {
+    __typename?: 'CtasDocAccessFields_label';
+    create?: Maybe<CtasDocAccessFields_Label_Create>;
+    delete?: Maybe<CtasDocAccessFields_Label_Delete>;
+    read?: Maybe<CtasDocAccessFields_Label_Read>;
+    update?: Maybe<CtasDocAccessFields_Label_Update>;
+};
+
+export type CtasDocAccessFields_Label_Create = {
+    __typename?: 'CtasDocAccessFields_label_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_Label_Delete = {
+    __typename?: 'CtasDocAccessFields_label_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_Label_Read = {
+    __typename?: 'CtasDocAccessFields_label_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_Label_Update = {
+    __typename?: 'CtasDocAccessFields_label_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_LinkType = {
+    __typename?: 'CtasDocAccessFields_linkType';
+    create?: Maybe<CtasDocAccessFields_LinkType_Create>;
+    delete?: Maybe<CtasDocAccessFields_LinkType_Delete>;
+    read?: Maybe<CtasDocAccessFields_LinkType_Read>;
+    update?: Maybe<CtasDocAccessFields_LinkType_Update>;
+};
+
+export type CtasDocAccessFields_LinkType_Create = {
+    __typename?: 'CtasDocAccessFields_linkType_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_LinkType_Delete = {
+    __typename?: 'CtasDocAccessFields_linkType_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_LinkType_Read = {
+    __typename?: 'CtasDocAccessFields_linkType_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_LinkType_Update = {
+    __typename?: 'CtasDocAccessFields_linkType_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_LinksTo = {
+    __typename?: 'CtasDocAccessFields_linksTo';
+    create?: Maybe<CtasDocAccessFields_LinksTo_Create>;
+    delete?: Maybe<CtasDocAccessFields_LinksTo_Delete>;
+    read?: Maybe<CtasDocAccessFields_LinksTo_Read>;
+    update?: Maybe<CtasDocAccessFields_LinksTo_Update>;
+};
+
+export type CtasDocAccessFields_LinksTo_Create = {
+    __typename?: 'CtasDocAccessFields_linksTo_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_LinksTo_Delete = {
+    __typename?: 'CtasDocAccessFields_linksTo_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_LinksTo_Read = {
+    __typename?: 'CtasDocAccessFields_linksTo_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_LinksTo_Update = {
+    __typename?: 'CtasDocAccessFields_linksTo_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_UpdatedAt = {
+    __typename?: 'CtasDocAccessFields_updatedAt';
+    create?: Maybe<CtasDocAccessFields_UpdatedAt_Create>;
+    delete?: Maybe<CtasDocAccessFields_UpdatedAt_Delete>;
+    read?: Maybe<CtasDocAccessFields_UpdatedAt_Read>;
+    update?: Maybe<CtasDocAccessFields_UpdatedAt_Update>;
+};
+
+export type CtasDocAccessFields_UpdatedAt_Create = {
+    __typename?: 'CtasDocAccessFields_updatedAt_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_UpdatedAt_Delete = {
+    __typename?: 'CtasDocAccessFields_updatedAt_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_UpdatedAt_Read = {
+    __typename?: 'CtasDocAccessFields_updatedAt_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasDocAccessFields_UpdatedAt_Update = {
+    __typename?: 'CtasDocAccessFields_updatedAt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields = {
+    __typename?: 'CtasFields';
+    createdAt?: Maybe<CtasFields_CreatedAt>;
+    externalLink?: Maybe<CtasFields_ExternalLink>;
+    fullTitle?: Maybe<CtasFields_FullTitle>;
+    internalLink?: Maybe<CtasFields_InternalLink>;
+    label?: Maybe<CtasFields_Label>;
+    linkType?: Maybe<CtasFields_LinkType>;
+    linksTo?: Maybe<CtasFields_LinksTo>;
+    updatedAt?: Maybe<CtasFields_UpdatedAt>;
+};
+
+export type CtasFields_CreatedAt = {
+    __typename?: 'CtasFields_createdAt';
+    create?: Maybe<CtasFields_CreatedAt_Create>;
+    delete?: Maybe<CtasFields_CreatedAt_Delete>;
+    read?: Maybe<CtasFields_CreatedAt_Read>;
+    update?: Maybe<CtasFields_CreatedAt_Update>;
+};
+
+export type CtasFields_CreatedAt_Create = {
+    __typename?: 'CtasFields_createdAt_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_CreatedAt_Delete = {
+    __typename?: 'CtasFields_createdAt_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_CreatedAt_Read = {
+    __typename?: 'CtasFields_createdAt_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_CreatedAt_Update = {
+    __typename?: 'CtasFields_createdAt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_ExternalLink = {
+    __typename?: 'CtasFields_externalLink';
+    create?: Maybe<CtasFields_ExternalLink_Create>;
+    delete?: Maybe<CtasFields_ExternalLink_Delete>;
+    read?: Maybe<CtasFields_ExternalLink_Read>;
+    update?: Maybe<CtasFields_ExternalLink_Update>;
+};
+
+export type CtasFields_ExternalLink_Create = {
+    __typename?: 'CtasFields_externalLink_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_ExternalLink_Delete = {
+    __typename?: 'CtasFields_externalLink_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_ExternalLink_Read = {
+    __typename?: 'CtasFields_externalLink_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_ExternalLink_Update = {
+    __typename?: 'CtasFields_externalLink_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_FullTitle = {
+    __typename?: 'CtasFields_fullTitle';
+    create?: Maybe<CtasFields_FullTitle_Create>;
+    delete?: Maybe<CtasFields_FullTitle_Delete>;
+    read?: Maybe<CtasFields_FullTitle_Read>;
+    update?: Maybe<CtasFields_FullTitle_Update>;
+};
+
+export type CtasFields_FullTitle_Create = {
+    __typename?: 'CtasFields_fullTitle_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_FullTitle_Delete = {
+    __typename?: 'CtasFields_fullTitle_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_FullTitle_Read = {
+    __typename?: 'CtasFields_fullTitle_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_FullTitle_Update = {
+    __typename?: 'CtasFields_fullTitle_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_InternalLink = {
+    __typename?: 'CtasFields_internalLink';
+    create?: Maybe<CtasFields_InternalLink_Create>;
+    delete?: Maybe<CtasFields_InternalLink_Delete>;
+    read?: Maybe<CtasFields_InternalLink_Read>;
+    update?: Maybe<CtasFields_InternalLink_Update>;
+};
+
+export type CtasFields_InternalLink_Create = {
+    __typename?: 'CtasFields_internalLink_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_InternalLink_Delete = {
+    __typename?: 'CtasFields_internalLink_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_InternalLink_Read = {
+    __typename?: 'CtasFields_internalLink_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_InternalLink_Update = {
+    __typename?: 'CtasFields_internalLink_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_Label = {
+    __typename?: 'CtasFields_label';
+    create?: Maybe<CtasFields_Label_Create>;
+    delete?: Maybe<CtasFields_Label_Delete>;
+    read?: Maybe<CtasFields_Label_Read>;
+    update?: Maybe<CtasFields_Label_Update>;
+};
+
+export type CtasFields_Label_Create = {
+    __typename?: 'CtasFields_label_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_Label_Delete = {
+    __typename?: 'CtasFields_label_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_Label_Read = {
+    __typename?: 'CtasFields_label_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_Label_Update = {
+    __typename?: 'CtasFields_label_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_LinkType = {
+    __typename?: 'CtasFields_linkType';
+    create?: Maybe<CtasFields_LinkType_Create>;
+    delete?: Maybe<CtasFields_LinkType_Delete>;
+    read?: Maybe<CtasFields_LinkType_Read>;
+    update?: Maybe<CtasFields_LinkType_Update>;
+};
+
+export type CtasFields_LinkType_Create = {
+    __typename?: 'CtasFields_linkType_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_LinkType_Delete = {
+    __typename?: 'CtasFields_linkType_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_LinkType_Read = {
+    __typename?: 'CtasFields_linkType_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_LinkType_Update = {
+    __typename?: 'CtasFields_linkType_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_LinksTo = {
+    __typename?: 'CtasFields_linksTo';
+    create?: Maybe<CtasFields_LinksTo_Create>;
+    delete?: Maybe<CtasFields_LinksTo_Delete>;
+    read?: Maybe<CtasFields_LinksTo_Read>;
+    update?: Maybe<CtasFields_LinksTo_Update>;
+};
+
+export type CtasFields_LinksTo_Create = {
+    __typename?: 'CtasFields_linksTo_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_LinksTo_Delete = {
+    __typename?: 'CtasFields_linksTo_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_LinksTo_Read = {
+    __typename?: 'CtasFields_linksTo_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_LinksTo_Update = {
+    __typename?: 'CtasFields_linksTo_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_UpdatedAt = {
+    __typename?: 'CtasFields_updatedAt';
+    create?: Maybe<CtasFields_UpdatedAt_Create>;
+    delete?: Maybe<CtasFields_UpdatedAt_Delete>;
+    read?: Maybe<CtasFields_UpdatedAt_Read>;
+    update?: Maybe<CtasFields_UpdatedAt_Update>;
+};
+
+export type CtasFields_UpdatedAt_Create = {
+    __typename?: 'CtasFields_updatedAt_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_UpdatedAt_Delete = {
+    __typename?: 'CtasFields_updatedAt_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_UpdatedAt_Read = {
+    __typename?: 'CtasFields_updatedAt_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasFields_UpdatedAt_Update = {
+    __typename?: 'CtasFields_updatedAt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CtasReadAccess = {
+    __typename?: 'CtasReadAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type CtasReadDocAccess = {
+    __typename?: 'CtasReadDocAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type CtasUpdateAccess = {
+    __typename?: 'CtasUpdateAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type CtasUpdateDocAccess = {
+    __typename?: 'CtasUpdateDocAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
 export type Hero = {
     __typename?: 'Hero';
     coloredSubhead?: Maybe<Scalars['JSON']['output']>;
     createdAt?: Maybe<Scalars['DateTime']['output']>;
+    cta?: Maybe<Cta>;
     heading: Scalars['String']['output'];
     headingTag: Scalars['String']['output'];
     icon?: Maybe<Icon>;
@@ -828,6 +1503,15 @@ export type Hero_CreatedAt_Operator = {
     not_equals?: InputMaybe<Scalars['DateTime']['input']>;
 };
 
+export type Hero_Cta_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
 export type Hero_HeadingTag_Operator = {
     all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     contains?: InputMaybe<Scalars['String']['input']>;
@@ -881,6 +1565,7 @@ export type Hero_Where = {
     OR?: InputMaybe<Array<InputMaybe<Hero_Where_Or>>>;
     coloredSubhead?: InputMaybe<Hero_ColoredSubhead_Operator>;
     createdAt?: InputMaybe<Hero_CreatedAt_Operator>;
+    cta?: InputMaybe<Hero_Cta_Operator>;
     heading?: InputMaybe<Hero_Heading_Operator>;
     headingTag?: InputMaybe<Hero_HeadingTag_Operator>;
     icon?: InputMaybe<Hero_Icon_Operator>;
@@ -891,6 +1576,7 @@ export type Hero_Where = {
 export type Hero_Where_And = {
     coloredSubhead?: InputMaybe<Hero_ColoredSubhead_Operator>;
     createdAt?: InputMaybe<Hero_CreatedAt_Operator>;
+    cta?: InputMaybe<Hero_Cta_Operator>;
     heading?: InputMaybe<Hero_Heading_Operator>;
     headingTag?: InputMaybe<Hero_HeadingTag_Operator>;
     icon?: InputMaybe<Hero_Icon_Operator>;
@@ -901,6 +1587,7 @@ export type Hero_Where_And = {
 export type Hero_Where_Or = {
     coloredSubhead?: InputMaybe<Hero_ColoredSubhead_Operator>;
     createdAt?: InputMaybe<Hero_CreatedAt_Operator>;
+    cta?: InputMaybe<Hero_Cta_Operator>;
     heading?: InputMaybe<Hero_Heading_Operator>;
     headingTag?: InputMaybe<Hero_HeadingTag_Operator>;
     icon?: InputMaybe<Hero_Icon_Operator>;
@@ -951,6 +1638,7 @@ export type HeroesDocAccessFields = {
     __typename?: 'HeroesDocAccessFields';
     coloredSubhead?: Maybe<HeroesDocAccessFields_ColoredSubhead>;
     createdAt?: Maybe<HeroesDocAccessFields_CreatedAt>;
+    cta?: Maybe<HeroesDocAccessFields_Cta>;
     heading?: Maybe<HeroesDocAccessFields_Heading>;
     headingTag?: Maybe<HeroesDocAccessFields_HeadingTag>;
     icon?: Maybe<HeroesDocAccessFields_Icon>;
@@ -1010,6 +1698,34 @@ export type HeroesDocAccessFields_CreatedAt_Read = {
 
 export type HeroesDocAccessFields_CreatedAt_Update = {
     __typename?: 'HeroesDocAccessFields_createdAt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesDocAccessFields_Cta = {
+    __typename?: 'HeroesDocAccessFields_cta';
+    create?: Maybe<HeroesDocAccessFields_Cta_Create>;
+    delete?: Maybe<HeroesDocAccessFields_Cta_Delete>;
+    read?: Maybe<HeroesDocAccessFields_Cta_Read>;
+    update?: Maybe<HeroesDocAccessFields_Cta_Update>;
+};
+
+export type HeroesDocAccessFields_Cta_Create = {
+    __typename?: 'HeroesDocAccessFields_cta_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesDocAccessFields_Cta_Delete = {
+    __typename?: 'HeroesDocAccessFields_cta_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesDocAccessFields_Cta_Read = {
+    __typename?: 'HeroesDocAccessFields_cta_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesDocAccessFields_Cta_Update = {
+    __typename?: 'HeroesDocAccessFields_cta_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -1129,6 +1845,7 @@ export type HeroesFields = {
     __typename?: 'HeroesFields';
     coloredSubhead?: Maybe<HeroesFields_ColoredSubhead>;
     createdAt?: Maybe<HeroesFields_CreatedAt>;
+    cta?: Maybe<HeroesFields_Cta>;
     heading?: Maybe<HeroesFields_Heading>;
     headingTag?: Maybe<HeroesFields_HeadingTag>;
     icon?: Maybe<HeroesFields_Icon>;
@@ -1188,6 +1905,34 @@ export type HeroesFields_CreatedAt_Read = {
 
 export type HeroesFields_CreatedAt_Update = {
     __typename?: 'HeroesFields_createdAt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesFields_Cta = {
+    __typename?: 'HeroesFields_cta';
+    create?: Maybe<HeroesFields_Cta_Create>;
+    delete?: Maybe<HeroesFields_Cta_Delete>;
+    read?: Maybe<HeroesFields_Cta_Read>;
+    update?: Maybe<HeroesFields_Cta_Update>;
+};
+
+export type HeroesFields_Cta_Create = {
+    __typename?: 'HeroesFields_cta_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesFields_Cta_Delete = {
+    __typename?: 'HeroesFields_cta_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesFields_Cta_Read = {
+    __typename?: 'HeroesFields_cta_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesFields_Cta_Update = {
+    __typename?: 'HeroesFields_cta_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -3999,6 +4744,7 @@ export type ImagesUpdateDocAccess = {
 
 export type Mutation = {
     __typename?: 'Mutation';
+    createCta?: Maybe<Cta>;
     createHero?: Maybe<Hero>;
     createIcon?: Maybe<Icon>;
     createImage?: Maybe<Image>;
@@ -4007,6 +4753,7 @@ export type Mutation = {
     createTestimonial?: Maybe<Testimonial>;
     createTool?: Maybe<Tool>;
     createUser?: Maybe<User>;
+    deleteCta?: Maybe<Cta>;
     deleteHero?: Maybe<Hero>;
     deleteIcon?: Maybe<Icon>;
     deleteImage?: Maybe<Image>;
@@ -4023,6 +4770,7 @@ export type Mutation = {
     resetPasswordUser?: Maybe<UsersResetPassword>;
     unlockUser: Scalars['Boolean']['output'];
     updateCaseStudyListing?: Maybe<CaseStudyListing>;
+    updateCta?: Maybe<Cta>;
     updateHero?: Maybe<Hero>;
     updateIcon?: Maybe<Icon>;
     updateImage?: Maybe<Image>;
@@ -4036,6 +4784,11 @@ export type Mutation = {
     updateToolboxListing?: Maybe<ToolboxListing>;
     updateUser?: Maybe<User>;
     verifyEmailUser?: Maybe<Scalars['Boolean']['output']>;
+};
+
+export type MutationCreateCtaArgs = {
+    data: MutationCtaInput;
+    draft?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
 export type MutationCreateHeroArgs = {
@@ -4076,6 +4829,10 @@ export type MutationCreateToolArgs = {
 export type MutationCreateUserArgs = {
     data: MutationUserInput;
     draft?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type MutationDeleteCtaArgs = {
+    id: Scalars['String']['input'];
 };
 
 export type MutationDeleteHeroArgs = {
@@ -4141,6 +4898,13 @@ export type MutationUnlockUserArgs = {
 export type MutationUpdateCaseStudyListingArgs = {
     data: MutationCaseStudyListingInput;
     draft?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type MutationUpdateCtaArgs = {
+    autosave?: InputMaybe<Scalars['Boolean']['input']>;
+    data: MutationCtaUpdateInput;
+    draft?: InputMaybe<Scalars['Boolean']['input']>;
+    id: Scalars['String']['input'];
 };
 
 export type MutationUpdateHeroArgs = {
@@ -6416,6 +7180,8 @@ export type Query = {
     __typename?: 'Query';
     Access?: Maybe<Access>;
     CaseStudyListing?: Maybe<CaseStudyListing>;
+    Cta?: Maybe<Cta>;
+    Ctas?: Maybe<Ctas>;
     Hero?: Maybe<Hero>;
     Heroes?: Maybe<Heroes>;
     Icon?: Maybe<Icon>;
@@ -6437,6 +7203,7 @@ export type Query = {
     User?: Maybe<User>;
     Users?: Maybe<Users>;
     docAccessCaseStudyListing?: Maybe<Case_Study_ListingDocAccess>;
+    docAccessCta?: Maybe<CtasDocAccess>;
     docAccessHero?: Maybe<HeroesDocAccess>;
     docAccessIcon?: Maybe<IconsDocAccess>;
     docAccessImage?: Maybe<ImagesDocAccess>;
@@ -6454,6 +7221,19 @@ export type Query = {
 
 export type QueryCaseStudyListingArgs = {
     draft?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type QueryCtaArgs = {
+    draft?: InputMaybe<Scalars['Boolean']['input']>;
+    id: Scalars['String']['input'];
+};
+
+export type QueryCtasArgs = {
+    draft?: InputMaybe<Scalars['Boolean']['input']>;
+    limit?: InputMaybe<Scalars['Int']['input']>;
+    page?: InputMaybe<Scalars['Int']['input']>;
+    sort?: InputMaybe<Scalars['String']['input']>;
+    where?: InputMaybe<Cta_Where>;
 };
 
 export type QueryHeroArgs = {
@@ -6574,6 +7354,10 @@ export type QueryUsersArgs = {
     page?: InputMaybe<Scalars['Int']['input']>;
     sort?: InputMaybe<Scalars['String']['input']>;
     where?: InputMaybe<User_Where>;
+};
+
+export type QueryDocAccessCtaArgs = {
+    id: Scalars['String']['input'];
 };
 
 export type QueryDocAccessHeroArgs = {
@@ -9823,6 +10607,24 @@ export type Case_Study_ListingDocAccess = {
     update?: Maybe<CaseStudyListingUpdateDocAccess>;
 };
 
+export type CtasAccess = {
+    __typename?: 'ctasAccess';
+    create?: Maybe<CtasCreateAccess>;
+    delete?: Maybe<CtasDeleteAccess>;
+    fields?: Maybe<CtasFields>;
+    read?: Maybe<CtasReadAccess>;
+    update?: Maybe<CtasUpdateAccess>;
+};
+
+export type CtasDocAccess = {
+    __typename?: 'ctasDocAccess';
+    create?: Maybe<CtasCreateDocAccess>;
+    delete?: Maybe<CtasDeleteDocAccess>;
+    fields?: Maybe<CtasDocAccessFields>;
+    read?: Maybe<CtasReadDocAccess>;
+    update?: Maybe<CtasUpdateDocAccess>;
+};
+
 export type HeroesAccess = {
     __typename?: 'heroesAccess';
     create?: Maybe<HeroesCreateAccess>;
@@ -9884,9 +10686,30 @@ export type MutationCaseStudyListingInput = {
     updatedAt?: InputMaybe<Scalars['String']['input']>;
 };
 
+export type MutationCtaInput = {
+    createdAt?: InputMaybe<Scalars['String']['input']>;
+    externalLink?: InputMaybe<Scalars['String']['input']>;
+    fullTitle?: InputMaybe<Scalars['String']['input']>;
+    internalLink?: InputMaybe<Scalars['String']['input']>;
+    label?: InputMaybe<Scalars['String']['input']>;
+    linkType?: InputMaybe<Scalars['String']['input']>;
+    updatedAt?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type MutationCtaUpdateInput = {
+    createdAt?: InputMaybe<Scalars['String']['input']>;
+    externalLink?: InputMaybe<Scalars['String']['input']>;
+    fullTitle?: InputMaybe<Scalars['String']['input']>;
+    internalLink?: InputMaybe<Scalars['String']['input']>;
+    label?: InputMaybe<Scalars['String']['input']>;
+    linkType?: InputMaybe<Scalars['String']['input']>;
+    updatedAt?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type MutationHeroInput = {
     coloredSubhead?: InputMaybe<Scalars['JSON']['input']>;
     createdAt?: InputMaybe<Scalars['String']['input']>;
+    cta?: InputMaybe<Scalars['String']['input']>;
     heading: Scalars['String']['input'];
     headingTag: Scalars['String']['input'];
     icon?: InputMaybe<Scalars['String']['input']>;
@@ -9896,6 +10719,7 @@ export type MutationHeroInput = {
 export type MutationHeroUpdateInput = {
     coloredSubhead?: InputMaybe<Scalars['JSON']['input']>;
     createdAt?: InputMaybe<Scalars['String']['input']>;
+    cta?: InputMaybe<Scalars['String']['input']>;
     heading?: InputMaybe<Scalars['String']['input']>;
     headingTag?: InputMaybe<Scalars['String']['input']>;
     icon?: InputMaybe<Scalars['String']['input']>;

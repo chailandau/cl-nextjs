@@ -4,14 +4,27 @@ export const INTERNAL_LINK_FRAGMENT = `
     slug
 `;
 
+export const CTA_FRAGMENT = `
+  cta {
+    id
+    label
+    linkType
+    externalLink
+    internalLink {
+      id
+      slug
+    }
+  }
+`;
+
 export const ICON_FRAGMENT = `
-icon {
-  id
-  alt
-  url
-  width
-  height
-}
+  icon {
+    id
+    alt
+    url
+    width
+    height
+  }
 `;
 
 export const HERO_FRAGMENT = `
@@ -23,6 +36,7 @@ export const HERO_FRAGMENT = `
       heading
       headingTag
       coloredSubhead
+      ${CTA_FRAGMENT}
     }
   }
 `;

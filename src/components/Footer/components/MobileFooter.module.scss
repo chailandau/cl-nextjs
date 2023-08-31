@@ -21,6 +21,11 @@
                     color: color(common, 'white');
                     @include font(14, 18);
                     width: fit-content;
+                    span {
+                        &:before {
+                            background-color: color(common, 'white');
+                        }
+                    }
                 }
             }
         }
