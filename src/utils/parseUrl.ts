@@ -12,8 +12,8 @@ export interface ParsedUrl {
 /**
  * Parses URL and returns object with information.
  *
- * @param {string} href - URL to parse.
- * @return {ParsedUrl | undefined} - object with information about URL, or undefined if URL is invalid.
+ * @param href - URL to parse.
+ * @returns Object with information about URL, or undefined if URL is invalid.
  */
 const parseUrl = (href: string): ParsedUrl | undefined => {
     if (!href) {

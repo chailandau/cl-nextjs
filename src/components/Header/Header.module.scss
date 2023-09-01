@@ -1,4 +1,5 @@
 .header {
+    flex-direction: row !important;
     &,
     &:before {
         @include borderRadius;

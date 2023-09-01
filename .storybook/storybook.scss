@@ -1,0 +1,21 @@
+html {
+    max-width: unset;
+    padding: unset;
+    margin: unset;
+    &:before {
+        display: none;
+    }
+}
+.preview {
+    padding: rem(20);
+    &:before {
+        display: block;
+    }
+}
+
+.docs-story {
+    & > div {
+        padding: 0;
+        overflow: hidden;
+    }
+}

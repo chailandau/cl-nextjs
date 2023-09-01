@@ -1,4 +1,6 @@
 .link {
+    display: inline-block;
+    margin-right: auto;
     color: color(common, 'primary');
     @include font-ibm-plex-mono-bold;
     @include font(20, 26);

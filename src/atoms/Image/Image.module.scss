@@ -1,7 +1,7 @@
 .container {
     width: 100%;
     height: auto;
-    z-index: 1;
+    @include transition(width);
     img {
         position: relative !important;
         object-fit: contain;
@@ -16,7 +16,7 @@
         margin-right: rem(12);
         @include transition(margin-right);
         @include mobileLg {
-            margin-right: rem(20);
+            margin-right: rem(24);
         }
         @include boxShadow;
     }

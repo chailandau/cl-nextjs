@@ -1,9 +1,22 @@
 html {
-    margin: rem(10);
+    max-width: rem(1000);
+    padding: rem(24) rem(20);
+    margin: auto;
     @include font-ibm-plex-mono;
     color: color(common, 'black');
-    background-image: url('../assets/svg/Grid.svg');
-    background-position: top left;
-    background-color: color(pastel, 'purple');
-    background-size: rem(50);
+
+    &:before {
+        display: block;
+        content: '';
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-image: url('../assets/svg/Grid.svg');
+        background-position: top left;
+        background-color: color(pastel, 'purple');
+        background-size: rem(50);
+    }
 }

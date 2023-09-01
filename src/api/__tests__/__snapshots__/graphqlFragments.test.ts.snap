@@ -1,5 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Fragments "CTA_FRAGMENT" matches snapshot: CTA_FRAGMENT 1`] = `
+"
+  cta {
+    id
+    label
+    linkType
+    externalLink
+    internalLink {
+      id
+      slug
+    }
+  }
+"
+`;
+
+exports[`Fragments "HERO_FRAGMENT" matches snapshot: HERO_FRAGMENT 1`] = `
+"
+... on HeroBlock {
+    id
+    hero {
+      id
+      
+  icon {
+    id
+    alt
+    url
+    width
+    height
+  }
+
+      heading
+      headingTag
+      coloredSubhead
+      
+  cta {
+    id
+    label
+    linkType
+    externalLink
+    internalLink {
+      id
+      slug
+    }
+  }
+
+    }
+  }
+"
+`;
+
+exports[`Fragments "ICON_FRAGMENT" matches snapshot: ICON_FRAGMENT 1`] = `
+"
+  icon {
+    id
+    alt
+    url
+    width
+    height
+  }
+"
+`;
+
 exports[`Fragments "INTERNAL_LINK_FRAGMENT" matches snapshot: INTERNAL_LINK_FRAGMENT 1`] = `
 "
     id

@@ -1,0 +1,35 @@
+import { ArgTypes, Canvas, Meta } from '@storybook/blocks';
+
+import * as HeroStories from './Hero.stories';
+
+<Meta of={HeroStories} />
+
+# Hero Component
+
+The `Hero` component is a section that is above the fold. It serves to highlight the page's purpose and catch visitors' attention.
+
+<Canvas of={HeroStories.Default} />
+
+## heading
+
+The `heading` is supplied as a string. It has the `h1` tag applied to it by default. See [Heading atom](?path=/docs/atoms-heading--docs) for more details.
+
+## coloredSubhead
+
+The `coloredSubhead` prop accepts a JSON object containing subhead text, along with an indication of if it should be colored. The `bold` property indicates if the parser should treat that text segment as colored text.
+
+## icon
+
+The `icon` prop accepts an object containing the `icon`'s src url and alt text.
+
+## cta
+
+The `cta` prop accepts an object containing the `cta`'s label and link.
+
+<br />
+<br />
+<br />
+
+### Props Table
+
+<ArgTypes />

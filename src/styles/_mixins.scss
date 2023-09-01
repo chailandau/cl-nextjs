@@ -89,7 +89,7 @@
         height: 100%;
         top: rem(6);
         left: rem(6);
-        z-index: 0;
+        z-index: -1;
         background-color: color(common, 'black');
         @include borderRadius(10);
     }
@@ -101,7 +101,7 @@
         height: 100%;
         top: 0;
         left: 0;
-        z-index: 0;
+        z-index: -1;
         background-color: $color;
         @include borderRadius;
     }
@@ -170,7 +170,7 @@
         left: rem(-$padding);
         background-color: color(common, 'primary');
         bottom: rem(-$padding);
-        z-index: 0;
+        z-index: -1;
         @include transition(height);
     }
     .link-icon {
@@ -187,7 +187,7 @@
             background-color: color(common, 'primary');
             left: 0;
             bottom: rem(-$padding);
-            z-index: 0;
+            z-index: -1;
         }
     }
     @include hover {

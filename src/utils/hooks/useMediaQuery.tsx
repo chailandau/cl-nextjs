@@ -8,7 +8,7 @@ export type MediaQueryMatches = boolean | null;
  * Hook returning a boolean indicating whether the current viewport matches the specified media query.
  *
  * @param mediaQueryString - Media query string to match against the viewport.
- * @return `true` if the browser window matches the media query, `false` otherwise. Returns `null` if no window detected.
+ * @returns `true` if the browser window matches the media query, `false` otherwise. Returns `null` if no window detected.
  *  @see https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia
  * @example useMediaQuery('screen and (min-width: 600px)');
  */

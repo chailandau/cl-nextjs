@@ -1,4 +1,5 @@
 .text {
+    @include transition(font-size);
     &.xs {
         @include font(14, 22);
     }
@@ -22,6 +23,35 @@
         @include font(26, 54);
         @include tablet {
             @include font(32, 66);
+        }
+    }
+    &.primary {
+        @include font-ibm-plex-mono;
+    }
+    &.secondary {
+        @include font-inter-md;
+    }
+    &.bg {
+        &-aqua,
+        &-white,
+        &-pink {
+            position: relative;
+            display: inline-block;
+            padding: rem(2) rem(6);
+            line-height: rem(24);
+            @include mobileLg {
+                padding: rem(2) rem(8);
+                margin-right: rem(4);
+            }
+        }
+        &-aqua {
+            @include boxShadow(color(pastel, 'aqua'));
+        }
+        &-white {
+            @include boxShadow(color(common, 'white'));
+        }
+        &-pink {
+            @include boxShadow(color(pastel, 'pink'));
         }
     }
 }

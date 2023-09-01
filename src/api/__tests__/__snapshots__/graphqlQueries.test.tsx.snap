@@ -30,6 +30,14 @@ exports[`graphqlQueries mocks NAV_QUERY successfully 1`] = `
 }
 `;
 
+exports[`graphqlQueries mocks PAGE_CONTENT_QUERY successfully 1`] = `
+{
+  "errors": [
+    [GraphQLError: Variable "$slug" of required type "String!" was not provided.],
+  ],
+}
+`;
+
 exports[`graphqlQueries mocks PAGES_QUERY successfully 1`] = `
 {
   "data": {
@@ -37,13 +45,144 @@ exports[`graphqlQueries mocks PAGES_QUERY successfully 1`] = `
       "docs": [
         {
           "id": "Hello World",
+          "sections": [
+            {
+              "hero": {
+                "coloredSubhead": null,
+                "cta": {
+                  "externalLink": "Hello World",
+                  "id": "Hello World",
+                  "internalLink": {
+                    "id": "Hello World",
+                    "slug": "Hello World",
+                  },
+                  "label": "Hello World",
+                  "linkType": "internal",
+                },
+                "heading": "Hello World",
+                "headingTag": "Hello World",
+                "icon": {
+                  "alt": "Hello World",
+                  "height": 64,
+                  "id": "Hello World",
+                  "url": "Hello World",
+                  "width": 64,
+                },
+                "id": "Hello World",
+              },
+              "id": "Hello World",
+            },
+            {
+              "hero": {
+                "coloredSubhead": null,
+                "cta": {
+                  "externalLink": "Hello World",
+                  "id": "Hello World",
+                  "internalLink": {
+                    "id": "Hello World",
+                    "slug": "Hello World",
+                  },
+                  "label": "Hello World",
+                  "linkType": "internal",
+                },
+                "heading": "Hello World",
+                "headingTag": "Hello World",
+                "icon": {
+                  "alt": "Hello World",
+                  "height": 64,
+                  "id": "Hello World",
+                  "url": "Hello World",
+                  "width": 64,
+                },
+                "id": "Hello World",
+              },
+              "id": "Hello World",
+            },
+          ],
           "slug": "Hello World",
           "title": "Hello World",
         },
         {
           "id": "Hello World",
+          "sections": [
+            {
+              "hero": {
+                "coloredSubhead": null,
+                "cta": {
+                  "externalLink": "Hello World",
+                  "id": "Hello World",
+                  "internalLink": {
+                    "id": "Hello World",
+                    "slug": "Hello World",
+                  },
+                  "label": "Hello World",
+                  "linkType": "internal",
+                },
+                "heading": "Hello World",
+                "headingTag": "Hello World",
+                "icon": {
+                  "alt": "Hello World",
+                  "height": 64,
+                  "id": "Hello World",
+                  "url": "Hello World",
+                  "width": 64,
+                },
+                "id": "Hello World",
+              },
+              "id": "Hello World",
+            },
+            {
+              "hero": {
+                "coloredSubhead": null,
+                "cta": {
+                  "externalLink": "Hello World",
+                  "id": "Hello World",
+                  "internalLink": {
+                    "id": "Hello World",
+                    "slug": "Hello World",
+                  },
+                  "label": "Hello World",
+                  "linkType": "internal",
+                },
+                "heading": "Hello World",
+                "headingTag": "Hello World",
+                "icon": {
+                  "alt": "Hello World",
+                  "height": 64,
+                  "id": "Hello World",
+                  "url": "Hello World",
+                  "width": 64,
+                },
+                "id": "Hello World",
+              },
+              "id": "Hello World",
+            },
+          ],
           "slug": "Hello World",
           "title": "Hello World",
+        },
+      ],
+    },
+  },
+  "errors": [
+    [GraphQLError: No mock defined for type "JSON"],
+    [GraphQLError: No mock defined for type "JSON"],
+    [GraphQLError: No mock defined for type "JSON"],
+    [GraphQLError: No mock defined for type "JSON"],
+  ],
+}
+`;
+
+exports[`graphqlQueries mocks SLUG_QUERY successfully 1`] = `
+{
+  "data": {
+    "Pages": {
+      "docs": [
+        {
+          "slug": "Hello World",
+        },
+        {
+          "slug": "Hello World",
         },
       ],
     },
