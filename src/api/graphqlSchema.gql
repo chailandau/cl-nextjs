@@ -4608,7 +4608,7 @@ type Page {
   updatedAt: DateTime
 }
 
-union Page_Sections = HeroBlock
+union Page_Sections = HeroBlock | SingleUseBlock
 
 input Page_createdAt_operator {
   equals: DateTime
@@ -6127,6 +6127,19 @@ type Query {
   docAccessUser(id: String!): usersDocAccess
   initializedUser: Boolean
   meUser: usersMe
+}
+
+type SingleUseBlock {
+  blockName: String
+  blockType: String
+  id: String
+  singleUse: SingleUseBlock_singleUse
+}
+
+enum SingleUseBlock_singleUse {
+  case_study_listing
+  testimonial_listing
+  toolbox_listing
 }
 
 type Testimonial {
@@ -7762,6 +7775,7 @@ input Tool_where_or {
 
 type ToolboxListing {
   createdAt: DateTime
+  description: String
   icon(where: ToolboxListing_Icon_where): Icon
   title: String
   tools: [Tool!]
@@ -7770,6 +7784,7 @@ type ToolboxListing {
 
 type ToolboxListingDocAccessFields {
   createdAt: ToolboxListingDocAccessFields_createdAt
+  description: ToolboxListingDocAccessFields_description
   icon: ToolboxListingDocAccessFields_icon
   title: ToolboxListingDocAccessFields_title
   tools: ToolboxListingDocAccessFields_tools
@@ -7796,6 +7811,29 @@ type ToolboxListingDocAccessFields_createdAt_Read {
 }
 
 type ToolboxListingDocAccessFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type ToolboxListingDocAccessFields_description {
+  create: ToolboxListingDocAccessFields_description_Create
+  delete: ToolboxListingDocAccessFields_description_Delete
+  read: ToolboxListingDocAccessFields_description_Read
+  update: ToolboxListingDocAccessFields_description_Update
+}
+
+type ToolboxListingDocAccessFields_description_Create {
+  permission: Boolean!
+}
+
+type ToolboxListingDocAccessFields_description_Delete {
+  permission: Boolean!
+}
+
+type ToolboxListingDocAccessFields_description_Read {
+  permission: Boolean!
+}
+
+type ToolboxListingDocAccessFields_description_Update {
   permission: Boolean!
 }
 
@@ -7893,6 +7931,7 @@ type ToolboxListingDocAccessFields_updatedAt_Update {
 
 type ToolboxListingFields {
   createdAt: ToolboxListingFields_createdAt
+  description: ToolboxListingFields_description
   icon: ToolboxListingFields_icon
   title: ToolboxListingFields_title
   tools: ToolboxListingFields_tools
@@ -7919,6 +7958,29 @@ type ToolboxListingFields_createdAt_Read {
 }
 
 type ToolboxListingFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type ToolboxListingFields_description {
+  create: ToolboxListingFields_description_Create
+  delete: ToolboxListingFields_description_Delete
+  read: ToolboxListingFields_description_Read
+  update: ToolboxListingFields_description_Update
+}
+
+type ToolboxListingFields_description_Create {
+  permission: Boolean!
+}
+
+type ToolboxListingFields_description_Delete {
+  permission: Boolean!
+}
+
+type ToolboxListingFields_description_Read {
+  permission: Boolean!
+}
+
+type ToolboxListingFields_description_Update {
   permission: Boolean!
 }
 
@@ -9318,6 +9380,7 @@ input mutationToolUpdateInput {
 
 input mutationToolboxListingInput {
   createdAt: String
+  description: String
   icon: String
   title: String
   tools: [String]

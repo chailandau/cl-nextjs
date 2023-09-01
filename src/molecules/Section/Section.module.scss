@@ -1,4 +1,16 @@
 .section {
-    @include paddingX(24);
+    @include paddingX(12);
     flex-direction: column;
+    @include mobileLg {
+        @include paddingX(24);
+    }
+    &-heading {
+        gap: rem(24);
+        align-items: center;
+        @include dashBorder;
+        padding-bottom: rem(16);
+        .icon {
+            width: rem(32);
+        }
+    }
 }

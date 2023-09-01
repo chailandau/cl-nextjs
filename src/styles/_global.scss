@@ -1,16 +1,19 @@
 html {
     max-width: rem(1000);
-    padding: rem(24) rem(20);
+    padding: rem(16) rem(12);
     margin: auto;
     @include font-ibm-plex-mono;
     color: color(common, 'black');
+    @include mobileLg {
+        padding: rem(24) rem(20);
+    }
 
     &:before {
         display: block;
         content: '';
         position: fixed;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         top: 0;
         left: 0;
         z-index: -1;

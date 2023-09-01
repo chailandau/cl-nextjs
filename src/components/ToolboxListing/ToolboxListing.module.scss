@@ -1,0 +1,31 @@
+.toolbox-listing {
+    gap: rem(32);
+    ul,
+    li {
+        margin: inherit;
+        padding: inherit;
+    }
+    ul {
+        margin-top: rem(12);
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(40);
+        li {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: inherit;
+            padding: inherit;
+            gap: rem(16);
+            p {
+                text-align: center;
+            }
+        }
+    }
+    .icon {
+        & > div {
+            height: rem(50);
+        }
+    }
+}

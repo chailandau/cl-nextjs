@@ -8,8 +8,11 @@
     .nav {
         position: relative;
         @include boxShadow(color(common, 'primary'));
-        @include marginX(-24);
         padding: rem(12) rem(24);
+        @include marginX(4);
+        @include mobileLg {
+            margin: unset;
+        }
         ul {
             flex-direction: row;
             justify-content: center;

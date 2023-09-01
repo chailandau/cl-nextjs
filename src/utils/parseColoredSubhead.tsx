@@ -43,7 +43,7 @@ export const parseColoredSubhead = (
 
             const textProps = {
                 as: 'span' as TextProps['as'],
-                size: 'sm' as TextProps['size'],
+                size: 'md' as TextProps['size'],
                 font: 'secondary' as TextProps['font'],
                 backgroundColor: textBgColor
             };

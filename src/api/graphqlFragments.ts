@@ -29,6 +29,7 @@ export const ICON_FRAGMENT = `
 
 export const HERO_FRAGMENT = `
 ... on HeroBlock {
+    __typename
     id
     hero {
       id
@@ -39,4 +40,13 @@ export const HERO_FRAGMENT = `
       ${CTA_FRAGMENT}
     }
   }
+`;
+
+export const SINGLE_USE_FRAGMENT = `
+... on SingleUseBlock {
+  __typename
+  id
+  singleUse
+  
+}
 `;

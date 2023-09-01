@@ -1,6 +1,11 @@
 import { gql } from 'graphql-request';
 
-import { HERO_FRAGMENT, INTERNAL_LINK_FRAGMENT } from './graphqlFragments';
+import {
+    HERO_FRAGMENT,
+    ICON_FRAGMENT,
+    INTERNAL_LINK_FRAGMENT,
+    SINGLE_USE_FRAGMENT
+} from './graphqlFragments';
 
 export const PAGES_QUERY = gql`
     query PagesQuery {
@@ -26,6 +31,7 @@ export const PAGE_CONTENT_QUERY = gql`
                 title
                 sections {
                     ${HERO_FRAGMENT}
+                    ${SINGLE_USE_FRAGMENT}
                 }}
         }
     }`;
@@ -51,6 +57,20 @@ export const NAV_QUERY = gql`
                     customLabel
                 }
                 footerCopyrightText
+        }
+    }
+`;
+export const TOOLBOX_QUERY = gql`
+    query ToolboxQuery {
+        ToolboxListing {
+            title
+            description
+            ${ICON_FRAGMENT}
+            tools {
+                id
+                title
+                ${ICON_FRAGMENT}
+            }
         }
     }
 `;

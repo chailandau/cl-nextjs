@@ -21,14 +21,12 @@
     }
     &.md {
         @include font-ibm-plex-mono-semibold;
-        color: color(common, 'black');
         @include font(24, 32);
         @include tablet {
             @include font(36, 48);
         }
     }
     &.sm {
-        color: color(common, 'black');
         @include font(24, 30);
         @include tablet {
             @include font(30, 36);

@@ -4,12 +4,15 @@
         @include font(14, 22);
     }
     &.sm {
+        @include font(16, 28);
+    }
+    &.md {
         @include font(20, 30);
         @include tablet {
             @include font(22, 32);
         }
     }
-    &.md {
+    &.lg {
         @include font(24, 48);
         @include tablet {
             @include font(28, 52);
@@ -18,15 +21,12 @@
             @include font(32, 56);
         }
     }
-    &.lg {
+    &.xl {
         @include font-inter-md;
         @include font(26, 54);
         @include tablet {
             @include font(32, 66);
         }
-    }
-    &.primary {
-        @include font-ibm-plex-mono;
     }
     &.secondary {
         @include font-inter-md;
