@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grid matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="grid"
+  >
+    <p
+      class="text md primary"
+    >
+      This text is in a grid container
+    </p>
+  </div>
+</DocumentFragment>
+`;

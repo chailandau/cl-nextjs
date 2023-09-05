@@ -1,5 +1,6 @@
 import { FC } from 'react';
 
+import TestimonialListing from '../TestimonialListing';
 import ToolboxListing from '../ToolboxListing';
 
 import { SingleUseBlock_SingleUse } from '@/api/graphqlTypes';
@@ -14,6 +15,8 @@ const SingleUse: FC<SingleUseProps> = ({ component }) => {
     switch (component) {
         case 'toolbox_listing':
             return <ToolboxListing />;
+        case 'testimonial_listing':
+            return <TestimonialListing />;
         default:
             return null;
     }

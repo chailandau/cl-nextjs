@@ -7432,6 +7432,7 @@ export type TestimonialListing = {
     __typename?: 'TestimonialListing';
     createdAt?: Maybe<Scalars['DateTime']['output']>;
     icon?: Maybe<Icon>;
+    testimonials?: Maybe<Array<Testimonial>>;
     title?: Maybe<Scalars['String']['output']>;
     updatedAt?: Maybe<Scalars['DateTime']['output']>;
 };
@@ -7444,6 +7445,7 @@ export type TestimonialListingDocAccessFields = {
     __typename?: 'TestimonialListingDocAccessFields';
     createdAt?: Maybe<TestimonialListingDocAccessFields_CreatedAt>;
     icon?: Maybe<TestimonialListingDocAccessFields_Icon>;
+    testimonials?: Maybe<TestimonialListingDocAccessFields_Testimonials>;
     title?: Maybe<TestimonialListingDocAccessFields_Title>;
     updatedAt?: Maybe<TestimonialListingDocAccessFields_UpdatedAt>;
 };
@@ -7501,6 +7503,34 @@ export type TestimonialListingDocAccessFields_Icon_Read = {
 
 export type TestimonialListingDocAccessFields_Icon_Update = {
     __typename?: 'TestimonialListingDocAccessFields_icon_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type TestimonialListingDocAccessFields_Testimonials = {
+    __typename?: 'TestimonialListingDocAccessFields_testimonials';
+    create?: Maybe<TestimonialListingDocAccessFields_Testimonials_Create>;
+    delete?: Maybe<TestimonialListingDocAccessFields_Testimonials_Delete>;
+    read?: Maybe<TestimonialListingDocAccessFields_Testimonials_Read>;
+    update?: Maybe<TestimonialListingDocAccessFields_Testimonials_Update>;
+};
+
+export type TestimonialListingDocAccessFields_Testimonials_Create = {
+    __typename?: 'TestimonialListingDocAccessFields_testimonials_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type TestimonialListingDocAccessFields_Testimonials_Delete = {
+    __typename?: 'TestimonialListingDocAccessFields_testimonials_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type TestimonialListingDocAccessFields_Testimonials_Read = {
+    __typename?: 'TestimonialListingDocAccessFields_testimonials_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type TestimonialListingDocAccessFields_Testimonials_Update = {
+    __typename?: 'TestimonialListingDocAccessFields_testimonials_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -7564,6 +7594,7 @@ export type TestimonialListingFields = {
     __typename?: 'TestimonialListingFields';
     createdAt?: Maybe<TestimonialListingFields_CreatedAt>;
     icon?: Maybe<TestimonialListingFields_Icon>;
+    testimonials?: Maybe<TestimonialListingFields_Testimonials>;
     title?: Maybe<TestimonialListingFields_Title>;
     updatedAt?: Maybe<TestimonialListingFields_UpdatedAt>;
 };
@@ -7621,6 +7652,34 @@ export type TestimonialListingFields_Icon_Read = {
 
 export type TestimonialListingFields_Icon_Update = {
     __typename?: 'TestimonialListingFields_icon_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type TestimonialListingFields_Testimonials = {
+    __typename?: 'TestimonialListingFields_testimonials';
+    create?: Maybe<TestimonialListingFields_Testimonials_Create>;
+    delete?: Maybe<TestimonialListingFields_Testimonials_Delete>;
+    read?: Maybe<TestimonialListingFields_Testimonials_Read>;
+    update?: Maybe<TestimonialListingFields_Testimonials_Update>;
+};
+
+export type TestimonialListingFields_Testimonials_Create = {
+    __typename?: 'TestimonialListingFields_testimonials_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type TestimonialListingFields_Testimonials_Delete = {
+    __typename?: 'TestimonialListingFields_testimonials_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type TestimonialListingFields_Testimonials_Read = {
+    __typename?: 'TestimonialListingFields_testimonials_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type TestimonialListingFields_Testimonials_Update = {
+    __typename?: 'TestimonialListingFields_testimonials_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -10984,6 +11043,7 @@ export type MutationTestimonialInput = {
 export type MutationTestimonialListingInput = {
     createdAt?: InputMaybe<Scalars['String']['input']>;
     icon?: InputMaybe<Scalars['String']['input']>;
+    testimonials?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     title?: InputMaybe<Scalars['String']['input']>;
     updatedAt?: InputMaybe<Scalars['String']['input']>;
 };

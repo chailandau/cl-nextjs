@@ -3,6 +3,7 @@ import { gql } from 'graphql-request';
 import {
     HERO_FRAGMENT,
     ICON_FRAGMENT,
+    IMAGE_FRAGMENT,
     INTERNAL_LINK_FRAGMENT,
     SINGLE_USE_FRAGMENT
 } from './graphqlFragments';
@@ -70,6 +71,25 @@ export const TOOLBOX_QUERY = gql`
                 id
                 title
                 ${ICON_FRAGMENT}
+            }
+        }
+    }
+`;
+
+export const TESTIMONIALS_QUERY = gql`
+query TestimonialsQuery {
+    TestimonialListing {
+            title
+            ${ICON_FRAGMENT}
+            testimonials {
+                id
+                author
+                jobTitle
+                company
+                linkedin
+                excerpt
+                testimonial
+                ${IMAGE_FRAGMENT}
             }
         }
     }

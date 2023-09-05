@@ -8,7 +8,6 @@
     ul {
         margin-top: rem(12);
         list-style: none;
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: rem(32);
         @include transition(gap);

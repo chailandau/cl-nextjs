@@ -6,6 +6,7 @@ import { TOOLBOX_QUERY } from '@/api/graphqlQueries';
 import Container from '@/atoms/Container';
 import Image from '@/atoms/Image';
 import Text from '@/atoms/Text';
+import Grid from '@/molecules/Grid';
 import Section from '@/molecules/Section';
 import { getData } from '@/utils/getData';
 
@@ -21,7 +22,7 @@ const ToolboxListing: FC = async () => {
             icon={icon}
         >
             {description && <Text size='sm'>{description}</Text>}
-            <ul>
+            <Grid as='ul'>
                 {tools?.map((tool) => (
                     <li key={tool?.id}>
                         <Container className={styles['icon']}>
@@ -39,7 +40,7 @@ const ToolboxListing: FC = async () => {
                         <Text size='xs'>{tool?.title}</Text>
                     </li>
                 ))}
-            </ul>
+            </Grid>
         </Section>
     );
 };

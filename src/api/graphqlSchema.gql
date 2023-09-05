@@ -6158,6 +6158,7 @@ type Testimonial {
 type TestimonialListing {
   createdAt: DateTime
   icon(where: TestimonialListing_Icon_where): Icon
+  testimonials: [Testimonial!]
   title: String
   updatedAt: DateTime
 }
@@ -6165,6 +6166,7 @@ type TestimonialListing {
 type TestimonialListingDocAccessFields {
   createdAt: TestimonialListingDocAccessFields_createdAt
   icon: TestimonialListingDocAccessFields_icon
+  testimonials: TestimonialListingDocAccessFields_testimonials
   title: TestimonialListingDocAccessFields_title
   updatedAt: TestimonialListingDocAccessFields_updatedAt
 }
@@ -6212,6 +6214,29 @@ type TestimonialListingDocAccessFields_icon_Read {
 }
 
 type TestimonialListingDocAccessFields_icon_Update {
+  permission: Boolean!
+}
+
+type TestimonialListingDocAccessFields_testimonials {
+  create: TestimonialListingDocAccessFields_testimonials_Create
+  delete: TestimonialListingDocAccessFields_testimonials_Delete
+  read: TestimonialListingDocAccessFields_testimonials_Read
+  update: TestimonialListingDocAccessFields_testimonials_Update
+}
+
+type TestimonialListingDocAccessFields_testimonials_Create {
+  permission: Boolean!
+}
+
+type TestimonialListingDocAccessFields_testimonials_Delete {
+  permission: Boolean!
+}
+
+type TestimonialListingDocAccessFields_testimonials_Read {
+  permission: Boolean!
+}
+
+type TestimonialListingDocAccessFields_testimonials_Update {
   permission: Boolean!
 }
 
@@ -6264,6 +6289,7 @@ type TestimonialListingDocAccessFields_updatedAt_Update {
 type TestimonialListingFields {
   createdAt: TestimonialListingFields_createdAt
   icon: TestimonialListingFields_icon
+  testimonials: TestimonialListingFields_testimonials
   title: TestimonialListingFields_title
   updatedAt: TestimonialListingFields_updatedAt
 }
@@ -6311,6 +6337,29 @@ type TestimonialListingFields_icon_Read {
 }
 
 type TestimonialListingFields_icon_Update {
+  permission: Boolean!
+}
+
+type TestimonialListingFields_testimonials {
+  create: TestimonialListingFields_testimonials_Create
+  delete: TestimonialListingFields_testimonials_Delete
+  read: TestimonialListingFields_testimonials_Read
+  update: TestimonialListingFields_testimonials_Update
+}
+
+type TestimonialListingFields_testimonials_Create {
+  permission: Boolean!
+}
+
+type TestimonialListingFields_testimonials_Delete {
+  permission: Boolean!
+}
+
+type TestimonialListingFields_testimonials_Read {
+  permission: Boolean!
+}
+
+type TestimonialListingFields_testimonials_Update {
   permission: Boolean!
 }
 
@@ -9348,6 +9397,7 @@ input mutationTestimonialInput {
 input mutationTestimonialListingInput {
   createdAt: String
   icon: String
+  testimonials: [String]
   title: String
   updatedAt: String
 }
