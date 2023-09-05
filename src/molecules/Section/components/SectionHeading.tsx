@@ -27,8 +27,8 @@ const SectionHeading: FC<SectionHeadingProps> = ({ heading, icon }) => {
                     {heading}
                 </Heading>
             )}
-            <Container className={styles['icon']}>
-                {icon && icon?.url && (
+            {icon && icon?.url && (
+                <Container className={styles['icon']}>
                     <Image
                         src={icon?.url}
                         alt={icon?.alt}
@@ -36,8 +36,8 @@ const SectionHeading: FC<SectionHeadingProps> = ({ heading, icon }) => {
                         height={icon?.height || 64}
                         hasBorder={false}
                     />
-                )}
-            </Container>
+                </Container>
+            )}
         </Flex>
     );
 };
