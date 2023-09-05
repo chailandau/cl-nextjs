@@ -1,0 +1,13 @@
+.testimonial-listing {
+    gap: rem(32);
+    .testimonials {
+        gap: rem(32);
+        @include laptop {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        & > div {
+            flex-direction: column;
+            gap: rem(32);
+        }
+    }
+}
