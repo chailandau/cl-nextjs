@@ -1,8 +1,14 @@
 .section {
-    @include paddingX(12);
+    padding: rem(20) rem(12);
     flex-direction: column;
     @include mobileLg {
         @include paddingX(24);
+    }
+    @include tablet {
+        @include paddingY(32);
+    }
+    @include tabletLg {
+        @include paddingY(44);
     }
     &-heading {
         gap: rem(24);
@@ -11,6 +17,10 @@
         padding-bottom: rem(16);
         .icon {
             width: rem(32);
+            @include transition(width);
+            @include laptop {
+                width: rem(40);
+            }
         }
     }
 }

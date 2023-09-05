@@ -1,5 +1,6 @@
 .header {
     flex-direction: row !important;
+    @include paddingY(0);
     &,
     &:before {
         @include borderRadius;

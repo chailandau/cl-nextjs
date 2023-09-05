@@ -2,9 +2,15 @@
     @include transition(font-size);
     &.xs {
         @include font(14, 22);
+        @include tablet {
+            @include font(16, 28);
+        }
     }
     &.sm {
         @include font(16, 28);
+        @include tablet {
+            @include font(20, 30);
+        }
     }
     &.md {
         @include font(20, 30);
