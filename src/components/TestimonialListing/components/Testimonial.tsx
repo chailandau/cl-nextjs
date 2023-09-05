@@ -7,10 +7,10 @@ import Image from '@/atoms/Image';
 import Link from '@/atoms/Link';
 import Text from '@/atoms/Text';
 import Flex from '@/molecules/Flex';
-import Grid from '@/molecules/Grid';
 import { parseRichText } from '@/utils/parseRichText';
 
 interface TestimonialProps {
+    /** Testimonial object */
     testimonial: TestimonialType;
 }
 
@@ -28,7 +28,16 @@ const Testimonial: FC<TestimonialProps> = ({ testimonial }) => {
 
     return (
         <Flex className={styles['testimonial']}>
-            <Grid className={styles['author']}>
+            <Flex className={styles['testimonial-content']}>
+                {excerpt ? (
+                    <Text size='xs'>{excerpt}</Text>
+                ) : (
+                    parseRichText(testimonialText)
+                )}
+            </Flex>
+            {/* TODO: Add full testimonial text
+            https://github.com/chailandau/cl-nextjs/issues/25 */}
+            <Flex className={styles['author']}>
                 <Link
                     href={linkedin || ''}
                     className={styles['author-image']}
@@ -53,15 +62,7 @@ const Testimonial: FC<TestimonialProps> = ({ testimonial }) => {
                         {jobTitle} @ {company}
                     </Text>
                 </Flex>
-            </Grid>
-
-            {excerpt ? (
-                <Text size='sm'>{excerpt}</Text>
-            ) : (
-                parseRichText(testimonialText)
-            )}
-            {/* TODO: Add full testimonial text
-            https://github.com/chailandau/cl-nextjs/issues/25 */}
+            </Flex>
         </Flex>
     );
 };

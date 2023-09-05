@@ -107,6 +107,14 @@
     }
 }
 
+@mixin removeBoxShadow {
+    border: unset;
+    &:before,
+    &:after {
+        display: none;
+    }
+}
+
 // spacing
 @mixin paddingX($padding) {
     padding-left: rem($padding);

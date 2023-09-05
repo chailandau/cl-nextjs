@@ -10,7 +10,7 @@ interface RichTextProps {
     children: ChildSegment[];
 }
 
-type RichText = JSX.Element[][] | null | undefined;
+type RichText = JSX.Element[] | null | undefined;
 
 /**
  * Parses rich text and returns an array of Text components.
@@ -25,22 +25,22 @@ export const parseRichText = (richText: RichTextProps[]): RichText | null => {
 
     const results: JSX.Element[] = [];
 
-    return richText.flatMap(
+    richText.flatMap(
         (segment) =>
-            segment?.children?.map((child) => {
+            segment?.children?.forEach((child) => {
                 const paragraphs = child.text
                     .split('\n')
                     .filter((paragraph) => paragraph.trim() !== '');
 
                 paragraphs.forEach((par, parIndex) => {
                     results.push(
-                        <Text size='sm' key={parIndex}>
+                        <Text size='xs' key={parIndex}>
                             {par}
                         </Text>
                     );
                 });
-
-                return results;
             })
     );
+
+    return results;
 };

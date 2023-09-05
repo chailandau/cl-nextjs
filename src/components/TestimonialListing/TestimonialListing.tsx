@@ -4,7 +4,7 @@ import Testimonial from './components/Testimonial';
 import styles from './TestimonialListing.module.scss';
 
 import { TESTIMONIALS_QUERY } from '@/api/graphqlQueries';
-import Grid from '@/molecules/Grid';
+import Flex from '@/molecules/Flex';
 import Section from '@/molecules/Section';
 import { getData } from '@/utils/getData';
 
@@ -20,14 +20,14 @@ const TestimonialListing: FC = async () => {
             heading={title}
             icon={icon}
         >
-            <Grid className={styles['testimonials']}>
+            <Flex className={styles['testimonials']}>
                 {testimonials?.map((testimonial) => (
                     <Testimonial
                         key={testimonial?.id}
                         testimonial={testimonial}
                     />
                 ))}
-            </Grid>
+            </Flex>
         </Section>
     );
 };
