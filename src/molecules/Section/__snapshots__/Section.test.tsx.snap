@@ -6,7 +6,7 @@ exports[`Section matches snapshot 1`] = `
     class="flex section section"
   >
     <p
-      class="text sm primary"
+      class="text md primary"
     >
       This text is in a section
     </p>

@@ -6,7 +6,7 @@ exports[`Flex matches snapshot 1`] = `
     class="flex"
   >
     <p
-      class="text sm primary"
+      class="text md primary"
     >
       This text is in a flex container
     </p>

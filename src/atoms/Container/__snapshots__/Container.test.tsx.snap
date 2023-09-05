@@ -4,7 +4,7 @@ exports[`Container matches snapshot 1`] = `
 <DocumentFragment>
   <div>
     <p
-      class="text sm primary"
+      class="text md primary"
     >
       This text is in a container.
     </p>

@@ -18,6 +18,7 @@ exports[`Fragments "CTA_FRAGMENT" matches snapshot: CTA_FRAGMENT 1`] = `
 exports[`Fragments "HERO_FRAGMENT" matches snapshot: HERO_FRAGMENT 1`] = `
 "
 ... on HeroBlock {
+    __typename
     id
     hero {
       id
@@ -62,10 +63,33 @@ exports[`Fragments "ICON_FRAGMENT" matches snapshot: ICON_FRAGMENT 1`] = `
 "
 `;
 
+exports[`Fragments "IMAGE_FRAGMENT" matches snapshot: IMAGE_FRAGMENT 1`] = `
+"
+  image {
+    id
+    alt
+    url
+    width
+    height
+  }
+"
+`;
+
 exports[`Fragments "INTERNAL_LINK_FRAGMENT" matches snapshot: INTERNAL_LINK_FRAGMENT 1`] = `
 "
     id
     title
     slug
+"
+`;
+
+exports[`Fragments "SINGLE_USE_FRAGMENT" matches snapshot: SINGLE_USE_FRAGMENT 1`] = `
+"
+... on SingleUseBlock {
+  __typename
+  id
+  singleUse
+  
+}
 "
 `;
