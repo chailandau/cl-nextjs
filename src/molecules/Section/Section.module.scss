@@ -1,4 +1,31 @@
 .section {
-    @include paddingX(24);
+    padding: rem(20) rem(12);
     flex-direction: column;
+    gap: rem(32);
+    @include mobileLg {
+        @include paddingX(24);
+    }
+    @include tablet {
+        @include paddingY(32);
+        gap: rem(48);
+    }
+    @include tabletLg {
+        @include paddingY(44);
+    }
+    @include laptop {
+        gap: rem(56);
+    }
+    &-heading {
+        gap: rem(24);
+        align-items: center;
+        @include dashBorder;
+        padding-bottom: rem(16);
+        .icon {
+            width: rem(32);
+            @include transition(width);
+            @include laptop {
+                width: rem(40);
+            }
+        }
+    }
 }

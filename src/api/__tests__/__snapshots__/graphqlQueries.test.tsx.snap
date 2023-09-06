@@ -47,6 +47,7 @@ exports[`graphqlQueries mocks PAGES_QUERY successfully 1`] = `
           "id": "Hello World",
           "sections": [
             {
+              "__typename": "HeroBlock",
               "hero": {
                 "coloredSubhead": null,
                 "cta": {
@@ -73,6 +74,7 @@ exports[`graphqlQueries mocks PAGES_QUERY successfully 1`] = `
               "id": "Hello World",
             },
             {
+              "__typename": "HeroBlock",
               "hero": {
                 "coloredSubhead": null,
                 "cta": {
@@ -106,6 +108,7 @@ exports[`graphqlQueries mocks PAGES_QUERY successfully 1`] = `
           "id": "Hello World",
           "sections": [
             {
+              "__typename": "HeroBlock",
               "hero": {
                 "coloredSubhead": null,
                 "cta": {
@@ -132,6 +135,7 @@ exports[`graphqlQueries mocks PAGES_QUERY successfully 1`] = `
               "id": "Hello World",
             },
             {
+              "__typename": "HeroBlock",
               "hero": {
                 "coloredSubhead": null,
                 "cta": {
@@ -164,12 +168,6 @@ exports[`graphqlQueries mocks PAGES_QUERY successfully 1`] = `
       ],
     },
   },
-  "errors": [
-    [GraphQLError: No mock defined for type "JSON"],
-    [GraphQLError: No mock defined for type "JSON"],
-    [GraphQLError: No mock defined for type "JSON"],
-    [GraphQLError: No mock defined for type "JSON"],
-  ],
 }
 `;
 
@@ -183,6 +181,69 @@ exports[`graphqlQueries mocks SLUG_QUERY successfully 1`] = `
         },
         {
           "slug": "Hello World",
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`graphqlQueries mocks TESTIMONIALS_QUERY successfully 1`] = `
+{
+  "data": {
+    "TestimonialListing": {
+      "icon": {
+        "alt": "Hello World",
+        "height": 64,
+        "id": "Hello World",
+        "url": "Hello World",
+        "width": 64,
+      },
+      "testimonials": null,
+      "title": "Hello World",
+    },
+  },
+  "errors": [
+    [GraphQLError: No mock defined for type "JSON"],
+  ],
+}
+`;
+
+exports[`graphqlQueries mocks TOOLBOX_QUERY successfully 1`] = `
+{
+  "data": {
+    "ToolboxListing": {
+      "description": "Hello World",
+      "icon": {
+        "alt": "Hello World",
+        "height": 64,
+        "id": "Hello World",
+        "url": "Hello World",
+        "width": 64,
+      },
+      "title": "Hello World",
+      "tools": [
+        {
+          "icon": {
+            "alt": "Hello World",
+            "height": 64,
+            "id": "Hello World",
+            "url": "Hello World",
+            "width": 64,
+          },
+          "id": "Hello World",
+          "title": "Hello World",
+        },
+        {
+          "icon": {
+            "alt": "Hello World",
+            "height": 64,
+            "id": "Hello World",
+            "url": "Hello World",
+            "width": 64,
+          },
+          "id": "Hello World",
+          "title": "Hello World",
         },
       ],
     },

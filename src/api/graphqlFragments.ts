@@ -27,8 +27,19 @@ export const ICON_FRAGMENT = `
   }
 `;
 
+export const IMAGE_FRAGMENT = `
+  image {
+    id
+    alt
+    url
+    width
+    height
+  }
+`;
+
 export const HERO_FRAGMENT = `
 ... on HeroBlock {
+    __typename
     id
     hero {
       id
@@ -39,4 +50,13 @@ export const HERO_FRAGMENT = `
       ${CTA_FRAGMENT}
     }
   }
+`;
+
+export const SINGLE_USE_FRAGMENT = `
+... on SingleUseBlock {
+  __typename
+  id
+  singleUse
+  
+}
 `;

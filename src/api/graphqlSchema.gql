@@ -4608,7 +4608,7 @@ type Page {
   updatedAt: DateTime
 }
 
-union Page_Sections = HeroBlock
+union Page_Sections = HeroBlock | SingleUseBlock
 
 input Page_createdAt_operator {
   equals: DateTime
@@ -6129,6 +6129,19 @@ type Query {
   meUser: usersMe
 }
 
+type SingleUseBlock {
+  blockName: String
+  blockType: String
+  id: String
+  singleUse: SingleUseBlock_singleUse
+}
+
+enum SingleUseBlock_singleUse {
+  case_study_listing
+  testimonial_listing
+  toolbox_listing
+}
+
 type Testimonial {
   author: String!
   company: String!
@@ -6145,6 +6158,7 @@ type Testimonial {
 type TestimonialListing {
   createdAt: DateTime
   icon(where: TestimonialListing_Icon_where): Icon
+  testimonials: [Testimonial!]
   title: String
   updatedAt: DateTime
 }
@@ -6152,6 +6166,7 @@ type TestimonialListing {
 type TestimonialListingDocAccessFields {
   createdAt: TestimonialListingDocAccessFields_createdAt
   icon: TestimonialListingDocAccessFields_icon
+  testimonials: TestimonialListingDocAccessFields_testimonials
   title: TestimonialListingDocAccessFields_title
   updatedAt: TestimonialListingDocAccessFields_updatedAt
 }
@@ -6199,6 +6214,29 @@ type TestimonialListingDocAccessFields_icon_Read {
 }
 
 type TestimonialListingDocAccessFields_icon_Update {
+  permission: Boolean!
+}
+
+type TestimonialListingDocAccessFields_testimonials {
+  create: TestimonialListingDocAccessFields_testimonials_Create
+  delete: TestimonialListingDocAccessFields_testimonials_Delete
+  read: TestimonialListingDocAccessFields_testimonials_Read
+  update: TestimonialListingDocAccessFields_testimonials_Update
+}
+
+type TestimonialListingDocAccessFields_testimonials_Create {
+  permission: Boolean!
+}
+
+type TestimonialListingDocAccessFields_testimonials_Delete {
+  permission: Boolean!
+}
+
+type TestimonialListingDocAccessFields_testimonials_Read {
+  permission: Boolean!
+}
+
+type TestimonialListingDocAccessFields_testimonials_Update {
   permission: Boolean!
 }
 
@@ -6251,6 +6289,7 @@ type TestimonialListingDocAccessFields_updatedAt_Update {
 type TestimonialListingFields {
   createdAt: TestimonialListingFields_createdAt
   icon: TestimonialListingFields_icon
+  testimonials: TestimonialListingFields_testimonials
   title: TestimonialListingFields_title
   updatedAt: TestimonialListingFields_updatedAt
 }
@@ -6298,6 +6337,29 @@ type TestimonialListingFields_icon_Read {
 }
 
 type TestimonialListingFields_icon_Update {
+  permission: Boolean!
+}
+
+type TestimonialListingFields_testimonials {
+  create: TestimonialListingFields_testimonials_Create
+  delete: TestimonialListingFields_testimonials_Delete
+  read: TestimonialListingFields_testimonials_Read
+  update: TestimonialListingFields_testimonials_Update
+}
+
+type TestimonialListingFields_testimonials_Create {
+  permission: Boolean!
+}
+
+type TestimonialListingFields_testimonials_Delete {
+  permission: Boolean!
+}
+
+type TestimonialListingFields_testimonials_Read {
+  permission: Boolean!
+}
+
+type TestimonialListingFields_testimonials_Update {
   permission: Boolean!
 }
 
@@ -7762,6 +7824,7 @@ input Tool_where_or {
 
 type ToolboxListing {
   createdAt: DateTime
+  description: String
   icon(where: ToolboxListing_Icon_where): Icon
   title: String
   tools: [Tool!]
@@ -7770,6 +7833,7 @@ type ToolboxListing {
 
 type ToolboxListingDocAccessFields {
   createdAt: ToolboxListingDocAccessFields_createdAt
+  description: ToolboxListingDocAccessFields_description
   icon: ToolboxListingDocAccessFields_icon
   title: ToolboxListingDocAccessFields_title
   tools: ToolboxListingDocAccessFields_tools
@@ -7796,6 +7860,29 @@ type ToolboxListingDocAccessFields_createdAt_Read {
 }
 
 type ToolboxListingDocAccessFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type ToolboxListingDocAccessFields_description {
+  create: ToolboxListingDocAccessFields_description_Create
+  delete: ToolboxListingDocAccessFields_description_Delete
+  read: ToolboxListingDocAccessFields_description_Read
+  update: ToolboxListingDocAccessFields_description_Update
+}
+
+type ToolboxListingDocAccessFields_description_Create {
+  permission: Boolean!
+}
+
+type ToolboxListingDocAccessFields_description_Delete {
+  permission: Boolean!
+}
+
+type ToolboxListingDocAccessFields_description_Read {
+  permission: Boolean!
+}
+
+type ToolboxListingDocAccessFields_description_Update {
   permission: Boolean!
 }
 
@@ -7893,6 +7980,7 @@ type ToolboxListingDocAccessFields_updatedAt_Update {
 
 type ToolboxListingFields {
   createdAt: ToolboxListingFields_createdAt
+  description: ToolboxListingFields_description
   icon: ToolboxListingFields_icon
   title: ToolboxListingFields_title
   tools: ToolboxListingFields_tools
@@ -7919,6 +8007,29 @@ type ToolboxListingFields_createdAt_Read {
 }
 
 type ToolboxListingFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type ToolboxListingFields_description {
+  create: ToolboxListingFields_description_Create
+  delete: ToolboxListingFields_description_Delete
+  read: ToolboxListingFields_description_Read
+  update: ToolboxListingFields_description_Update
+}
+
+type ToolboxListingFields_description_Create {
+  permission: Boolean!
+}
+
+type ToolboxListingFields_description_Delete {
+  permission: Boolean!
+}
+
+type ToolboxListingFields_description_Read {
+  permission: Boolean!
+}
+
+type ToolboxListingFields_description_Update {
   permission: Boolean!
 }
 
@@ -9286,6 +9397,7 @@ input mutationTestimonialInput {
 input mutationTestimonialListingInput {
   createdAt: String
   icon: String
+  testimonials: [String]
   title: String
   updatedAt: String
 }
@@ -9318,6 +9430,7 @@ input mutationToolUpdateInput {
 
 input mutationToolboxListingInput {
   createdAt: String
+  description: String
   icon: String
   title: String
   tools: [String]

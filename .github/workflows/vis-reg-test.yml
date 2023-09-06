@@ -57,7 +57,7 @@ jobs:
                       | View report | https://chailandau.github.io/cl-nextjs/ |
                       |---|---|
 
-                      <em>If visual regressions are as expected, run <code>yarn loki update</code> and then <code>yarn reg-cli:update</code> twice on local and push up.</em>
+                      <em>If visual regressions are as expected, run <code>yarn loki:update</code> and then <code>yarn reg-cli:update</code> twice on local and push up.</em>
 
             - name: VRT no errors - Deploy Success Comment
               uses: mshick/add-pr-comment@v2

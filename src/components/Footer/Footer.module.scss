@@ -1,0 +1,8 @@
+.footer {
+    @include mobileLg {
+        @include marginX(-24);
+    }
+    @include tablet {
+        padding-bottom: 0;
+    }
+}

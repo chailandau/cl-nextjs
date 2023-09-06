@@ -5,7 +5,7 @@ import styles from './Text.module.scss';
 
 export const textTags = ['p', 'span'] as const;
 
-export const textSizes = ['lg', 'md', 'sm', 'xs'] as const;
+export const textSizes = ['xl', 'lg', 'md', 'sm', 'xs'] as const;
 
 export const fontFamily = ['primary', 'secondary'] as const;
 export interface TextProps {
@@ -26,7 +26,7 @@ export const backgroundColors = ['aqua', 'white', 'pink'] as const;
 const Text: FC<TextProps> = ({
     as: TextTag = 'p',
     backgroundColor,
-    size = 'sm',
+    size = 'md',
     font = 'primary',
     children
 }) => {

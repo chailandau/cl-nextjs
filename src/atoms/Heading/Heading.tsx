@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 import styles from './Heading.module.scss';
 
@@ -17,7 +17,7 @@ interface HeadingProps {
     /** Heading color */
     color?: (typeof headingColors)[number];
     /** Heading content */
-    children: string;
+    children: string | ReactNode;
 }
 
 const Heading: FC<HeadingProps> = ({

@@ -12,7 +12,7 @@ const meta: Meta<typeof Text> = {
         },
         size: {
             options: textSizes,
-            table: { defaultValue: { summary: 'sm' } },
+            table: { defaultValue: { summary: 'md' } },
             control: { type: 'select' }
         }
     }
@@ -25,8 +25,8 @@ type Story = StoryObj<typeof Text>;
 export const Default: Story = {
     args: {
         as: 'p',
-        size: 'sm',
-        children: 'This is default text (small).'
+        size: 'md',
+        children: 'This is default text (medium).'
     }
 };
 
@@ -37,12 +37,11 @@ export const ExtraSmall: Story = {
         children: 'This is extra small text.'
     }
 };
-
-export const Medium: Story = {
+export const Small: Story = {
     args: {
         as: 'p',
-        size: 'md',
-        children: 'This is medium text.'
+        size: 'sm',
+        children: 'This is small text.'
     }
 };
 
@@ -51,5 +50,13 @@ export const Large: Story = {
         as: 'p',
         size: 'lg',
         children: 'This is large text.'
+    }
+};
+
+export const ExtraLarge: Story = {
+    args: {
+        as: 'p',
+        size: 'xl',
+        children: 'This is extra large text.'
     }
 };

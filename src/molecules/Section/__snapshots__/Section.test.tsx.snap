@@ -5,8 +5,36 @@ exports[`Section matches snapshot 1`] = `
   <section
     class="flex section section"
   >
+    <div
+      class="flex section-heading"
+    >
+      <h2
+        class="heading md black"
+      >
+        Section Heading
+      </h2>
+      <div
+        class="icon"
+      >
+        <div
+          class="flex container"
+        >
+          <img
+            alt="Waving hand emoji"
+            data-nimg="1"
+            decoding="async"
+            height="64"
+            loading="lazy"
+            src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fwave.png&w=128&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fwave.png&w=64&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fwave.png&w=128&q=75 2x"
+            style="color: transparent;"
+            width="64"
+          />
+        </div>
+      </div>
+    </div>
     <p
-      class="text sm primary"
+      class="text md primary"
     >
       This text is in a section
     </p>

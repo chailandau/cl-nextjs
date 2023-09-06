@@ -1,0 +1,57 @@
+.testimonial {
+    position: relative;
+    flex-direction: column;
+    display: grid;
+    gap: rem(16);
+    @include dashBorder;
+    @include tabletLg {
+        max-width: rem(680);
+        margin: auto;
+        background-image: unset;
+    }
+    a {
+        margin: unset;
+        padding: unset;
+    }
+    .author {
+        gap: rem(24);
+        z-index: 1;
+        margin: rem(24) rem(0) rem(16) rem(24);
+
+        span {
+            display: inline;
+        }
+        &-image {
+            width: rem(64);
+            > span {
+                &:before {
+                    display: none !important;
+                }
+                > div {
+                    border-radius: 100%;
+                    overflow: hidden;
+                    width: rem(64);
+                    height: rem(64);
+                }
+            }
+        }
+        &-details {
+            flex-direction: column;
+            gap: rem(4);
+            @include laptop {
+                max-width: rem(240);
+            }
+        }
+    }
+    &-content {
+        position: relative;
+        flex-direction: column;
+        gap: rem(24);
+        background-color: color(common, 'white');
+        @include boxShadow;
+        padding: rem(24);
+        @include tabletLg {
+            padding: rem(32) rem(48);
+        }
+    }
+}

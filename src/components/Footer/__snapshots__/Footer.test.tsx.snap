@@ -3,7 +3,7 @@
 exports[`Footer matches snapshot 1`] = `
 <DocumentFragment>
   <footer
-    class="flex section"
+    class="flex section footer"
   >
     <div
       class="flex mobile-footer"

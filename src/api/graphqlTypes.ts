@@ -5519,7 +5519,7 @@ export type Page = {
     updatedAt?: Maybe<Scalars['DateTime']['output']>;
 };
 
-export type Page_Sections = HeroBlock;
+export type Page_Sections = HeroBlock | SingleUseBlock;
 
 export type Page_CreatedAt_Operator = {
     equals?: InputMaybe<Scalars['DateTime']['input']>;
@@ -7392,6 +7392,20 @@ export type QueryDocAccessUserArgs = {
     id: Scalars['String']['input'];
 };
 
+export type SingleUseBlock = {
+    __typename?: 'SingleUseBlock';
+    blockName?: Maybe<Scalars['String']['output']>;
+    blockType?: Maybe<Scalars['String']['output']>;
+    id?: Maybe<Scalars['String']['output']>;
+    singleUse?: Maybe<SingleUseBlock_SingleUse>;
+};
+
+export type SingleUseBlock_SingleUse =
+    | 'case_study_listing'
+    | 'testimonial_listing'
+    | 'toolbox_listing'
+    | '%future added value';
+
 export type Testimonial = {
     __typename?: 'Testimonial';
     author: Scalars['String']['output'];
@@ -7418,6 +7432,7 @@ export type TestimonialListing = {
     __typename?: 'TestimonialListing';
     createdAt?: Maybe<Scalars['DateTime']['output']>;
     icon?: Maybe<Icon>;
+    testimonials?: Maybe<Array<Testimonial>>;
     title?: Maybe<Scalars['String']['output']>;
     updatedAt?: Maybe<Scalars['DateTime']['output']>;
 };
@@ -7430,6 +7445,7 @@ export type TestimonialListingDocAccessFields = {
     __typename?: 'TestimonialListingDocAccessFields';
     createdAt?: Maybe<TestimonialListingDocAccessFields_CreatedAt>;
     icon?: Maybe<TestimonialListingDocAccessFields_Icon>;
+    testimonials?: Maybe<TestimonialListingDocAccessFields_Testimonials>;
     title?: Maybe<TestimonialListingDocAccessFields_Title>;
     updatedAt?: Maybe<TestimonialListingDocAccessFields_UpdatedAt>;
 };
@@ -7487,6 +7503,34 @@ export type TestimonialListingDocAccessFields_Icon_Read = {
 
 export type TestimonialListingDocAccessFields_Icon_Update = {
     __typename?: 'TestimonialListingDocAccessFields_icon_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type TestimonialListingDocAccessFields_Testimonials = {
+    __typename?: 'TestimonialListingDocAccessFields_testimonials';
+    create?: Maybe<TestimonialListingDocAccessFields_Testimonials_Create>;
+    delete?: Maybe<TestimonialListingDocAccessFields_Testimonials_Delete>;
+    read?: Maybe<TestimonialListingDocAccessFields_Testimonials_Read>;
+    update?: Maybe<TestimonialListingDocAccessFields_Testimonials_Update>;
+};
+
+export type TestimonialListingDocAccessFields_Testimonials_Create = {
+    __typename?: 'TestimonialListingDocAccessFields_testimonials_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type TestimonialListingDocAccessFields_Testimonials_Delete = {
+    __typename?: 'TestimonialListingDocAccessFields_testimonials_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type TestimonialListingDocAccessFields_Testimonials_Read = {
+    __typename?: 'TestimonialListingDocAccessFields_testimonials_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type TestimonialListingDocAccessFields_Testimonials_Update = {
+    __typename?: 'TestimonialListingDocAccessFields_testimonials_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -7550,6 +7594,7 @@ export type TestimonialListingFields = {
     __typename?: 'TestimonialListingFields';
     createdAt?: Maybe<TestimonialListingFields_CreatedAt>;
     icon?: Maybe<TestimonialListingFields_Icon>;
+    testimonials?: Maybe<TestimonialListingFields_Testimonials>;
     title?: Maybe<TestimonialListingFields_Title>;
     updatedAt?: Maybe<TestimonialListingFields_UpdatedAt>;
 };
@@ -7607,6 +7652,34 @@ export type TestimonialListingFields_Icon_Read = {
 
 export type TestimonialListingFields_Icon_Update = {
     __typename?: 'TestimonialListingFields_icon_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type TestimonialListingFields_Testimonials = {
+    __typename?: 'TestimonialListingFields_testimonials';
+    create?: Maybe<TestimonialListingFields_Testimonials_Create>;
+    delete?: Maybe<TestimonialListingFields_Testimonials_Delete>;
+    read?: Maybe<TestimonialListingFields_Testimonials_Read>;
+    update?: Maybe<TestimonialListingFields_Testimonials_Update>;
+};
+
+export type TestimonialListingFields_Testimonials_Create = {
+    __typename?: 'TestimonialListingFields_testimonials_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type TestimonialListingFields_Testimonials_Delete = {
+    __typename?: 'TestimonialListingFields_testimonials_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type TestimonialListingFields_Testimonials_Read = {
+    __typename?: 'TestimonialListingFields_testimonials_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type TestimonialListingFields_Testimonials_Update = {
+    __typename?: 'TestimonialListingFields_testimonials_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -9192,6 +9265,7 @@ export type Tool_Where_Or = {
 export type ToolboxListing = {
     __typename?: 'ToolboxListing';
     createdAt?: Maybe<Scalars['DateTime']['output']>;
+    description?: Maybe<Scalars['String']['output']>;
     icon?: Maybe<Icon>;
     title?: Maybe<Scalars['String']['output']>;
     tools?: Maybe<Array<Tool>>;
@@ -9205,6 +9279,7 @@ export type ToolboxListingIconArgs = {
 export type ToolboxListingDocAccessFields = {
     __typename?: 'ToolboxListingDocAccessFields';
     createdAt?: Maybe<ToolboxListingDocAccessFields_CreatedAt>;
+    description?: Maybe<ToolboxListingDocAccessFields_Description>;
     icon?: Maybe<ToolboxListingDocAccessFields_Icon>;
     title?: Maybe<ToolboxListingDocAccessFields_Title>;
     tools?: Maybe<ToolboxListingDocAccessFields_Tools>;
@@ -9236,6 +9311,34 @@ export type ToolboxListingDocAccessFields_CreatedAt_Read = {
 
 export type ToolboxListingDocAccessFields_CreatedAt_Update = {
     __typename?: 'ToolboxListingDocAccessFields_createdAt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ToolboxListingDocAccessFields_Description = {
+    __typename?: 'ToolboxListingDocAccessFields_description';
+    create?: Maybe<ToolboxListingDocAccessFields_Description_Create>;
+    delete?: Maybe<ToolboxListingDocAccessFields_Description_Delete>;
+    read?: Maybe<ToolboxListingDocAccessFields_Description_Read>;
+    update?: Maybe<ToolboxListingDocAccessFields_Description_Update>;
+};
+
+export type ToolboxListingDocAccessFields_Description_Create = {
+    __typename?: 'ToolboxListingDocAccessFields_description_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ToolboxListingDocAccessFields_Description_Delete = {
+    __typename?: 'ToolboxListingDocAccessFields_description_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ToolboxListingDocAccessFields_Description_Read = {
+    __typename?: 'ToolboxListingDocAccessFields_description_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ToolboxListingDocAccessFields_Description_Update = {
+    __typename?: 'ToolboxListingDocAccessFields_description_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -9354,6 +9457,7 @@ export type ToolboxListingDocAccessFields_UpdatedAt_Update = {
 export type ToolboxListingFields = {
     __typename?: 'ToolboxListingFields';
     createdAt?: Maybe<ToolboxListingFields_CreatedAt>;
+    description?: Maybe<ToolboxListingFields_Description>;
     icon?: Maybe<ToolboxListingFields_Icon>;
     title?: Maybe<ToolboxListingFields_Title>;
     tools?: Maybe<ToolboxListingFields_Tools>;
@@ -9385,6 +9489,34 @@ export type ToolboxListingFields_CreatedAt_Read = {
 
 export type ToolboxListingFields_CreatedAt_Update = {
     __typename?: 'ToolboxListingFields_createdAt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ToolboxListingFields_Description = {
+    __typename?: 'ToolboxListingFields_description';
+    create?: Maybe<ToolboxListingFields_Description_Create>;
+    delete?: Maybe<ToolboxListingFields_Description_Delete>;
+    read?: Maybe<ToolboxListingFields_Description_Read>;
+    update?: Maybe<ToolboxListingFields_Description_Update>;
+};
+
+export type ToolboxListingFields_Description_Create = {
+    __typename?: 'ToolboxListingFields_description_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ToolboxListingFields_Description_Delete = {
+    __typename?: 'ToolboxListingFields_description_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ToolboxListingFields_Description_Read = {
+    __typename?: 'ToolboxListingFields_description_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ToolboxListingFields_Description_Update = {
+    __typename?: 'ToolboxListingFields_description_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -10911,6 +11043,7 @@ export type MutationTestimonialInput = {
 export type MutationTestimonialListingInput = {
     createdAt?: InputMaybe<Scalars['String']['input']>;
     icon?: InputMaybe<Scalars['String']['input']>;
+    testimonials?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     title?: InputMaybe<Scalars['String']['input']>;
     updatedAt?: InputMaybe<Scalars['String']['input']>;
 };
@@ -10943,6 +11076,7 @@ export type MutationToolUpdateInput = {
 
 export type MutationToolboxListingInput = {
     createdAt?: InputMaybe<Scalars['String']['input']>;
+    description?: InputMaybe<Scalars['String']['input']>;
     icon?: InputMaybe<Scalars['String']['input']>;
     title?: InputMaybe<Scalars['String']['input']>;
     tools?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;

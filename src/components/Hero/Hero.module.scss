@@ -1,12 +1,7 @@
 .hero {
     margin: rem(48) 0 rem(64);
-    gap: rem(32);
     @include tablet {
         margin: rem(64) 0;
-        gap: rem(48);
-    }
-    @include laptop {
-        gap: rem(56);
     }
     .icon {
         width: rem(48);

@@ -1,0 +1,37 @@
+import { ArgTypes, Canvas, Meta } from '@storybook/blocks';
+
+import * as TestimonialStories from './Testimonial.stories';
+
+<Meta of={TestimonialStories} />
+
+# Testimonial Component
+
+The `Testimonial` component highlights a testimonial from a list of testimonials.
+
+<Canvas of={TestimonialStories.Default} />
+
+## testimonial
+
+The `testimonial` is supplied as an object. It contains the following properties:
+
+<ul>
+    <li>`image` - author's image</li>
+    <li>`author` - author's name</li>
+    <li>`jobTitle` - author's</li>
+    <li>`company` - author's company</li>
+    <li>`linkedin` - author's linkedin profile</li>
+    <li>`excerpt` - testimonial excerpt</li>
+    <li>`testimonial` - testimonial text</li>
+</ul>
+
+It defaults to displaying the `excerpt`. If one is not found, it displays the `testimonial`.
+
+<br />
+
+<br />
+<br />
+<br />
+
+## Props Table
+
+<ArgTypes />

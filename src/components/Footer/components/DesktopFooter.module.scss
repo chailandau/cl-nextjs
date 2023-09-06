@@ -1,12 +1,13 @@
 .desktop-footer {
     display: none !important;
     position: relative;
-    margin: rem(120) rem(-24) 0 rem(-24);
     padding: rem(12) rem(24);
+    margin: rem(48) auto rem(24);
     justify-content: space-between;
     width: 100%;
     flex: 1;
     @include boxShadow(color(common, 'primary'));
+
     @include tabletLg {
         display: flex !important;
     }

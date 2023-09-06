@@ -33,32 +33,32 @@ exports[`Hero matches snapshot 1`] = `
       class="flex subhead"
     >
       <span
-        class="text sm secondary"
+        class="text md secondary"
       >
         I’m a 
       </span>
       <span
-        class="text sm bg-aqua secondary"
+        class="text md bg-aqua secondary"
       >
         designer-turned-engineer
       </span>
       <span
-        class="text sm secondary"
+        class="text md secondary"
       >
          obsessed with 
       </span>
       <span
-        class="text sm bg-white secondary"
+        class="text md bg-white secondary"
       >
         accessibility
       </span>
       <span
-        class="text sm secondary"
+        class="text md secondary"
       >
          and 
       </span>
       <span
-        class="text sm bg-pink secondary"
+        class="text md bg-pink secondary"
       >
         user experience.
       </span>

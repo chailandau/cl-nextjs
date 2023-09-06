@@ -1,0 +1,13 @@
+.testimonial-listing {
+    gap: rem(32);
+    @include tabletLg {
+        gap: rem(64);
+    }
+    .testimonials {
+        gap: rem(64);
+        flex-direction: column;
+        @include tabletLg {
+            gap: rem(80);
+        }
+    }
+}
