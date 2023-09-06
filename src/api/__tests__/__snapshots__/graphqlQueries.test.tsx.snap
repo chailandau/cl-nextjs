@@ -46,8 +46,60 @@ exports[`graphqlQueries mocks PAGES_QUERY successfully 1`] = `
         {
           "id": "Hello World",
           "sections": [
-            {},
-            {},
+            {
+              "__typename": "HeroBlock",
+              "hero": {
+                "coloredSubhead": null,
+                "cta": {
+                  "externalLink": "Hello World",
+                  "id": "Hello World",
+                  "internalLink": {
+                    "id": "Hello World",
+                    "slug": "Hello World",
+                  },
+                  "label": "Hello World",
+                  "linkType": "internal",
+                },
+                "heading": "Hello World",
+                "headingTag": "Hello World",
+                "icon": {
+                  "alt": "Hello World",
+                  "height": 64,
+                  "id": "Hello World",
+                  "url": "Hello World",
+                  "width": 64,
+                },
+                "id": "Hello World",
+              },
+              "id": "Hello World",
+            },
+            {
+              "__typename": "HeroBlock",
+              "hero": {
+                "coloredSubhead": null,
+                "cta": {
+                  "externalLink": "Hello World",
+                  "id": "Hello World",
+                  "internalLink": {
+                    "id": "Hello World",
+                    "slug": "Hello World",
+                  },
+                  "label": "Hello World",
+                  "linkType": "internal",
+                },
+                "heading": "Hello World",
+                "headingTag": "Hello World",
+                "icon": {
+                  "alt": "Hello World",
+                  "height": 64,
+                  "id": "Hello World",
+                  "url": "Hello World",
+                  "width": 64,
+                },
+                "id": "Hello World",
+              },
+              "id": "Hello World",
+            },
           ],
           "slug": "Hello World",
           "title": "Hello World",
@@ -55,8 +107,60 @@ exports[`graphqlQueries mocks PAGES_QUERY successfully 1`] = `
         {
           "id": "Hello World",
           "sections": [
-            {},
-            {},
+            {
+              "__typename": "HeroBlock",
+              "hero": {
+                "coloredSubhead": null,
+                "cta": {
+                  "externalLink": "Hello World",
+                  "id": "Hello World",
+                  "internalLink": {
+                    "id": "Hello World",
+                    "slug": "Hello World",
+                  },
+                  "label": "Hello World",
+                  "linkType": "internal",
+                },
+                "heading": "Hello World",
+                "headingTag": "Hello World",
+                "icon": {
+                  "alt": "Hello World",
+                  "height": 64,
+                  "id": "Hello World",
+                  "url": "Hello World",
+                  "width": 64,
+                },
+                "id": "Hello World",
+              },
+              "id": "Hello World",
+            },
+            {
+              "__typename": "HeroBlock",
+              "hero": {
+                "coloredSubhead": null,
+                "cta": {
+                  "externalLink": "Hello World",
+                  "id": "Hello World",
+                  "internalLink": {
+                    "id": "Hello World",
+                    "slug": "Hello World",
+                  },
+                  "label": "Hello World",
+                  "linkType": "internal",
+                },
+                "heading": "Hello World",
+                "headingTag": "Hello World",
+                "icon": {
+                  "alt": "Hello World",
+                  "height": 64,
+                  "id": "Hello World",
+                  "url": "Hello World",
+                  "width": 64,
+                },
+                "id": "Hello World",
+              },
+              "id": "Hello World",
+            },
           ],
           "slug": "Hello World",
           "title": "Hello World",
