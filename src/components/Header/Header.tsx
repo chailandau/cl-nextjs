@@ -3,8 +3,6 @@
 import FocusTrap from 'focus-trap-react';
 import { FC, useEffect } from 'react';
 
-import styles from './Header.module.scss';
-
 import { Nav_MenuItems } from '@/api/graphqlTypes';
 import Logo from '@/assets/svg/Logo.svg';
 import Image from '@/atoms/Image';
@@ -15,6 +13,9 @@ import { MenuToggle } from '@/molecules/Menu';
 import Section from '@/molecules/Section';
 import useStore from '@/store/useStore';
 import { tabletLgQuery, useMediaQuery } from '@/utils/hooks/useMediaQuery';
+
+// eslint-disable-next-line import/order
+import styles from './Header.module.scss';
 
 export interface HeaderProps {
     /* Nav to pass into header */

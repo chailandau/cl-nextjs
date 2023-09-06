@@ -5,11 +5,6 @@ import Section from './Section';
 import Text from '@/atoms/Text/Text';
 
 const textAtom = <Text>This text is in a section</Text>;
-
-export const icon = {
-    alt: 'Waving hand emoji',
-    url: 'https://cl-payload.cr.chailandau.com/icons/wave.png'
-};
 const meta: Meta<typeof Section> = {
     title: 'Molecules/Section',
     component: Section,
@@ -40,6 +35,9 @@ export const Default: Story = {
         children: textAtom,
         className: 'section',
         heading: 'Section Heading',
-        icon
+        icon: {
+            alt: 'Waving hand emoji',
+            url: 'https://cl-payload.cr.chailandau.com/icons/wave.png'
+        }
     }
 };
