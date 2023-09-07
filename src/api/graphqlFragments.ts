@@ -28,13 +28,11 @@ export const ICON_FRAGMENT = `
 `;
 
 export const IMAGE_FRAGMENT = `
-  image {
     id
     alt
     url
     width
     height
-  }
 `;
 
 export const HERO_FRAGMENT = `

@@ -11,26 +11,17 @@
         }
     }
     .subhead {
-        flex-wrap: wrap;
-        align-items: center;
-        row-gap: rem(16);
-        column-gap: rem(8);
-        max-width: rem(800);
-        @include transition(row-gap, column-gap);
+        line-height: rem(56);
         @include mobileLg {
-            row-gap: rem(20);
-            column-gap: rem(12);
+            line-height: rem(64);
         }
         @include tablet {
-            row-gap: rem(22);
-        }
-        @include tabletLg {
-            row-gap: rem(28);
+            line-height: rem(72);
         }
         @include laptop {
-            row-gap: rem(32);
+            line-height: rem(80);
         }
-        span {
+        & > span {
             @include font(17, 26);
             @include mobileLg {
                 @include font(20, 30);
@@ -43,6 +34,7 @@
             }
         }
     }
+
     .cta {
         margin-top: rem(8);
         @include transition(margin-top);

@@ -6,9 +6,9 @@ import { Hero as HeroType } from '@/api/graphqlTypes';
 import Heading from '@/atoms/Heading';
 import Image from '@/atoms/Image';
 import Link from '@/atoms/Link';
+import ColoredSubhead from '@/molecules/ColoredSubhead';
 import Flex from '@/molecules/Flex';
 import Section from '@/molecules/Section';
-import { parseColoredSubhead } from '@/utils/parseColoredSubhead';
 
 export interface HeroProps {
     heading?: string;
@@ -42,9 +42,10 @@ const Hero: FC<HeroProps> = ({ heading, coloredSubhead, icon, cta }) => {
                 </Heading>
             )}
             {coloredSubhead && (
-                <Flex className={styles['subhead']}>
-                    {parseColoredSubhead(coloredSubhead)}
-                </Flex>
+                <ColoredSubhead
+                    className={styles['subhead']}
+                    coloredSubhead={coloredSubhead}
+                />
             )}
             {cta && (
                 <Link href={ctaLink} className={styles['cta']}>

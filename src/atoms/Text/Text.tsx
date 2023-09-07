@@ -19,6 +19,8 @@ export interface TextProps {
     size?: (typeof textSizes)[number];
     /** Background block color */
     backgroundColor?: string;
+    /** optional class name */
+    className?: string;
 }
 
 export const backgroundColors = ['aqua', 'white', 'pink'] as const;
@@ -28,13 +30,15 @@ const Text: FC<TextProps> = ({
     backgroundColor,
     size = 'md',
     font = 'primary',
-    children
+    children,
+    className
 }) => {
     const classList = classNames(
         styles['text'],
         styles[size],
         backgroundColor && styles[`bg-${backgroundColor}`],
-        font && styles[font]
+        font && styles[font],
+        className && className
     );
 
     return <TextTag className={classList}>{children}</TextTag>;

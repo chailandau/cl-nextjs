@@ -7,7 +7,7 @@ interface ChildSegment {
     bold?: boolean;
 }
 
-interface ColoredSubheadProps {
+export interface ColoredSubheadProps {
     children: ChildSegment[];
 }
 

@@ -1,16 +1,23 @@
 .header {
     flex-direction: row !important;
     @include paddingY(0);
-    &,
-    &:before {
-        @include borderRadius;
-    }
+    margin-bottom: rem(24);
     position: relative;
     gap: rem(40);
     justify-content: space-between;
     align-items: center;
     @include boxShadow;
-
+    @include transition(margin, padding);
+    @include tabletLg {
+        @include paddingY(6);
+    }
+    @include laptop {
+        margin-bottom: rem(48);
+    }
+    &,
+    &:before {
+        @include borderRadius;
+    }
     .logo,
     .nav {
         z-index: 101;
@@ -29,8 +36,5 @@
             margin-right: 0;
             margin-top: rem(3);
         }
-    }
-    @include tabletLg {
-        @include paddingY(6);
     }
 }

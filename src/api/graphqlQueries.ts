@@ -89,7 +89,32 @@ query TestimonialsQuery {
                 linkedin
                 excerpt
                 testimonial
+                image {
+                    ${IMAGE_FRAGMENT}
+                }
+            }
+        }
+    }
+`;
+export const ABOUT_QUERY = gql`
+query AboutQuery {
+    About {
+            title
+            coloredSubhead
+            image {
                 ${IMAGE_FRAGMENT}
+            }
+            content
+            pets {
+                athena {
+                    ${IMAGE_FRAGMENT}
+                }
+                harvey {
+                    ${IMAGE_FRAGMENT}
+                }
+                warren {
+                    ${IMAGE_FRAGMENT}
+                }
             }
         }
     }

@@ -1,0 +1,92 @@
+.about {
+    gap: rem(120);
+    @include mobileLg {
+        gap: rem(132);
+    }
+    @include tablet {
+        gap: rem(156);
+    }
+    @include laptop {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: rem(64);
+    }
+    .image {
+        position: relative;
+        @include tabletLg {
+            max-width: rem(390);
+        }
+        > div > img {
+            aspect-ratio: 1;
+            object-fit: cover;
+            @include laptop {
+                aspect-ratio: unset;
+            }
+        }
+        .pets {
+            position: absolute;
+            width: 100%;
+            > div {
+                position: absolute;
+                @include transition(width);
+            }
+            .warren {
+                width: rem(112);
+                transform: rotate(-14deg);
+                top: rem(-20);
+                left: rem(2);
+                @include tablet {
+                    width: rem(136);
+                }
+            }
+            .harvey {
+                width: rem(66);
+                left: 46%;
+                top: rem(30);
+                @include tablet {
+                    width: rem(80);
+                }
+            }
+            .athena {
+                width: rem(72);
+                right: rem(12);
+                top: rem(-42);
+                @include tablet {
+                    width: rem(84);
+                }
+            }
+        }
+    }
+    .content {
+        flex-direction: column;
+        gap: rem(24);
+        @include tabletLg {
+            max-width: rem(540);
+            margin-left: auto;
+        }
+        @include laptop {
+            margin-left: unset;
+            gap: rem(32);
+            margin-top: rem(12);
+        }
+        .subhead {
+            line-height: rem(56);
+            @include mobileLg {
+                line-height: rem(64);
+            }
+            @include tablet {
+                line-height: rem(72);
+            }
+
+            & > span {
+                @include font(17, 26);
+                @include mobileLg {
+                    @include font(20, 30);
+                }
+                @include tablet {
+                    @include font(28, 34);
+                }
+            }
+        }
+    }
+}
