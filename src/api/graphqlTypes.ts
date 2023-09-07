@@ -2810,10 +2810,13 @@ export type Hero = {
     coloredSubhead?: Maybe<Scalars['JSON']['output']>;
     createdAt?: Maybe<Scalars['DateTime']['output']>;
     cta?: Maybe<Cta>;
+    doodles?: Maybe<Scalars['Boolean']['output']>;
     heading: Scalars['String']['output'];
     headingTag: Scalars['String']['output'];
+    homepage?: Maybe<Scalars['Boolean']['output']>;
     icon?: Maybe<Icon>;
     id?: Maybe<Scalars['String']['output']>;
+    subhead?: Maybe<Scalars['String']['output']>;
     updatedAt?: Maybe<Scalars['DateTime']['output']>;
 };
 
@@ -3089,6 +3092,12 @@ export type Hero_Cta_Operator = {
     not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
+export type Hero_Doodles_Operator = {
+    equals?: InputMaybe<Scalars['Boolean']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    not_equals?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
 export type Hero_HeadingTag_Operator = {
     all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     contains?: InputMaybe<Scalars['String']['input']>;
@@ -3109,6 +3118,12 @@ export type Hero_Heading_Operator = {
     not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
+export type Hero_Homepage_Operator = {
+    equals?: InputMaybe<Scalars['Boolean']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    not_equals?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
 export type Hero_Icon_Operator = {
     equals?: InputMaybe<Scalars['String']['input']>;
     exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -3124,6 +3139,14 @@ export type Hero_Id_Operator = {
     like?: InputMaybe<Scalars['String']['input']>;
     not_equals?: InputMaybe<Scalars['String']['input']>;
     not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Hero_Subhead_Operator = {
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type Hero_UpdatedAt_Operator = {
@@ -3143,10 +3166,13 @@ export type Hero_Where = {
     coloredSubhead?: InputMaybe<Hero_ColoredSubhead_Operator>;
     createdAt?: InputMaybe<Hero_CreatedAt_Operator>;
     cta?: InputMaybe<Hero_Cta_Operator>;
+    doodles?: InputMaybe<Hero_Doodles_Operator>;
     heading?: InputMaybe<Hero_Heading_Operator>;
     headingTag?: InputMaybe<Hero_HeadingTag_Operator>;
+    homepage?: InputMaybe<Hero_Homepage_Operator>;
     icon?: InputMaybe<Hero_Icon_Operator>;
     id?: InputMaybe<Hero_Id_Operator>;
+    subhead?: InputMaybe<Hero_Subhead_Operator>;
     updatedAt?: InputMaybe<Hero_UpdatedAt_Operator>;
 };
 
@@ -3154,10 +3180,13 @@ export type Hero_Where_And = {
     coloredSubhead?: InputMaybe<Hero_ColoredSubhead_Operator>;
     createdAt?: InputMaybe<Hero_CreatedAt_Operator>;
     cta?: InputMaybe<Hero_Cta_Operator>;
+    doodles?: InputMaybe<Hero_Doodles_Operator>;
     heading?: InputMaybe<Hero_Heading_Operator>;
     headingTag?: InputMaybe<Hero_HeadingTag_Operator>;
+    homepage?: InputMaybe<Hero_Homepage_Operator>;
     icon?: InputMaybe<Hero_Icon_Operator>;
     id?: InputMaybe<Hero_Id_Operator>;
+    subhead?: InputMaybe<Hero_Subhead_Operator>;
     updatedAt?: InputMaybe<Hero_UpdatedAt_Operator>;
 };
 
@@ -3165,10 +3194,13 @@ export type Hero_Where_Or = {
     coloredSubhead?: InputMaybe<Hero_ColoredSubhead_Operator>;
     createdAt?: InputMaybe<Hero_CreatedAt_Operator>;
     cta?: InputMaybe<Hero_Cta_Operator>;
+    doodles?: InputMaybe<Hero_Doodles_Operator>;
     heading?: InputMaybe<Hero_Heading_Operator>;
     headingTag?: InputMaybe<Hero_HeadingTag_Operator>;
+    homepage?: InputMaybe<Hero_Homepage_Operator>;
     icon?: InputMaybe<Hero_Icon_Operator>;
     id?: InputMaybe<Hero_Id_Operator>;
+    subhead?: InputMaybe<Hero_Subhead_Operator>;
     updatedAt?: InputMaybe<Hero_UpdatedAt_Operator>;
 };
 
@@ -3216,9 +3248,12 @@ export type HeroesDocAccessFields = {
     coloredSubhead?: Maybe<HeroesDocAccessFields_ColoredSubhead>;
     createdAt?: Maybe<HeroesDocAccessFields_CreatedAt>;
     cta?: Maybe<HeroesDocAccessFields_Cta>;
+    doodles?: Maybe<HeroesDocAccessFields_Doodles>;
     heading?: Maybe<HeroesDocAccessFields_Heading>;
     headingTag?: Maybe<HeroesDocAccessFields_HeadingTag>;
+    homepage?: Maybe<HeroesDocAccessFields_Homepage>;
     icon?: Maybe<HeroesDocAccessFields_Icon>;
+    subhead?: Maybe<HeroesDocAccessFields_Subhead>;
     updatedAt?: Maybe<HeroesDocAccessFields_UpdatedAt>;
 };
 
@@ -3306,6 +3341,34 @@ export type HeroesDocAccessFields_Cta_Update = {
     permission: Scalars['Boolean']['output'];
 };
 
+export type HeroesDocAccessFields_Doodles = {
+    __typename?: 'HeroesDocAccessFields_doodles';
+    create?: Maybe<HeroesDocAccessFields_Doodles_Create>;
+    delete?: Maybe<HeroesDocAccessFields_Doodles_Delete>;
+    read?: Maybe<HeroesDocAccessFields_Doodles_Read>;
+    update?: Maybe<HeroesDocAccessFields_Doodles_Update>;
+};
+
+export type HeroesDocAccessFields_Doodles_Create = {
+    __typename?: 'HeroesDocAccessFields_doodles_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesDocAccessFields_Doodles_Delete = {
+    __typename?: 'HeroesDocAccessFields_doodles_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesDocAccessFields_Doodles_Read = {
+    __typename?: 'HeroesDocAccessFields_doodles_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesDocAccessFields_Doodles_Update = {
+    __typename?: 'HeroesDocAccessFields_doodles_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
 export type HeroesDocAccessFields_Heading = {
     __typename?: 'HeroesDocAccessFields_heading';
     create?: Maybe<HeroesDocAccessFields_Heading_Create>;
@@ -3362,6 +3425,34 @@ export type HeroesDocAccessFields_Heading_Update = {
     permission: Scalars['Boolean']['output'];
 };
 
+export type HeroesDocAccessFields_Homepage = {
+    __typename?: 'HeroesDocAccessFields_homepage';
+    create?: Maybe<HeroesDocAccessFields_Homepage_Create>;
+    delete?: Maybe<HeroesDocAccessFields_Homepage_Delete>;
+    read?: Maybe<HeroesDocAccessFields_Homepage_Read>;
+    update?: Maybe<HeroesDocAccessFields_Homepage_Update>;
+};
+
+export type HeroesDocAccessFields_Homepage_Create = {
+    __typename?: 'HeroesDocAccessFields_homepage_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesDocAccessFields_Homepage_Delete = {
+    __typename?: 'HeroesDocAccessFields_homepage_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesDocAccessFields_Homepage_Read = {
+    __typename?: 'HeroesDocAccessFields_homepage_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesDocAccessFields_Homepage_Update = {
+    __typename?: 'HeroesDocAccessFields_homepage_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
 export type HeroesDocAccessFields_Icon = {
     __typename?: 'HeroesDocAccessFields_icon';
     create?: Maybe<HeroesDocAccessFields_Icon_Create>;
@@ -3387,6 +3478,34 @@ export type HeroesDocAccessFields_Icon_Read = {
 
 export type HeroesDocAccessFields_Icon_Update = {
     __typename?: 'HeroesDocAccessFields_icon_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesDocAccessFields_Subhead = {
+    __typename?: 'HeroesDocAccessFields_subhead';
+    create?: Maybe<HeroesDocAccessFields_Subhead_Create>;
+    delete?: Maybe<HeroesDocAccessFields_Subhead_Delete>;
+    read?: Maybe<HeroesDocAccessFields_Subhead_Read>;
+    update?: Maybe<HeroesDocAccessFields_Subhead_Update>;
+};
+
+export type HeroesDocAccessFields_Subhead_Create = {
+    __typename?: 'HeroesDocAccessFields_subhead_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesDocAccessFields_Subhead_Delete = {
+    __typename?: 'HeroesDocAccessFields_subhead_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesDocAccessFields_Subhead_Read = {
+    __typename?: 'HeroesDocAccessFields_subhead_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesDocAccessFields_Subhead_Update = {
+    __typename?: 'HeroesDocAccessFields_subhead_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -3423,9 +3542,12 @@ export type HeroesFields = {
     coloredSubhead?: Maybe<HeroesFields_ColoredSubhead>;
     createdAt?: Maybe<HeroesFields_CreatedAt>;
     cta?: Maybe<HeroesFields_Cta>;
+    doodles?: Maybe<HeroesFields_Doodles>;
     heading?: Maybe<HeroesFields_Heading>;
     headingTag?: Maybe<HeroesFields_HeadingTag>;
+    homepage?: Maybe<HeroesFields_Homepage>;
     icon?: Maybe<HeroesFields_Icon>;
+    subhead?: Maybe<HeroesFields_Subhead>;
     updatedAt?: Maybe<HeroesFields_UpdatedAt>;
 };
 
@@ -3513,6 +3635,34 @@ export type HeroesFields_Cta_Update = {
     permission: Scalars['Boolean']['output'];
 };
 
+export type HeroesFields_Doodles = {
+    __typename?: 'HeroesFields_doodles';
+    create?: Maybe<HeroesFields_Doodles_Create>;
+    delete?: Maybe<HeroesFields_Doodles_Delete>;
+    read?: Maybe<HeroesFields_Doodles_Read>;
+    update?: Maybe<HeroesFields_Doodles_Update>;
+};
+
+export type HeroesFields_Doodles_Create = {
+    __typename?: 'HeroesFields_doodles_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesFields_Doodles_Delete = {
+    __typename?: 'HeroesFields_doodles_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesFields_Doodles_Read = {
+    __typename?: 'HeroesFields_doodles_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesFields_Doodles_Update = {
+    __typename?: 'HeroesFields_doodles_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
 export type HeroesFields_Heading = {
     __typename?: 'HeroesFields_heading';
     create?: Maybe<HeroesFields_Heading_Create>;
@@ -3569,6 +3719,34 @@ export type HeroesFields_Heading_Update = {
     permission: Scalars['Boolean']['output'];
 };
 
+export type HeroesFields_Homepage = {
+    __typename?: 'HeroesFields_homepage';
+    create?: Maybe<HeroesFields_Homepage_Create>;
+    delete?: Maybe<HeroesFields_Homepage_Delete>;
+    read?: Maybe<HeroesFields_Homepage_Read>;
+    update?: Maybe<HeroesFields_Homepage_Update>;
+};
+
+export type HeroesFields_Homepage_Create = {
+    __typename?: 'HeroesFields_homepage_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesFields_Homepage_Delete = {
+    __typename?: 'HeroesFields_homepage_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesFields_Homepage_Read = {
+    __typename?: 'HeroesFields_homepage_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesFields_Homepage_Update = {
+    __typename?: 'HeroesFields_homepage_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
 export type HeroesFields_Icon = {
     __typename?: 'HeroesFields_icon';
     create?: Maybe<HeroesFields_Icon_Create>;
@@ -3594,6 +3772,34 @@ export type HeroesFields_Icon_Read = {
 
 export type HeroesFields_Icon_Update = {
     __typename?: 'HeroesFields_icon_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesFields_Subhead = {
+    __typename?: 'HeroesFields_subhead';
+    create?: Maybe<HeroesFields_Subhead_Create>;
+    delete?: Maybe<HeroesFields_Subhead_Delete>;
+    read?: Maybe<HeroesFields_Subhead_Read>;
+    update?: Maybe<HeroesFields_Subhead_Update>;
+};
+
+export type HeroesFields_Subhead_Create = {
+    __typename?: 'HeroesFields_subhead_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesFields_Subhead_Delete = {
+    __typename?: 'HeroesFields_subhead_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesFields_Subhead_Read = {
+    __typename?: 'HeroesFields_subhead_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type HeroesFields_Subhead_Update = {
+    __typename?: 'HeroesFields_subhead_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -12462,9 +12668,12 @@ export type MutationHeroInput = {
     coloredSubhead?: InputMaybe<Scalars['JSON']['input']>;
     createdAt?: InputMaybe<Scalars['String']['input']>;
     cta?: InputMaybe<Scalars['String']['input']>;
+    doodles?: InputMaybe<Scalars['Boolean']['input']>;
     heading: Scalars['String']['input'];
     headingTag: Scalars['String']['input'];
+    homepage?: InputMaybe<Scalars['Boolean']['input']>;
     icon?: InputMaybe<Scalars['String']['input']>;
+    subhead?: InputMaybe<Scalars['String']['input']>;
     updatedAt?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -12472,9 +12681,12 @@ export type MutationHeroUpdateInput = {
     coloredSubhead?: InputMaybe<Scalars['JSON']['input']>;
     createdAt?: InputMaybe<Scalars['String']['input']>;
     cta?: InputMaybe<Scalars['String']['input']>;
+    doodles?: InputMaybe<Scalars['Boolean']['input']>;
     heading?: InputMaybe<Scalars['String']['input']>;
     headingTag?: InputMaybe<Scalars['String']['input']>;
+    homepage?: InputMaybe<Scalars['Boolean']['input']>;
     icon?: InputMaybe<Scalars['String']['input']>;
+    subhead?: InputMaybe<Scalars['String']['input']>;
     updatedAt?: InputMaybe<Scalars['String']['input']>;
 };
 

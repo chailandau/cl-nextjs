@@ -45,6 +45,9 @@ export const HERO_FRAGMENT = `
       heading
       headingTag
       coloredSubhead
+      subhead
+      doodles
+      homepage
       ${CTA_FRAGMENT}
     }
   }

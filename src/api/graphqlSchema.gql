@@ -2514,10 +2514,13 @@ type Hero {
   coloredSubhead(depth: Int): JSON
   createdAt: DateTime
   cta: Cta
+  doodles: Boolean
   heading: String!
   headingTag: String!
+  homepage: Boolean
   icon(where: Hero_Icon_where): Icon
   id: String
+  subhead: String
   updatedAt: DateTime
 }
 
@@ -2784,6 +2787,12 @@ input Hero_cta_operator {
   not_in: [String]
 }
 
+input Hero_doodles_operator {
+  equals: Boolean
+  exists: Boolean
+  not_equals: Boolean
+}
+
 input Hero_headingTag_operator {
   all: [String]
   contains: String
@@ -2804,6 +2813,12 @@ input Hero_heading_operator {
   not_in: [String]
 }
 
+input Hero_homepage_operator {
+  equals: Boolean
+  exists: Boolean
+  not_equals: Boolean
+}
+
 input Hero_icon_operator {
   equals: String
   exists: Boolean
@@ -2819,6 +2834,14 @@ input Hero_id_operator {
   like: String
   not_equals: String
   not_in: [String]
+}
+
+input Hero_subhead_operator {
+  contains: String
+  equals: String
+  exists: Boolean
+  like: String
+  not_equals: String
 }
 
 input Hero_updatedAt_operator {
@@ -2838,10 +2861,13 @@ input Hero_where {
   coloredSubhead: Hero_coloredSubhead_operator
   createdAt: Hero_createdAt_operator
   cta: Hero_cta_operator
+  doodles: Hero_doodles_operator
   heading: Hero_heading_operator
   headingTag: Hero_headingTag_operator
+  homepage: Hero_homepage_operator
   icon: Hero_icon_operator
   id: Hero_id_operator
+  subhead: Hero_subhead_operator
   updatedAt: Hero_updatedAt_operator
 }
 
@@ -2849,10 +2875,13 @@ input Hero_where_and {
   coloredSubhead: Hero_coloredSubhead_operator
   createdAt: Hero_createdAt_operator
   cta: Hero_cta_operator
+  doodles: Hero_doodles_operator
   heading: Hero_heading_operator
   headingTag: Hero_headingTag_operator
+  homepage: Hero_homepage_operator
   icon: Hero_icon_operator
   id: Hero_id_operator
+  subhead: Hero_subhead_operator
   updatedAt: Hero_updatedAt_operator
 }
 
@@ -2860,10 +2889,13 @@ input Hero_where_or {
   coloredSubhead: Hero_coloredSubhead_operator
   createdAt: Hero_createdAt_operator
   cta: Hero_cta_operator
+  doodles: Hero_doodles_operator
   heading: Hero_heading_operator
   headingTag: Hero_headingTag_operator
+  homepage: Hero_homepage_operator
   icon: Hero_icon_operator
   id: Hero_id_operator
+  subhead: Hero_subhead_operator
   updatedAt: Hero_updatedAt_operator
 }
 
@@ -2905,9 +2937,12 @@ type HeroesDocAccessFields {
   coloredSubhead: HeroesDocAccessFields_coloredSubhead
   createdAt: HeroesDocAccessFields_createdAt
   cta: HeroesDocAccessFields_cta
+  doodles: HeroesDocAccessFields_doodles
   heading: HeroesDocAccessFields_heading
   headingTag: HeroesDocAccessFields_headingTag
+  homepage: HeroesDocAccessFields_homepage
   icon: HeroesDocAccessFields_icon
+  subhead: HeroesDocAccessFields_subhead
   updatedAt: HeroesDocAccessFields_updatedAt
 }
 
@@ -2980,6 +3015,29 @@ type HeroesDocAccessFields_cta_Update {
   permission: Boolean!
 }
 
+type HeroesDocAccessFields_doodles {
+  create: HeroesDocAccessFields_doodles_Create
+  delete: HeroesDocAccessFields_doodles_Delete
+  read: HeroesDocAccessFields_doodles_Read
+  update: HeroesDocAccessFields_doodles_Update
+}
+
+type HeroesDocAccessFields_doodles_Create {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_doodles_Delete {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_doodles_Read {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_doodles_Update {
+  permission: Boolean!
+}
+
 type HeroesDocAccessFields_heading {
   create: HeroesDocAccessFields_heading_Create
   delete: HeroesDocAccessFields_heading_Delete
@@ -3026,6 +3084,29 @@ type HeroesDocAccessFields_heading_Update {
   permission: Boolean!
 }
 
+type HeroesDocAccessFields_homepage {
+  create: HeroesDocAccessFields_homepage_Create
+  delete: HeroesDocAccessFields_homepage_Delete
+  read: HeroesDocAccessFields_homepage_Read
+  update: HeroesDocAccessFields_homepage_Update
+}
+
+type HeroesDocAccessFields_homepage_Create {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_homepage_Delete {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_homepage_Read {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_homepage_Update {
+  permission: Boolean!
+}
+
 type HeroesDocAccessFields_icon {
   create: HeroesDocAccessFields_icon_Create
   delete: HeroesDocAccessFields_icon_Delete
@@ -3046,6 +3127,29 @@ type HeroesDocAccessFields_icon_Read {
 }
 
 type HeroesDocAccessFields_icon_Update {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_subhead {
+  create: HeroesDocAccessFields_subhead_Create
+  delete: HeroesDocAccessFields_subhead_Delete
+  read: HeroesDocAccessFields_subhead_Read
+  update: HeroesDocAccessFields_subhead_Update
+}
+
+type HeroesDocAccessFields_subhead_Create {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_subhead_Delete {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_subhead_Read {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_subhead_Update {
   permission: Boolean!
 }
 
@@ -3076,9 +3180,12 @@ type HeroesFields {
   coloredSubhead: HeroesFields_coloredSubhead
   createdAt: HeroesFields_createdAt
   cta: HeroesFields_cta
+  doodles: HeroesFields_doodles
   heading: HeroesFields_heading
   headingTag: HeroesFields_headingTag
+  homepage: HeroesFields_homepage
   icon: HeroesFields_icon
+  subhead: HeroesFields_subhead
   updatedAt: HeroesFields_updatedAt
 }
 
@@ -3151,6 +3258,29 @@ type HeroesFields_cta_Update {
   permission: Boolean!
 }
 
+type HeroesFields_doodles {
+  create: HeroesFields_doodles_Create
+  delete: HeroesFields_doodles_Delete
+  read: HeroesFields_doodles_Read
+  update: HeroesFields_doodles_Update
+}
+
+type HeroesFields_doodles_Create {
+  permission: Boolean!
+}
+
+type HeroesFields_doodles_Delete {
+  permission: Boolean!
+}
+
+type HeroesFields_doodles_Read {
+  permission: Boolean!
+}
+
+type HeroesFields_doodles_Update {
+  permission: Boolean!
+}
+
 type HeroesFields_heading {
   create: HeroesFields_heading_Create
   delete: HeroesFields_heading_Delete
@@ -3197,6 +3327,29 @@ type HeroesFields_heading_Update {
   permission: Boolean!
 }
 
+type HeroesFields_homepage {
+  create: HeroesFields_homepage_Create
+  delete: HeroesFields_homepage_Delete
+  read: HeroesFields_homepage_Read
+  update: HeroesFields_homepage_Update
+}
+
+type HeroesFields_homepage_Create {
+  permission: Boolean!
+}
+
+type HeroesFields_homepage_Delete {
+  permission: Boolean!
+}
+
+type HeroesFields_homepage_Read {
+  permission: Boolean!
+}
+
+type HeroesFields_homepage_Update {
+  permission: Boolean!
+}
+
 type HeroesFields_icon {
   create: HeroesFields_icon_Create
   delete: HeroesFields_icon_Delete
@@ -3217,6 +3370,29 @@ type HeroesFields_icon_Read {
 }
 
 type HeroesFields_icon_Update {
+  permission: Boolean!
+}
+
+type HeroesFields_subhead {
+  create: HeroesFields_subhead_Create
+  delete: HeroesFields_subhead_Delete
+  read: HeroesFields_subhead_Read
+  update: HeroesFields_subhead_Update
+}
+
+type HeroesFields_subhead_Create {
+  permission: Boolean!
+}
+
+type HeroesFields_subhead_Delete {
+  permission: Boolean!
+}
+
+type HeroesFields_subhead_Read {
+  permission: Boolean!
+}
+
+type HeroesFields_subhead_Update {
   permission: Boolean!
 }
 
@@ -10671,9 +10847,12 @@ input mutationHeroInput {
   coloredSubhead: JSON
   createdAt: String
   cta: String
+  doodles: Boolean
   heading: String!
   headingTag: String!
+  homepage: Boolean
   icon: String
+  subhead: String
   updatedAt: String
 }
 
@@ -10681,9 +10860,12 @@ input mutationHeroUpdateInput {
   coloredSubhead: JSON
   createdAt: String
   cta: String
+  doodles: Boolean
   heading: String
   headingTag: String
+  homepage: Boolean
   icon: String
+  subhead: String
   updatedAt: String
 }
 

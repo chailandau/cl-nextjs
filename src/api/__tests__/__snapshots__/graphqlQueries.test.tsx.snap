@@ -1,5 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`graphqlQueries mocks ABOUT_QUERY successfully 1`] = `
+{
+  "data": {
+    "About": {
+      "coloredSubhead": null,
+      "content": null,
+      "image": {
+        "alt": "Hello World",
+        "height": -39.26243533081424,
+        "id": "Hello World",
+        "url": "Hello World",
+        "width": -13.925099047159904,
+      },
+      "pets": {
+        "athena": {
+          "alt": "Hello World",
+          "height": -39.26243533081424,
+          "id": "Hello World",
+          "url": "Hello World",
+          "width": -13.925099047159904,
+        },
+        "harvey": {
+          "alt": "Hello World",
+          "height": -39.26243533081424,
+          "id": "Hello World",
+          "url": "Hello World",
+          "width": -13.925099047159904,
+        },
+        "warren": {
+          "alt": "Hello World",
+          "height": -39.26243533081424,
+          "id": "Hello World",
+          "url": "Hello World",
+          "width": -13.925099047159904,
+        },
+      },
+      "title": "Hello World",
+    },
+  },
+  "errors": [
+    [GraphQLError: No mock defined for type "JSON"],
+    [GraphQLError: No mock defined for type "JSON"],
+  ],
+}
+`;
+
 exports[`graphqlQueries mocks NAV_QUERY successfully 1`] = `
 {
   "data": {

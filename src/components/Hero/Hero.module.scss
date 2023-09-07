@@ -1,5 +1,6 @@
 .hero {
     margin: rem(48) 0 rem(64);
+    position: relative;
     @include tablet {
         margin: rem(64) 0;
     }
@@ -10,7 +11,62 @@
             width: rem(64);
         }
     }
+    .doodles {
+        position: absolute;
+        width: 100%;
+        > div {
+            position: absolute;
+            @include transition(width, right, top);
+        }
+        .asterisk {
+            width: rem(30);
+            top: rem(2);
+            right: 26%;
+            @include tablet {
+                width: rem(40);
+                top: rem(-20);
+                right: 24%;
+            }
+            @include laptop {
+                width: rem(50);
+                top: rem(-8);
+                right: rem(155);
+            }
+        }
+        .x {
+            width: rem(30);
+            top: rem(30);
+            right: 15%;
+            @include tablet {
+                width: rem(40);
+                top: rem(26);
+            }
+            @include laptop {
+                width: rem(50);
+                top: rem(52);
+                right: rem(85);
+            }
+        }
+        .heart {
+            width: rem(24);
+            top: rem(6);
+            right: 5%;
+            @include tablet {
+                width: rem(32);
+                top: rem(-20);
+                right: 6%;
+            }
+            @include laptop {
+                width: rem(42);
+                top: rem(-28);
+                right: rem(34);
+            }
+        }
+    }
     .subhead {
+        max-width: rem(660);
+    }
+    .colored-subhead {
         line-height: rem(56);
         @include mobileLg {
             line-height: rem(64);

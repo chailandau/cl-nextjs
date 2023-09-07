@@ -65,13 +65,11 @@ exports[`Fragments "ICON_FRAGMENT" matches snapshot: ICON_FRAGMENT 1`] = `
 
 exports[`Fragments "IMAGE_FRAGMENT" matches snapshot: IMAGE_FRAGMENT 1`] = `
 "
-  image {
     id
     alt
     url
     width
     height
-  }
 "
 `;
 
