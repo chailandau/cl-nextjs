@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import SingleUse from '@/components/SingleUse/SingleUse';
 
 interface Sections {
+    /** Sections to render */
     components?: Page_Sections[];
 }
 

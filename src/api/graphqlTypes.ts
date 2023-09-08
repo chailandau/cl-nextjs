@@ -1621,6 +1621,7 @@ export type Access = {
     nav?: Maybe<NavAccess>;
     pages?: Maybe<PagesAccess>;
     projects?: Maybe<ProjectsAccess>;
+    socials?: Maybe<SocialsAccess>;
     testimonial_listing?: Maybe<Testimonial_ListingAccess>;
     testimonials?: Maybe<TestimonialsAccess>;
     toolbox_listing?: Maybe<Toolbox_ListingAccess>;
@@ -6533,6 +6534,7 @@ export type Mutation = {
     createImage?: Maybe<Image>;
     createPage?: Maybe<Page>;
     createProject?: Maybe<Project>;
+    createSocial?: Maybe<Social>;
     createTestimonial?: Maybe<Testimonial>;
     createTool?: Maybe<Tool>;
     createUser?: Maybe<User>;
@@ -6543,6 +6545,7 @@ export type Mutation = {
     deletePage?: Maybe<Page>;
     deletePreference?: Maybe<Preference>;
     deleteProject?: Maybe<Project>;
+    deleteSocial?: Maybe<Social>;
     deleteTestimonial?: Maybe<Testimonial>;
     deleteTool?: Maybe<Tool>;
     deleteUser?: Maybe<User>;
@@ -6562,6 +6565,7 @@ export type Mutation = {
     updatePage?: Maybe<Page>;
     updatePreference?: Maybe<Preference>;
     updateProject?: Maybe<Project>;
+    updateSocial?: Maybe<Social>;
     updateTestimonial?: Maybe<Testimonial>;
     updateTestimonialListing?: Maybe<TestimonialListing>;
     updateTool?: Maybe<Tool>;
@@ -6597,6 +6601,11 @@ export type MutationCreatePageArgs = {
 
 export type MutationCreateProjectArgs = {
     data: MutationProjectInput;
+    draft?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type MutationCreateSocialArgs = {
+    data: MutationSocialInput;
     draft?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
@@ -6640,6 +6649,10 @@ export type MutationDeletePreferenceArgs = {
 };
 
 export type MutationDeleteProjectArgs = {
+    id: Scalars['String']['input'];
+};
+
+export type MutationDeleteSocialArgs = {
     id: Scalars['String']['input'];
 };
 
@@ -6737,6 +6750,13 @@ export type MutationUpdatePreferenceArgs = {
 export type MutationUpdateProjectArgs = {
     autosave?: InputMaybe<Scalars['Boolean']['input']>;
     data: MutationProjectUpdateInput;
+    draft?: InputMaybe<Scalars['Boolean']['input']>;
+    id: Scalars['String']['input'];
+};
+
+export type MutationUpdateSocialArgs = {
+    autosave?: InputMaybe<Scalars['Boolean']['input']>;
+    data: MutationSocialUpdateInput;
     draft?: InputMaybe<Scalars['Boolean']['input']>;
     id: Scalars['String']['input'];
 };
@@ -7308,7 +7328,7 @@ export type Page = {
     updatedAt?: Maybe<Scalars['DateTime']['output']>;
 };
 
-export type Page_Sections = HeroBlock | SingleUseBlock;
+export type Page_Sections = HeroBlock | SingleUseBlock | SocialsBlock;
 
 export type Page_CreatedAt_Operator = {
     equals?: InputMaybe<Scalars['DateTime']['input']>;
@@ -8984,6 +9004,8 @@ export type Query = {
     Preference?: Maybe<Preference>;
     Project?: Maybe<Project>;
     Projects?: Maybe<Projects>;
+    Social?: Maybe<Social>;
+    Socials?: Maybe<Socials>;
     Testimonial?: Maybe<Testimonial>;
     TestimonialListing?: Maybe<TestimonialListing>;
     Testimonials?: Maybe<Testimonials>;
@@ -9001,6 +9023,7 @@ export type Query = {
     docAccessNav?: Maybe<NavDocAccess>;
     docAccessPage?: Maybe<PagesDocAccess>;
     docAccessProject?: Maybe<ProjectsDocAccess>;
+    docAccessSocial?: Maybe<SocialsDocAccess>;
     docAccessTestimonial?: Maybe<TestimonialsDocAccess>;
     docAccessTestimonialListing?: Maybe<Testimonial_ListingDocAccess>;
     docAccessTool?: Maybe<ToolsDocAccess>;
@@ -9104,6 +9127,19 @@ export type QueryProjectsArgs = {
     where?: InputMaybe<Project_Where>;
 };
 
+export type QuerySocialArgs = {
+    draft?: InputMaybe<Scalars['Boolean']['input']>;
+    id: Scalars['String']['input'];
+};
+
+export type QuerySocialsArgs = {
+    draft?: InputMaybe<Scalars['Boolean']['input']>;
+    limit?: InputMaybe<Scalars['Int']['input']>;
+    page?: InputMaybe<Scalars['Int']['input']>;
+    sort?: InputMaybe<Scalars['String']['input']>;
+    where?: InputMaybe<Social_Where>;
+};
+
 export type QueryTestimonialArgs = {
     draft?: InputMaybe<Scalars['Boolean']['input']>;
     id: Scalars['String']['input'];
@@ -9175,6 +9211,10 @@ export type QueryDocAccessProjectArgs = {
     id: Scalars['String']['input'];
 };
 
+export type QueryDocAccessSocialArgs = {
+    id: Scalars['String']['input'];
+};
+
 export type QueryDocAccessTestimonialArgs = {
     id: Scalars['String']['input'];
 };
@@ -9201,6 +9241,705 @@ export type SingleUseBlock_SingleUse =
     | 'testimonial_listing'
     | 'toolbox_listing'
     | '%future added value';
+
+export type Social = {
+    __typename?: 'Social';
+    createdAt?: Maybe<Scalars['DateTime']['output']>;
+    icon: Icon;
+    id?: Maybe<Scalars['String']['output']>;
+    label: Scalars['String']['output'];
+    socialLink?: Maybe<Scalars['String']['output']>;
+    updatedAt?: Maybe<Scalars['DateTime']['output']>;
+};
+
+export type SocialIconArgs = {
+    where?: InputMaybe<Social_Icon_Where>;
+};
+
+export type Social_Icon_Alt_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Social_Icon_CreatedAt_Operator = {
+    equals?: InputMaybe<Scalars['DateTime']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['DateTime']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    like?: InputMaybe<Scalars['DateTime']['input']>;
+    not_equals?: InputMaybe<Scalars['DateTime']['input']>;
+};
+
+export type Social_Icon_Filename_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Social_Icon_Filesize_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type Social_Icon_Height_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type Social_Icon_Id_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Social_Icon_MimeType_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Social_Icon_Sizes__Thumbnail__Filename_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Social_Icon_Sizes__Thumbnail__Filesize_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type Social_Icon_Sizes__Thumbnail__Height_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type Social_Icon_Sizes__Thumbnail__MimeType_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Social_Icon_Sizes__Thumbnail__Url_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Social_Icon_Sizes__Thumbnail__Width_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type Social_Icon_UpdatedAt_Operator = {
+    equals?: InputMaybe<Scalars['DateTime']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['DateTime']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    like?: InputMaybe<Scalars['DateTime']['input']>;
+    not_equals?: InputMaybe<Scalars['DateTime']['input']>;
+};
+
+export type Social_Icon_Url_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Social_Icon_Where = {
+    AND?: InputMaybe<Array<InputMaybe<Social_Icon_Where_And>>>;
+    OR?: InputMaybe<Array<InputMaybe<Social_Icon_Where_Or>>>;
+    alt?: InputMaybe<Social_Icon_Alt_Operator>;
+    createdAt?: InputMaybe<Social_Icon_CreatedAt_Operator>;
+    filename?: InputMaybe<Social_Icon_Filename_Operator>;
+    filesize?: InputMaybe<Social_Icon_Filesize_Operator>;
+    height?: InputMaybe<Social_Icon_Height_Operator>;
+    id?: InputMaybe<Social_Icon_Id_Operator>;
+    mimeType?: InputMaybe<Social_Icon_MimeType_Operator>;
+    sizes__thumbnail__filename?: InputMaybe<Social_Icon_Sizes__Thumbnail__Filename_Operator>;
+    sizes__thumbnail__filesize?: InputMaybe<Social_Icon_Sizes__Thumbnail__Filesize_Operator>;
+    sizes__thumbnail__height?: InputMaybe<Social_Icon_Sizes__Thumbnail__Height_Operator>;
+    sizes__thumbnail__mimeType?: InputMaybe<Social_Icon_Sizes__Thumbnail__MimeType_Operator>;
+    sizes__thumbnail__url?: InputMaybe<Social_Icon_Sizes__Thumbnail__Url_Operator>;
+    sizes__thumbnail__width?: InputMaybe<Social_Icon_Sizes__Thumbnail__Width_Operator>;
+    updatedAt?: InputMaybe<Social_Icon_UpdatedAt_Operator>;
+    url?: InputMaybe<Social_Icon_Url_Operator>;
+    width?: InputMaybe<Social_Icon_Width_Operator>;
+};
+
+export type Social_Icon_Where_And = {
+    alt?: InputMaybe<Social_Icon_Alt_Operator>;
+    createdAt?: InputMaybe<Social_Icon_CreatedAt_Operator>;
+    filename?: InputMaybe<Social_Icon_Filename_Operator>;
+    filesize?: InputMaybe<Social_Icon_Filesize_Operator>;
+    height?: InputMaybe<Social_Icon_Height_Operator>;
+    id?: InputMaybe<Social_Icon_Id_Operator>;
+    mimeType?: InputMaybe<Social_Icon_MimeType_Operator>;
+    sizes__thumbnail__filename?: InputMaybe<Social_Icon_Sizes__Thumbnail__Filename_Operator>;
+    sizes__thumbnail__filesize?: InputMaybe<Social_Icon_Sizes__Thumbnail__Filesize_Operator>;
+    sizes__thumbnail__height?: InputMaybe<Social_Icon_Sizes__Thumbnail__Height_Operator>;
+    sizes__thumbnail__mimeType?: InputMaybe<Social_Icon_Sizes__Thumbnail__MimeType_Operator>;
+    sizes__thumbnail__url?: InputMaybe<Social_Icon_Sizes__Thumbnail__Url_Operator>;
+    sizes__thumbnail__width?: InputMaybe<Social_Icon_Sizes__Thumbnail__Width_Operator>;
+    updatedAt?: InputMaybe<Social_Icon_UpdatedAt_Operator>;
+    url?: InputMaybe<Social_Icon_Url_Operator>;
+    width?: InputMaybe<Social_Icon_Width_Operator>;
+};
+
+export type Social_Icon_Where_Or = {
+    alt?: InputMaybe<Social_Icon_Alt_Operator>;
+    createdAt?: InputMaybe<Social_Icon_CreatedAt_Operator>;
+    filename?: InputMaybe<Social_Icon_Filename_Operator>;
+    filesize?: InputMaybe<Social_Icon_Filesize_Operator>;
+    height?: InputMaybe<Social_Icon_Height_Operator>;
+    id?: InputMaybe<Social_Icon_Id_Operator>;
+    mimeType?: InputMaybe<Social_Icon_MimeType_Operator>;
+    sizes__thumbnail__filename?: InputMaybe<Social_Icon_Sizes__Thumbnail__Filename_Operator>;
+    sizes__thumbnail__filesize?: InputMaybe<Social_Icon_Sizes__Thumbnail__Filesize_Operator>;
+    sizes__thumbnail__height?: InputMaybe<Social_Icon_Sizes__Thumbnail__Height_Operator>;
+    sizes__thumbnail__mimeType?: InputMaybe<Social_Icon_Sizes__Thumbnail__MimeType_Operator>;
+    sizes__thumbnail__url?: InputMaybe<Social_Icon_Sizes__Thumbnail__Url_Operator>;
+    sizes__thumbnail__width?: InputMaybe<Social_Icon_Sizes__Thumbnail__Width_Operator>;
+    updatedAt?: InputMaybe<Social_Icon_UpdatedAt_Operator>;
+    url?: InputMaybe<Social_Icon_Url_Operator>;
+    width?: InputMaybe<Social_Icon_Width_Operator>;
+};
+
+export type Social_Icon_Width_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type Social_CreatedAt_Operator = {
+    equals?: InputMaybe<Scalars['DateTime']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['DateTime']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    like?: InputMaybe<Scalars['DateTime']['input']>;
+    not_equals?: InputMaybe<Scalars['DateTime']['input']>;
+};
+
+export type Social_Icon_Operator = {
+    equals?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type Social_Id_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Social_Label_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Social_SocialLink_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Social_UpdatedAt_Operator = {
+    equals?: InputMaybe<Scalars['DateTime']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['DateTime']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    like?: InputMaybe<Scalars['DateTime']['input']>;
+    not_equals?: InputMaybe<Scalars['DateTime']['input']>;
+};
+
+export type Social_Where = {
+    AND?: InputMaybe<Array<InputMaybe<Social_Where_And>>>;
+    OR?: InputMaybe<Array<InputMaybe<Social_Where_Or>>>;
+    createdAt?: InputMaybe<Social_CreatedAt_Operator>;
+    icon?: InputMaybe<Social_Icon_Operator>;
+    id?: InputMaybe<Social_Id_Operator>;
+    label?: InputMaybe<Social_Label_Operator>;
+    socialLink?: InputMaybe<Social_SocialLink_Operator>;
+    updatedAt?: InputMaybe<Social_UpdatedAt_Operator>;
+};
+
+export type Social_Where_And = {
+    createdAt?: InputMaybe<Social_CreatedAt_Operator>;
+    icon?: InputMaybe<Social_Icon_Operator>;
+    id?: InputMaybe<Social_Id_Operator>;
+    label?: InputMaybe<Social_Label_Operator>;
+    socialLink?: InputMaybe<Social_SocialLink_Operator>;
+    updatedAt?: InputMaybe<Social_UpdatedAt_Operator>;
+};
+
+export type Social_Where_Or = {
+    createdAt?: InputMaybe<Social_CreatedAt_Operator>;
+    icon?: InputMaybe<Social_Icon_Operator>;
+    id?: InputMaybe<Social_Id_Operator>;
+    label?: InputMaybe<Social_Label_Operator>;
+    socialLink?: InputMaybe<Social_SocialLink_Operator>;
+    updatedAt?: InputMaybe<Social_UpdatedAt_Operator>;
+};
+
+export type Socials = {
+    __typename?: 'Socials';
+    docs?: Maybe<Array<Maybe<Social>>>;
+    hasNextPage?: Maybe<Scalars['Boolean']['output']>;
+    hasPrevPage?: Maybe<Scalars['Boolean']['output']>;
+    limit?: Maybe<Scalars['Int']['output']>;
+    nextPage?: Maybe<Scalars['Int']['output']>;
+    offset?: Maybe<Scalars['Int']['output']>;
+    page?: Maybe<Scalars['Int']['output']>;
+    pagingCounter?: Maybe<Scalars['Int']['output']>;
+    prevPage?: Maybe<Scalars['Int']['output']>;
+    totalDocs?: Maybe<Scalars['Int']['output']>;
+    totalPages?: Maybe<Scalars['Int']['output']>;
+};
+
+export type SocialsBlock = {
+    __typename?: 'SocialsBlock';
+    blockName?: Maybe<Scalars['String']['output']>;
+    blockType?: Maybe<Scalars['String']['output']>;
+    id?: Maybe<Scalars['String']['output']>;
+    socials?: Maybe<Array<Social>>;
+};
+
+export type SocialsCreateAccess = {
+    __typename?: 'SocialsCreateAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type SocialsCreateDocAccess = {
+    __typename?: 'SocialsCreateDocAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type SocialsDeleteAccess = {
+    __typename?: 'SocialsDeleteAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type SocialsDeleteDocAccess = {
+    __typename?: 'SocialsDeleteDocAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type SocialsDocAccessFields = {
+    __typename?: 'SocialsDocAccessFields';
+    createdAt?: Maybe<SocialsDocAccessFields_CreatedAt>;
+    icon?: Maybe<SocialsDocAccessFields_Icon>;
+    label?: Maybe<SocialsDocAccessFields_Label>;
+    socialLink?: Maybe<SocialsDocAccessFields_SocialLink>;
+    updatedAt?: Maybe<SocialsDocAccessFields_UpdatedAt>;
+};
+
+export type SocialsDocAccessFields_CreatedAt = {
+    __typename?: 'SocialsDocAccessFields_createdAt';
+    create?: Maybe<SocialsDocAccessFields_CreatedAt_Create>;
+    delete?: Maybe<SocialsDocAccessFields_CreatedAt_Delete>;
+    read?: Maybe<SocialsDocAccessFields_CreatedAt_Read>;
+    update?: Maybe<SocialsDocAccessFields_CreatedAt_Update>;
+};
+
+export type SocialsDocAccessFields_CreatedAt_Create = {
+    __typename?: 'SocialsDocAccessFields_createdAt_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsDocAccessFields_CreatedAt_Delete = {
+    __typename?: 'SocialsDocAccessFields_createdAt_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsDocAccessFields_CreatedAt_Read = {
+    __typename?: 'SocialsDocAccessFields_createdAt_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsDocAccessFields_CreatedAt_Update = {
+    __typename?: 'SocialsDocAccessFields_createdAt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsDocAccessFields_Icon = {
+    __typename?: 'SocialsDocAccessFields_icon';
+    create?: Maybe<SocialsDocAccessFields_Icon_Create>;
+    delete?: Maybe<SocialsDocAccessFields_Icon_Delete>;
+    read?: Maybe<SocialsDocAccessFields_Icon_Read>;
+    update?: Maybe<SocialsDocAccessFields_Icon_Update>;
+};
+
+export type SocialsDocAccessFields_Icon_Create = {
+    __typename?: 'SocialsDocAccessFields_icon_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsDocAccessFields_Icon_Delete = {
+    __typename?: 'SocialsDocAccessFields_icon_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsDocAccessFields_Icon_Read = {
+    __typename?: 'SocialsDocAccessFields_icon_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsDocAccessFields_Icon_Update = {
+    __typename?: 'SocialsDocAccessFields_icon_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsDocAccessFields_Label = {
+    __typename?: 'SocialsDocAccessFields_label';
+    create?: Maybe<SocialsDocAccessFields_Label_Create>;
+    delete?: Maybe<SocialsDocAccessFields_Label_Delete>;
+    read?: Maybe<SocialsDocAccessFields_Label_Read>;
+    update?: Maybe<SocialsDocAccessFields_Label_Update>;
+};
+
+export type SocialsDocAccessFields_Label_Create = {
+    __typename?: 'SocialsDocAccessFields_label_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsDocAccessFields_Label_Delete = {
+    __typename?: 'SocialsDocAccessFields_label_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsDocAccessFields_Label_Read = {
+    __typename?: 'SocialsDocAccessFields_label_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsDocAccessFields_Label_Update = {
+    __typename?: 'SocialsDocAccessFields_label_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsDocAccessFields_SocialLink = {
+    __typename?: 'SocialsDocAccessFields_socialLink';
+    create?: Maybe<SocialsDocAccessFields_SocialLink_Create>;
+    delete?: Maybe<SocialsDocAccessFields_SocialLink_Delete>;
+    read?: Maybe<SocialsDocAccessFields_SocialLink_Read>;
+    update?: Maybe<SocialsDocAccessFields_SocialLink_Update>;
+};
+
+export type SocialsDocAccessFields_SocialLink_Create = {
+    __typename?: 'SocialsDocAccessFields_socialLink_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsDocAccessFields_SocialLink_Delete = {
+    __typename?: 'SocialsDocAccessFields_socialLink_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsDocAccessFields_SocialLink_Read = {
+    __typename?: 'SocialsDocAccessFields_socialLink_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsDocAccessFields_SocialLink_Update = {
+    __typename?: 'SocialsDocAccessFields_socialLink_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsDocAccessFields_UpdatedAt = {
+    __typename?: 'SocialsDocAccessFields_updatedAt';
+    create?: Maybe<SocialsDocAccessFields_UpdatedAt_Create>;
+    delete?: Maybe<SocialsDocAccessFields_UpdatedAt_Delete>;
+    read?: Maybe<SocialsDocAccessFields_UpdatedAt_Read>;
+    update?: Maybe<SocialsDocAccessFields_UpdatedAt_Update>;
+};
+
+export type SocialsDocAccessFields_UpdatedAt_Create = {
+    __typename?: 'SocialsDocAccessFields_updatedAt_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsDocAccessFields_UpdatedAt_Delete = {
+    __typename?: 'SocialsDocAccessFields_updatedAt_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsDocAccessFields_UpdatedAt_Read = {
+    __typename?: 'SocialsDocAccessFields_updatedAt_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsDocAccessFields_UpdatedAt_Update = {
+    __typename?: 'SocialsDocAccessFields_updatedAt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsFields = {
+    __typename?: 'SocialsFields';
+    createdAt?: Maybe<SocialsFields_CreatedAt>;
+    icon?: Maybe<SocialsFields_Icon>;
+    label?: Maybe<SocialsFields_Label>;
+    socialLink?: Maybe<SocialsFields_SocialLink>;
+    updatedAt?: Maybe<SocialsFields_UpdatedAt>;
+};
+
+export type SocialsFields_CreatedAt = {
+    __typename?: 'SocialsFields_createdAt';
+    create?: Maybe<SocialsFields_CreatedAt_Create>;
+    delete?: Maybe<SocialsFields_CreatedAt_Delete>;
+    read?: Maybe<SocialsFields_CreatedAt_Read>;
+    update?: Maybe<SocialsFields_CreatedAt_Update>;
+};
+
+export type SocialsFields_CreatedAt_Create = {
+    __typename?: 'SocialsFields_createdAt_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsFields_CreatedAt_Delete = {
+    __typename?: 'SocialsFields_createdAt_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsFields_CreatedAt_Read = {
+    __typename?: 'SocialsFields_createdAt_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsFields_CreatedAt_Update = {
+    __typename?: 'SocialsFields_createdAt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsFields_Icon = {
+    __typename?: 'SocialsFields_icon';
+    create?: Maybe<SocialsFields_Icon_Create>;
+    delete?: Maybe<SocialsFields_Icon_Delete>;
+    read?: Maybe<SocialsFields_Icon_Read>;
+    update?: Maybe<SocialsFields_Icon_Update>;
+};
+
+export type SocialsFields_Icon_Create = {
+    __typename?: 'SocialsFields_icon_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsFields_Icon_Delete = {
+    __typename?: 'SocialsFields_icon_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsFields_Icon_Read = {
+    __typename?: 'SocialsFields_icon_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsFields_Icon_Update = {
+    __typename?: 'SocialsFields_icon_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsFields_Label = {
+    __typename?: 'SocialsFields_label';
+    create?: Maybe<SocialsFields_Label_Create>;
+    delete?: Maybe<SocialsFields_Label_Delete>;
+    read?: Maybe<SocialsFields_Label_Read>;
+    update?: Maybe<SocialsFields_Label_Update>;
+};
+
+export type SocialsFields_Label_Create = {
+    __typename?: 'SocialsFields_label_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsFields_Label_Delete = {
+    __typename?: 'SocialsFields_label_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsFields_Label_Read = {
+    __typename?: 'SocialsFields_label_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsFields_Label_Update = {
+    __typename?: 'SocialsFields_label_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsFields_SocialLink = {
+    __typename?: 'SocialsFields_socialLink';
+    create?: Maybe<SocialsFields_SocialLink_Create>;
+    delete?: Maybe<SocialsFields_SocialLink_Delete>;
+    read?: Maybe<SocialsFields_SocialLink_Read>;
+    update?: Maybe<SocialsFields_SocialLink_Update>;
+};
+
+export type SocialsFields_SocialLink_Create = {
+    __typename?: 'SocialsFields_socialLink_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsFields_SocialLink_Delete = {
+    __typename?: 'SocialsFields_socialLink_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsFields_SocialLink_Read = {
+    __typename?: 'SocialsFields_socialLink_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsFields_SocialLink_Update = {
+    __typename?: 'SocialsFields_socialLink_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsFields_UpdatedAt = {
+    __typename?: 'SocialsFields_updatedAt';
+    create?: Maybe<SocialsFields_UpdatedAt_Create>;
+    delete?: Maybe<SocialsFields_UpdatedAt_Delete>;
+    read?: Maybe<SocialsFields_UpdatedAt_Read>;
+    update?: Maybe<SocialsFields_UpdatedAt_Update>;
+};
+
+export type SocialsFields_UpdatedAt_Create = {
+    __typename?: 'SocialsFields_updatedAt_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsFields_UpdatedAt_Delete = {
+    __typename?: 'SocialsFields_updatedAt_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsFields_UpdatedAt_Read = {
+    __typename?: 'SocialsFields_updatedAt_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsFields_UpdatedAt_Update = {
+    __typename?: 'SocialsFields_updatedAt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type SocialsReadAccess = {
+    __typename?: 'SocialsReadAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type SocialsReadDocAccess = {
+    __typename?: 'SocialsReadDocAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type SocialsUpdateAccess = {
+    __typename?: 'SocialsUpdateAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type SocialsUpdateDocAccess = {
+    __typename?: 'SocialsUpdateDocAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
 
 export type Testimonial = {
     __typename?: 'Testimonial';
@@ -12860,6 +13599,22 @@ export type MutationProject_IntroInput = {
     image?: InputMaybe<Scalars['String']['input']>;
 };
 
+export type MutationSocialInput = {
+    createdAt?: InputMaybe<Scalars['String']['input']>;
+    icon: Scalars['String']['input'];
+    label: Scalars['String']['input'];
+    socialLink?: InputMaybe<Scalars['String']['input']>;
+    updatedAt?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type MutationSocialUpdateInput = {
+    createdAt?: InputMaybe<Scalars['String']['input']>;
+    icon?: InputMaybe<Scalars['String']['input']>;
+    label?: InputMaybe<Scalars['String']['input']>;
+    socialLink?: InputMaybe<Scalars['String']['input']>;
+    updatedAt?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type MutationTestimonialInput = {
     author: Scalars['String']['input'];
     company: Scalars['String']['input'];
@@ -12995,6 +13750,24 @@ export type ProjectsDocAccess = {
     fields?: Maybe<ProjectsDocAccessFields>;
     read?: Maybe<ProjectsReadDocAccess>;
     update?: Maybe<ProjectsUpdateDocAccess>;
+};
+
+export type SocialsAccess = {
+    __typename?: 'socialsAccess';
+    create?: Maybe<SocialsCreateAccess>;
+    delete?: Maybe<SocialsDeleteAccess>;
+    fields?: Maybe<SocialsFields>;
+    read?: Maybe<SocialsReadAccess>;
+    update?: Maybe<SocialsUpdateAccess>;
+};
+
+export type SocialsDocAccess = {
+    __typename?: 'socialsDocAccess';
+    create?: Maybe<SocialsCreateDocAccess>;
+    delete?: Maybe<SocialsDeleteDocAccess>;
+    fields?: Maybe<SocialsDocAccessFields>;
+    read?: Maybe<SocialsReadDocAccess>;
+    update?: Maybe<SocialsUpdateDocAccess>;
 };
 
 export type Testimonial_ListingAccess = {

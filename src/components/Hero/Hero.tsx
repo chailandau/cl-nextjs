@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import styles from './Hero.module.scss';
 
-import { Hero as HeroType } from '@/api/graphqlTypes';
+import { Hero as HeroType, Maybe } from '@/api/graphqlTypes';
 import Heading from '@/atoms/Heading';
 import Image from '@/atoms/Image';
 import Link from '@/atoms/Link';
@@ -19,9 +19,9 @@ export interface HeroProps {
     /** Optional non-colored subheading */
     subhead?: HeroType['subhead'];
     /** Indicates whether to display doodles */
-    doodles?: boolean;
+    doodles?: Maybe<boolean>;
     /** Indicates if hero is on homepage */
-    homepage?: boolean;
+    homepage?: Maybe<boolean>;
     /** Hero icon */
     icon?: HeroType['icon'];
     /** Hero CTA */
