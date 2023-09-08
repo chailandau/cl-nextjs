@@ -1,8 +1,7 @@
 import { FC } from 'react';
 
-import styles from './About.module.scss';
-
 import { ABOUT_QUERY } from '@/api/graphqlQueries';
+import { About as AboutType, Maybe } from '@/api/graphqlTypes';
 import Container from '@/atoms/Container';
 import Heading from '@/atoms/Heading';
 import Image from '@/atoms/Image';
@@ -12,10 +11,19 @@ import RichText from '@/molecules/RichText';
 import Section from '@/molecules/Section';
 import { getData } from '@/utils/getData';
 
-const About: FC = async () => {
-    const { About: AboutData } = await getData(ABOUT_QUERY);
+// Prevent Storybook styling issues due to cascade order
+// eslint-disable-next-line import/order
+import styles from './About.module.scss';
 
-    const { title, coloredSubhead, image, pets, content } = AboutData || {};
+interface AboutContentProps {
+    data?: Maybe<AboutType> | undefined;
+}
+
+export const AboutContent: FC<AboutContentProps> = ({ data }) => {
+    if (!data) {
+        return <></>;
+    }
+    const { title, coloredSubhead, image, pets, content } = data || {};
 
     return (
         <Section className={styles['about']}>
@@ -28,38 +36,40 @@ const About: FC = async () => {
                         height={image?.height || 1000}
                     />
                 )}
-                <Container className={styles['pets']}>
-                    {pets && pets?.warren && pets?.warren?.url && (
-                        <Image
-                            src={pets?.warren?.url}
-                            alt={pets?.warren?.alt || ''}
-                            width={pets?.warren?.width || 102}
-                            height={pets?.warren?.height || 60}
-                            hasBorder={false}
-                            className={styles['warren']}
-                        />
-                    )}
-                    {pets && pets?.harvey && pets?.harvey?.url && (
-                        <Image
-                            src={pets?.harvey?.url}
-                            alt={pets?.harvey?.alt || ''}
-                            width={pets?.harvey?.width || 55}
-                            height={pets?.harvey?.height || 58}
-                            hasBorder={false}
-                            className={styles['harvey']}
-                        />
-                    )}
-                    {pets && pets?.athena && pets?.athena?.url && (
-                        <Image
-                            src={pets?.athena?.url}
-                            alt={pets?.athena?.alt || ''}
-                            width={pets?.athena?.width || 46}
-                            height={pets?.athena?.height || 54}
-                            hasBorder={false}
-                            className={styles['athena']}
-                        />
-                    )}
-                </Container>
+                {pets && (
+                    <Container className={styles['pets']}>
+                        {pets?.warren && pets?.warren?.url && (
+                            <Image
+                                src={pets?.warren?.url}
+                                alt={pets?.warren?.alt || ''}
+                                width={pets?.warren?.width || 102}
+                                height={pets?.warren?.height || 60}
+                                hasBorder={false}
+                                className={styles['warren']}
+                            />
+                        )}
+                        {pets?.harvey && pets?.harvey?.url && (
+                            <Image
+                                src={pets?.harvey?.url}
+                                alt={pets?.harvey?.alt || ''}
+                                width={pets?.harvey?.width || 55}
+                                height={pets?.harvey?.height || 58}
+                                hasBorder={false}
+                                className={styles['harvey']}
+                            />
+                        )}
+                        {pets?.athena && pets?.athena?.url && (
+                            <Image
+                                src={pets?.athena?.url}
+                                alt={pets?.athena?.alt || ''}
+                                width={pets?.athena?.width || 46}
+                                height={pets?.athena?.height || 54}
+                                hasBorder={false}
+                                className={styles['athena']}
+                            />
+                        )}
+                    </Container>
+                )}
             </Container>
 
             <Flex className={styles['content']}>
@@ -78,6 +88,12 @@ const About: FC = async () => {
             </Flex>
         </Section>
     );
+};
+
+const About: FC = async () => {
+    const { About: aboutData } = await getData(ABOUT_QUERY);
+
+    return <AboutContent data={aboutData} />;
 };
 
 export default About;
