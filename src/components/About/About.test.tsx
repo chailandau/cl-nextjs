@@ -10,7 +10,6 @@ const About = composeStory(Default, Meta);
 describe('About', () => {
     it('defaults correctly', () => {
         render(<About data={undefined} />);
-        // screen.debug();
         expect(screen.queryByRole('section')).not.toBeInTheDocument();
     });
     testAxeAndSnapshot({
