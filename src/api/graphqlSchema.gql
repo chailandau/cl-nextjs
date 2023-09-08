@@ -1456,6 +1456,7 @@ type Access {
   nav: navAccess
   pages: pagesAccess
   projects: projectsAccess
+  socials: socialsAccess
   testimonial_listing: testimonial_listingAccess
   testimonials: testimonialsAccess
   toolbox_listing: toolbox_listingAccess
@@ -5750,6 +5751,7 @@ type Mutation {
   createImage(data: mutationImageInput!, draft: Boolean): Image
   createPage(data: mutationPageInput!, draft: Boolean): Page
   createProject(data: mutationProjectInput!, draft: Boolean): Project
+  createSocial(data: mutationSocialInput!, draft: Boolean): Social
   createTestimonial(data: mutationTestimonialInput!, draft: Boolean): Testimonial
   createTool(data: mutationToolInput!, draft: Boolean): Tool
   createUser(data: mutationUserInput!, draft: Boolean): User
@@ -5760,6 +5762,7 @@ type Mutation {
   deletePage(id: String!): Page
   deletePreference(key: String!): Preference
   deleteProject(id: String!): Project
+  deleteSocial(id: String!): Social
   deleteTestimonial(id: String!): Testimonial
   deleteTool(id: String!): Tool
   deleteUser(id: String!): User
@@ -5779,6 +5782,7 @@ type Mutation {
   updatePage(autosave: Boolean, data: mutationPageUpdateInput!, draft: Boolean, id: String!): Page
   updatePreference(key: String!, value: JSON): Preference
   updateProject(autosave: Boolean, data: mutationProjectUpdateInput!, draft: Boolean, id: String!): Project
+  updateSocial(autosave: Boolean, data: mutationSocialUpdateInput!, draft: Boolean, id: String!): Social
   updateTestimonial(autosave: Boolean, data: mutationTestimonialUpdateInput!, draft: Boolean, id: String!): Testimonial
   updateTestimonialListing(data: mutationTestimonialListingInput!, draft: Boolean): TestimonialListing
   updateTool(autosave: Boolean, data: mutationToolUpdateInput!, draft: Boolean, id: String!): Tool
@@ -6228,7 +6232,7 @@ type Page {
   updatedAt: DateTime
 }
 
-union Page_Sections = HeroBlock | SingleUseBlock
+union Page_Sections = HeroBlock | SingleUseBlock | SocialsBlock
 
 input Page_createdAt_operator {
   equals: DateTime
@@ -7725,6 +7729,8 @@ type Query {
   Preference(key: String): Preference
   Project(draft: Boolean, id: String!): Project
   Projects(draft: Boolean, limit: Int, page: Int, sort: String, where: Project_where): Projects
+  Social(draft: Boolean, id: String!): Social
+  Socials(draft: Boolean, limit: Int, page: Int, sort: String, where: Social_where): Socials
   Testimonial(draft: Boolean, id: String!): Testimonial
   TestimonialListing(draft: Boolean): TestimonialListing
   Testimonials(draft: Boolean, limit: Int, page: Int, sort: String, where: Testimonial_where): Testimonials
@@ -7742,6 +7748,7 @@ type Query {
   docAccessNav: navDocAccess
   docAccessPage(id: String!): pagesDocAccess
   docAccessProject(id: String!): projectsDocAccess
+  docAccessSocial(id: String!): socialsDocAccess
   docAccessTestimonial(id: String!): testimonialsDocAccess
   docAccessTestimonialListing: testimonial_listingDocAccess
   docAccessTool(id: String!): toolsDocAccess
@@ -7763,6 +7770,638 @@ enum SingleUseBlock_singleUse {
   case_study_listing
   testimonial_listing
   toolbox_listing
+}
+
+type Social {
+  createdAt: DateTime
+  icon(where: Social_Icon_where): Icon!
+  id: String
+  label: String!
+  socialLink: String
+  updatedAt: DateTime
+}
+
+input Social_Icon_alt_operator {
+  all: [String]
+  contains: String
+  equals: String
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Social_Icon_createdAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input Social_Icon_filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Social_Icon_filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input Social_Icon_height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input Social_Icon_id_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Social_Icon_mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Social_Icon_sizes__thumbnail__filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Social_Icon_sizes__thumbnail__filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input Social_Icon_sizes__thumbnail__height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input Social_Icon_sizes__thumbnail__mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Social_Icon_sizes__thumbnail__url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Social_Icon_sizes__thumbnail__width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input Social_Icon_updatedAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input Social_Icon_url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Social_Icon_where {
+  AND: [Social_Icon_where_and]
+  OR: [Social_Icon_where_or]
+  alt: Social_Icon_alt_operator
+  createdAt: Social_Icon_createdAt_operator
+  filename: Social_Icon_filename_operator
+  filesize: Social_Icon_filesize_operator
+  height: Social_Icon_height_operator
+  id: Social_Icon_id_operator
+  mimeType: Social_Icon_mimeType_operator
+  sizes__thumbnail__filename: Social_Icon_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: Social_Icon_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: Social_Icon_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: Social_Icon_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: Social_Icon_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: Social_Icon_sizes__thumbnail__width_operator
+  updatedAt: Social_Icon_updatedAt_operator
+  url: Social_Icon_url_operator
+  width: Social_Icon_width_operator
+}
+
+input Social_Icon_where_and {
+  alt: Social_Icon_alt_operator
+  createdAt: Social_Icon_createdAt_operator
+  filename: Social_Icon_filename_operator
+  filesize: Social_Icon_filesize_operator
+  height: Social_Icon_height_operator
+  id: Social_Icon_id_operator
+  mimeType: Social_Icon_mimeType_operator
+  sizes__thumbnail__filename: Social_Icon_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: Social_Icon_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: Social_Icon_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: Social_Icon_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: Social_Icon_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: Social_Icon_sizes__thumbnail__width_operator
+  updatedAt: Social_Icon_updatedAt_operator
+  url: Social_Icon_url_operator
+  width: Social_Icon_width_operator
+}
+
+input Social_Icon_where_or {
+  alt: Social_Icon_alt_operator
+  createdAt: Social_Icon_createdAt_operator
+  filename: Social_Icon_filename_operator
+  filesize: Social_Icon_filesize_operator
+  height: Social_Icon_height_operator
+  id: Social_Icon_id_operator
+  mimeType: Social_Icon_mimeType_operator
+  sizes__thumbnail__filename: Social_Icon_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: Social_Icon_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: Social_Icon_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: Social_Icon_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: Social_Icon_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: Social_Icon_sizes__thumbnail__width_operator
+  updatedAt: Social_Icon_updatedAt_operator
+  url: Social_Icon_url_operator
+  width: Social_Icon_width_operator
+}
+
+input Social_Icon_width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input Social_createdAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input Social_icon_operator {
+  equals: String
+  not_equals: String
+}
+
+input Social_id_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Social_label_operator {
+  all: [String]
+  contains: String
+  equals: String
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Social_socialLink_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Social_updatedAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input Social_where {
+  AND: [Social_where_and]
+  OR: [Social_where_or]
+  createdAt: Social_createdAt_operator
+  icon: Social_icon_operator
+  id: Social_id_operator
+  label: Social_label_operator
+  socialLink: Social_socialLink_operator
+  updatedAt: Social_updatedAt_operator
+}
+
+input Social_where_and {
+  createdAt: Social_createdAt_operator
+  icon: Social_icon_operator
+  id: Social_id_operator
+  label: Social_label_operator
+  socialLink: Social_socialLink_operator
+  updatedAt: Social_updatedAt_operator
+}
+
+input Social_where_or {
+  createdAt: Social_createdAt_operator
+  icon: Social_icon_operator
+  id: Social_id_operator
+  label: Social_label_operator
+  socialLink: Social_socialLink_operator
+  updatedAt: Social_updatedAt_operator
+}
+
+type Socials {
+  docs: [Social]
+  hasNextPage: Boolean
+  hasPrevPage: Boolean
+  limit: Int
+  nextPage: Int
+  offset: Int
+  page: Int
+  pagingCounter: Int
+  prevPage: Int
+  totalDocs: Int
+  totalPages: Int
+}
+
+type SocialsBlock {
+  blockName: String
+  blockType: String
+  id: String
+  socials: [Social!]
+}
+
+type SocialsCreateAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type SocialsCreateDocAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type SocialsDeleteAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type SocialsDeleteDocAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type SocialsDocAccessFields {
+  createdAt: SocialsDocAccessFields_createdAt
+  icon: SocialsDocAccessFields_icon
+  label: SocialsDocAccessFields_label
+  socialLink: SocialsDocAccessFields_socialLink
+  updatedAt: SocialsDocAccessFields_updatedAt
+}
+
+type SocialsDocAccessFields_createdAt {
+  create: SocialsDocAccessFields_createdAt_Create
+  delete: SocialsDocAccessFields_createdAt_Delete
+  read: SocialsDocAccessFields_createdAt_Read
+  update: SocialsDocAccessFields_createdAt_Update
+}
+
+type SocialsDocAccessFields_createdAt_Create {
+  permission: Boolean!
+}
+
+type SocialsDocAccessFields_createdAt_Delete {
+  permission: Boolean!
+}
+
+type SocialsDocAccessFields_createdAt_Read {
+  permission: Boolean!
+}
+
+type SocialsDocAccessFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type SocialsDocAccessFields_icon {
+  create: SocialsDocAccessFields_icon_Create
+  delete: SocialsDocAccessFields_icon_Delete
+  read: SocialsDocAccessFields_icon_Read
+  update: SocialsDocAccessFields_icon_Update
+}
+
+type SocialsDocAccessFields_icon_Create {
+  permission: Boolean!
+}
+
+type SocialsDocAccessFields_icon_Delete {
+  permission: Boolean!
+}
+
+type SocialsDocAccessFields_icon_Read {
+  permission: Boolean!
+}
+
+type SocialsDocAccessFields_icon_Update {
+  permission: Boolean!
+}
+
+type SocialsDocAccessFields_label {
+  create: SocialsDocAccessFields_label_Create
+  delete: SocialsDocAccessFields_label_Delete
+  read: SocialsDocAccessFields_label_Read
+  update: SocialsDocAccessFields_label_Update
+}
+
+type SocialsDocAccessFields_label_Create {
+  permission: Boolean!
+}
+
+type SocialsDocAccessFields_label_Delete {
+  permission: Boolean!
+}
+
+type SocialsDocAccessFields_label_Read {
+  permission: Boolean!
+}
+
+type SocialsDocAccessFields_label_Update {
+  permission: Boolean!
+}
+
+type SocialsDocAccessFields_socialLink {
+  create: SocialsDocAccessFields_socialLink_Create
+  delete: SocialsDocAccessFields_socialLink_Delete
+  read: SocialsDocAccessFields_socialLink_Read
+  update: SocialsDocAccessFields_socialLink_Update
+}
+
+type SocialsDocAccessFields_socialLink_Create {
+  permission: Boolean!
+}
+
+type SocialsDocAccessFields_socialLink_Delete {
+  permission: Boolean!
+}
+
+type SocialsDocAccessFields_socialLink_Read {
+  permission: Boolean!
+}
+
+type SocialsDocAccessFields_socialLink_Update {
+  permission: Boolean!
+}
+
+type SocialsDocAccessFields_updatedAt {
+  create: SocialsDocAccessFields_updatedAt_Create
+  delete: SocialsDocAccessFields_updatedAt_Delete
+  read: SocialsDocAccessFields_updatedAt_Read
+  update: SocialsDocAccessFields_updatedAt_Update
+}
+
+type SocialsDocAccessFields_updatedAt_Create {
+  permission: Boolean!
+}
+
+type SocialsDocAccessFields_updatedAt_Delete {
+  permission: Boolean!
+}
+
+type SocialsDocAccessFields_updatedAt_Read {
+  permission: Boolean!
+}
+
+type SocialsDocAccessFields_updatedAt_Update {
+  permission: Boolean!
+}
+
+type SocialsFields {
+  createdAt: SocialsFields_createdAt
+  icon: SocialsFields_icon
+  label: SocialsFields_label
+  socialLink: SocialsFields_socialLink
+  updatedAt: SocialsFields_updatedAt
+}
+
+type SocialsFields_createdAt {
+  create: SocialsFields_createdAt_Create
+  delete: SocialsFields_createdAt_Delete
+  read: SocialsFields_createdAt_Read
+  update: SocialsFields_createdAt_Update
+}
+
+type SocialsFields_createdAt_Create {
+  permission: Boolean!
+}
+
+type SocialsFields_createdAt_Delete {
+  permission: Boolean!
+}
+
+type SocialsFields_createdAt_Read {
+  permission: Boolean!
+}
+
+type SocialsFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type SocialsFields_icon {
+  create: SocialsFields_icon_Create
+  delete: SocialsFields_icon_Delete
+  read: SocialsFields_icon_Read
+  update: SocialsFields_icon_Update
+}
+
+type SocialsFields_icon_Create {
+  permission: Boolean!
+}
+
+type SocialsFields_icon_Delete {
+  permission: Boolean!
+}
+
+type SocialsFields_icon_Read {
+  permission: Boolean!
+}
+
+type SocialsFields_icon_Update {
+  permission: Boolean!
+}
+
+type SocialsFields_label {
+  create: SocialsFields_label_Create
+  delete: SocialsFields_label_Delete
+  read: SocialsFields_label_Read
+  update: SocialsFields_label_Update
+}
+
+type SocialsFields_label_Create {
+  permission: Boolean!
+}
+
+type SocialsFields_label_Delete {
+  permission: Boolean!
+}
+
+type SocialsFields_label_Read {
+  permission: Boolean!
+}
+
+type SocialsFields_label_Update {
+  permission: Boolean!
+}
+
+type SocialsFields_socialLink {
+  create: SocialsFields_socialLink_Create
+  delete: SocialsFields_socialLink_Delete
+  read: SocialsFields_socialLink_Read
+  update: SocialsFields_socialLink_Update
+}
+
+type SocialsFields_socialLink_Create {
+  permission: Boolean!
+}
+
+type SocialsFields_socialLink_Delete {
+  permission: Boolean!
+}
+
+type SocialsFields_socialLink_Read {
+  permission: Boolean!
+}
+
+type SocialsFields_socialLink_Update {
+  permission: Boolean!
+}
+
+type SocialsFields_updatedAt {
+  create: SocialsFields_updatedAt_Create
+  delete: SocialsFields_updatedAt_Delete
+  read: SocialsFields_updatedAt_Read
+  update: SocialsFields_updatedAt_Update
+}
+
+type SocialsFields_updatedAt_Create {
+  permission: Boolean!
+}
+
+type SocialsFields_updatedAt_Delete {
+  permission: Boolean!
+}
+
+type SocialsFields_updatedAt_Read {
+  permission: Boolean!
+}
+
+type SocialsFields_updatedAt_Update {
+  permission: Boolean!
+}
+
+type SocialsReadAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type SocialsReadDocAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type SocialsUpdateAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type SocialsUpdateDocAccess {
+  permission: Boolean!
+  where: JSONObject
 }
 
 type Testimonial {
@@ -11039,6 +11678,22 @@ input mutationProject_IntroInput {
   image: String
 }
 
+input mutationSocialInput {
+  createdAt: String
+  icon: String!
+  label: String!
+  socialLink: String
+  updatedAt: String
+}
+
+input mutationSocialUpdateInput {
+  createdAt: String
+  icon: String
+  label: String
+  socialLink: String
+  updatedAt: String
+}
+
 input mutationTestimonialInput {
   author: String!
   company: String!
@@ -11168,6 +11823,22 @@ type projectsDocAccess {
   fields: ProjectsDocAccessFields
   read: ProjectsReadDocAccess
   update: ProjectsUpdateDocAccess
+}
+
+type socialsAccess {
+  create: SocialsCreateAccess
+  delete: SocialsDeleteAccess
+  fields: SocialsFields
+  read: SocialsReadAccess
+  update: SocialsUpdateAccess
+}
+
+type socialsDocAccess {
+  create: SocialsCreateDocAccess
+  delete: SocialsDeleteDocAccess
+  fields: SocialsDocAccessFields
+  read: SocialsReadDocAccess
+  update: SocialsUpdateDocAccess
 }
 
 type testimonial_listingAccess {
