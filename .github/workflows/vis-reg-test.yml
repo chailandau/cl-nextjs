@@ -30,6 +30,8 @@ jobs:
             - name: Generate report with Loki and reg-cli
               id: loki
               run: yarn loki:ci
+              env:
+                  NEXT_PUBLIC_BASE_PAYLOAD_URL: '${{ secrets.NEXT_PUBLIC_BASE_PAYLOAD_URL }}'
 
             - name: Create report folder
               if: success() || failure()
