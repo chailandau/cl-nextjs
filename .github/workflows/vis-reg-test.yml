@@ -33,6 +33,9 @@ jobs:
               env:
                   NEXT_PUBLIC_BASE_PAYLOAD_URL: '${{ secrets.NEXT_PUBLIC_BASE_PAYLOAD_URL }}'
 
+            - name: Debug Environment Variable
+              run: echo "NEXT_PUBLIC_BASE_PAYLOAD_URL = ${{ secrets.NEXT_PUBLIC_BASE_PAYLOAD_URL }}"
+
             - name: Create report folder
               if: success() || failure()
               run: |
