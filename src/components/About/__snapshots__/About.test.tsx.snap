@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="flex section about"
+  >
+    <div
+      class="image"
+    >
+      <div
+        class="flex container border"
+      >
+        <img
+          alt="Chai Landau smiling, surrounded by greenery"
+          data-nimg="1"
+          decoding="async"
+          height="1191"
+          loading="lazy"
+          src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2Fabout-pic.jpg&w=2048&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2Fabout-pic.jpg&w=1080&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2Fabout-pic.jpg&w=2048&q=75 2x"
+          style="color: transparent;"
+          width="1000"
+        />
+      </div>
+      <div
+        class="pets"
+      >
+        <div
+          class="flex container warren"
+        >
+          <img
+            alt="Warren - greyhound with tongue sticking out of side of mouth"
+            data-nimg="1"
+            decoding="async"
+            height="181"
+            loading="lazy"
+            src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2Fwarren.png&w=640&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2Fwarren.png&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2Fwarren.png&w=640&q=75 2x"
+            style="color: transparent;"
+            width="270"
+          />
+        </div>
+        <div
+          class="flex container harvey"
+        >
+          <img
+            alt="Harvey - orange cat with yellow eyes"
+            data-nimg="1"
+            decoding="async"
+            height="149"
+            loading="lazy"
+            src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2Fharvey.png&w=384&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2Fharvey.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2Fharvey.png&w=384&q=75 2x"
+            style="color: transparent;"
+            width="144"
+          />
+        </div>
+        <div
+          class="flex container athena"
+        >
+          <img
+            alt="Athena - brown tabby cat"
+            data-nimg="1"
+            decoding="async"
+            height="120"
+            loading="lazy"
+            src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2Fathena.png&w=256&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2Fathena.png&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2Fathena.png&w=256&q=75 2x"
+            style="color: transparent;"
+            width="120"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex content"
+    >
+      <h1
+        class="heading lg primary"
+      >
+        Hello! I’m Chai.
+      </h1>
+      <div
+        class="colored-subhead subhead"
+      >
+        <span
+          class="text md secondary"
+        >
+          I’m a 
+        </span>
+        <span
+          class="text md bg-aqua secondary"
+        >
+          tinkerer
+        </span>
+        <span
+          class="text md secondary"
+        >
+           at heart with a passion for creating 
+        </span>
+        <span
+          class="text md bg-white secondary"
+        >
+          functional
+        </span>
+        <span
+          class="text md secondary"
+        >
+           and 
+        </span>
+        <span
+          class="text md bg-pink secondary"
+        >
+          delightful
+        </span>
+        <span
+          class="text md secondary"
+        >
+           user experiences.
+        </span>
+      </div>
+      <div>
+        <p
+          class="text sm primary rich-text"
+        >
+          I prioritize accessibility and functionality in everything I do, whether it is sewing, woodworking, or architecting a component library. 
+        </p>
+        <p
+          class="text sm primary rich-text"
+        >
+          My design background ensures that my code choices are well-informed and part of a bigger picture.
+        </p>
+        <p
+          class="text sm primary rich-text"
+        >
+          When I’m not customizing my mechanical keyboard (Keychron K1 Pro, brown switch, RGB backlighting), chances are I am messing around on my Linux server, daydreaming about my next sewing project, or enjoying quality time with my partner and pets.
+        </p>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

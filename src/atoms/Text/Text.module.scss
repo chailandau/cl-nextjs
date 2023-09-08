@@ -2,21 +2,33 @@
     @include transition(font-size);
     &.xs {
         @include font(16, 28);
+        &.rich-text + &.rich-text {
+            margin-top: rem(24);
+        }
     }
     &.sm {
         @include font(16, 28);
+        &.rich-text + &.rich-text {
+            margin-top: rem(28);
+        }
         @include tablet {
             @include font(20, 30);
         }
     }
     &.md {
         @include font(20, 30);
+        &.rich-text + &.rich-text {
+            margin-top: rem(30);
+        }
         @include tablet {
             @include font(22, 32);
         }
     }
     &.lg {
         @include font(24, 48);
+        &.rich-text + &.rich-text {
+            margin-top: rem(32);
+        }
         @include tablet {
             @include font(28, 52);
         }
@@ -27,6 +39,9 @@
     &.xl {
         @include font-inter-md;
         @include font(26, 54);
+        &.rich-text + &.rich-text {
+            margin-top: rem(34);
+        }
         @include tablet {
             @include font(32, 66);
         }
@@ -42,6 +57,7 @@
             display: inline-block;
             padding: rem(2) rem(6);
             line-height: rem(24);
+            margin-right: rem(6);
             @include mobileLg {
                 padding: rem(2) rem(8);
                 margin-right: rem(4);

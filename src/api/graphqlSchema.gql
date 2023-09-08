@@ -3,7 +3,1450 @@ schema {
   mutation: Mutation
 }
 
+type About {
+  coloredSubhead(depth: Int): JSON
+  content(depth: Int): JSON
+  createdAt: DateTime
+  image(where: About_Image_where): Image
+  pets: About_Pets
+  title: String
+  updatedAt: DateTime
+}
+
+type AboutDocAccessFields {
+  coloredSubhead: AboutDocAccessFields_coloredSubhead
+  content: AboutDocAccessFields_content
+  createdAt: AboutDocAccessFields_createdAt
+  image: AboutDocAccessFields_image
+  pets: AboutDocAccessFields_pets
+  title: AboutDocAccessFields_title
+  updatedAt: AboutDocAccessFields_updatedAt
+}
+
+type AboutDocAccessFields_coloredSubhead {
+  create: AboutDocAccessFields_coloredSubhead_Create
+  delete: AboutDocAccessFields_coloredSubhead_Delete
+  read: AboutDocAccessFields_coloredSubhead_Read
+  update: AboutDocAccessFields_coloredSubhead_Update
+}
+
+type AboutDocAccessFields_coloredSubhead_Create {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_coloredSubhead_Delete {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_coloredSubhead_Read {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_coloredSubhead_Update {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_content {
+  create: AboutDocAccessFields_content_Create
+  delete: AboutDocAccessFields_content_Delete
+  read: AboutDocAccessFields_content_Read
+  update: AboutDocAccessFields_content_Update
+}
+
+type AboutDocAccessFields_content_Create {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_content_Delete {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_content_Read {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_content_Update {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_createdAt {
+  create: AboutDocAccessFields_createdAt_Create
+  delete: AboutDocAccessFields_createdAt_Delete
+  read: AboutDocAccessFields_createdAt_Read
+  update: AboutDocAccessFields_createdAt_Update
+}
+
+type AboutDocAccessFields_createdAt_Create {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_createdAt_Delete {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_createdAt_Read {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_image {
+  create: AboutDocAccessFields_image_Create
+  delete: AboutDocAccessFields_image_Delete
+  read: AboutDocAccessFields_image_Read
+  update: AboutDocAccessFields_image_Update
+}
+
+type AboutDocAccessFields_image_Create {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_image_Delete {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_image_Read {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_image_Update {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_pets {
+  create: AboutDocAccessFields_pets_Create
+  delete: AboutDocAccessFields_pets_Delete
+  fields: AboutDocAccessFields_pets_Fields
+  read: AboutDocAccessFields_pets_Read
+  update: AboutDocAccessFields_pets_Update
+}
+
+type AboutDocAccessFields_pets_Create {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_pets_Delete {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_pets_Fields {
+  athena: AboutDocAccessFields_pets_athena
+  harvey: AboutDocAccessFields_pets_harvey
+  warren: AboutDocAccessFields_pets_warren
+}
+
+type AboutDocAccessFields_pets_Read {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_pets_Update {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_pets_athena {
+  create: AboutDocAccessFields_pets_athena_Create
+  delete: AboutDocAccessFields_pets_athena_Delete
+  read: AboutDocAccessFields_pets_athena_Read
+  update: AboutDocAccessFields_pets_athena_Update
+}
+
+type AboutDocAccessFields_pets_athena_Create {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_pets_athena_Delete {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_pets_athena_Read {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_pets_athena_Update {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_pets_harvey {
+  create: AboutDocAccessFields_pets_harvey_Create
+  delete: AboutDocAccessFields_pets_harvey_Delete
+  read: AboutDocAccessFields_pets_harvey_Read
+  update: AboutDocAccessFields_pets_harvey_Update
+}
+
+type AboutDocAccessFields_pets_harvey_Create {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_pets_harvey_Delete {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_pets_harvey_Read {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_pets_harvey_Update {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_pets_warren {
+  create: AboutDocAccessFields_pets_warren_Create
+  delete: AboutDocAccessFields_pets_warren_Delete
+  read: AboutDocAccessFields_pets_warren_Read
+  update: AboutDocAccessFields_pets_warren_Update
+}
+
+type AboutDocAccessFields_pets_warren_Create {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_pets_warren_Delete {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_pets_warren_Read {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_pets_warren_Update {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_title {
+  create: AboutDocAccessFields_title_Create
+  delete: AboutDocAccessFields_title_Delete
+  read: AboutDocAccessFields_title_Read
+  update: AboutDocAccessFields_title_Update
+}
+
+type AboutDocAccessFields_title_Create {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_title_Delete {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_title_Read {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_title_Update {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_updatedAt {
+  create: AboutDocAccessFields_updatedAt_Create
+  delete: AboutDocAccessFields_updatedAt_Delete
+  read: AboutDocAccessFields_updatedAt_Read
+  update: AboutDocAccessFields_updatedAt_Update
+}
+
+type AboutDocAccessFields_updatedAt_Create {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_updatedAt_Delete {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_updatedAt_Read {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_updatedAt_Update {
+  permission: Boolean!
+}
+
+type AboutFields {
+  coloredSubhead: AboutFields_coloredSubhead
+  content: AboutFields_content
+  createdAt: AboutFields_createdAt
+  image: AboutFields_image
+  pets: AboutFields_pets
+  title: AboutFields_title
+  updatedAt: AboutFields_updatedAt
+}
+
+type AboutFields_coloredSubhead {
+  create: AboutFields_coloredSubhead_Create
+  delete: AboutFields_coloredSubhead_Delete
+  read: AboutFields_coloredSubhead_Read
+  update: AboutFields_coloredSubhead_Update
+}
+
+type AboutFields_coloredSubhead_Create {
+  permission: Boolean!
+}
+
+type AboutFields_coloredSubhead_Delete {
+  permission: Boolean!
+}
+
+type AboutFields_coloredSubhead_Read {
+  permission: Boolean!
+}
+
+type AboutFields_coloredSubhead_Update {
+  permission: Boolean!
+}
+
+type AboutFields_content {
+  create: AboutFields_content_Create
+  delete: AboutFields_content_Delete
+  read: AboutFields_content_Read
+  update: AboutFields_content_Update
+}
+
+type AboutFields_content_Create {
+  permission: Boolean!
+}
+
+type AboutFields_content_Delete {
+  permission: Boolean!
+}
+
+type AboutFields_content_Read {
+  permission: Boolean!
+}
+
+type AboutFields_content_Update {
+  permission: Boolean!
+}
+
+type AboutFields_createdAt {
+  create: AboutFields_createdAt_Create
+  delete: AboutFields_createdAt_Delete
+  read: AboutFields_createdAt_Read
+  update: AboutFields_createdAt_Update
+}
+
+type AboutFields_createdAt_Create {
+  permission: Boolean!
+}
+
+type AboutFields_createdAt_Delete {
+  permission: Boolean!
+}
+
+type AboutFields_createdAt_Read {
+  permission: Boolean!
+}
+
+type AboutFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type AboutFields_image {
+  create: AboutFields_image_Create
+  delete: AboutFields_image_Delete
+  read: AboutFields_image_Read
+  update: AboutFields_image_Update
+}
+
+type AboutFields_image_Create {
+  permission: Boolean!
+}
+
+type AboutFields_image_Delete {
+  permission: Boolean!
+}
+
+type AboutFields_image_Read {
+  permission: Boolean!
+}
+
+type AboutFields_image_Update {
+  permission: Boolean!
+}
+
+type AboutFields_pets {
+  create: AboutFields_pets_Create
+  delete: AboutFields_pets_Delete
+  fields: AboutFields_pets_Fields
+  read: AboutFields_pets_Read
+  update: AboutFields_pets_Update
+}
+
+type AboutFields_pets_Create {
+  permission: Boolean!
+}
+
+type AboutFields_pets_Delete {
+  permission: Boolean!
+}
+
+type AboutFields_pets_Fields {
+  athena: AboutFields_pets_athena
+  harvey: AboutFields_pets_harvey
+  warren: AboutFields_pets_warren
+}
+
+type AboutFields_pets_Read {
+  permission: Boolean!
+}
+
+type AboutFields_pets_Update {
+  permission: Boolean!
+}
+
+type AboutFields_pets_athena {
+  create: AboutFields_pets_athena_Create
+  delete: AboutFields_pets_athena_Delete
+  read: AboutFields_pets_athena_Read
+  update: AboutFields_pets_athena_Update
+}
+
+type AboutFields_pets_athena_Create {
+  permission: Boolean!
+}
+
+type AboutFields_pets_athena_Delete {
+  permission: Boolean!
+}
+
+type AboutFields_pets_athena_Read {
+  permission: Boolean!
+}
+
+type AboutFields_pets_athena_Update {
+  permission: Boolean!
+}
+
+type AboutFields_pets_harvey {
+  create: AboutFields_pets_harvey_Create
+  delete: AboutFields_pets_harvey_Delete
+  read: AboutFields_pets_harvey_Read
+  update: AboutFields_pets_harvey_Update
+}
+
+type AboutFields_pets_harvey_Create {
+  permission: Boolean!
+}
+
+type AboutFields_pets_harvey_Delete {
+  permission: Boolean!
+}
+
+type AboutFields_pets_harvey_Read {
+  permission: Boolean!
+}
+
+type AboutFields_pets_harvey_Update {
+  permission: Boolean!
+}
+
+type AboutFields_pets_warren {
+  create: AboutFields_pets_warren_Create
+  delete: AboutFields_pets_warren_Delete
+  read: AboutFields_pets_warren_Read
+  update: AboutFields_pets_warren_Update
+}
+
+type AboutFields_pets_warren_Create {
+  permission: Boolean!
+}
+
+type AboutFields_pets_warren_Delete {
+  permission: Boolean!
+}
+
+type AboutFields_pets_warren_Read {
+  permission: Boolean!
+}
+
+type AboutFields_pets_warren_Update {
+  permission: Boolean!
+}
+
+type AboutFields_title {
+  create: AboutFields_title_Create
+  delete: AboutFields_title_Delete
+  read: AboutFields_title_Read
+  update: AboutFields_title_Update
+}
+
+type AboutFields_title_Create {
+  permission: Boolean!
+}
+
+type AboutFields_title_Delete {
+  permission: Boolean!
+}
+
+type AboutFields_title_Read {
+  permission: Boolean!
+}
+
+type AboutFields_title_Update {
+  permission: Boolean!
+}
+
+type AboutFields_updatedAt {
+  create: AboutFields_updatedAt_Create
+  delete: AboutFields_updatedAt_Delete
+  read: AboutFields_updatedAt_Read
+  update: AboutFields_updatedAt_Update
+}
+
+type AboutFields_updatedAt_Create {
+  permission: Boolean!
+}
+
+type AboutFields_updatedAt_Delete {
+  permission: Boolean!
+}
+
+type AboutFields_updatedAt_Read {
+  permission: Boolean!
+}
+
+type AboutFields_updatedAt_Update {
+  permission: Boolean!
+}
+
+type AboutReadAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type AboutReadDocAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type AboutUpdateAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type AboutUpdateDocAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+input About_Image_alt_operator {
+  all: [String]
+  contains: String
+  equals: String
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Image_createdAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input About_Image_filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Image_filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Image_height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Image_id_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Image_mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Image_sizes__thumbnail__filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Image_sizes__thumbnail__filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Image_sizes__thumbnail__height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Image_sizes__thumbnail__mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Image_sizes__thumbnail__url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Image_sizes__thumbnail__width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Image_updatedAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input About_Image_url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Image_where {
+  AND: [About_Image_where_and]
+  OR: [About_Image_where_or]
+  alt: About_Image_alt_operator
+  createdAt: About_Image_createdAt_operator
+  filename: About_Image_filename_operator
+  filesize: About_Image_filesize_operator
+  height: About_Image_height_operator
+  id: About_Image_id_operator
+  mimeType: About_Image_mimeType_operator
+  sizes__thumbnail__filename: About_Image_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: About_Image_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: About_Image_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: About_Image_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: About_Image_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: About_Image_sizes__thumbnail__width_operator
+  updatedAt: About_Image_updatedAt_operator
+  url: About_Image_url_operator
+  width: About_Image_width_operator
+}
+
+input About_Image_where_and {
+  alt: About_Image_alt_operator
+  createdAt: About_Image_createdAt_operator
+  filename: About_Image_filename_operator
+  filesize: About_Image_filesize_operator
+  height: About_Image_height_operator
+  id: About_Image_id_operator
+  mimeType: About_Image_mimeType_operator
+  sizes__thumbnail__filename: About_Image_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: About_Image_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: About_Image_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: About_Image_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: About_Image_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: About_Image_sizes__thumbnail__width_operator
+  updatedAt: About_Image_updatedAt_operator
+  url: About_Image_url_operator
+  width: About_Image_width_operator
+}
+
+input About_Image_where_or {
+  alt: About_Image_alt_operator
+  createdAt: About_Image_createdAt_operator
+  filename: About_Image_filename_operator
+  filesize: About_Image_filesize_operator
+  height: About_Image_height_operator
+  id: About_Image_id_operator
+  mimeType: About_Image_mimeType_operator
+  sizes__thumbnail__filename: About_Image_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: About_Image_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: About_Image_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: About_Image_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: About_Image_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: About_Image_sizes__thumbnail__width_operator
+  updatedAt: About_Image_updatedAt_operator
+  url: About_Image_url_operator
+  width: About_Image_width_operator
+}
+
+input About_Image_width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+type About_Pets {
+  athena(where: About_Pets_Athena_where): Image
+  harvey(where: About_Pets_Harvey_where): Image
+  warren(where: About_Pets_Warren_where): Image
+}
+
+input About_Pets_Athena_alt_operator {
+  all: [String]
+  contains: String
+  equals: String
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Athena_createdAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input About_Pets_Athena_filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Athena_filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Athena_height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Athena_id_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Athena_mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Athena_sizes__thumbnail__filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Athena_sizes__thumbnail__filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Athena_sizes__thumbnail__height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Athena_sizes__thumbnail__mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Athena_sizes__thumbnail__url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Athena_sizes__thumbnail__width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Athena_updatedAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input About_Pets_Athena_url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Athena_where {
+  AND: [About_Pets_Athena_where_and]
+  OR: [About_Pets_Athena_where_or]
+  alt: About_Pets_Athena_alt_operator
+  createdAt: About_Pets_Athena_createdAt_operator
+  filename: About_Pets_Athena_filename_operator
+  filesize: About_Pets_Athena_filesize_operator
+  height: About_Pets_Athena_height_operator
+  id: About_Pets_Athena_id_operator
+  mimeType: About_Pets_Athena_mimeType_operator
+  sizes__thumbnail__filename: About_Pets_Athena_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: About_Pets_Athena_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: About_Pets_Athena_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: About_Pets_Athena_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: About_Pets_Athena_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: About_Pets_Athena_sizes__thumbnail__width_operator
+  updatedAt: About_Pets_Athena_updatedAt_operator
+  url: About_Pets_Athena_url_operator
+  width: About_Pets_Athena_width_operator
+}
+
+input About_Pets_Athena_where_and {
+  alt: About_Pets_Athena_alt_operator
+  createdAt: About_Pets_Athena_createdAt_operator
+  filename: About_Pets_Athena_filename_operator
+  filesize: About_Pets_Athena_filesize_operator
+  height: About_Pets_Athena_height_operator
+  id: About_Pets_Athena_id_operator
+  mimeType: About_Pets_Athena_mimeType_operator
+  sizes__thumbnail__filename: About_Pets_Athena_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: About_Pets_Athena_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: About_Pets_Athena_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: About_Pets_Athena_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: About_Pets_Athena_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: About_Pets_Athena_sizes__thumbnail__width_operator
+  updatedAt: About_Pets_Athena_updatedAt_operator
+  url: About_Pets_Athena_url_operator
+  width: About_Pets_Athena_width_operator
+}
+
+input About_Pets_Athena_where_or {
+  alt: About_Pets_Athena_alt_operator
+  createdAt: About_Pets_Athena_createdAt_operator
+  filename: About_Pets_Athena_filename_operator
+  filesize: About_Pets_Athena_filesize_operator
+  height: About_Pets_Athena_height_operator
+  id: About_Pets_Athena_id_operator
+  mimeType: About_Pets_Athena_mimeType_operator
+  sizes__thumbnail__filename: About_Pets_Athena_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: About_Pets_Athena_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: About_Pets_Athena_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: About_Pets_Athena_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: About_Pets_Athena_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: About_Pets_Athena_sizes__thumbnail__width_operator
+  updatedAt: About_Pets_Athena_updatedAt_operator
+  url: About_Pets_Athena_url_operator
+  width: About_Pets_Athena_width_operator
+}
+
+input About_Pets_Athena_width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Harvey_alt_operator {
+  all: [String]
+  contains: String
+  equals: String
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Harvey_createdAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input About_Pets_Harvey_filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Harvey_filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Harvey_height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Harvey_id_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Harvey_mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Harvey_sizes__thumbnail__filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Harvey_sizes__thumbnail__filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Harvey_sizes__thumbnail__height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Harvey_sizes__thumbnail__mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Harvey_sizes__thumbnail__url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Harvey_sizes__thumbnail__width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Harvey_updatedAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input About_Pets_Harvey_url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Harvey_where {
+  AND: [About_Pets_Harvey_where_and]
+  OR: [About_Pets_Harvey_where_or]
+  alt: About_Pets_Harvey_alt_operator
+  createdAt: About_Pets_Harvey_createdAt_operator
+  filename: About_Pets_Harvey_filename_operator
+  filesize: About_Pets_Harvey_filesize_operator
+  height: About_Pets_Harvey_height_operator
+  id: About_Pets_Harvey_id_operator
+  mimeType: About_Pets_Harvey_mimeType_operator
+  sizes__thumbnail__filename: About_Pets_Harvey_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: About_Pets_Harvey_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: About_Pets_Harvey_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: About_Pets_Harvey_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: About_Pets_Harvey_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: About_Pets_Harvey_sizes__thumbnail__width_operator
+  updatedAt: About_Pets_Harvey_updatedAt_operator
+  url: About_Pets_Harvey_url_operator
+  width: About_Pets_Harvey_width_operator
+}
+
+input About_Pets_Harvey_where_and {
+  alt: About_Pets_Harvey_alt_operator
+  createdAt: About_Pets_Harvey_createdAt_operator
+  filename: About_Pets_Harvey_filename_operator
+  filesize: About_Pets_Harvey_filesize_operator
+  height: About_Pets_Harvey_height_operator
+  id: About_Pets_Harvey_id_operator
+  mimeType: About_Pets_Harvey_mimeType_operator
+  sizes__thumbnail__filename: About_Pets_Harvey_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: About_Pets_Harvey_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: About_Pets_Harvey_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: About_Pets_Harvey_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: About_Pets_Harvey_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: About_Pets_Harvey_sizes__thumbnail__width_operator
+  updatedAt: About_Pets_Harvey_updatedAt_operator
+  url: About_Pets_Harvey_url_operator
+  width: About_Pets_Harvey_width_operator
+}
+
+input About_Pets_Harvey_where_or {
+  alt: About_Pets_Harvey_alt_operator
+  createdAt: About_Pets_Harvey_createdAt_operator
+  filename: About_Pets_Harvey_filename_operator
+  filesize: About_Pets_Harvey_filesize_operator
+  height: About_Pets_Harvey_height_operator
+  id: About_Pets_Harvey_id_operator
+  mimeType: About_Pets_Harvey_mimeType_operator
+  sizes__thumbnail__filename: About_Pets_Harvey_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: About_Pets_Harvey_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: About_Pets_Harvey_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: About_Pets_Harvey_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: About_Pets_Harvey_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: About_Pets_Harvey_sizes__thumbnail__width_operator
+  updatedAt: About_Pets_Harvey_updatedAt_operator
+  url: About_Pets_Harvey_url_operator
+  width: About_Pets_Harvey_width_operator
+}
+
+input About_Pets_Harvey_width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Warren_alt_operator {
+  all: [String]
+  contains: String
+  equals: String
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Warren_createdAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input About_Pets_Warren_filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Warren_filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Warren_height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Warren_id_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Warren_mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Warren_sizes__thumbnail__filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Warren_sizes__thumbnail__filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Warren_sizes__thumbnail__height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Warren_sizes__thumbnail__mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Warren_sizes__thumbnail__url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Warren_sizes__thumbnail__width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Warren_updatedAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input About_Pets_Warren_url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Warren_where {
+  AND: [About_Pets_Warren_where_and]
+  OR: [About_Pets_Warren_where_or]
+  alt: About_Pets_Warren_alt_operator
+  createdAt: About_Pets_Warren_createdAt_operator
+  filename: About_Pets_Warren_filename_operator
+  filesize: About_Pets_Warren_filesize_operator
+  height: About_Pets_Warren_height_operator
+  id: About_Pets_Warren_id_operator
+  mimeType: About_Pets_Warren_mimeType_operator
+  sizes__thumbnail__filename: About_Pets_Warren_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: About_Pets_Warren_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: About_Pets_Warren_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: About_Pets_Warren_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: About_Pets_Warren_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: About_Pets_Warren_sizes__thumbnail__width_operator
+  updatedAt: About_Pets_Warren_updatedAt_operator
+  url: About_Pets_Warren_url_operator
+  width: About_Pets_Warren_width_operator
+}
+
+input About_Pets_Warren_where_and {
+  alt: About_Pets_Warren_alt_operator
+  createdAt: About_Pets_Warren_createdAt_operator
+  filename: About_Pets_Warren_filename_operator
+  filesize: About_Pets_Warren_filesize_operator
+  height: About_Pets_Warren_height_operator
+  id: About_Pets_Warren_id_operator
+  mimeType: About_Pets_Warren_mimeType_operator
+  sizes__thumbnail__filename: About_Pets_Warren_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: About_Pets_Warren_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: About_Pets_Warren_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: About_Pets_Warren_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: About_Pets_Warren_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: About_Pets_Warren_sizes__thumbnail__width_operator
+  updatedAt: About_Pets_Warren_updatedAt_operator
+  url: About_Pets_Warren_url_operator
+  width: About_Pets_Warren_width_operator
+}
+
+input About_Pets_Warren_where_or {
+  alt: About_Pets_Warren_alt_operator
+  createdAt: About_Pets_Warren_createdAt_operator
+  filename: About_Pets_Warren_filename_operator
+  filesize: About_Pets_Warren_filesize_operator
+  height: About_Pets_Warren_height_operator
+  id: About_Pets_Warren_id_operator
+  mimeType: About_Pets_Warren_mimeType_operator
+  sizes__thumbnail__filename: About_Pets_Warren_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: About_Pets_Warren_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: About_Pets_Warren_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: About_Pets_Warren_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: About_Pets_Warren_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: About_Pets_Warren_sizes__thumbnail__width_operator
+  updatedAt: About_Pets_Warren_updatedAt_operator
+  url: About_Pets_Warren_url_operator
+  width: About_Pets_Warren_width_operator
+}
+
+input About_Pets_Warren_width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
 type Access {
+  about: aboutAccess
   canAccessAdmin: Boolean!
   case_study_listing: case_study_listingAccess
   ctas: ctasAccess
@@ -1071,10 +2514,13 @@ type Hero {
   coloredSubhead(depth: Int): JSON
   createdAt: DateTime
   cta: Cta
+  doodles: Boolean
   heading: String!
   headingTag: String!
+  homepage: Boolean
   icon(where: Hero_Icon_where): Icon
   id: String
+  subhead: String
   updatedAt: DateTime
 }
 
@@ -1341,6 +2787,12 @@ input Hero_cta_operator {
   not_in: [String]
 }
 
+input Hero_doodles_operator {
+  equals: Boolean
+  exists: Boolean
+  not_equals: Boolean
+}
+
 input Hero_headingTag_operator {
   all: [String]
   contains: String
@@ -1361,6 +2813,12 @@ input Hero_heading_operator {
   not_in: [String]
 }
 
+input Hero_homepage_operator {
+  equals: Boolean
+  exists: Boolean
+  not_equals: Boolean
+}
+
 input Hero_icon_operator {
   equals: String
   exists: Boolean
@@ -1376,6 +2834,14 @@ input Hero_id_operator {
   like: String
   not_equals: String
   not_in: [String]
+}
+
+input Hero_subhead_operator {
+  contains: String
+  equals: String
+  exists: Boolean
+  like: String
+  not_equals: String
 }
 
 input Hero_updatedAt_operator {
@@ -1395,10 +2861,13 @@ input Hero_where {
   coloredSubhead: Hero_coloredSubhead_operator
   createdAt: Hero_createdAt_operator
   cta: Hero_cta_operator
+  doodles: Hero_doodles_operator
   heading: Hero_heading_operator
   headingTag: Hero_headingTag_operator
+  homepage: Hero_homepage_operator
   icon: Hero_icon_operator
   id: Hero_id_operator
+  subhead: Hero_subhead_operator
   updatedAt: Hero_updatedAt_operator
 }
 
@@ -1406,10 +2875,13 @@ input Hero_where_and {
   coloredSubhead: Hero_coloredSubhead_operator
   createdAt: Hero_createdAt_operator
   cta: Hero_cta_operator
+  doodles: Hero_doodles_operator
   heading: Hero_heading_operator
   headingTag: Hero_headingTag_operator
+  homepage: Hero_homepage_operator
   icon: Hero_icon_operator
   id: Hero_id_operator
+  subhead: Hero_subhead_operator
   updatedAt: Hero_updatedAt_operator
 }
 
@@ -1417,10 +2889,13 @@ input Hero_where_or {
   coloredSubhead: Hero_coloredSubhead_operator
   createdAt: Hero_createdAt_operator
   cta: Hero_cta_operator
+  doodles: Hero_doodles_operator
   heading: Hero_heading_operator
   headingTag: Hero_headingTag_operator
+  homepage: Hero_homepage_operator
   icon: Hero_icon_operator
   id: Hero_id_operator
+  subhead: Hero_subhead_operator
   updatedAt: Hero_updatedAt_operator
 }
 
@@ -1462,9 +2937,12 @@ type HeroesDocAccessFields {
   coloredSubhead: HeroesDocAccessFields_coloredSubhead
   createdAt: HeroesDocAccessFields_createdAt
   cta: HeroesDocAccessFields_cta
+  doodles: HeroesDocAccessFields_doodles
   heading: HeroesDocAccessFields_heading
   headingTag: HeroesDocAccessFields_headingTag
+  homepage: HeroesDocAccessFields_homepage
   icon: HeroesDocAccessFields_icon
+  subhead: HeroesDocAccessFields_subhead
   updatedAt: HeroesDocAccessFields_updatedAt
 }
 
@@ -1537,6 +3015,29 @@ type HeroesDocAccessFields_cta_Update {
   permission: Boolean!
 }
 
+type HeroesDocAccessFields_doodles {
+  create: HeroesDocAccessFields_doodles_Create
+  delete: HeroesDocAccessFields_doodles_Delete
+  read: HeroesDocAccessFields_doodles_Read
+  update: HeroesDocAccessFields_doodles_Update
+}
+
+type HeroesDocAccessFields_doodles_Create {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_doodles_Delete {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_doodles_Read {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_doodles_Update {
+  permission: Boolean!
+}
+
 type HeroesDocAccessFields_heading {
   create: HeroesDocAccessFields_heading_Create
   delete: HeroesDocAccessFields_heading_Delete
@@ -1583,6 +3084,29 @@ type HeroesDocAccessFields_heading_Update {
   permission: Boolean!
 }
 
+type HeroesDocAccessFields_homepage {
+  create: HeroesDocAccessFields_homepage_Create
+  delete: HeroesDocAccessFields_homepage_Delete
+  read: HeroesDocAccessFields_homepage_Read
+  update: HeroesDocAccessFields_homepage_Update
+}
+
+type HeroesDocAccessFields_homepage_Create {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_homepage_Delete {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_homepage_Read {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_homepage_Update {
+  permission: Boolean!
+}
+
 type HeroesDocAccessFields_icon {
   create: HeroesDocAccessFields_icon_Create
   delete: HeroesDocAccessFields_icon_Delete
@@ -1603,6 +3127,29 @@ type HeroesDocAccessFields_icon_Read {
 }
 
 type HeroesDocAccessFields_icon_Update {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_subhead {
+  create: HeroesDocAccessFields_subhead_Create
+  delete: HeroesDocAccessFields_subhead_Delete
+  read: HeroesDocAccessFields_subhead_Read
+  update: HeroesDocAccessFields_subhead_Update
+}
+
+type HeroesDocAccessFields_subhead_Create {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_subhead_Delete {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_subhead_Read {
+  permission: Boolean!
+}
+
+type HeroesDocAccessFields_subhead_Update {
   permission: Boolean!
 }
 
@@ -1633,9 +3180,12 @@ type HeroesFields {
   coloredSubhead: HeroesFields_coloredSubhead
   createdAt: HeroesFields_createdAt
   cta: HeroesFields_cta
+  doodles: HeroesFields_doodles
   heading: HeroesFields_heading
   headingTag: HeroesFields_headingTag
+  homepage: HeroesFields_homepage
   icon: HeroesFields_icon
+  subhead: HeroesFields_subhead
   updatedAt: HeroesFields_updatedAt
 }
 
@@ -1708,6 +3258,29 @@ type HeroesFields_cta_Update {
   permission: Boolean!
 }
 
+type HeroesFields_doodles {
+  create: HeroesFields_doodles_Create
+  delete: HeroesFields_doodles_Delete
+  read: HeroesFields_doodles_Read
+  update: HeroesFields_doodles_Update
+}
+
+type HeroesFields_doodles_Create {
+  permission: Boolean!
+}
+
+type HeroesFields_doodles_Delete {
+  permission: Boolean!
+}
+
+type HeroesFields_doodles_Read {
+  permission: Boolean!
+}
+
+type HeroesFields_doodles_Update {
+  permission: Boolean!
+}
+
 type HeroesFields_heading {
   create: HeroesFields_heading_Create
   delete: HeroesFields_heading_Delete
@@ -1754,6 +3327,29 @@ type HeroesFields_heading_Update {
   permission: Boolean!
 }
 
+type HeroesFields_homepage {
+  create: HeroesFields_homepage_Create
+  delete: HeroesFields_homepage_Delete
+  read: HeroesFields_homepage_Read
+  update: HeroesFields_homepage_Update
+}
+
+type HeroesFields_homepage_Create {
+  permission: Boolean!
+}
+
+type HeroesFields_homepage_Delete {
+  permission: Boolean!
+}
+
+type HeroesFields_homepage_Read {
+  permission: Boolean!
+}
+
+type HeroesFields_homepage_Update {
+  permission: Boolean!
+}
+
 type HeroesFields_icon {
   create: HeroesFields_icon_Create
   delete: HeroesFields_icon_Delete
@@ -1774,6 +3370,29 @@ type HeroesFields_icon_Read {
 }
 
 type HeroesFields_icon_Update {
+  permission: Boolean!
+}
+
+type HeroesFields_subhead {
+  create: HeroesFields_subhead_Create
+  delete: HeroesFields_subhead_Delete
+  read: HeroesFields_subhead_Read
+  update: HeroesFields_subhead_Update
+}
+
+type HeroesFields_subhead_Create {
+  permission: Boolean!
+}
+
+type HeroesFields_subhead_Delete {
+  permission: Boolean!
+}
+
+type HeroesFields_subhead_Read {
+  permission: Boolean!
+}
+
+type HeroesFields_subhead_Update {
   permission: Boolean!
 }
 
@@ -4150,6 +5769,7 @@ type Mutation {
   refreshTokenUser(token: String): usersRefreshedUser
   resetPasswordUser(password: String, token: String): usersResetPassword
   unlockUser(email: String!): Boolean!
+  updateAbout(data: mutationAboutInput!, draft: Boolean): About
   updateCaseStudyListing(data: mutationCaseStudyListingInput!, draft: Boolean): CaseStudyListing
   updateCta(autosave: Boolean, data: mutationCtaUpdateInput!, draft: Boolean, id: String!): Cta
   updateHero(autosave: Boolean, data: mutationHeroUpdateInput!, draft: Boolean, id: String!): Hero
@@ -6088,6 +7708,7 @@ type ProjectsUpdateDocAccess {
 }
 
 type Query {
+  About(draft: Boolean): About
   Access: Access
   CaseStudyListing(draft: Boolean): CaseStudyListing
   Cta(draft: Boolean, id: String!): Cta
@@ -6112,6 +7733,7 @@ type Query {
   Tools(draft: Boolean, limit: Int, page: Int, sort: String, where: Tool_where): Tools
   User(draft: Boolean, id: String!): User
   Users(draft: Boolean, limit: Int, page: Int, sort: String, where: User_where): Users
+  docAccessAbout: aboutDocAccess
   docAccessCaseStudyListing: case_study_listingDocAccess
   docAccessCta(id: String!): ctasDocAccess
   docAccessHero(id: String!): heroesDocAccess
@@ -6137,6 +7759,7 @@ type SingleUseBlock {
 }
 
 enum SingleUseBlock_singleUse {
+  about
   case_study_listing
   testimonial_listing
   toolbox_listing
@@ -9089,6 +10712,18 @@ type UsersUpdateDocAccess {
   where: JSONObject
 }
 
+type aboutAccess {
+  fields: AboutFields
+  read: AboutReadAccess
+  update: AboutUpdateAccess
+}
+
+type aboutDocAccess {
+  fields: AboutDocAccessFields
+  read: AboutReadDocAccess
+  update: AboutUpdateDocAccess
+}
+
 type case_study_listingAccess {
   fields: CaseStudyListingFields
   read: CaseStudyListingReadAccess
@@ -9165,6 +10800,22 @@ type imagesDocAccess {
   update: ImagesUpdateDocAccess
 }
 
+input mutationAboutInput {
+  coloredSubhead: JSON
+  content: JSON
+  createdAt: String
+  image: String
+  pets: mutationAbout_PetsInput
+  title: String
+  updatedAt: String
+}
+
+input mutationAbout_PetsInput {
+  athena: String
+  harvey: String
+  warren: String
+}
+
 input mutationCaseStudyListingInput {
   createdAt: String
   icon: String
@@ -9196,9 +10847,12 @@ input mutationHeroInput {
   coloredSubhead: JSON
   createdAt: String
   cta: String
+  doodles: Boolean
   heading: String!
   headingTag: String!
+  homepage: Boolean
   icon: String
+  subhead: String
   updatedAt: String
 }
 
@@ -9206,9 +10860,12 @@ input mutationHeroUpdateInput {
   coloredSubhead: JSON
   createdAt: String
   cta: String
+  doodles: Boolean
   heading: String
   headingTag: String
+  homepage: Boolean
   icon: String
+  subhead: String
   updatedAt: String
 }
 

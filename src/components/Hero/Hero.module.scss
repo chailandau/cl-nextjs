@@ -1,5 +1,6 @@
 .hero {
     margin: rem(48) 0 rem(64);
+    position: relative;
     @include tablet {
         margin: rem(64) 0;
     }
@@ -10,27 +11,73 @@
             width: rem(64);
         }
     }
+    .doodles {
+        position: absolute;
+        width: 100%;
+        > div {
+            position: absolute;
+            @include transition(width, right, top);
+        }
+        .asterisk {
+            width: rem(30);
+            top: rem(2);
+            right: 26%;
+            @include tablet {
+                width: rem(40);
+                top: rem(-20);
+                right: 24%;
+            }
+            @include laptop {
+                width: rem(50);
+                top: rem(-8);
+                right: rem(155);
+            }
+        }
+        .x {
+            width: rem(30);
+            top: rem(30);
+            right: 15%;
+            @include tablet {
+                width: rem(40);
+                top: rem(26);
+            }
+            @include laptop {
+                width: rem(50);
+                top: rem(52);
+                right: rem(85);
+            }
+        }
+        .heart {
+            width: rem(24);
+            top: rem(6);
+            right: 5%;
+            @include tablet {
+                width: rem(32);
+                top: rem(-20);
+                right: 6%;
+            }
+            @include laptop {
+                width: rem(42);
+                top: rem(-28);
+                right: rem(34);
+            }
+        }
+    }
     .subhead {
-        flex-wrap: wrap;
-        align-items: center;
-        row-gap: rem(16);
-        column-gap: rem(8);
-        max-width: rem(800);
-        @include transition(row-gap, column-gap);
+        max-width: rem(660);
+    }
+    .colored-subhead {
+        line-height: rem(56);
         @include mobileLg {
-            row-gap: rem(20);
-            column-gap: rem(12);
+            line-height: rem(64);
         }
         @include tablet {
-            row-gap: rem(22);
-        }
-        @include tabletLg {
-            row-gap: rem(28);
+            line-height: rem(72);
         }
         @include laptop {
-            row-gap: rem(32);
+            line-height: rem(80);
         }
-        span {
+        & > span {
             @include font(17, 26);
             @include mobileLg {
                 @include font(20, 30);
@@ -43,6 +90,7 @@
             }
         }
     }
+
     .cta {
         margin-top: rem(8);
         @include transition(margin-top);

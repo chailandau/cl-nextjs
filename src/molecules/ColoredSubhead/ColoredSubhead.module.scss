@@ -1,0 +1,4 @@
+.colored-subhead {
+    max-width: rem(800);
+    @include transition(row-gap, column-gap);
+}

@@ -46,7 +46,6 @@
     &-content {
         position: relative;
         flex-direction: column;
-        gap: rem(24);
         background-color: color(common, 'white');
         @include boxShadow;
         padding: rem(24);

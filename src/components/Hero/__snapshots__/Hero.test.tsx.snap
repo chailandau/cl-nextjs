@@ -25,12 +25,12 @@ exports[`Hero matches snapshot 1`] = `
       </div>
     </div>
     <h1
-      class="heading xl primary"
+      class="heading lg primary"
     >
       Hi, I’m  Chai.
     </h1>
     <div
-      class="flex subhead"
+      class="colored-subhead colored-subhead"
     >
       <span
         class="text md secondary"
