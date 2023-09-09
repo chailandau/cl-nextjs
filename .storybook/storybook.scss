@@ -6,6 +6,11 @@ html {
         display: none;
     }
 }
+
+.section {
+    max-width: rem(1000);
+    margin: auto;
+}
 .preview {
     padding: rem(20);
     &:before {
