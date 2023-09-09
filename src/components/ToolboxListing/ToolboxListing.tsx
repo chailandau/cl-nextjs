@@ -3,6 +3,10 @@ import { FC } from 'react';
 import styles from './ToolboxListing.module.scss';
 
 import { TOOLBOX_QUERY } from '@/api/graphqlQueries';
+import {
+    Maybe,
+    ToolboxListing as ToolboxListingType
+} from '@/api/graphqlTypes';
 import Container from '@/atoms/Container';
 import Image from '@/atoms/Image';
 import Text from '@/atoms/Text';
@@ -10,10 +14,13 @@ import Grid from '@/molecules/Grid';
 import Section from '@/molecules/Section';
 import { getData } from '@/utils/getData';
 
-const ToolboxListing: FC = async () => {
-    const { ToolboxListing: Toolbox } = await getData(TOOLBOX_QUERY);
-
-    const { title, description, icon, tools } = Toolbox || {};
+interface ToolboxListingContentProps {
+    data?: Maybe<ToolboxListingType> | undefined;
+}
+export const ToolboxListingContent: FC<ToolboxListingContentProps> = ({
+    data
+}) => {
+    const { title, description, icon, tools } = data || {};
 
     return (
         <Section
@@ -43,6 +50,12 @@ const ToolboxListing: FC = async () => {
             </Grid>
         </Section>
     );
+};
+
+const ToolboxListing: FC = async () => {
+    const { ToolboxListing: toolboxData } = await getData(TOOLBOX_QUERY);
+
+    return <ToolboxListingContent data={toolboxData} />;
 };
 
 export default ToolboxListing;
