@@ -86,11 +86,32 @@ exports[`Fragments "INTERNAL_LINK_FRAGMENT" matches snapshot: INTERNAL_LINK_FRAG
 
 exports[`Fragments "SINGLE_USE_FRAGMENT" matches snapshot: SINGLE_USE_FRAGMENT 1`] = `
 "
-... on SingleUseBlock {
-  __typename
-  id
-  singleUse
-  
-}
+  ... on SingleUseBlock {
+    __typename
+    id
+    singleUse
+  }
+"
+`;
+
+exports[`Fragments "SOCIALS_FRAGMENT" matches snapshot: SOCIALS_FRAGMENT 1`] = `
+"
+  ... on SocialsBlock {
+    __typename
+    id
+    socials {
+      
+  icon {
+    id
+    alt
+    url
+    width
+    height
+  }
+
+      label
+      socialLink
+    }
+  }
 "
 `;

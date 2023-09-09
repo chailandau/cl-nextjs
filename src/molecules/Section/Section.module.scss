@@ -28,4 +28,9 @@
             }
         }
     }
+    &.border-top {
+        @include dashBorder(top);
+        margin-top: rem(-16);
+        padding-top: rem(48);
+    }
 }

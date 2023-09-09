@@ -49,7 +49,7 @@ export const parseColoredSubhead = (
             };
 
             return (
-                <Text key={index} {...textProps}>
+                <Text key={`subhead-${index}`} {...textProps}>
                     {child?.text}
                 </Text>
             );

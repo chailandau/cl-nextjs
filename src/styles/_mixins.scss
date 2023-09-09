@@ -68,13 +68,13 @@
     @include borderRadius($radius);
 }
 
-@mixin dashBorder {
+@mixin dashBorder($position: bottom) {
     background-image: linear-gradient(
         to right,
         color(common, 'md-gray') 50%,
         rgba(255, 255, 255, 0) 0%
     );
-    background-position: bottom;
+    background-position: $position;
     background-size: rem(16) 1px;
     background-repeat: repeat-x;
 }

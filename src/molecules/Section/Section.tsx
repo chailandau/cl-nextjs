@@ -9,14 +9,28 @@ import styles from './Section.module.scss';
 import { ContainerProps } from '@/atoms/Container';
 import Flex from '@/molecules/Flex';
 
-type SectionProps = ContainerProps & SectionHeadingProps;
+interface SectionProps extends ContainerProps, SectionHeadingProps {
+    /** Optional dashed border ontop */
+    borderTop?: boolean;
+}
 
 const Section: FC<SectionProps> = forwardRef(
     (
-        { children, as: SectionTag = 'section', className, heading, icon },
+        {
+            children,
+            as: SectionTag = 'section',
+            className,
+            heading,
+            icon,
+            borderTop = false
+        },
         ref
     ) => {
-        const classList = classNames(styles['section'], className && className);
+        const classList = classNames(
+            styles['section'],
+            className && className,
+            borderTop && styles['border-top']
+        );
 
         return (
             <Flex as={SectionTag} className={classList} ref={ref}>

@@ -35,6 +35,18 @@ export const IMAGE_FRAGMENT = `
     height
 `;
 
+export const SOCIALS_FRAGMENT = `
+  ... on SocialsBlock {
+    __typename
+    id
+    socials {
+      ${ICON_FRAGMENT}
+      label
+      socialLink
+    }
+  }
+`;
+
 export const HERO_FRAGMENT = `
 ... on HeroBlock {
     __typename
@@ -54,10 +66,9 @@ export const HERO_FRAGMENT = `
 `;
 
 export const SINGLE_USE_FRAGMENT = `
-... on SingleUseBlock {
-  __typename
-  id
-  singleUse
-  
-}
+  ... on SingleUseBlock {
+    __typename
+    id
+    singleUse
+  }
 `;
