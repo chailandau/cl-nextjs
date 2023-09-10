@@ -9,7 +9,7 @@ import Text from '@/atoms/Text';
 import Flex from '@/molecules/Flex';
 
 const SocialLink: FC<Social> = ({ icon, label, socialLink }) => {
-    if (!socialLink) {
+    if (!socialLink || !icon || !label) {
         return null;
     }
 
