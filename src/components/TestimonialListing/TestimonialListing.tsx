@@ -4,15 +4,22 @@ import Testimonial from './components/Testimonial';
 import styles from './TestimonialListing.module.scss';
 
 import { TESTIMONIALS_QUERY } from '@/api/graphqlQueries';
+import {
+    Maybe,
+    TestimonialListing as TestimonialListingType
+} from '@/api/graphqlTypes';
 import Flex from '@/molecules/Flex';
 import Section from '@/molecules/Section';
 import { getData } from '@/utils/getData';
 
-const TestimonialListing: FC = async () => {
-    const { TestimonialListing: Testimonials } =
-        await getData(TESTIMONIALS_QUERY);
+interface TestimonialListingData {
+    data?: Maybe<TestimonialListingType> | undefined;
+}
 
-    const { title, icon, testimonials } = Testimonials || {};
+export const TestimonialListingContent: FC<TestimonialListingData> = ({
+    data
+}) => {
+    const { title, icon, testimonials } = data || {};
 
     return (
         <Section
@@ -30,6 +37,13 @@ const TestimonialListing: FC = async () => {
             </Flex>
         </Section>
     );
+};
+
+const TestimonialListing: FC = async () => {
+    const { TestimonialListing: testimonialsData } =
+        await getData(TESTIMONIALS_QUERY);
+
+    return <TestimonialListingContent data={testimonialsData} />;
 };
 
 export default TestimonialListing;

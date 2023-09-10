@@ -1,0 +1,699 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testimonial Listing matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="section"
+  >
+    <section
+      class="flex section testimonial-listing"
+    >
+      <div
+        class="flex section-heading"
+      >
+        <h2
+          class="heading md black"
+        >
+          Word on the street
+        </h2>
+        <div
+          class="icon"
+        >
+          <div
+            class="flex container"
+          >
+            <img
+              alt="Speed bubble icon"
+              data-nimg="1"
+              decoding="async"
+              height="122"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fspeech-bubble.png&w=256&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fspeech-bubble.png&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fspeech-bubble.png&w=256&q=75 2x"
+              style="color: transparent;"
+              width="120"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex testimonials"
+      >
+        <div
+          class="flex testimonial"
+        >
+          <div
+            class="flex testimonial-content"
+          >
+            <p
+              class="text xs primary"
+            >
+               Chai is an exceptional individual who stands above her peers in accessibility, development speed, and collaborative spirit. One of Chai's greatest strengths is her expertise in accessible web content. In an age where inclusivity is becoming increasingly important, Chai has shown a deep understanding of the principles and techniques required to create websites and applications that are accessible to all users. She understands how to create a user experience that is welcoming and inclusive, and her dedication to this 
+ important aspect of software development has not gone unnoticed.
+            </p>
+          </div>
+          <div
+            class="flex author"
+          >
+            <a
+              class="link author-image"
+              href="https://www.linkedin.com/in/thejustinwallace"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <span
+                class="link-text"
+              >
+                <div
+                  class="flex container"
+                >
+                  <img
+                    alt="Justin Wallace headshot"
+                    data-nimg="1"
+                    decoding="async"
+                    height="800"
+                    loading="lazy"
+                    src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1675655635559.jpeg&w=1920&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1675655635559.jpeg&w=828&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1675655635559.jpeg&w=1920&q=75 2x"
+                    style="color: transparent;"
+                    width="800"
+                  />
+                </div>
+              </span>
+            </a>
+            <div
+              class="flex author-details"
+            >
+              <a
+                class="link"
+                href="https://www.linkedin.com/in/thejustinwallace"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                <span
+                  class="link-text"
+                >
+                  Justin Wallace
+                </span>
+              </a>
+              <p
+                class="text xs secondary"
+              >
+                Sr. Software Engineer @ OctoML
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex testimonial"
+        >
+          <div
+            class="flex testimonial-content"
+          >
+            <p
+              class="text xs primary"
+            >
+              Chai is a highly motivated and hardworking Frontend Engineer with a strong work ethic and a positive attitude. She is always willing to go the extra mile, and is able to bounce back from setbacks quickly. She is also a team player who helps her fellow engineers succeed by providing valuable insights and guidance to everyone. I have seen Chai's work on large clients and will attest to the quality of her work and approach. She cares about the code she writes and enjoys shipping amazing features on websites.
+            </p>
+          </div>
+          <div
+            class="flex author"
+          >
+            <a
+              class="link author-image"
+              href="https://www.linkedin.com/in/joe-desoto"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <span
+                class="link-text"
+              >
+                <div
+                  class="flex container"
+                >
+                  <img
+                    alt="Joe DeSoto headshot"
+                    data-nimg="1"
+                    decoding="async"
+                    height="450"
+                    loading="lazy"
+                    src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1517616622136.jpeg&w=1080&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1517616622136.jpeg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1517616622136.jpeg&w=1080&q=75 2x"
+                    style="color: transparent;"
+                    width="450"
+                  />
+                </div>
+              </span>
+            </a>
+            <div
+              class="flex author-details"
+            >
+              <a
+                class="link"
+                href="https://www.linkedin.com/in/joe-desoto"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                <span
+                  class="link-text"
+                >
+                  Joe DeSoto
+                </span>
+              </a>
+              <p
+                class="text xs secondary"
+              >
+                Engineering Manager @ Webstacks
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex testimonial"
+        >
+          <div
+            class="flex testimonial-content"
+          >
+            <p
+              class="text xs primary"
+            >
+              Chai and I have worked very closely and she has proven to be a reliable, helpful, solution oriented teammate in all contexts. She is quick to offer insights and recommendations to teammates and clients alike, always with the intention of meeting client's needs and subsequently exceeding their expectations. Chai is a knowledgable resource on all things TypeScript, and is widely known within the office to be a true expert on accessibility. Her attention to detail has improved every code base we have worked on together.
+            </p>
+          </div>
+          <div
+            class="flex author"
+          >
+            <a
+              class="link author-image"
+              href="https://www.linkedin.com/in/ericaleesnyder"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <span
+                class="link-text"
+              >
+                <div
+                  class="flex container"
+                >
+                  <img
+                    alt="Erica Snyder headshot"
+                    data-nimg="1"
+                    decoding="async"
+                    height="800"
+                    loading="lazy"
+                    src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1665862253678.jpeg&w=1920&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1665862253678.jpeg&w=828&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1665862253678.jpeg&w=1920&q=75 2x"
+                    style="color: transparent;"
+                    width="800"
+                  />
+                </div>
+              </span>
+            </a>
+            <div
+              class="flex author-details"
+            >
+              <a
+                class="link"
+                href="https://www.linkedin.com/in/ericaleesnyder"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                <span
+                  class="link-text"
+                >
+                  Erica Snyder
+                </span>
+              </a>
+              <p
+                class="text xs secondary"
+              >
+                Frontend Engineer @ Webstacks
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex testimonial"
+        >
+          <div
+            class="flex testimonial-content"
+          >
+            <p
+              class="text xs primary rich-text"
+            >
+              Efficient, precise, considerate, and talented are among the descriptors that come to mind when working with Chai. Beyond her technical prowess, she excels as a collaborator, proactively engaging with cross-functional teams to harmonize design, functionality, and user-centricity. It's evident that Chai is an invaluable addition to any team.
+            </p>
+          </div>
+          <div
+            class="flex author"
+          >
+            <a
+              class="link author-image"
+              href="https://www.linkedin.com/in/katienaum"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <span
+                class="link-text"
+              >
+                <div
+                  class="flex container"
+                >
+                  <img
+                    alt="Katie Naum headshot"
+                    data-nimg="1"
+                    decoding="async"
+                    height="800"
+                    loading="lazy"
+                    src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1672091894973.jpeg&w=1920&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1672091894973.jpeg&w=828&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1672091894973.jpeg&w=1920&q=75 2x"
+                    style="color: transparent;"
+                    width="800"
+                  />
+                </div>
+              </span>
+            </a>
+            <div
+              class="flex author-details"
+            >
+              <a
+                class="link"
+                href="https://www.linkedin.com/in/katienaum"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                <span
+                  class="link-text"
+                >
+                  Katie Naum
+                </span>
+              </a>
+              <p
+                class="text xs secondary"
+              >
+                Senior UX/UI Designer @ Webstacks
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex testimonial"
+        >
+          <div
+            class="flex testimonial-content"
+          >
+            <p
+              class="text xs primary rich-text"
+            >
+              Chai was a joy to work with! She’s a great communicator who is always quick to respond. She’s able to offer valuable sight not just on the development front, but also from a design perspective. 
+            </p>
+            <p
+              class="text xs primary rich-text"
+            >
+              As a designer, I really appreciated Chai’s holistic approach to problem solving. She went above and beyond to provide feedback and suggestions during the design process. This was crucial to the team to ensure we implemented best practices and made handoff from design to development a seamless process.
+            </p>
+          </div>
+          <div
+            class="flex author"
+          >
+            <a
+              class="link author-image"
+              href="https://www.linkedin.com/in/mochendesigns"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <span
+                class="link-text"
+              >
+                <div
+                  class="flex container"
+                >
+                  <img
+                    alt="Mo Chen headshot"
+                    data-nimg="1"
+                    decoding="async"
+                    height="285"
+                    loading="lazy"
+                    src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1642635937793.jpeg&w=640&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1642635937793.jpeg&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1642635937793.jpeg&w=640&q=75 2x"
+                    style="color: transparent;"
+                    width="285"
+                  />
+                </div>
+              </span>
+            </a>
+            <div
+              class="flex author-details"
+            >
+              <a
+                class="link"
+                href="https://www.linkedin.com/in/mochendesigns"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                <span
+                  class="link-text"
+                >
+                  Mo Chen
+                </span>
+              </a>
+              <p
+                class="text xs secondary"
+              >
+                UX/UI Designer @ Webstacks
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex testimonial"
+        >
+          <div
+            class="flex testimonial-content"
+          >
+            <p
+              class="text xs primary"
+            >
+              Chai's transition from design to frontend development shines in her work, whether it be seamless frontend experiences or accessible, organized, and considered code. I learned a lot from her; she had interests in frontend development tools that I wasn’t familiar with, and she was able to dive into a subject and share those knowledge and skills extremely well. Not only is she technically skilled, but she’s incredibly communicative, a team player, a teacher, and a wonderful colleague!
+            </p>
+          </div>
+          <div
+            class="flex author"
+          >
+            <a
+              class="link author-image"
+              href="https://www.linkedin.com/in/sarahrachaelrooney"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <span
+                class="link-text"
+              >
+                <div
+                  class="flex container"
+                >
+                  <img
+                    alt="Sarah Rooney headshot"
+                    data-nimg="1"
+                    decoding="async"
+                    height="225"
+                    loading="lazy"
+                    src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2Fdownload.jpeg&w=640&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2Fdownload.jpeg&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2Fdownload.jpeg&w=640&q=75 2x"
+                    style="color: transparent;"
+                    width="225"
+                  />
+                </div>
+              </span>
+            </a>
+            <div
+              class="flex author-details"
+            >
+              <a
+                class="link"
+                href="https://www.linkedin.com/in/sarahrachaelrooney"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                <span
+                  class="link-text"
+                >
+                  Sarah Rooney
+                </span>
+              </a>
+              <p
+                class="text xs secondary"
+              >
+                Frontend Developer @ Patagonia
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex testimonial"
+        >
+          <div
+            class="flex testimonial-content"
+          >
+            <p
+              class="text xs primary rich-text"
+            >
+              Working with Chai was a treat! She's my favorite kind of engineer - one who can take the most complex ideas and simplify them for those of us who need the extra help understanding. She always took the time to make sure I was grasping these concepts for myself but also that I was relaying accurate information to our clients.
+            </p>
+            <p
+              class="text xs primary rich-text"
+            >
+              She's a true master of her craft with an accessibility-first approach to everything she does. Any engineering team would be fortunate to have her!
+            </p>
+          </div>
+          <div
+            class="flex author"
+          >
+            <a
+              class="link author-image"
+              href="https://www.linkedin.com/in/ajmrodriguez/"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <span
+                class="link-text"
+              >
+                <div
+                  class="flex container"
+                >
+                  <img
+                    alt="Andrés J. Muñoz Rodriguez headshot"
+                    data-nimg="1"
+                    decoding="async"
+                    height="800"
+                    loading="lazy"
+                    src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1622448875956.jpeg&w=1920&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1622448875956.jpeg&w=828&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1622448875956.jpeg&w=1920&q=75 2x"
+                    style="color: transparent;"
+                    width="800"
+                  />
+                </div>
+              </span>
+            </a>
+            <div
+              class="flex author-details"
+            >
+              <a
+                class="link"
+                href="https://www.linkedin.com/in/ajmrodriguez/"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                <span
+                  class="link-text"
+                >
+                  Andrés J. Muñoz Rodriguez
+                </span>
+              </a>
+              <p
+                class="text xs secondary"
+              >
+                CSM @ Clique Studios
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex testimonial"
+        >
+          <div
+            class="flex testimonial-content"
+          >
+            <p
+              class="text xs primary"
+            >
+              Chai was a valuable resource and a helpful mentor for my internship at Clique Studios. Whether it was walking me through implementing animations into my sites or teaching me how to best use templating through handlebars.js, Chai was always able to make complex concepts seem approachable and took the time to help give me what I needed to succeed. 
+            </p>
+          </div>
+          <div
+            class="flex author"
+          >
+            <a
+              class="link author-image"
+              href="https://www.linkedin.com/in/joekowalczyk1"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <span
+                class="link-text"
+              >
+                <div
+                  class="flex container"
+                >
+                  <img
+                    alt="Joe Kowalczyk headshot"
+                    data-nimg="1"
+                    decoding="async"
+                    height="800"
+                    loading="lazy"
+                    src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1657139627821.jpeg&w=1920&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1657139627821.jpeg&w=828&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1657139627821.jpeg&w=1920&q=75 2x"
+                    style="color: transparent;"
+                    width="800"
+                  />
+                </div>
+              </span>
+            </a>
+            <div
+              class="flex author-details"
+            >
+              <a
+                class="link"
+                href="https://www.linkedin.com/in/joekowalczyk1"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                <span
+                  class="link-text"
+                >
+                  Joe Kowalczyk
+                </span>
+              </a>
+              <p
+                class="text xs secondary"
+              >
+                Engineering Intern @ Clique Studios
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex testimonial"
+        >
+          <div
+            class="flex testimonial-content"
+          >
+            <p
+              class="text xs primary"
+            >
+              Chai was always available if I needed help, very accommodating and answered any questions I had when working on projects. She also guided me when working with Wordpress websites as well as CSS/HTML. This exposure to using code and working on the backend of Wordpress sites, coupled with Chai’s patience and eagerness to share her professional knowledge, provided me with useful knowledge for my current job. It was a pleasure learning and working with Chai. 
+            </p>
+          </div>
+          <div
+            class="flex author"
+          >
+            <a
+              class="link author-image"
+              href="https://www.linkedin.com/in/ninaguido"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <span
+                class="link-text"
+              >
+                <div
+                  class="flex container"
+                >
+                  <img
+                    alt="Nina Guido"
+                    data-nimg="1"
+                    decoding="async"
+                    height="1920"
+                    loading="lazy"
+                    src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2Fbb16bcd6-a33b-4381-8224-017819d1d3ef_rw_1920.jpeg&w=3840&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2Fbb16bcd6-a33b-4381-8224-017819d1d3ef_rw_1920.jpeg&w=1920&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2Fbb16bcd6-a33b-4381-8224-017819d1d3ef_rw_1920.jpeg&w=3840&q=75 2x"
+                    style="color: transparent;"
+                    width="1920"
+                  />
+                </div>
+              </span>
+            </a>
+            <div
+              class="flex author-details"
+            >
+              <a
+                class="link"
+                href="https://www.linkedin.com/in/ninaguido"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                <span
+                  class="link-text"
+                >
+                  Nina Guido
+                </span>
+              </a>
+              <p
+                class="text xs secondary"
+              >
+                Graphic Designer @ Katy Dwyer Design
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex testimonial"
+        >
+          <div
+            class="flex testimonial-content"
+          >
+            <p
+              class="text xs primary"
+            >
+              Chai was a pleasure to work with! Her work was always high-caliber design and required very little feedback from start to finish.
+
+She has great critical thinking skills and was very helpful in anticipating what might be required after initial solutions. Her work was thorough and she quickly understood the level of delivery we expected.
+            </p>
+          </div>
+          <div
+            class="flex author"
+          >
+            <a
+              class="link author-image"
+              href="https://www.linkedin.com/in/ktsterling"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <span
+                class="link-text"
+              >
+                <div
+                  class="flex container"
+                >
+                  <img
+                    alt="Kevin Sterling headshot"
+                    data-nimg="1"
+                    decoding="async"
+                    height="450"
+                    loading="lazy"
+                    src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1517706005083.jpeg&w=1080&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1517706005083.jpeg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Fimages%2F1517706005083.jpeg&w=1080&q=75 2x"
+                    style="color: transparent;"
+                    width="450"
+                  />
+                </div>
+              </span>
+            </a>
+            <div
+              class="flex author-details"
+            >
+              <a
+                class="link"
+                href="https://www.linkedin.com/in/ktsterling"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                <span
+                  class="link-text"
+                >
+                  Kevin Sterling
+                </span>
+              </a>
+              <p
+                class="text xs secondary"
+              >
+                Director: Web @ Pixel Wilderness
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</DocumentFragment>
+`;

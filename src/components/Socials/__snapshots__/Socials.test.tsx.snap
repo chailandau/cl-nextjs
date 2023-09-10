@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Socials matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="section"
+  >
+    <section
+      class="flex section border-top"
+    >
+      <div
+        class="grid socials"
+      >
+        <div
+          class="flex social-link"
+        >
+          <div
+            class="flex container social-link-icon"
+          >
+            <img
+              alt="Email icon"
+              data-nimg="1"
+              decoding="async"
+              height="75"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Femail.png&w=256&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Femail.png&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Femail.png&w=256&q=75 2x"
+              style="color: transparent;"
+              width="72"
+            />
+          </div>
+          <a
+            class="link underline"
+            href="mailto:chai.landau@gmail.com"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            <span
+              class="link-text"
+            >
+              <p
+                class="text lg primary"
+              >
+                email
+              </p>
+            </span>
+            <span
+              class="link-icon"
+            >
+              &gt;
+            </span>
+          </a>
+        </div>
+        <div
+          class="flex social-link"
+        >
+          <div
+            class="flex container social-link-icon"
+          >
+            <img
+              alt="github icon"
+              data-nimg="1"
+              decoding="async"
+              height="72"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fgithub.png&w=256&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fgithub.png&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fgithub.png&w=256&q=75 2x"
+              style="color: transparent;"
+              width="72"
+            />
+          </div>
+          <a
+            class="link underline"
+            href="https://github.com/chailandau/"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            <span
+              class="link-text"
+            >
+              <p
+                class="text lg primary"
+              >
+                github
+              </p>
+            </span>
+            <span
+              class="link-icon"
+            >
+              &gt;
+            </span>
+          </a>
+        </div>
+        <div
+          class="flex social-link"
+        >
+          <div
+            class="flex container social-link-icon"
+          >
+            <img
+              alt="linkedin icon"
+              data-nimg="1"
+              decoding="async"
+              height="72"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Flinkedin.png&w=256&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Flinkedin.png&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Flinkedin.png&w=256&q=75 2x"
+              style="color: transparent;"
+              width="72"
+            />
+          </div>
+          <a
+            class="link underline"
+            href="https://www.linkedin.com/in/chai-landau/"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            <span
+              class="link-text"
+            >
+              <p
+                class="text lg primary"
+              >
+                linkedin
+              </p>
+            </span>
+            <span
+              class="link-icon"
+            >
+              &gt;
+            </span>
+          </a>
+        </div>
+        <div
+          class="flex social-link"
+        >
+          <div
+            class="flex container social-link-icon"
+          >
+            <img
+              alt="instagram icon"
+              data-nimg="1"
+              decoding="async"
+              height="72"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Finstagram.png&w=256&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Finstagram.png&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Finstagram.png&w=256&q=75 2x"
+              style="color: transparent;"
+              width="72"
+            />
+          </div>
+          <a
+            class="link underline"
+            href="https://www.instagram.com/chaitea_crafts"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            <span
+              class="link-text"
+            >
+              <p
+                class="text lg primary"
+              >
+                instagram
+              </p>
+            </span>
+            <span
+              class="link-icon"
+            >
+              &gt;
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</DocumentFragment>
+`;

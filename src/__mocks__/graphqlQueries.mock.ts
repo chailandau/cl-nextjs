@@ -609,3 +609,50 @@ export const mockTestimonialsData = {
         }
     ]
 };
+
+export const mockSocials = [
+    {
+        icon: {
+            id: '64fa286417391ca7677bac40',
+            alt: 'Email icon',
+            url: 'https://cl-payload.cr.chailandau.com/icons/email.png',
+            width: 72,
+            height: 75
+        },
+        label: 'email',
+        socialLink: 'mailto:chai.landau@gmail.com'
+    },
+    {
+        icon: {
+            id: '64fa2e4e8f46b75a76e7d2e4',
+            alt: 'github icon',
+            url: 'https://cl-payload.cr.chailandau.com/icons/github.png',
+            width: 72,
+            height: 72
+        },
+        label: 'github',
+        socialLink: 'https://github.com/chailandau/'
+    },
+    {
+        icon: {
+            id: '64fa2e708f46b75a76e7d2f6',
+            alt: 'linkedin icon',
+            url: 'https://cl-payload.cr.chailandau.com/icons/linkedin.png',
+            width: 72,
+            height: 72
+        },
+        label: 'linkedin',
+        socialLink: 'https://www.linkedin.com/in/chai-landau/'
+    },
+    {
+        icon: {
+            id: '64fa2edf8f46b75a76e7d308',
+            alt: 'instagram icon',
+            url: 'https://cl-payload.cr.chailandau.com/icons/instagram.png',
+            width: 72,
+            height: 72
+        },
+        label: 'instagram',
+        socialLink: 'https://www.instagram.com/chaitea_crafts'
+    }
+];

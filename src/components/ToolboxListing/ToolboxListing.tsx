@@ -14,12 +14,10 @@ import Grid from '@/molecules/Grid';
 import Section from '@/molecules/Section';
 import { getData } from '@/utils/getData';
 
-interface ToolboxListingContentProps {
+interface ToolboxListingData {
     data?: Maybe<ToolboxListingType> | undefined;
 }
-export const ToolboxListingContent: FC<ToolboxListingContentProps> = ({
-    data
-}) => {
+export const ToolboxListingContent: FC<ToolboxListingData> = ({ data }) => {
     const { title, description, icon, tools } = data || {};
 
     return (
