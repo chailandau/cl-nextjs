@@ -10,7 +10,7 @@ import { ContainerProps } from '@/atoms/Container';
 import Flex from '@/molecules/Flex';
 
 interface SectionProps extends ContainerProps, SectionHeadingProps {
-    /** Optional dashed border ontop */
+    /** Optional dashed border on top */
     borderTop?: boolean;
 }
 
