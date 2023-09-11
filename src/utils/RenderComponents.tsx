@@ -2,7 +2,8 @@ import { FC, Fragment } from 'react';
 
 import { Page_Sections } from '@/api/graphqlTypes';
 import Hero from '@/components/Hero';
-import SingleUse from '@/components/SingleUse/SingleUse';
+import SingleUse from '@/components/SingleUse';
+import Socials from '@/components/Socials';
 
 interface Sections {
     /** Sections to render */
@@ -17,6 +18,8 @@ const RenderComponents: FC<Sections> = ({ components }) => {
         switch (component?.__typename) {
             case 'HeroBlock':
                 return <Hero {...component?.hero} />;
+            case 'SocialsBlock':
+                return <Socials socials={component?.socials} />;
             case 'SingleUseBlock':
                 return <SingleUse component={component?.singleUse} />;
             default:

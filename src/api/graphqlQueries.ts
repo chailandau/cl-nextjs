@@ -5,23 +5,9 @@ import {
     ICON_FRAGMENT,
     IMAGE_FRAGMENT,
     INTERNAL_LINK_FRAGMENT,
-    SINGLE_USE_FRAGMENT
+    SINGLE_USE_FRAGMENT,
+    SOCIALS_FRAGMENT
 } from './graphqlFragments';
-
-export const PAGES_QUERY = gql`
-    query PagesQuery {
-        Pages {
-            docs {
-                id
-                slug
-                title
-                sections {
-                    ${HERO_FRAGMENT}
-                }
-            }
-        }
-    }
-`;
 
 export const PAGE_CONTENT_QUERY = gql`
     query PageContentQuery($slug: String!) {
@@ -32,6 +18,7 @@ export const PAGE_CONTENT_QUERY = gql`
                 title
                 sections {
                     ${HERO_FRAGMENT}
+                    ${SOCIALS_FRAGMENT}
                     ${SINGLE_USE_FRAGMENT}
                 }}
         }

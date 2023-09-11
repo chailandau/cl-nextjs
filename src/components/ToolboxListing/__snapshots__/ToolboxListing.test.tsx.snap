@@ -1,0 +1,519 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toolbox Listing matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="section"
+  >
+    <section
+      class="flex section toolbox-listing"
+    >
+      <div
+        class="flex section-heading"
+      >
+        <h2
+          class="heading md black"
+        >
+          Toolbox
+        </h2>
+        <div
+          class="icon"
+        >
+          <div
+            class="flex container"
+          >
+            <img
+              alt="Tools icon"
+              data-nimg="1"
+              decoding="async"
+              height="120"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Ftools.png&w=256&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Ftools.png&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Ftools.png&w=256&q=75 2x"
+              style="color: transparent;"
+              width="120"
+            />
+          </div>
+        </div>
+      </div>
+      <p
+        class="text sm primary"
+      >
+        If I listed every tool I used, this page would be super long. Here’s some I’ve used a bunch, though!
+      </p>
+      <ul
+        class="grid"
+      >
+        <li>
+          <div
+            class="icon"
+          >
+            <div
+              class="flex container"
+            >
+              <img
+                alt="React icon"
+                data-nimg="1"
+                decoding="async"
+                height="150"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Freact.png&w=384&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Freact.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Freact.png&w=384&q=75 2x"
+                style="color: transparent;"
+                width="166"
+              />
+            </div>
+          </div>
+          <p
+            class="text xs primary"
+          >
+            React
+          </p>
+        </li>
+        <li>
+          <div
+            class="icon"
+          >
+            <div
+              class="flex container"
+            >
+              <img
+                alt="NextJS icon"
+                data-nimg="1"
+                decoding="async"
+                height="150"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fnext.png&w=384&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fnext.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fnext.png&w=384&q=75 2x"
+                style="color: transparent;"
+                width="150"
+              />
+            </div>
+          </div>
+          <p
+            class="text xs primary"
+          >
+            Next.js
+          </p>
+        </li>
+        <li>
+          <div
+            class="icon"
+          >
+            <div
+              class="flex container"
+            >
+              <img
+                alt="Redux icon"
+                data-nimg="1"
+                decoding="async"
+                height="150"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fredux.png&w=384&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fredux.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fredux.png&w=384&q=75 2x"
+                style="color: transparent;"
+                width="152"
+              />
+            </div>
+          </div>
+          <p
+            class="text xs primary"
+          >
+            Redux
+          </p>
+        </li>
+        <li>
+          <div
+            class="icon"
+          >
+            <div
+              class="flex container"
+            >
+              <img
+                alt="GraphQL Icon"
+                data-nimg="1"
+                decoding="async"
+                height="150"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fgraphql.png&w=384&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fgraphql.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fgraphql.png&w=384&q=75 2x"
+                style="color: transparent;"
+                width="137"
+              />
+            </div>
+          </div>
+          <p
+            class="text xs primary"
+          >
+            GraphQL
+          </p>
+        </li>
+        <li>
+          <div
+            class="icon"
+          >
+            <div
+              class="flex container"
+            >
+              <img
+                alt="Typescript icon"
+                data-nimg="1"
+                decoding="async"
+                height="150"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Ftypescript.png&w=384&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Ftypescript.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Ftypescript.png&w=384&q=75 2x"
+                style="color: transparent;"
+                width="150"
+              />
+            </div>
+          </div>
+          <p
+            class="text xs primary"
+          >
+            TypeScript
+          </p>
+        </li>
+        <li>
+          <div
+            class="icon"
+          >
+            <div
+              class="flex container"
+            >
+              <img
+                alt="Git icon"
+                data-nimg="1"
+                decoding="async"
+                height="150"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fgit.png&w=384&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fgit.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fgit.png&w=384&q=75 2x"
+                style="color: transparent;"
+                width="150"
+              />
+            </div>
+          </div>
+          <p
+            class="text xs primary"
+          >
+            Git
+          </p>
+        </li>
+        <li>
+          <div
+            class="icon"
+          >
+            <div
+              class="flex container"
+            >
+              <img
+                alt="Storybook icon"
+                data-nimg="1"
+                decoding="async"
+                height="150"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fstorybook.png&w=256&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fstorybook.png&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fstorybook.png&w=256&q=75 2x"
+                style="color: transparent;"
+                width="128"
+              />
+            </div>
+          </div>
+          <p
+            class="text xs primary"
+          >
+            Storybook
+          </p>
+        </li>
+        <li>
+          <div
+            class="icon"
+          >
+            <div
+              class="flex container"
+            >
+              <img
+                alt="Contentful icon"
+                data-nimg="1"
+                decoding="async"
+                height="150"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fcontentful.png&w=384&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fcontentful.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fcontentful.png&w=384&q=75 2x"
+                style="color: transparent;"
+                width="137"
+              />
+            </div>
+          </div>
+          <p
+            class="text xs primary"
+          >
+            Contentful
+          </p>
+        </li>
+        <li>
+          <div
+            class="icon"
+          >
+            <div
+              class="flex container"
+            >
+              <img
+                alt="Jira icon"
+                data-nimg="1"
+                decoding="async"
+                height="150"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fjira.png&w=384&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fjira.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fjira.png&w=384&q=75 2x"
+                style="color: transparent;"
+                width="147"
+              />
+            </div>
+          </div>
+          <p
+            class="text xs primary"
+          >
+            Jira
+          </p>
+        </li>
+        <li>
+          <div
+            class="icon"
+          >
+            <div
+              class="flex container"
+            >
+              <img
+                alt="Sass icon"
+                data-nimg="1"
+                decoding="async"
+                height="150"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fsass.png&w=384&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fsass.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fsass.png&w=384&q=75 2x"
+                style="color: transparent;"
+                width="191"
+              />
+            </div>
+          </div>
+          <p
+            class="text xs primary"
+          >
+            SASS / SCSS
+          </p>
+        </li>
+        <li>
+          <div
+            class="icon"
+          >
+            <div
+              class="flex container"
+            >
+              <img
+                alt="Figma icon"
+                data-nimg="1"
+                decoding="async"
+                height="150"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Ffigma.png&w=256&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Ffigma.png&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Ffigma.png&w=256&q=75 2x"
+                style="color: transparent;"
+                width="111"
+              />
+            </div>
+          </div>
+          <p
+            class="text xs primary"
+          >
+            Figma
+          </p>
+        </li>
+        <li>
+          <div
+            class="icon"
+          >
+            <div
+              class="flex container"
+            >
+              <img
+                alt="Styled components icon"
+                data-nimg="1"
+                decoding="async"
+                height="150"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fstyled-components.png&w=384&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fstyled-components.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fstyled-components.png&w=384&q=75 2x"
+                style="color: transparent;"
+                width="148"
+              />
+            </div>
+          </div>
+          <p
+            class="text xs primary"
+          >
+            Styled Components
+          </p>
+        </li>
+        <li>
+          <div
+            class="icon"
+          >
+            <div
+              class="flex container"
+            >
+              <img
+                alt="Jest icon"
+                data-nimg="1"
+                decoding="async"
+                height="150"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fjest.png&w=384&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fjest.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fjest.png&w=384&q=75 2x"
+                style="color: transparent;"
+                width="133"
+              />
+            </div>
+          </div>
+          <p
+            class="text xs primary"
+          >
+            Jest
+          </p>
+        </li>
+        <li>
+          <div
+            class="icon"
+          >
+            <div
+              class="flex container"
+            >
+              <img
+                alt="Github actions icon"
+                data-nimg="1"
+                decoding="async"
+                height="150"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fgithub-actions.png&w=384&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fgithub-actions.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fgithub-actions.png&w=384&q=75 2x"
+                style="color: transparent;"
+                width="150"
+              />
+            </div>
+          </div>
+          <p
+            class="text xs primary"
+          >
+            Github Actions
+          </p>
+        </li>
+        <li>
+          <div
+            class="icon"
+          >
+            <div
+              class="flex container"
+            >
+              <img
+                alt="Firebase icon"
+                data-nimg="1"
+                decoding="async"
+                height="150"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Ffirebase.png&w=256&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Ffirebase.png&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Ffirebase.png&w=256&q=75 2x"
+                style="color: transparent;"
+                width="117"
+              />
+            </div>
+          </div>
+          <p
+            class="text xs primary"
+          >
+            Firebase
+          </p>
+        </li>
+        <li>
+          <div
+            class="icon"
+          >
+            <div
+              class="flex container"
+            >
+              <img
+                alt="NodeJS Icon"
+                data-nimg="1"
+                decoding="async"
+                height="150"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fnodejs.png&w=384&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fnodejs.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fnodejs.png&w=384&q=75 2x"
+                style="color: transparent;"
+                width="137"
+              />
+            </div>
+          </div>
+          <p
+            class="text xs primary"
+          >
+            Node.js
+          </p>
+        </li>
+        <li>
+          <div
+            class="icon"
+          >
+            <div
+              class="flex container"
+            >
+              <img
+                alt="MongoDB icon"
+                data-nimg="1"
+                decoding="async"
+                height="150"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fmongodb.png&w=384&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fmongodb.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fmongodb.png&w=384&q=75 2x"
+                style="color: transparent;"
+                width="150"
+              />
+            </div>
+          </div>
+          <p
+            class="text xs primary"
+          >
+            MongoDB
+          </p>
+        </li>
+        <li>
+          <div
+            class="icon"
+          >
+            <div
+              class="flex container"
+            >
+              <img
+                alt="Docker icon"
+                data-nimg="1"
+                decoding="async"
+                height="150"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fdocker.png&w=640&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fdocker.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fcl-payload.cr.chailandau.com%2Ficons%2Fdocker.png&w=640&q=75 2x"
+                style="color: transparent;"
+                width="199"
+              />
+            </div>
+          </div>
+          <p
+            class="text xs primary"
+          >
+            Docker
+          </p>
+        </li>
+      </ul>
+    </section>
+  </div>
+</DocumentFragment>
+`;

@@ -1,18 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { AboutContent } from './About';
+import { AboutContent as About } from './About';
 
 import { mockAboutData } from '@/__mocks__/graphqlQueries.mock';
 
-const meta: Meta<typeof AboutContent> = {
+const meta: Meta<typeof About> = {
     title: 'Components/About',
-    component: AboutContent,
+    component: About,
     argTypes: {}
 };
 
 export default meta;
 
-type Story = StoryObj<typeof AboutContent>;
+type Story = StoryObj<typeof About>;
 
 export const Default: Story = {
     args: {
