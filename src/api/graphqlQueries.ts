@@ -3,10 +3,12 @@ import { gql } from 'graphql-request';
 import {
     HERO_FRAGMENT,
     ICON_FRAGMENT,
+    IMAGE_BLOCK_FRAGMENT,
     IMAGE_FRAGMENT,
     INTERNAL_LINK_FRAGMENT,
     SINGLE_USE_FRAGMENT,
-    SOCIALS_FRAGMENT
+    SOCIALS_FRAGMENT,
+    TEXT_BLOCK_FRAGMENT
 } from './graphqlFragments';
 
 export const PAGE_CONTENT_QUERY = gql`
@@ -16,13 +18,14 @@ export const PAGE_CONTENT_QUERY = gql`
                 id
                 slug
                 title
-                sections {
+                pageSections {
                     ${HERO_FRAGMENT}
                     ${SOCIALS_FRAGMENT}
                     ${SINGLE_USE_FRAGMENT}
                 }}
         }
-    }`;
+    }
+`;
 
 export const SLUG_QUERY = gql`
     query PagesQuery {
@@ -91,7 +94,7 @@ query AboutQuery {
             image {
                 ${IMAGE_FRAGMENT}
             }
-            content
+            text
             pets {
                 athena {
                     ${IMAGE_FRAGMENT}
@@ -105,4 +108,24 @@ query AboutQuery {
             }
         }
     }
+`;
+
+export const PROJECT_CONTENT_QUERY = gql`
+query ProjectsQuery {
+    docs {
+      id
+      title
+      slug
+      projectSections {
+       ${IMAGE_BLOCK_FRAGMENT}
+       ${TEXT_BLOCK_FRAGMENT}
+      }
+      intro {
+        description
+        image {
+            ${IMAGE_FRAGMENT}
+        }
+      }
+    }
+  }
 `;

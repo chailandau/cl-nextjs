@@ -36,10 +36,10 @@ export type Scalars = {
 export type About = {
     __typename?: 'About';
     coloredSubhead?: Maybe<Scalars['JSON']['output']>;
-    content?: Maybe<Scalars['JSON']['output']>;
     createdAt?: Maybe<Scalars['DateTime']['output']>;
     image?: Maybe<Image>;
     pets?: Maybe<About_Pets>;
+    text?: Maybe<Scalars['JSON']['output']>;
     title?: Maybe<Scalars['String']['output']>;
     updatedAt?: Maybe<Scalars['DateTime']['output']>;
 };
@@ -48,21 +48,21 @@ export type AboutColoredSubheadArgs = {
     depth?: InputMaybe<Scalars['Int']['input']>;
 };
 
-export type AboutContentArgs = {
-    depth?: InputMaybe<Scalars['Int']['input']>;
-};
-
 export type AboutImageArgs = {
     where?: InputMaybe<About_Image_Where>;
+};
+
+export type AboutTextArgs = {
+    depth?: InputMaybe<Scalars['Int']['input']>;
 };
 
 export type AboutDocAccessFields = {
     __typename?: 'AboutDocAccessFields';
     coloredSubhead?: Maybe<AboutDocAccessFields_ColoredSubhead>;
-    content?: Maybe<AboutDocAccessFields_Content>;
     createdAt?: Maybe<AboutDocAccessFields_CreatedAt>;
     image?: Maybe<AboutDocAccessFields_Image>;
     pets?: Maybe<AboutDocAccessFields_Pets>;
+    text?: Maybe<AboutDocAccessFields_Text>;
     title?: Maybe<AboutDocAccessFields_Title>;
     updatedAt?: Maybe<AboutDocAccessFields_UpdatedAt>;
 };
@@ -92,34 +92,6 @@ export type AboutDocAccessFields_ColoredSubhead_Read = {
 
 export type AboutDocAccessFields_ColoredSubhead_Update = {
     __typename?: 'AboutDocAccessFields_coloredSubhead_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type AboutDocAccessFields_Content = {
-    __typename?: 'AboutDocAccessFields_content';
-    create?: Maybe<AboutDocAccessFields_Content_Create>;
-    delete?: Maybe<AboutDocAccessFields_Content_Delete>;
-    read?: Maybe<AboutDocAccessFields_Content_Read>;
-    update?: Maybe<AboutDocAccessFields_Content_Update>;
-};
-
-export type AboutDocAccessFields_Content_Create = {
-    __typename?: 'AboutDocAccessFields_content_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type AboutDocAccessFields_Content_Delete = {
-    __typename?: 'AboutDocAccessFields_content_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type AboutDocAccessFields_Content_Read = {
-    __typename?: 'AboutDocAccessFields_content_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type AboutDocAccessFields_Content_Update = {
-    __typename?: 'AboutDocAccessFields_content_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -299,6 +271,34 @@ export type AboutDocAccessFields_Pets_Warren_Update = {
     permission: Scalars['Boolean']['output'];
 };
 
+export type AboutDocAccessFields_Text = {
+    __typename?: 'AboutDocAccessFields_text';
+    create?: Maybe<AboutDocAccessFields_Text_Create>;
+    delete?: Maybe<AboutDocAccessFields_Text_Delete>;
+    read?: Maybe<AboutDocAccessFields_Text_Read>;
+    update?: Maybe<AboutDocAccessFields_Text_Update>;
+};
+
+export type AboutDocAccessFields_Text_Create = {
+    __typename?: 'AboutDocAccessFields_text_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type AboutDocAccessFields_Text_Delete = {
+    __typename?: 'AboutDocAccessFields_text_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type AboutDocAccessFields_Text_Read = {
+    __typename?: 'AboutDocAccessFields_text_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type AboutDocAccessFields_Text_Update = {
+    __typename?: 'AboutDocAccessFields_text_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
 export type AboutDocAccessFields_Title = {
     __typename?: 'AboutDocAccessFields_title';
     create?: Maybe<AboutDocAccessFields_Title_Create>;
@@ -358,10 +358,10 @@ export type AboutDocAccessFields_UpdatedAt_Update = {
 export type AboutFields = {
     __typename?: 'AboutFields';
     coloredSubhead?: Maybe<AboutFields_ColoredSubhead>;
-    content?: Maybe<AboutFields_Content>;
     createdAt?: Maybe<AboutFields_CreatedAt>;
     image?: Maybe<AboutFields_Image>;
     pets?: Maybe<AboutFields_Pets>;
+    text?: Maybe<AboutFields_Text>;
     title?: Maybe<AboutFields_Title>;
     updatedAt?: Maybe<AboutFields_UpdatedAt>;
 };
@@ -391,34 +391,6 @@ export type AboutFields_ColoredSubhead_Read = {
 
 export type AboutFields_ColoredSubhead_Update = {
     __typename?: 'AboutFields_coloredSubhead_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type AboutFields_Content = {
-    __typename?: 'AboutFields_content';
-    create?: Maybe<AboutFields_Content_Create>;
-    delete?: Maybe<AboutFields_Content_Delete>;
-    read?: Maybe<AboutFields_Content_Read>;
-    update?: Maybe<AboutFields_Content_Update>;
-};
-
-export type AboutFields_Content_Create = {
-    __typename?: 'AboutFields_content_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type AboutFields_Content_Delete = {
-    __typename?: 'AboutFields_content_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type AboutFields_Content_Read = {
-    __typename?: 'AboutFields_content_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type AboutFields_Content_Update = {
-    __typename?: 'AboutFields_content_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -595,6 +567,34 @@ export type AboutFields_Pets_Warren_Read = {
 
 export type AboutFields_Pets_Warren_Update = {
     __typename?: 'AboutFields_pets_warren_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type AboutFields_Text = {
+    __typename?: 'AboutFields_text';
+    create?: Maybe<AboutFields_Text_Create>;
+    delete?: Maybe<AboutFields_Text_Delete>;
+    read?: Maybe<AboutFields_Text_Read>;
+    update?: Maybe<AboutFields_Text_Update>;
+};
+
+export type AboutFields_Text_Create = {
+    __typename?: 'AboutFields_text_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type AboutFields_Text_Delete = {
+    __typename?: 'AboutFields_text_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type AboutFields_Text_Read = {
+    __typename?: 'AboutFields_text_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type AboutFields_Text_Update = {
+    __typename?: 'AboutFields_text_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -1613,6 +1613,7 @@ export type Access = {
     __typename?: 'Access';
     about?: Maybe<AboutAccess>;
     canAccessAdmin: Scalars['Boolean']['output'];
+    case_studies?: Maybe<Case_StudiesAccess>;
     case_study_listing?: Maybe<Case_Study_ListingAccess>;
     ctas?: Maybe<CtasAccess>;
     heroes?: Maybe<HeroesAccess>;
@@ -1627,6 +1628,620 @@ export type Access = {
     toolbox_listing?: Maybe<Toolbox_ListingAccess>;
     tools?: Maybe<ToolsAccess>;
     users?: Maybe<UsersAccess>;
+};
+
+export type CaseStudies = {
+    __typename?: 'CaseStudies';
+    docs?: Maybe<Array<Maybe<CaseStudy>>>;
+    hasNextPage?: Maybe<Scalars['Boolean']['output']>;
+    hasPrevPage?: Maybe<Scalars['Boolean']['output']>;
+    limit?: Maybe<Scalars['Int']['output']>;
+    nextPage?: Maybe<Scalars['Int']['output']>;
+    offset?: Maybe<Scalars['Int']['output']>;
+    page?: Maybe<Scalars['Int']['output']>;
+    pagingCounter?: Maybe<Scalars['Int']['output']>;
+    prevPage?: Maybe<Scalars['Int']['output']>;
+    totalDocs?: Maybe<Scalars['Int']['output']>;
+    totalPages?: Maybe<Scalars['Int']['output']>;
+};
+
+export type CaseStudiesCreateAccess = {
+    __typename?: 'CaseStudiesCreateAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type CaseStudiesCreateDocAccess = {
+    __typename?: 'CaseStudiesCreateDocAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type CaseStudiesDeleteAccess = {
+    __typename?: 'CaseStudiesDeleteAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type CaseStudiesDeleteDocAccess = {
+    __typename?: 'CaseStudiesDeleteDocAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type CaseStudiesDocAccessFields = {
+    __typename?: 'CaseStudiesDocAccessFields';
+    caseStudySections?: Maybe<CaseStudiesDocAccessFields_CaseStudySections>;
+    createdAt?: Maybe<CaseStudiesDocAccessFields_CreatedAt>;
+    intro?: Maybe<CaseStudiesDocAccessFields_Intro>;
+    project?: Maybe<CaseStudiesDocAccessFields_Project>;
+    title?: Maybe<CaseStudiesDocAccessFields_Title>;
+    updatedAt?: Maybe<CaseStudiesDocAccessFields_UpdatedAt>;
+};
+
+export type CaseStudiesDocAccessFields_CaseStudySections = {
+    __typename?: 'CaseStudiesDocAccessFields_caseStudySections';
+    create?: Maybe<CaseStudiesDocAccessFields_CaseStudySections_Create>;
+    delete?: Maybe<CaseStudiesDocAccessFields_CaseStudySections_Delete>;
+    read?: Maybe<CaseStudiesDocAccessFields_CaseStudySections_Read>;
+    update?: Maybe<CaseStudiesDocAccessFields_CaseStudySections_Update>;
+};
+
+export type CaseStudiesDocAccessFields_CaseStudySections_Create = {
+    __typename?: 'CaseStudiesDocAccessFields_caseStudySections_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_CaseStudySections_Delete = {
+    __typename?: 'CaseStudiesDocAccessFields_caseStudySections_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_CaseStudySections_Read = {
+    __typename?: 'CaseStudiesDocAccessFields_caseStudySections_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_CaseStudySections_Update = {
+    __typename?: 'CaseStudiesDocAccessFields_caseStudySections_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_CreatedAt = {
+    __typename?: 'CaseStudiesDocAccessFields_createdAt';
+    create?: Maybe<CaseStudiesDocAccessFields_CreatedAt_Create>;
+    delete?: Maybe<CaseStudiesDocAccessFields_CreatedAt_Delete>;
+    read?: Maybe<CaseStudiesDocAccessFields_CreatedAt_Read>;
+    update?: Maybe<CaseStudiesDocAccessFields_CreatedAt_Update>;
+};
+
+export type CaseStudiesDocAccessFields_CreatedAt_Create = {
+    __typename?: 'CaseStudiesDocAccessFields_createdAt_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_CreatedAt_Delete = {
+    __typename?: 'CaseStudiesDocAccessFields_createdAt_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_CreatedAt_Read = {
+    __typename?: 'CaseStudiesDocAccessFields_createdAt_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_CreatedAt_Update = {
+    __typename?: 'CaseStudiesDocAccessFields_createdAt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Intro = {
+    __typename?: 'CaseStudiesDocAccessFields_intro';
+    create?: Maybe<CaseStudiesDocAccessFields_Intro_Create>;
+    delete?: Maybe<CaseStudiesDocAccessFields_Intro_Delete>;
+    fields?: Maybe<CaseStudiesDocAccessFields_Intro_Fields>;
+    read?: Maybe<CaseStudiesDocAccessFields_Intro_Read>;
+    update?: Maybe<CaseStudiesDocAccessFields_Intro_Update>;
+};
+
+export type CaseStudiesDocAccessFields_Intro_Create = {
+    __typename?: 'CaseStudiesDocAccessFields_intro_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Intro_Delete = {
+    __typename?: 'CaseStudiesDocAccessFields_intro_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Intro_Fields = {
+    __typename?: 'CaseStudiesDocAccessFields_intro_Fields';
+    heading?: Maybe<CaseStudiesDocAccessFields_Intro_Heading>;
+    image?: Maybe<CaseStudiesDocAccessFields_Intro_Image>;
+    text?: Maybe<CaseStudiesDocAccessFields_Intro_Text>;
+};
+
+export type CaseStudiesDocAccessFields_Intro_Read = {
+    __typename?: 'CaseStudiesDocAccessFields_intro_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Intro_Update = {
+    __typename?: 'CaseStudiesDocAccessFields_intro_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Intro_Heading = {
+    __typename?: 'CaseStudiesDocAccessFields_intro_heading';
+    create?: Maybe<CaseStudiesDocAccessFields_Intro_Heading_Create>;
+    delete?: Maybe<CaseStudiesDocAccessFields_Intro_Heading_Delete>;
+    read?: Maybe<CaseStudiesDocAccessFields_Intro_Heading_Read>;
+    update?: Maybe<CaseStudiesDocAccessFields_Intro_Heading_Update>;
+};
+
+export type CaseStudiesDocAccessFields_Intro_Heading_Create = {
+    __typename?: 'CaseStudiesDocAccessFields_intro_heading_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Intro_Heading_Delete = {
+    __typename?: 'CaseStudiesDocAccessFields_intro_heading_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Intro_Heading_Read = {
+    __typename?: 'CaseStudiesDocAccessFields_intro_heading_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Intro_Heading_Update = {
+    __typename?: 'CaseStudiesDocAccessFields_intro_heading_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Intro_Image = {
+    __typename?: 'CaseStudiesDocAccessFields_intro_image';
+    create?: Maybe<CaseStudiesDocAccessFields_Intro_Image_Create>;
+    delete?: Maybe<CaseStudiesDocAccessFields_Intro_Image_Delete>;
+    read?: Maybe<CaseStudiesDocAccessFields_Intro_Image_Read>;
+    update?: Maybe<CaseStudiesDocAccessFields_Intro_Image_Update>;
+};
+
+export type CaseStudiesDocAccessFields_Intro_Image_Create = {
+    __typename?: 'CaseStudiesDocAccessFields_intro_image_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Intro_Image_Delete = {
+    __typename?: 'CaseStudiesDocAccessFields_intro_image_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Intro_Image_Read = {
+    __typename?: 'CaseStudiesDocAccessFields_intro_image_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Intro_Image_Update = {
+    __typename?: 'CaseStudiesDocAccessFields_intro_image_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Intro_Text = {
+    __typename?: 'CaseStudiesDocAccessFields_intro_text';
+    create?: Maybe<CaseStudiesDocAccessFields_Intro_Text_Create>;
+    delete?: Maybe<CaseStudiesDocAccessFields_Intro_Text_Delete>;
+    read?: Maybe<CaseStudiesDocAccessFields_Intro_Text_Read>;
+    update?: Maybe<CaseStudiesDocAccessFields_Intro_Text_Update>;
+};
+
+export type CaseStudiesDocAccessFields_Intro_Text_Create = {
+    __typename?: 'CaseStudiesDocAccessFields_intro_text_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Intro_Text_Delete = {
+    __typename?: 'CaseStudiesDocAccessFields_intro_text_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Intro_Text_Read = {
+    __typename?: 'CaseStudiesDocAccessFields_intro_text_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Intro_Text_Update = {
+    __typename?: 'CaseStudiesDocAccessFields_intro_text_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Project = {
+    __typename?: 'CaseStudiesDocAccessFields_project';
+    create?: Maybe<CaseStudiesDocAccessFields_Project_Create>;
+    delete?: Maybe<CaseStudiesDocAccessFields_Project_Delete>;
+    read?: Maybe<CaseStudiesDocAccessFields_Project_Read>;
+    update?: Maybe<CaseStudiesDocAccessFields_Project_Update>;
+};
+
+export type CaseStudiesDocAccessFields_Project_Create = {
+    __typename?: 'CaseStudiesDocAccessFields_project_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Project_Delete = {
+    __typename?: 'CaseStudiesDocAccessFields_project_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Project_Read = {
+    __typename?: 'CaseStudiesDocAccessFields_project_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Project_Update = {
+    __typename?: 'CaseStudiesDocAccessFields_project_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Title = {
+    __typename?: 'CaseStudiesDocAccessFields_title';
+    create?: Maybe<CaseStudiesDocAccessFields_Title_Create>;
+    delete?: Maybe<CaseStudiesDocAccessFields_Title_Delete>;
+    read?: Maybe<CaseStudiesDocAccessFields_Title_Read>;
+    update?: Maybe<CaseStudiesDocAccessFields_Title_Update>;
+};
+
+export type CaseStudiesDocAccessFields_Title_Create = {
+    __typename?: 'CaseStudiesDocAccessFields_title_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Title_Delete = {
+    __typename?: 'CaseStudiesDocAccessFields_title_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Title_Read = {
+    __typename?: 'CaseStudiesDocAccessFields_title_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_Title_Update = {
+    __typename?: 'CaseStudiesDocAccessFields_title_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_UpdatedAt = {
+    __typename?: 'CaseStudiesDocAccessFields_updatedAt';
+    create?: Maybe<CaseStudiesDocAccessFields_UpdatedAt_Create>;
+    delete?: Maybe<CaseStudiesDocAccessFields_UpdatedAt_Delete>;
+    read?: Maybe<CaseStudiesDocAccessFields_UpdatedAt_Read>;
+    update?: Maybe<CaseStudiesDocAccessFields_UpdatedAt_Update>;
+};
+
+export type CaseStudiesDocAccessFields_UpdatedAt_Create = {
+    __typename?: 'CaseStudiesDocAccessFields_updatedAt_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_UpdatedAt_Delete = {
+    __typename?: 'CaseStudiesDocAccessFields_updatedAt_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_UpdatedAt_Read = {
+    __typename?: 'CaseStudiesDocAccessFields_updatedAt_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesDocAccessFields_UpdatedAt_Update = {
+    __typename?: 'CaseStudiesDocAccessFields_updatedAt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields = {
+    __typename?: 'CaseStudiesFields';
+    caseStudySections?: Maybe<CaseStudiesFields_CaseStudySections>;
+    createdAt?: Maybe<CaseStudiesFields_CreatedAt>;
+    intro?: Maybe<CaseStudiesFields_Intro>;
+    project?: Maybe<CaseStudiesFields_Project>;
+    title?: Maybe<CaseStudiesFields_Title>;
+    updatedAt?: Maybe<CaseStudiesFields_UpdatedAt>;
+};
+
+export type CaseStudiesFields_CaseStudySections = {
+    __typename?: 'CaseStudiesFields_caseStudySections';
+    create?: Maybe<CaseStudiesFields_CaseStudySections_Create>;
+    delete?: Maybe<CaseStudiesFields_CaseStudySections_Delete>;
+    read?: Maybe<CaseStudiesFields_CaseStudySections_Read>;
+    update?: Maybe<CaseStudiesFields_CaseStudySections_Update>;
+};
+
+export type CaseStudiesFields_CaseStudySections_Create = {
+    __typename?: 'CaseStudiesFields_caseStudySections_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_CaseStudySections_Delete = {
+    __typename?: 'CaseStudiesFields_caseStudySections_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_CaseStudySections_Read = {
+    __typename?: 'CaseStudiesFields_caseStudySections_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_CaseStudySections_Update = {
+    __typename?: 'CaseStudiesFields_caseStudySections_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_CreatedAt = {
+    __typename?: 'CaseStudiesFields_createdAt';
+    create?: Maybe<CaseStudiesFields_CreatedAt_Create>;
+    delete?: Maybe<CaseStudiesFields_CreatedAt_Delete>;
+    read?: Maybe<CaseStudiesFields_CreatedAt_Read>;
+    update?: Maybe<CaseStudiesFields_CreatedAt_Update>;
+};
+
+export type CaseStudiesFields_CreatedAt_Create = {
+    __typename?: 'CaseStudiesFields_createdAt_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_CreatedAt_Delete = {
+    __typename?: 'CaseStudiesFields_createdAt_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_CreatedAt_Read = {
+    __typename?: 'CaseStudiesFields_createdAt_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_CreatedAt_Update = {
+    __typename?: 'CaseStudiesFields_createdAt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Intro = {
+    __typename?: 'CaseStudiesFields_intro';
+    create?: Maybe<CaseStudiesFields_Intro_Create>;
+    delete?: Maybe<CaseStudiesFields_Intro_Delete>;
+    fields?: Maybe<CaseStudiesFields_Intro_Fields>;
+    read?: Maybe<CaseStudiesFields_Intro_Read>;
+    update?: Maybe<CaseStudiesFields_Intro_Update>;
+};
+
+export type CaseStudiesFields_Intro_Create = {
+    __typename?: 'CaseStudiesFields_intro_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Intro_Delete = {
+    __typename?: 'CaseStudiesFields_intro_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Intro_Fields = {
+    __typename?: 'CaseStudiesFields_intro_Fields';
+    heading?: Maybe<CaseStudiesFields_Intro_Heading>;
+    image?: Maybe<CaseStudiesFields_Intro_Image>;
+    text?: Maybe<CaseStudiesFields_Intro_Text>;
+};
+
+export type CaseStudiesFields_Intro_Read = {
+    __typename?: 'CaseStudiesFields_intro_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Intro_Update = {
+    __typename?: 'CaseStudiesFields_intro_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Intro_Heading = {
+    __typename?: 'CaseStudiesFields_intro_heading';
+    create?: Maybe<CaseStudiesFields_Intro_Heading_Create>;
+    delete?: Maybe<CaseStudiesFields_Intro_Heading_Delete>;
+    read?: Maybe<CaseStudiesFields_Intro_Heading_Read>;
+    update?: Maybe<CaseStudiesFields_Intro_Heading_Update>;
+};
+
+export type CaseStudiesFields_Intro_Heading_Create = {
+    __typename?: 'CaseStudiesFields_intro_heading_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Intro_Heading_Delete = {
+    __typename?: 'CaseStudiesFields_intro_heading_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Intro_Heading_Read = {
+    __typename?: 'CaseStudiesFields_intro_heading_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Intro_Heading_Update = {
+    __typename?: 'CaseStudiesFields_intro_heading_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Intro_Image = {
+    __typename?: 'CaseStudiesFields_intro_image';
+    create?: Maybe<CaseStudiesFields_Intro_Image_Create>;
+    delete?: Maybe<CaseStudiesFields_Intro_Image_Delete>;
+    read?: Maybe<CaseStudiesFields_Intro_Image_Read>;
+    update?: Maybe<CaseStudiesFields_Intro_Image_Update>;
+};
+
+export type CaseStudiesFields_Intro_Image_Create = {
+    __typename?: 'CaseStudiesFields_intro_image_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Intro_Image_Delete = {
+    __typename?: 'CaseStudiesFields_intro_image_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Intro_Image_Read = {
+    __typename?: 'CaseStudiesFields_intro_image_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Intro_Image_Update = {
+    __typename?: 'CaseStudiesFields_intro_image_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Intro_Text = {
+    __typename?: 'CaseStudiesFields_intro_text';
+    create?: Maybe<CaseStudiesFields_Intro_Text_Create>;
+    delete?: Maybe<CaseStudiesFields_Intro_Text_Delete>;
+    read?: Maybe<CaseStudiesFields_Intro_Text_Read>;
+    update?: Maybe<CaseStudiesFields_Intro_Text_Update>;
+};
+
+export type CaseStudiesFields_Intro_Text_Create = {
+    __typename?: 'CaseStudiesFields_intro_text_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Intro_Text_Delete = {
+    __typename?: 'CaseStudiesFields_intro_text_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Intro_Text_Read = {
+    __typename?: 'CaseStudiesFields_intro_text_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Intro_Text_Update = {
+    __typename?: 'CaseStudiesFields_intro_text_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Project = {
+    __typename?: 'CaseStudiesFields_project';
+    create?: Maybe<CaseStudiesFields_Project_Create>;
+    delete?: Maybe<CaseStudiesFields_Project_Delete>;
+    read?: Maybe<CaseStudiesFields_Project_Read>;
+    update?: Maybe<CaseStudiesFields_Project_Update>;
+};
+
+export type CaseStudiesFields_Project_Create = {
+    __typename?: 'CaseStudiesFields_project_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Project_Delete = {
+    __typename?: 'CaseStudiesFields_project_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Project_Read = {
+    __typename?: 'CaseStudiesFields_project_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Project_Update = {
+    __typename?: 'CaseStudiesFields_project_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Title = {
+    __typename?: 'CaseStudiesFields_title';
+    create?: Maybe<CaseStudiesFields_Title_Create>;
+    delete?: Maybe<CaseStudiesFields_Title_Delete>;
+    read?: Maybe<CaseStudiesFields_Title_Read>;
+    update?: Maybe<CaseStudiesFields_Title_Update>;
+};
+
+export type CaseStudiesFields_Title_Create = {
+    __typename?: 'CaseStudiesFields_title_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Title_Delete = {
+    __typename?: 'CaseStudiesFields_title_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Title_Read = {
+    __typename?: 'CaseStudiesFields_title_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_Title_Update = {
+    __typename?: 'CaseStudiesFields_title_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_UpdatedAt = {
+    __typename?: 'CaseStudiesFields_updatedAt';
+    create?: Maybe<CaseStudiesFields_UpdatedAt_Create>;
+    delete?: Maybe<CaseStudiesFields_UpdatedAt_Delete>;
+    read?: Maybe<CaseStudiesFields_UpdatedAt_Read>;
+    update?: Maybe<CaseStudiesFields_UpdatedAt_Update>;
+};
+
+export type CaseStudiesFields_UpdatedAt_Create = {
+    __typename?: 'CaseStudiesFields_updatedAt_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_UpdatedAt_Delete = {
+    __typename?: 'CaseStudiesFields_updatedAt_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_UpdatedAt_Read = {
+    __typename?: 'CaseStudiesFields_updatedAt_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesFields_UpdatedAt_Update = {
+    __typename?: 'CaseStudiesFields_updatedAt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudiesReadAccess = {
+    __typename?: 'CaseStudiesReadAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type CaseStudiesReadDocAccess = {
+    __typename?: 'CaseStudiesReadDocAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type CaseStudiesUpdateAccess = {
+    __typename?: 'CaseStudiesUpdateAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type CaseStudiesUpdateDocAccess = {
+    __typename?: 'CaseStudiesUpdateDocAccess';
+    permission: Scalars['Boolean']['output'];
+    where?: Maybe<Scalars['JSONObject']['output']>;
+};
+
+export type CaseStudy = {
+    __typename?: 'CaseStudy';
+    caseStudySections?: Maybe<Array<CaseStudy_CaseStudySections>>;
+    createdAt?: Maybe<Scalars['DateTime']['output']>;
+    id?: Maybe<Scalars['String']['output']>;
+    intro?: Maybe<CaseStudy_Intro>;
+    project: Project;
+    title?: Maybe<Scalars['String']['output']>;
+    updatedAt?: Maybe<Scalars['DateTime']['output']>;
 };
 
 export type CaseStudyListing = {
@@ -2131,6 +2746,363 @@ export type CaseStudyListing_Icon_Width_Operator = {
     less_than?: InputMaybe<Scalars['Float']['input']>;
     less_than_equal?: InputMaybe<Scalars['Float']['input']>;
     not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type CaseStudy_CaseStudySections = ImageBlock | TextBlock;
+
+export type CaseStudy_Intro = {
+    __typename?: 'CaseStudy_Intro';
+    heading?: Maybe<Scalars['String']['output']>;
+    image?: Maybe<Image>;
+    text?: Maybe<Scalars['JSON']['output']>;
+};
+
+export type CaseStudy_IntroImageArgs = {
+    where?: InputMaybe<CaseStudy_Intro_Image_Where>;
+};
+
+export type CaseStudy_IntroTextArgs = {
+    depth?: InputMaybe<Scalars['Int']['input']>;
+};
+
+export type CaseStudy_Intro_Image_Alt_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type CaseStudy_Intro_Image_CreatedAt_Operator = {
+    equals?: InputMaybe<Scalars['DateTime']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['DateTime']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    like?: InputMaybe<Scalars['DateTime']['input']>;
+    not_equals?: InputMaybe<Scalars['DateTime']['input']>;
+};
+
+export type CaseStudy_Intro_Image_Filename_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type CaseStudy_Intro_Image_Filesize_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type CaseStudy_Intro_Image_Height_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type CaseStudy_Intro_Image_Id_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type CaseStudy_Intro_Image_MimeType_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type CaseStudy_Intro_Image_Sizes__Thumbnail__Filename_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type CaseStudy_Intro_Image_Sizes__Thumbnail__Filesize_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type CaseStudy_Intro_Image_Sizes__Thumbnail__Height_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type CaseStudy_Intro_Image_Sizes__Thumbnail__MimeType_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type CaseStudy_Intro_Image_Sizes__Thumbnail__Url_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type CaseStudy_Intro_Image_Sizes__Thumbnail__Width_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type CaseStudy_Intro_Image_UpdatedAt_Operator = {
+    equals?: InputMaybe<Scalars['DateTime']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['DateTime']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    like?: InputMaybe<Scalars['DateTime']['input']>;
+    not_equals?: InputMaybe<Scalars['DateTime']['input']>;
+};
+
+export type CaseStudy_Intro_Image_Url_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type CaseStudy_Intro_Image_Where = {
+    AND?: InputMaybe<Array<InputMaybe<CaseStudy_Intro_Image_Where_And>>>;
+    OR?: InputMaybe<Array<InputMaybe<CaseStudy_Intro_Image_Where_Or>>>;
+    alt?: InputMaybe<CaseStudy_Intro_Image_Alt_Operator>;
+    createdAt?: InputMaybe<CaseStudy_Intro_Image_CreatedAt_Operator>;
+    filename?: InputMaybe<CaseStudy_Intro_Image_Filename_Operator>;
+    filesize?: InputMaybe<CaseStudy_Intro_Image_Filesize_Operator>;
+    height?: InputMaybe<CaseStudy_Intro_Image_Height_Operator>;
+    id?: InputMaybe<CaseStudy_Intro_Image_Id_Operator>;
+    mimeType?: InputMaybe<CaseStudy_Intro_Image_MimeType_Operator>;
+    sizes__thumbnail__filename?: InputMaybe<CaseStudy_Intro_Image_Sizes__Thumbnail__Filename_Operator>;
+    sizes__thumbnail__filesize?: InputMaybe<CaseStudy_Intro_Image_Sizes__Thumbnail__Filesize_Operator>;
+    sizes__thumbnail__height?: InputMaybe<CaseStudy_Intro_Image_Sizes__Thumbnail__Height_Operator>;
+    sizes__thumbnail__mimeType?: InputMaybe<CaseStudy_Intro_Image_Sizes__Thumbnail__MimeType_Operator>;
+    sizes__thumbnail__url?: InputMaybe<CaseStudy_Intro_Image_Sizes__Thumbnail__Url_Operator>;
+    sizes__thumbnail__width?: InputMaybe<CaseStudy_Intro_Image_Sizes__Thumbnail__Width_Operator>;
+    updatedAt?: InputMaybe<CaseStudy_Intro_Image_UpdatedAt_Operator>;
+    url?: InputMaybe<CaseStudy_Intro_Image_Url_Operator>;
+    width?: InputMaybe<CaseStudy_Intro_Image_Width_Operator>;
+};
+
+export type CaseStudy_Intro_Image_Where_And = {
+    alt?: InputMaybe<CaseStudy_Intro_Image_Alt_Operator>;
+    createdAt?: InputMaybe<CaseStudy_Intro_Image_CreatedAt_Operator>;
+    filename?: InputMaybe<CaseStudy_Intro_Image_Filename_Operator>;
+    filesize?: InputMaybe<CaseStudy_Intro_Image_Filesize_Operator>;
+    height?: InputMaybe<CaseStudy_Intro_Image_Height_Operator>;
+    id?: InputMaybe<CaseStudy_Intro_Image_Id_Operator>;
+    mimeType?: InputMaybe<CaseStudy_Intro_Image_MimeType_Operator>;
+    sizes__thumbnail__filename?: InputMaybe<CaseStudy_Intro_Image_Sizes__Thumbnail__Filename_Operator>;
+    sizes__thumbnail__filesize?: InputMaybe<CaseStudy_Intro_Image_Sizes__Thumbnail__Filesize_Operator>;
+    sizes__thumbnail__height?: InputMaybe<CaseStudy_Intro_Image_Sizes__Thumbnail__Height_Operator>;
+    sizes__thumbnail__mimeType?: InputMaybe<CaseStudy_Intro_Image_Sizes__Thumbnail__MimeType_Operator>;
+    sizes__thumbnail__url?: InputMaybe<CaseStudy_Intro_Image_Sizes__Thumbnail__Url_Operator>;
+    sizes__thumbnail__width?: InputMaybe<CaseStudy_Intro_Image_Sizes__Thumbnail__Width_Operator>;
+    updatedAt?: InputMaybe<CaseStudy_Intro_Image_UpdatedAt_Operator>;
+    url?: InputMaybe<CaseStudy_Intro_Image_Url_Operator>;
+    width?: InputMaybe<CaseStudy_Intro_Image_Width_Operator>;
+};
+
+export type CaseStudy_Intro_Image_Where_Or = {
+    alt?: InputMaybe<CaseStudy_Intro_Image_Alt_Operator>;
+    createdAt?: InputMaybe<CaseStudy_Intro_Image_CreatedAt_Operator>;
+    filename?: InputMaybe<CaseStudy_Intro_Image_Filename_Operator>;
+    filesize?: InputMaybe<CaseStudy_Intro_Image_Filesize_Operator>;
+    height?: InputMaybe<CaseStudy_Intro_Image_Height_Operator>;
+    id?: InputMaybe<CaseStudy_Intro_Image_Id_Operator>;
+    mimeType?: InputMaybe<CaseStudy_Intro_Image_MimeType_Operator>;
+    sizes__thumbnail__filename?: InputMaybe<CaseStudy_Intro_Image_Sizes__Thumbnail__Filename_Operator>;
+    sizes__thumbnail__filesize?: InputMaybe<CaseStudy_Intro_Image_Sizes__Thumbnail__Filesize_Operator>;
+    sizes__thumbnail__height?: InputMaybe<CaseStudy_Intro_Image_Sizes__Thumbnail__Height_Operator>;
+    sizes__thumbnail__mimeType?: InputMaybe<CaseStudy_Intro_Image_Sizes__Thumbnail__MimeType_Operator>;
+    sizes__thumbnail__url?: InputMaybe<CaseStudy_Intro_Image_Sizes__Thumbnail__Url_Operator>;
+    sizes__thumbnail__width?: InputMaybe<CaseStudy_Intro_Image_Sizes__Thumbnail__Width_Operator>;
+    updatedAt?: InputMaybe<CaseStudy_Intro_Image_UpdatedAt_Operator>;
+    url?: InputMaybe<CaseStudy_Intro_Image_Url_Operator>;
+    width?: InputMaybe<CaseStudy_Intro_Image_Width_Operator>;
+};
+
+export type CaseStudy_Intro_Image_Width_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type CaseStudy_CreatedAt_Operator = {
+    equals?: InputMaybe<Scalars['DateTime']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['DateTime']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    like?: InputMaybe<Scalars['DateTime']['input']>;
+    not_equals?: InputMaybe<Scalars['DateTime']['input']>;
+};
+
+export type CaseStudy_Id_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type CaseStudy_Intro__Heading_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type CaseStudy_Intro__Image_Operator = {
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type CaseStudy_Intro__Text_Operator = {
+    contains?: InputMaybe<Scalars['JSON']['input']>;
+    equals?: InputMaybe<Scalars['JSON']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    like?: InputMaybe<Scalars['JSON']['input']>;
+    not_equals?: InputMaybe<Scalars['JSON']['input']>;
+};
+
+export type CaseStudy_Project_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type CaseStudy_Title_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type CaseStudy_UpdatedAt_Operator = {
+    equals?: InputMaybe<Scalars['DateTime']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['DateTime']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    like?: InputMaybe<Scalars['DateTime']['input']>;
+    not_equals?: InputMaybe<Scalars['DateTime']['input']>;
+};
+
+export type CaseStudy_Where = {
+    AND?: InputMaybe<Array<InputMaybe<CaseStudy_Where_And>>>;
+    OR?: InputMaybe<Array<InputMaybe<CaseStudy_Where_Or>>>;
+    createdAt?: InputMaybe<CaseStudy_CreatedAt_Operator>;
+    id?: InputMaybe<CaseStudy_Id_Operator>;
+    intro__heading?: InputMaybe<CaseStudy_Intro__Heading_Operator>;
+    intro__image?: InputMaybe<CaseStudy_Intro__Image_Operator>;
+    intro__text?: InputMaybe<CaseStudy_Intro__Text_Operator>;
+    project?: InputMaybe<CaseStudy_Project_Operator>;
+    title?: InputMaybe<CaseStudy_Title_Operator>;
+    updatedAt?: InputMaybe<CaseStudy_UpdatedAt_Operator>;
+};
+
+export type CaseStudy_Where_And = {
+    createdAt?: InputMaybe<CaseStudy_CreatedAt_Operator>;
+    id?: InputMaybe<CaseStudy_Id_Operator>;
+    intro__heading?: InputMaybe<CaseStudy_Intro__Heading_Operator>;
+    intro__image?: InputMaybe<CaseStudy_Intro__Image_Operator>;
+    intro__text?: InputMaybe<CaseStudy_Intro__Text_Operator>;
+    project?: InputMaybe<CaseStudy_Project_Operator>;
+    title?: InputMaybe<CaseStudy_Title_Operator>;
+    updatedAt?: InputMaybe<CaseStudy_UpdatedAt_Operator>;
+};
+
+export type CaseStudy_Where_Or = {
+    createdAt?: InputMaybe<CaseStudy_CreatedAt_Operator>;
+    id?: InputMaybe<CaseStudy_Id_Operator>;
+    intro__heading?: InputMaybe<CaseStudy_Intro__Heading_Operator>;
+    intro__image?: InputMaybe<CaseStudy_Intro__Image_Operator>;
+    intro__text?: InputMaybe<CaseStudy_Intro__Text_Operator>;
+    project?: InputMaybe<CaseStudy_Project_Operator>;
+    title?: InputMaybe<CaseStudy_Title_Operator>;
+    updatedAt?: InputMaybe<CaseStudy_UpdatedAt_Operator>;
 };
 
 export type Cta = {
@@ -5206,6 +6178,246 @@ export type Image = {
     width?: Maybe<Scalars['Float']['output']>;
 };
 
+export type ImageBlock = {
+    __typename?: 'ImageBlock';
+    blockName?: Maybe<Scalars['String']['output']>;
+    blockType?: Maybe<Scalars['String']['output']>;
+    id?: Maybe<Scalars['String']['output']>;
+    image?: Maybe<Image>;
+};
+
+export type ImageBlockImageArgs = {
+    where?: InputMaybe<ImageBlock_Image_Where>;
+};
+
+export type ImageBlock_Image_Alt_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type ImageBlock_Image_CreatedAt_Operator = {
+    equals?: InputMaybe<Scalars['DateTime']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['DateTime']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    like?: InputMaybe<Scalars['DateTime']['input']>;
+    not_equals?: InputMaybe<Scalars['DateTime']['input']>;
+};
+
+export type ImageBlock_Image_Filename_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type ImageBlock_Image_Filesize_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type ImageBlock_Image_Height_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type ImageBlock_Image_Id_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type ImageBlock_Image_MimeType_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type ImageBlock_Image_Sizes__Thumbnail__Filename_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type ImageBlock_Image_Sizes__Thumbnail__Filesize_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type ImageBlock_Image_Sizes__Thumbnail__Height_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type ImageBlock_Image_Sizes__Thumbnail__MimeType_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type ImageBlock_Image_Sizes__Thumbnail__Url_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type ImageBlock_Image_Sizes__Thumbnail__Width_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type ImageBlock_Image_UpdatedAt_Operator = {
+    equals?: InputMaybe<Scalars['DateTime']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['DateTime']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    like?: InputMaybe<Scalars['DateTime']['input']>;
+    not_equals?: InputMaybe<Scalars['DateTime']['input']>;
+};
+
+export type ImageBlock_Image_Url_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type ImageBlock_Image_Where = {
+    AND?: InputMaybe<Array<InputMaybe<ImageBlock_Image_Where_And>>>;
+    OR?: InputMaybe<Array<InputMaybe<ImageBlock_Image_Where_Or>>>;
+    alt?: InputMaybe<ImageBlock_Image_Alt_Operator>;
+    createdAt?: InputMaybe<ImageBlock_Image_CreatedAt_Operator>;
+    filename?: InputMaybe<ImageBlock_Image_Filename_Operator>;
+    filesize?: InputMaybe<ImageBlock_Image_Filesize_Operator>;
+    height?: InputMaybe<ImageBlock_Image_Height_Operator>;
+    id?: InputMaybe<ImageBlock_Image_Id_Operator>;
+    mimeType?: InputMaybe<ImageBlock_Image_MimeType_Operator>;
+    sizes__thumbnail__filename?: InputMaybe<ImageBlock_Image_Sizes__Thumbnail__Filename_Operator>;
+    sizes__thumbnail__filesize?: InputMaybe<ImageBlock_Image_Sizes__Thumbnail__Filesize_Operator>;
+    sizes__thumbnail__height?: InputMaybe<ImageBlock_Image_Sizes__Thumbnail__Height_Operator>;
+    sizes__thumbnail__mimeType?: InputMaybe<ImageBlock_Image_Sizes__Thumbnail__MimeType_Operator>;
+    sizes__thumbnail__url?: InputMaybe<ImageBlock_Image_Sizes__Thumbnail__Url_Operator>;
+    sizes__thumbnail__width?: InputMaybe<ImageBlock_Image_Sizes__Thumbnail__Width_Operator>;
+    updatedAt?: InputMaybe<ImageBlock_Image_UpdatedAt_Operator>;
+    url?: InputMaybe<ImageBlock_Image_Url_Operator>;
+    width?: InputMaybe<ImageBlock_Image_Width_Operator>;
+};
+
+export type ImageBlock_Image_Where_And = {
+    alt?: InputMaybe<ImageBlock_Image_Alt_Operator>;
+    createdAt?: InputMaybe<ImageBlock_Image_CreatedAt_Operator>;
+    filename?: InputMaybe<ImageBlock_Image_Filename_Operator>;
+    filesize?: InputMaybe<ImageBlock_Image_Filesize_Operator>;
+    height?: InputMaybe<ImageBlock_Image_Height_Operator>;
+    id?: InputMaybe<ImageBlock_Image_Id_Operator>;
+    mimeType?: InputMaybe<ImageBlock_Image_MimeType_Operator>;
+    sizes__thumbnail__filename?: InputMaybe<ImageBlock_Image_Sizes__Thumbnail__Filename_Operator>;
+    sizes__thumbnail__filesize?: InputMaybe<ImageBlock_Image_Sizes__Thumbnail__Filesize_Operator>;
+    sizes__thumbnail__height?: InputMaybe<ImageBlock_Image_Sizes__Thumbnail__Height_Operator>;
+    sizes__thumbnail__mimeType?: InputMaybe<ImageBlock_Image_Sizes__Thumbnail__MimeType_Operator>;
+    sizes__thumbnail__url?: InputMaybe<ImageBlock_Image_Sizes__Thumbnail__Url_Operator>;
+    sizes__thumbnail__width?: InputMaybe<ImageBlock_Image_Sizes__Thumbnail__Width_Operator>;
+    updatedAt?: InputMaybe<ImageBlock_Image_UpdatedAt_Operator>;
+    url?: InputMaybe<ImageBlock_Image_Url_Operator>;
+    width?: InputMaybe<ImageBlock_Image_Width_Operator>;
+};
+
+export type ImageBlock_Image_Where_Or = {
+    alt?: InputMaybe<ImageBlock_Image_Alt_Operator>;
+    createdAt?: InputMaybe<ImageBlock_Image_CreatedAt_Operator>;
+    filename?: InputMaybe<ImageBlock_Image_Filename_Operator>;
+    filesize?: InputMaybe<ImageBlock_Image_Filesize_Operator>;
+    height?: InputMaybe<ImageBlock_Image_Height_Operator>;
+    id?: InputMaybe<ImageBlock_Image_Id_Operator>;
+    mimeType?: InputMaybe<ImageBlock_Image_MimeType_Operator>;
+    sizes__thumbnail__filename?: InputMaybe<ImageBlock_Image_Sizes__Thumbnail__Filename_Operator>;
+    sizes__thumbnail__filesize?: InputMaybe<ImageBlock_Image_Sizes__Thumbnail__Filesize_Operator>;
+    sizes__thumbnail__height?: InputMaybe<ImageBlock_Image_Sizes__Thumbnail__Height_Operator>;
+    sizes__thumbnail__mimeType?: InputMaybe<ImageBlock_Image_Sizes__Thumbnail__MimeType_Operator>;
+    sizes__thumbnail__url?: InputMaybe<ImageBlock_Image_Sizes__Thumbnail__Url_Operator>;
+    sizes__thumbnail__width?: InputMaybe<ImageBlock_Image_Sizes__Thumbnail__Width_Operator>;
+    updatedAt?: InputMaybe<ImageBlock_Image_UpdatedAt_Operator>;
+    url?: InputMaybe<ImageBlock_Image_Url_Operator>;
+    width?: InputMaybe<ImageBlock_Image_Width_Operator>;
+};
+
+export type ImageBlock_Image_Width_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
 export type Image_Sizes = {
     __typename?: 'Image_Sizes';
     thumbnail?: Maybe<Image_Sizes_Thumbnail>;
@@ -6528,6 +7740,7 @@ export type ImagesUpdateDocAccess = {
 
 export type Mutation = {
     __typename?: 'Mutation';
+    createCaseStudy?: Maybe<CaseStudy>;
     createCta?: Maybe<Cta>;
     createHero?: Maybe<Hero>;
     createIcon?: Maybe<Icon>;
@@ -6538,6 +7751,7 @@ export type Mutation = {
     createTestimonial?: Maybe<Testimonial>;
     createTool?: Maybe<Tool>;
     createUser?: Maybe<User>;
+    deleteCaseStudy?: Maybe<CaseStudy>;
     deleteCta?: Maybe<Cta>;
     deleteHero?: Maybe<Hero>;
     deleteIcon?: Maybe<Icon>;
@@ -6556,6 +7770,7 @@ export type Mutation = {
     resetPasswordUser?: Maybe<UsersResetPassword>;
     unlockUser: Scalars['Boolean']['output'];
     updateAbout?: Maybe<About>;
+    updateCaseStudy?: Maybe<CaseStudy>;
     updateCaseStudyListing?: Maybe<CaseStudyListing>;
     updateCta?: Maybe<Cta>;
     updateHero?: Maybe<Hero>;
@@ -6572,6 +7787,11 @@ export type Mutation = {
     updateToolboxListing?: Maybe<ToolboxListing>;
     updateUser?: Maybe<User>;
     verifyEmailUser?: Maybe<Scalars['Boolean']['output']>;
+};
+
+export type MutationCreateCaseStudyArgs = {
+    data: MutationCaseStudyInput;
+    draft?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
 export type MutationCreateCtaArgs = {
@@ -6622,6 +7842,10 @@ export type MutationCreateToolArgs = {
 export type MutationCreateUserArgs = {
     data: MutationUserInput;
     draft?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type MutationDeleteCaseStudyArgs = {
+    id: Scalars['String']['input'];
 };
 
 export type MutationDeleteCtaArgs = {
@@ -6695,6 +7919,13 @@ export type MutationUnlockUserArgs = {
 export type MutationUpdateAboutArgs = {
     data: MutationAboutInput;
     draft?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type MutationUpdateCaseStudyArgs = {
+    autosave?: InputMaybe<Scalars['Boolean']['input']>;
+    data: MutationCaseStudyUpdateInput;
+    draft?: InputMaybe<Scalars['Boolean']['input']>;
+    id: Scalars['String']['input'];
 };
 
 export type MutationUpdateCaseStudyListingArgs = {
@@ -7322,13 +8553,13 @@ export type Page = {
     __typename?: 'Page';
     createdAt?: Maybe<Scalars['DateTime']['output']>;
     id?: Maybe<Scalars['String']['output']>;
-    sections?: Maybe<Array<Page_Sections>>;
+    pageSections?: Maybe<Array<Page_PageSections>>;
     slug?: Maybe<Scalars['String']['output']>;
     title?: Maybe<Scalars['String']['output']>;
     updatedAt?: Maybe<Scalars['DateTime']['output']>;
 };
 
-export type Page_Sections = HeroBlock | SingleUseBlock | SocialsBlock;
+export type Page_PageSections = HeroBlock | SingleUseBlock | SocialsBlock;
 
 export type Page_CreatedAt_Operator = {
     equals?: InputMaybe<Scalars['DateTime']['input']>;
@@ -7453,7 +8684,7 @@ export type PagesDeleteDocAccess = {
 export type PagesDocAccessFields = {
     __typename?: 'PagesDocAccessFields';
     createdAt?: Maybe<PagesDocAccessFields_CreatedAt>;
-    sections?: Maybe<PagesDocAccessFields_Sections>;
+    pageSections?: Maybe<PagesDocAccessFields_PageSections>;
     slug?: Maybe<PagesDocAccessFields_Slug>;
     title?: Maybe<PagesDocAccessFields_Title>;
     updatedAt?: Maybe<PagesDocAccessFields_UpdatedAt>;
@@ -7487,31 +8718,31 @@ export type PagesDocAccessFields_CreatedAt_Update = {
     permission: Scalars['Boolean']['output'];
 };
 
-export type PagesDocAccessFields_Sections = {
-    __typename?: 'PagesDocAccessFields_sections';
-    create?: Maybe<PagesDocAccessFields_Sections_Create>;
-    delete?: Maybe<PagesDocAccessFields_Sections_Delete>;
-    read?: Maybe<PagesDocAccessFields_Sections_Read>;
-    update?: Maybe<PagesDocAccessFields_Sections_Update>;
+export type PagesDocAccessFields_PageSections = {
+    __typename?: 'PagesDocAccessFields_pageSections';
+    create?: Maybe<PagesDocAccessFields_PageSections_Create>;
+    delete?: Maybe<PagesDocAccessFields_PageSections_Delete>;
+    read?: Maybe<PagesDocAccessFields_PageSections_Read>;
+    update?: Maybe<PagesDocAccessFields_PageSections_Update>;
 };
 
-export type PagesDocAccessFields_Sections_Create = {
-    __typename?: 'PagesDocAccessFields_sections_Create';
+export type PagesDocAccessFields_PageSections_Create = {
+    __typename?: 'PagesDocAccessFields_pageSections_Create';
     permission: Scalars['Boolean']['output'];
 };
 
-export type PagesDocAccessFields_Sections_Delete = {
-    __typename?: 'PagesDocAccessFields_sections_Delete';
+export type PagesDocAccessFields_PageSections_Delete = {
+    __typename?: 'PagesDocAccessFields_pageSections_Delete';
     permission: Scalars['Boolean']['output'];
 };
 
-export type PagesDocAccessFields_Sections_Read = {
-    __typename?: 'PagesDocAccessFields_sections_Read';
+export type PagesDocAccessFields_PageSections_Read = {
+    __typename?: 'PagesDocAccessFields_pageSections_Read';
     permission: Scalars['Boolean']['output'];
 };
 
-export type PagesDocAccessFields_Sections_Update = {
-    __typename?: 'PagesDocAccessFields_sections_Update';
+export type PagesDocAccessFields_PageSections_Update = {
+    __typename?: 'PagesDocAccessFields_pageSections_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -7602,7 +8833,7 @@ export type PagesDocAccessFields_UpdatedAt_Update = {
 export type PagesFields = {
     __typename?: 'PagesFields';
     createdAt?: Maybe<PagesFields_CreatedAt>;
-    sections?: Maybe<PagesFields_Sections>;
+    pageSections?: Maybe<PagesFields_PageSections>;
     slug?: Maybe<PagesFields_Slug>;
     title?: Maybe<PagesFields_Title>;
     updatedAt?: Maybe<PagesFields_UpdatedAt>;
@@ -7636,31 +8867,31 @@ export type PagesFields_CreatedAt_Update = {
     permission: Scalars['Boolean']['output'];
 };
 
-export type PagesFields_Sections = {
-    __typename?: 'PagesFields_sections';
-    create?: Maybe<PagesFields_Sections_Create>;
-    delete?: Maybe<PagesFields_Sections_Delete>;
-    read?: Maybe<PagesFields_Sections_Read>;
-    update?: Maybe<PagesFields_Sections_Update>;
+export type PagesFields_PageSections = {
+    __typename?: 'PagesFields_pageSections';
+    create?: Maybe<PagesFields_PageSections_Create>;
+    delete?: Maybe<PagesFields_PageSections_Delete>;
+    read?: Maybe<PagesFields_PageSections_Read>;
+    update?: Maybe<PagesFields_PageSections_Update>;
 };
 
-export type PagesFields_Sections_Create = {
-    __typename?: 'PagesFields_sections_Create';
+export type PagesFields_PageSections_Create = {
+    __typename?: 'PagesFields_pageSections_Create';
     permission: Scalars['Boolean']['output'];
 };
 
-export type PagesFields_Sections_Delete = {
-    __typename?: 'PagesFields_sections_Delete';
+export type PagesFields_PageSections_Delete = {
+    __typename?: 'PagesFields_pageSections_Delete';
     permission: Scalars['Boolean']['output'];
 };
 
-export type PagesFields_Sections_Read = {
-    __typename?: 'PagesFields_sections_Read';
+export type PagesFields_PageSections_Read = {
+    __typename?: 'PagesFields_pageSections_Read';
     permission: Scalars['Boolean']['output'];
 };
 
-export type PagesFields_Sections_Update = {
-    __typename?: 'PagesFields_sections_Update';
+export type PagesFields_PageSections_Update = {
+    __typename?: 'PagesFields_pageSections_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -7782,250 +9013,13 @@ export type Preference = {
 
 export type Project = {
     __typename?: 'Project';
-    cardInfo?: Maybe<Project_CardInfo>;
     createdAt?: Maybe<Scalars['DateTime']['output']>;
     id?: Maybe<Scalars['String']['output']>;
     intro?: Maybe<Project_Intro>;
-    title: Scalars['String']['output'];
+    projectSections?: Maybe<Array<Project_ProjectSections>>;
+    slug?: Maybe<Scalars['String']['output']>;
+    title?: Maybe<Scalars['String']['output']>;
     updatedAt?: Maybe<Scalars['DateTime']['output']>;
-};
-
-export type Project_CardInfo = {
-    __typename?: 'Project_CardInfo';
-    image?: Maybe<Image>;
-    snippet?: Maybe<Scalars['String']['output']>;
-};
-
-export type Project_CardInfoImageArgs = {
-    where?: InputMaybe<Project_CardInfo_Image_Where>;
-};
-
-export type Project_CardInfo_Image_Alt_Operator = {
-    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-    contains?: InputMaybe<Scalars['String']['input']>;
-    equals?: InputMaybe<Scalars['String']['input']>;
-    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-    like?: InputMaybe<Scalars['String']['input']>;
-    not_equals?: InputMaybe<Scalars['String']['input']>;
-    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
-export type Project_CardInfo_Image_CreatedAt_Operator = {
-    equals?: InputMaybe<Scalars['DateTime']['input']>;
-    exists?: InputMaybe<Scalars['Boolean']['input']>;
-    greater_than?: InputMaybe<Scalars['DateTime']['input']>;
-    greater_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
-    less_than?: InputMaybe<Scalars['DateTime']['input']>;
-    less_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
-    like?: InputMaybe<Scalars['DateTime']['input']>;
-    not_equals?: InputMaybe<Scalars['DateTime']['input']>;
-};
-
-export type Project_CardInfo_Image_Filename_Operator = {
-    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-    contains?: InputMaybe<Scalars['String']['input']>;
-    equals?: InputMaybe<Scalars['String']['input']>;
-    exists?: InputMaybe<Scalars['Boolean']['input']>;
-    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-    like?: InputMaybe<Scalars['String']['input']>;
-    not_equals?: InputMaybe<Scalars['String']['input']>;
-    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
-export type Project_CardInfo_Image_Filesize_Operator = {
-    equals?: InputMaybe<Scalars['Float']['input']>;
-    exists?: InputMaybe<Scalars['Boolean']['input']>;
-    greater_than?: InputMaybe<Scalars['Float']['input']>;
-    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
-    less_than?: InputMaybe<Scalars['Float']['input']>;
-    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
-    not_equals?: InputMaybe<Scalars['Float']['input']>;
-};
-
-export type Project_CardInfo_Image_Height_Operator = {
-    equals?: InputMaybe<Scalars['Float']['input']>;
-    exists?: InputMaybe<Scalars['Boolean']['input']>;
-    greater_than?: InputMaybe<Scalars['Float']['input']>;
-    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
-    less_than?: InputMaybe<Scalars['Float']['input']>;
-    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
-    not_equals?: InputMaybe<Scalars['Float']['input']>;
-};
-
-export type Project_CardInfo_Image_Id_Operator = {
-    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-    contains?: InputMaybe<Scalars['String']['input']>;
-    equals?: InputMaybe<Scalars['String']['input']>;
-    exists?: InputMaybe<Scalars['Boolean']['input']>;
-    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-    like?: InputMaybe<Scalars['String']['input']>;
-    not_equals?: InputMaybe<Scalars['String']['input']>;
-    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
-export type Project_CardInfo_Image_MimeType_Operator = {
-    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-    contains?: InputMaybe<Scalars['String']['input']>;
-    equals?: InputMaybe<Scalars['String']['input']>;
-    exists?: InputMaybe<Scalars['Boolean']['input']>;
-    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-    like?: InputMaybe<Scalars['String']['input']>;
-    not_equals?: InputMaybe<Scalars['String']['input']>;
-    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
-export type Project_CardInfo_Image_Sizes__Thumbnail__Filename_Operator = {
-    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-    contains?: InputMaybe<Scalars['String']['input']>;
-    equals?: InputMaybe<Scalars['String']['input']>;
-    exists?: InputMaybe<Scalars['Boolean']['input']>;
-    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-    like?: InputMaybe<Scalars['String']['input']>;
-    not_equals?: InputMaybe<Scalars['String']['input']>;
-    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
-export type Project_CardInfo_Image_Sizes__Thumbnail__Filesize_Operator = {
-    equals?: InputMaybe<Scalars['Float']['input']>;
-    exists?: InputMaybe<Scalars['Boolean']['input']>;
-    greater_than?: InputMaybe<Scalars['Float']['input']>;
-    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
-    less_than?: InputMaybe<Scalars['Float']['input']>;
-    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
-    not_equals?: InputMaybe<Scalars['Float']['input']>;
-};
-
-export type Project_CardInfo_Image_Sizes__Thumbnail__Height_Operator = {
-    equals?: InputMaybe<Scalars['Float']['input']>;
-    exists?: InputMaybe<Scalars['Boolean']['input']>;
-    greater_than?: InputMaybe<Scalars['Float']['input']>;
-    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
-    less_than?: InputMaybe<Scalars['Float']['input']>;
-    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
-    not_equals?: InputMaybe<Scalars['Float']['input']>;
-};
-
-export type Project_CardInfo_Image_Sizes__Thumbnail__MimeType_Operator = {
-    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-    contains?: InputMaybe<Scalars['String']['input']>;
-    equals?: InputMaybe<Scalars['String']['input']>;
-    exists?: InputMaybe<Scalars['Boolean']['input']>;
-    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-    like?: InputMaybe<Scalars['String']['input']>;
-    not_equals?: InputMaybe<Scalars['String']['input']>;
-    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
-export type Project_CardInfo_Image_Sizes__Thumbnail__Url_Operator = {
-    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-    contains?: InputMaybe<Scalars['String']['input']>;
-    equals?: InputMaybe<Scalars['String']['input']>;
-    exists?: InputMaybe<Scalars['Boolean']['input']>;
-    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-    like?: InputMaybe<Scalars['String']['input']>;
-    not_equals?: InputMaybe<Scalars['String']['input']>;
-    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
-export type Project_CardInfo_Image_Sizes__Thumbnail__Width_Operator = {
-    equals?: InputMaybe<Scalars['Float']['input']>;
-    exists?: InputMaybe<Scalars['Boolean']['input']>;
-    greater_than?: InputMaybe<Scalars['Float']['input']>;
-    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
-    less_than?: InputMaybe<Scalars['Float']['input']>;
-    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
-    not_equals?: InputMaybe<Scalars['Float']['input']>;
-};
-
-export type Project_CardInfo_Image_UpdatedAt_Operator = {
-    equals?: InputMaybe<Scalars['DateTime']['input']>;
-    exists?: InputMaybe<Scalars['Boolean']['input']>;
-    greater_than?: InputMaybe<Scalars['DateTime']['input']>;
-    greater_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
-    less_than?: InputMaybe<Scalars['DateTime']['input']>;
-    less_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
-    like?: InputMaybe<Scalars['DateTime']['input']>;
-    not_equals?: InputMaybe<Scalars['DateTime']['input']>;
-};
-
-export type Project_CardInfo_Image_Url_Operator = {
-    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-    contains?: InputMaybe<Scalars['String']['input']>;
-    equals?: InputMaybe<Scalars['String']['input']>;
-    exists?: InputMaybe<Scalars['Boolean']['input']>;
-    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-    like?: InputMaybe<Scalars['String']['input']>;
-    not_equals?: InputMaybe<Scalars['String']['input']>;
-    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
-export type Project_CardInfo_Image_Where = {
-    AND?: InputMaybe<Array<InputMaybe<Project_CardInfo_Image_Where_And>>>;
-    OR?: InputMaybe<Array<InputMaybe<Project_CardInfo_Image_Where_Or>>>;
-    alt?: InputMaybe<Project_CardInfo_Image_Alt_Operator>;
-    createdAt?: InputMaybe<Project_CardInfo_Image_CreatedAt_Operator>;
-    filename?: InputMaybe<Project_CardInfo_Image_Filename_Operator>;
-    filesize?: InputMaybe<Project_CardInfo_Image_Filesize_Operator>;
-    height?: InputMaybe<Project_CardInfo_Image_Height_Operator>;
-    id?: InputMaybe<Project_CardInfo_Image_Id_Operator>;
-    mimeType?: InputMaybe<Project_CardInfo_Image_MimeType_Operator>;
-    sizes__thumbnail__filename?: InputMaybe<Project_CardInfo_Image_Sizes__Thumbnail__Filename_Operator>;
-    sizes__thumbnail__filesize?: InputMaybe<Project_CardInfo_Image_Sizes__Thumbnail__Filesize_Operator>;
-    sizes__thumbnail__height?: InputMaybe<Project_CardInfo_Image_Sizes__Thumbnail__Height_Operator>;
-    sizes__thumbnail__mimeType?: InputMaybe<Project_CardInfo_Image_Sizes__Thumbnail__MimeType_Operator>;
-    sizes__thumbnail__url?: InputMaybe<Project_CardInfo_Image_Sizes__Thumbnail__Url_Operator>;
-    sizes__thumbnail__width?: InputMaybe<Project_CardInfo_Image_Sizes__Thumbnail__Width_Operator>;
-    updatedAt?: InputMaybe<Project_CardInfo_Image_UpdatedAt_Operator>;
-    url?: InputMaybe<Project_CardInfo_Image_Url_Operator>;
-    width?: InputMaybe<Project_CardInfo_Image_Width_Operator>;
-};
-
-export type Project_CardInfo_Image_Where_And = {
-    alt?: InputMaybe<Project_CardInfo_Image_Alt_Operator>;
-    createdAt?: InputMaybe<Project_CardInfo_Image_CreatedAt_Operator>;
-    filename?: InputMaybe<Project_CardInfo_Image_Filename_Operator>;
-    filesize?: InputMaybe<Project_CardInfo_Image_Filesize_Operator>;
-    height?: InputMaybe<Project_CardInfo_Image_Height_Operator>;
-    id?: InputMaybe<Project_CardInfo_Image_Id_Operator>;
-    mimeType?: InputMaybe<Project_CardInfo_Image_MimeType_Operator>;
-    sizes__thumbnail__filename?: InputMaybe<Project_CardInfo_Image_Sizes__Thumbnail__Filename_Operator>;
-    sizes__thumbnail__filesize?: InputMaybe<Project_CardInfo_Image_Sizes__Thumbnail__Filesize_Operator>;
-    sizes__thumbnail__height?: InputMaybe<Project_CardInfo_Image_Sizes__Thumbnail__Height_Operator>;
-    sizes__thumbnail__mimeType?: InputMaybe<Project_CardInfo_Image_Sizes__Thumbnail__MimeType_Operator>;
-    sizes__thumbnail__url?: InputMaybe<Project_CardInfo_Image_Sizes__Thumbnail__Url_Operator>;
-    sizes__thumbnail__width?: InputMaybe<Project_CardInfo_Image_Sizes__Thumbnail__Width_Operator>;
-    updatedAt?: InputMaybe<Project_CardInfo_Image_UpdatedAt_Operator>;
-    url?: InputMaybe<Project_CardInfo_Image_Url_Operator>;
-    width?: InputMaybe<Project_CardInfo_Image_Width_Operator>;
-};
-
-export type Project_CardInfo_Image_Where_Or = {
-    alt?: InputMaybe<Project_CardInfo_Image_Alt_Operator>;
-    createdAt?: InputMaybe<Project_CardInfo_Image_CreatedAt_Operator>;
-    filename?: InputMaybe<Project_CardInfo_Image_Filename_Operator>;
-    filesize?: InputMaybe<Project_CardInfo_Image_Filesize_Operator>;
-    height?: InputMaybe<Project_CardInfo_Image_Height_Operator>;
-    id?: InputMaybe<Project_CardInfo_Image_Id_Operator>;
-    mimeType?: InputMaybe<Project_CardInfo_Image_MimeType_Operator>;
-    sizes__thumbnail__filename?: InputMaybe<Project_CardInfo_Image_Sizes__Thumbnail__Filename_Operator>;
-    sizes__thumbnail__filesize?: InputMaybe<Project_CardInfo_Image_Sizes__Thumbnail__Filesize_Operator>;
-    sizes__thumbnail__height?: InputMaybe<Project_CardInfo_Image_Sizes__Thumbnail__Height_Operator>;
-    sizes__thumbnail__mimeType?: InputMaybe<Project_CardInfo_Image_Sizes__Thumbnail__MimeType_Operator>;
-    sizes__thumbnail__url?: InputMaybe<Project_CardInfo_Image_Sizes__Thumbnail__Url_Operator>;
-    sizes__thumbnail__width?: InputMaybe<Project_CardInfo_Image_Sizes__Thumbnail__Width_Operator>;
-    updatedAt?: InputMaybe<Project_CardInfo_Image_UpdatedAt_Operator>;
-    url?: InputMaybe<Project_CardInfo_Image_Url_Operator>;
-    width?: InputMaybe<Project_CardInfo_Image_Width_Operator>;
-};
-
-export type Project_CardInfo_Image_Width_Operator = {
-    equals?: InputMaybe<Scalars['Float']['input']>;
-    exists?: InputMaybe<Scalars['Boolean']['input']>;
-    greater_than?: InputMaybe<Scalars['Float']['input']>;
-    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
-    less_than?: InputMaybe<Scalars['Float']['input']>;
-    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
-    not_equals?: InputMaybe<Scalars['Float']['input']>;
 };
 
 export type Project_Intro = {
@@ -8266,19 +9260,7 @@ export type Project_Intro_Image_Width_Operator = {
     not_equals?: InputMaybe<Scalars['Float']['input']>;
 };
 
-export type Project_CardInfo__Image_Operator = {
-    equals?: InputMaybe<Scalars['String']['input']>;
-    exists?: InputMaybe<Scalars['Boolean']['input']>;
-    not_equals?: InputMaybe<Scalars['String']['input']>;
-};
-
-export type Project_CardInfo__Snippet_Operator = {
-    contains?: InputMaybe<Scalars['String']['input']>;
-    equals?: InputMaybe<Scalars['String']['input']>;
-    exists?: InputMaybe<Scalars['Boolean']['input']>;
-    like?: InputMaybe<Scalars['String']['input']>;
-    not_equals?: InputMaybe<Scalars['String']['input']>;
-};
+export type Project_ProjectSections = ImageBlock | TextBlock;
 
 export type Project_CreatedAt_Operator = {
     equals?: InputMaybe<Scalars['DateTime']['input']>;
@@ -8316,10 +9298,22 @@ export type Project_Intro__Image_Operator = {
     not_equals?: InputMaybe<Scalars['String']['input']>;
 };
 
+export type Project_Slug_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
 export type Project_Title_Operator = {
     all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     contains?: InputMaybe<Scalars['String']['input']>;
     equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
     in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     like?: InputMaybe<Scalars['String']['input']>;
     not_equals?: InputMaybe<Scalars['String']['input']>;
@@ -8340,34 +9334,31 @@ export type Project_UpdatedAt_Operator = {
 export type Project_Where = {
     AND?: InputMaybe<Array<InputMaybe<Project_Where_And>>>;
     OR?: InputMaybe<Array<InputMaybe<Project_Where_Or>>>;
-    cardInfo__image?: InputMaybe<Project_CardInfo__Image_Operator>;
-    cardInfo__snippet?: InputMaybe<Project_CardInfo__Snippet_Operator>;
     createdAt?: InputMaybe<Project_CreatedAt_Operator>;
     id?: InputMaybe<Project_Id_Operator>;
     intro__description?: InputMaybe<Project_Intro__Description_Operator>;
     intro__image?: InputMaybe<Project_Intro__Image_Operator>;
+    slug?: InputMaybe<Project_Slug_Operator>;
     title?: InputMaybe<Project_Title_Operator>;
     updatedAt?: InputMaybe<Project_UpdatedAt_Operator>;
 };
 
 export type Project_Where_And = {
-    cardInfo__image?: InputMaybe<Project_CardInfo__Image_Operator>;
-    cardInfo__snippet?: InputMaybe<Project_CardInfo__Snippet_Operator>;
     createdAt?: InputMaybe<Project_CreatedAt_Operator>;
     id?: InputMaybe<Project_Id_Operator>;
     intro__description?: InputMaybe<Project_Intro__Description_Operator>;
     intro__image?: InputMaybe<Project_Intro__Image_Operator>;
+    slug?: InputMaybe<Project_Slug_Operator>;
     title?: InputMaybe<Project_Title_Operator>;
     updatedAt?: InputMaybe<Project_UpdatedAt_Operator>;
 };
 
 export type Project_Where_Or = {
-    cardInfo__image?: InputMaybe<Project_CardInfo__Image_Operator>;
-    cardInfo__snippet?: InputMaybe<Project_CardInfo__Snippet_Operator>;
     createdAt?: InputMaybe<Project_CreatedAt_Operator>;
     id?: InputMaybe<Project_Id_Operator>;
     intro__description?: InputMaybe<Project_Intro__Description_Operator>;
     intro__image?: InputMaybe<Project_Intro__Image_Operator>;
+    slug?: InputMaybe<Project_Slug_Operator>;
     title?: InputMaybe<Project_Title_Operator>;
     updatedAt?: InputMaybe<Project_UpdatedAt_Operator>;
 };
@@ -8413,102 +9404,12 @@ export type ProjectsDeleteDocAccess = {
 
 export type ProjectsDocAccessFields = {
     __typename?: 'ProjectsDocAccessFields';
-    cardInfo?: Maybe<ProjectsDocAccessFields_CardInfo>;
     createdAt?: Maybe<ProjectsDocAccessFields_CreatedAt>;
     intro?: Maybe<ProjectsDocAccessFields_Intro>;
+    projectSections?: Maybe<ProjectsDocAccessFields_ProjectSections>;
+    slug?: Maybe<ProjectsDocAccessFields_Slug>;
     title?: Maybe<ProjectsDocAccessFields_Title>;
     updatedAt?: Maybe<ProjectsDocAccessFields_UpdatedAt>;
-};
-
-export type ProjectsDocAccessFields_CardInfo = {
-    __typename?: 'ProjectsDocAccessFields_cardInfo';
-    create?: Maybe<ProjectsDocAccessFields_CardInfo_Create>;
-    delete?: Maybe<ProjectsDocAccessFields_CardInfo_Delete>;
-    fields?: Maybe<ProjectsDocAccessFields_CardInfo_Fields>;
-    read?: Maybe<ProjectsDocAccessFields_CardInfo_Read>;
-    update?: Maybe<ProjectsDocAccessFields_CardInfo_Update>;
-};
-
-export type ProjectsDocAccessFields_CardInfo_Create = {
-    __typename?: 'ProjectsDocAccessFields_cardInfo_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsDocAccessFields_CardInfo_Delete = {
-    __typename?: 'ProjectsDocAccessFields_cardInfo_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsDocAccessFields_CardInfo_Fields = {
-    __typename?: 'ProjectsDocAccessFields_cardInfo_Fields';
-    image?: Maybe<ProjectsDocAccessFields_CardInfo_Image>;
-    snippet?: Maybe<ProjectsDocAccessFields_CardInfo_Snippet>;
-};
-
-export type ProjectsDocAccessFields_CardInfo_Read = {
-    __typename?: 'ProjectsDocAccessFields_cardInfo_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsDocAccessFields_CardInfo_Update = {
-    __typename?: 'ProjectsDocAccessFields_cardInfo_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsDocAccessFields_CardInfo_Image = {
-    __typename?: 'ProjectsDocAccessFields_cardInfo_image';
-    create?: Maybe<ProjectsDocAccessFields_CardInfo_Image_Create>;
-    delete?: Maybe<ProjectsDocAccessFields_CardInfo_Image_Delete>;
-    read?: Maybe<ProjectsDocAccessFields_CardInfo_Image_Read>;
-    update?: Maybe<ProjectsDocAccessFields_CardInfo_Image_Update>;
-};
-
-export type ProjectsDocAccessFields_CardInfo_Image_Create = {
-    __typename?: 'ProjectsDocAccessFields_cardInfo_image_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsDocAccessFields_CardInfo_Image_Delete = {
-    __typename?: 'ProjectsDocAccessFields_cardInfo_image_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsDocAccessFields_CardInfo_Image_Read = {
-    __typename?: 'ProjectsDocAccessFields_cardInfo_image_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsDocAccessFields_CardInfo_Image_Update = {
-    __typename?: 'ProjectsDocAccessFields_cardInfo_image_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsDocAccessFields_CardInfo_Snippet = {
-    __typename?: 'ProjectsDocAccessFields_cardInfo_snippet';
-    create?: Maybe<ProjectsDocAccessFields_CardInfo_Snippet_Create>;
-    delete?: Maybe<ProjectsDocAccessFields_CardInfo_Snippet_Delete>;
-    read?: Maybe<ProjectsDocAccessFields_CardInfo_Snippet_Read>;
-    update?: Maybe<ProjectsDocAccessFields_CardInfo_Snippet_Update>;
-};
-
-export type ProjectsDocAccessFields_CardInfo_Snippet_Create = {
-    __typename?: 'ProjectsDocAccessFields_cardInfo_snippet_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsDocAccessFields_CardInfo_Snippet_Delete = {
-    __typename?: 'ProjectsDocAccessFields_cardInfo_snippet_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsDocAccessFields_CardInfo_Snippet_Read = {
-    __typename?: 'ProjectsDocAccessFields_cardInfo_snippet_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsDocAccessFields_CardInfo_Snippet_Update = {
-    __typename?: 'ProjectsDocAccessFields_cardInfo_snippet_Update';
-    permission: Scalars['Boolean']['output'];
 };
 
 export type ProjectsDocAccessFields_CreatedAt = {
@@ -8630,6 +9531,62 @@ export type ProjectsDocAccessFields_Intro_Image_Update = {
     permission: Scalars['Boolean']['output'];
 };
 
+export type ProjectsDocAccessFields_ProjectSections = {
+    __typename?: 'ProjectsDocAccessFields_projectSections';
+    create?: Maybe<ProjectsDocAccessFields_ProjectSections_Create>;
+    delete?: Maybe<ProjectsDocAccessFields_ProjectSections_Delete>;
+    read?: Maybe<ProjectsDocAccessFields_ProjectSections_Read>;
+    update?: Maybe<ProjectsDocAccessFields_ProjectSections_Update>;
+};
+
+export type ProjectsDocAccessFields_ProjectSections_Create = {
+    __typename?: 'ProjectsDocAccessFields_projectSections_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsDocAccessFields_ProjectSections_Delete = {
+    __typename?: 'ProjectsDocAccessFields_projectSections_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsDocAccessFields_ProjectSections_Read = {
+    __typename?: 'ProjectsDocAccessFields_projectSections_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsDocAccessFields_ProjectSections_Update = {
+    __typename?: 'ProjectsDocAccessFields_projectSections_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsDocAccessFields_Slug = {
+    __typename?: 'ProjectsDocAccessFields_slug';
+    create?: Maybe<ProjectsDocAccessFields_Slug_Create>;
+    delete?: Maybe<ProjectsDocAccessFields_Slug_Delete>;
+    read?: Maybe<ProjectsDocAccessFields_Slug_Read>;
+    update?: Maybe<ProjectsDocAccessFields_Slug_Update>;
+};
+
+export type ProjectsDocAccessFields_Slug_Create = {
+    __typename?: 'ProjectsDocAccessFields_slug_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsDocAccessFields_Slug_Delete = {
+    __typename?: 'ProjectsDocAccessFields_slug_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsDocAccessFields_Slug_Read = {
+    __typename?: 'ProjectsDocAccessFields_slug_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsDocAccessFields_Slug_Update = {
+    __typename?: 'ProjectsDocAccessFields_slug_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
 export type ProjectsDocAccessFields_Title = {
     __typename?: 'ProjectsDocAccessFields_title';
     create?: Maybe<ProjectsDocAccessFields_Title_Create>;
@@ -8688,102 +9645,12 @@ export type ProjectsDocAccessFields_UpdatedAt_Update = {
 
 export type ProjectsFields = {
     __typename?: 'ProjectsFields';
-    cardInfo?: Maybe<ProjectsFields_CardInfo>;
     createdAt?: Maybe<ProjectsFields_CreatedAt>;
     intro?: Maybe<ProjectsFields_Intro>;
+    projectSections?: Maybe<ProjectsFields_ProjectSections>;
+    slug?: Maybe<ProjectsFields_Slug>;
     title?: Maybe<ProjectsFields_Title>;
     updatedAt?: Maybe<ProjectsFields_UpdatedAt>;
-};
-
-export type ProjectsFields_CardInfo = {
-    __typename?: 'ProjectsFields_cardInfo';
-    create?: Maybe<ProjectsFields_CardInfo_Create>;
-    delete?: Maybe<ProjectsFields_CardInfo_Delete>;
-    fields?: Maybe<ProjectsFields_CardInfo_Fields>;
-    read?: Maybe<ProjectsFields_CardInfo_Read>;
-    update?: Maybe<ProjectsFields_CardInfo_Update>;
-};
-
-export type ProjectsFields_CardInfo_Create = {
-    __typename?: 'ProjectsFields_cardInfo_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsFields_CardInfo_Delete = {
-    __typename?: 'ProjectsFields_cardInfo_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsFields_CardInfo_Fields = {
-    __typename?: 'ProjectsFields_cardInfo_Fields';
-    image?: Maybe<ProjectsFields_CardInfo_Image>;
-    snippet?: Maybe<ProjectsFields_CardInfo_Snippet>;
-};
-
-export type ProjectsFields_CardInfo_Read = {
-    __typename?: 'ProjectsFields_cardInfo_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsFields_CardInfo_Update = {
-    __typename?: 'ProjectsFields_cardInfo_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsFields_CardInfo_Image = {
-    __typename?: 'ProjectsFields_cardInfo_image';
-    create?: Maybe<ProjectsFields_CardInfo_Image_Create>;
-    delete?: Maybe<ProjectsFields_CardInfo_Image_Delete>;
-    read?: Maybe<ProjectsFields_CardInfo_Image_Read>;
-    update?: Maybe<ProjectsFields_CardInfo_Image_Update>;
-};
-
-export type ProjectsFields_CardInfo_Image_Create = {
-    __typename?: 'ProjectsFields_cardInfo_image_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsFields_CardInfo_Image_Delete = {
-    __typename?: 'ProjectsFields_cardInfo_image_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsFields_CardInfo_Image_Read = {
-    __typename?: 'ProjectsFields_cardInfo_image_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsFields_CardInfo_Image_Update = {
-    __typename?: 'ProjectsFields_cardInfo_image_Update';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsFields_CardInfo_Snippet = {
-    __typename?: 'ProjectsFields_cardInfo_snippet';
-    create?: Maybe<ProjectsFields_CardInfo_Snippet_Create>;
-    delete?: Maybe<ProjectsFields_CardInfo_Snippet_Delete>;
-    read?: Maybe<ProjectsFields_CardInfo_Snippet_Read>;
-    update?: Maybe<ProjectsFields_CardInfo_Snippet_Update>;
-};
-
-export type ProjectsFields_CardInfo_Snippet_Create = {
-    __typename?: 'ProjectsFields_cardInfo_snippet_Create';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsFields_CardInfo_Snippet_Delete = {
-    __typename?: 'ProjectsFields_cardInfo_snippet_Delete';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsFields_CardInfo_Snippet_Read = {
-    __typename?: 'ProjectsFields_cardInfo_snippet_Read';
-    permission: Scalars['Boolean']['output'];
-};
-
-export type ProjectsFields_CardInfo_Snippet_Update = {
-    __typename?: 'ProjectsFields_cardInfo_snippet_Update';
-    permission: Scalars['Boolean']['output'];
 };
 
 export type ProjectsFields_CreatedAt = {
@@ -8905,6 +9772,62 @@ export type ProjectsFields_Intro_Image_Update = {
     permission: Scalars['Boolean']['output'];
 };
 
+export type ProjectsFields_ProjectSections = {
+    __typename?: 'ProjectsFields_projectSections';
+    create?: Maybe<ProjectsFields_ProjectSections_Create>;
+    delete?: Maybe<ProjectsFields_ProjectSections_Delete>;
+    read?: Maybe<ProjectsFields_ProjectSections_Read>;
+    update?: Maybe<ProjectsFields_ProjectSections_Update>;
+};
+
+export type ProjectsFields_ProjectSections_Create = {
+    __typename?: 'ProjectsFields_projectSections_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsFields_ProjectSections_Delete = {
+    __typename?: 'ProjectsFields_projectSections_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsFields_ProjectSections_Read = {
+    __typename?: 'ProjectsFields_projectSections_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsFields_ProjectSections_Update = {
+    __typename?: 'ProjectsFields_projectSections_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsFields_Slug = {
+    __typename?: 'ProjectsFields_slug';
+    create?: Maybe<ProjectsFields_Slug_Create>;
+    delete?: Maybe<ProjectsFields_Slug_Delete>;
+    read?: Maybe<ProjectsFields_Slug_Read>;
+    update?: Maybe<ProjectsFields_Slug_Update>;
+};
+
+export type ProjectsFields_Slug_Create = {
+    __typename?: 'ProjectsFields_slug_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsFields_Slug_Delete = {
+    __typename?: 'ProjectsFields_slug_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsFields_Slug_Read = {
+    __typename?: 'ProjectsFields_slug_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsFields_Slug_Update = {
+    __typename?: 'ProjectsFields_slug_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
 export type ProjectsFields_Title = {
     __typename?: 'ProjectsFields_title';
     create?: Maybe<ProjectsFields_Title_Create>;
@@ -8989,6 +9912,8 @@ export type Query = {
     __typename?: 'Query';
     About?: Maybe<About>;
     Access?: Maybe<Access>;
+    CaseStudies?: Maybe<CaseStudies>;
+    CaseStudy?: Maybe<CaseStudy>;
     CaseStudyListing?: Maybe<CaseStudyListing>;
     Cta?: Maybe<Cta>;
     Ctas?: Maybe<Ctas>;
@@ -9015,6 +9940,7 @@ export type Query = {
     User?: Maybe<User>;
     Users?: Maybe<Users>;
     docAccessAbout?: Maybe<AboutDocAccess>;
+    docAccessCaseStudy?: Maybe<Case_StudiesDocAccess>;
     docAccessCaseStudyListing?: Maybe<Case_Study_ListingDocAccess>;
     docAccessCta?: Maybe<CtasDocAccess>;
     docAccessHero?: Maybe<HeroesDocAccess>;
@@ -9035,6 +9961,19 @@ export type Query = {
 
 export type QueryAboutArgs = {
     draft?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type QueryCaseStudiesArgs = {
+    draft?: InputMaybe<Scalars['Boolean']['input']>;
+    limit?: InputMaybe<Scalars['Int']['input']>;
+    page?: InputMaybe<Scalars['Int']['input']>;
+    sort?: InputMaybe<Scalars['String']['input']>;
+    where?: InputMaybe<CaseStudy_Where>;
+};
+
+export type QueryCaseStudyArgs = {
+    draft?: InputMaybe<Scalars['Boolean']['input']>;
+    id: Scalars['String']['input'];
 };
 
 export type QueryCaseStudyListingArgs = {
@@ -9185,6 +10124,10 @@ export type QueryUsersArgs = {
     page?: InputMaybe<Scalars['Int']['input']>;
     sort?: InputMaybe<Scalars['String']['input']>;
     where?: InputMaybe<User_Where>;
+};
+
+export type QueryDocAccessCaseStudyArgs = {
+    id: Scalars['String']['input'];
 };
 
 export type QueryDocAccessCtaArgs = {
@@ -11482,6 +12425,19 @@ export type TestimonialsUpdateDocAccess = {
     where?: Maybe<Scalars['JSONObject']['output']>;
 };
 
+export type TextBlock = {
+    __typename?: 'TextBlock';
+    blockName?: Maybe<Scalars['String']['output']>;
+    blockType?: Maybe<Scalars['String']['output']>;
+    heading?: Maybe<Scalars['String']['output']>;
+    id?: Maybe<Scalars['String']['output']>;
+    text?: Maybe<Scalars['JSON']['output']>;
+};
+
+export type TextBlockTextArgs = {
+    depth?: InputMaybe<Scalars['Int']['input']>;
+};
+
 export type Tool = {
     __typename?: 'Tool';
     createdAt?: Maybe<Scalars['DateTime']['output']>;
@@ -13274,6 +14230,24 @@ export type AboutDocAccess = {
     update?: Maybe<AboutUpdateDocAccess>;
 };
 
+export type Case_StudiesAccess = {
+    __typename?: 'case_studiesAccess';
+    create?: Maybe<CaseStudiesCreateAccess>;
+    delete?: Maybe<CaseStudiesDeleteAccess>;
+    fields?: Maybe<CaseStudiesFields>;
+    read?: Maybe<CaseStudiesReadAccess>;
+    update?: Maybe<CaseStudiesUpdateAccess>;
+};
+
+export type Case_StudiesDocAccess = {
+    __typename?: 'case_studiesDocAccess';
+    create?: Maybe<CaseStudiesCreateDocAccess>;
+    delete?: Maybe<CaseStudiesDeleteDocAccess>;
+    fields?: Maybe<CaseStudiesDocAccessFields>;
+    read?: Maybe<CaseStudiesReadDocAccess>;
+    update?: Maybe<CaseStudiesUpdateDocAccess>;
+};
+
 export type Case_Study_ListingAccess = {
     __typename?: 'case_study_listingAccess';
     fields?: Maybe<CaseStudyListingFields>;
@@ -13362,10 +14336,10 @@ export type ImagesDocAccess = {
 
 export type MutationAboutInput = {
     coloredSubhead?: InputMaybe<Scalars['JSON']['input']>;
-    content?: InputMaybe<Scalars['JSON']['input']>;
     createdAt?: InputMaybe<Scalars['String']['input']>;
     image?: InputMaybe<Scalars['String']['input']>;
     pets?: InputMaybe<MutationAbout_PetsInput>;
+    text?: InputMaybe<Scalars['JSON']['input']>;
     title?: InputMaybe<Scalars['String']['input']>;
     updatedAt?: InputMaybe<Scalars['String']['input']>;
 };
@@ -13376,11 +14350,41 @@ export type MutationAbout_PetsInput = {
     warren?: InputMaybe<Scalars['String']['input']>;
 };
 
+export type MutationCaseStudyInput = {
+    caseStudySections?: InputMaybe<Scalars['JSON']['input']>;
+    createdAt?: InputMaybe<Scalars['String']['input']>;
+    intro?: InputMaybe<MutationCaseStudy_IntroInput>;
+    project?: InputMaybe<Scalars['String']['input']>;
+    title?: InputMaybe<Scalars['String']['input']>;
+    updatedAt?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type MutationCaseStudyListingInput = {
     createdAt?: InputMaybe<Scalars['String']['input']>;
     icon?: InputMaybe<Scalars['String']['input']>;
     title?: InputMaybe<Scalars['String']['input']>;
     updatedAt?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type MutationCaseStudyUpdateInput = {
+    caseStudySections?: InputMaybe<Scalars['JSON']['input']>;
+    createdAt?: InputMaybe<Scalars['String']['input']>;
+    intro?: InputMaybe<MutationCaseStudyUpdate_IntroInput>;
+    project?: InputMaybe<Scalars['String']['input']>;
+    title?: InputMaybe<Scalars['String']['input']>;
+    updatedAt?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type MutationCaseStudyUpdate_IntroInput = {
+    heading?: InputMaybe<Scalars['String']['input']>;
+    image?: InputMaybe<Scalars['String']['input']>;
+    text?: InputMaybe<Scalars['JSON']['input']>;
+};
+
+export type MutationCaseStudy_IntroInput = {
+    heading?: InputMaybe<Scalars['String']['input']>;
+    image?: InputMaybe<Scalars['String']['input']>;
+    text?: InputMaybe<Scalars['JSON']['input']>;
 };
 
 export type MutationCtaInput = {
@@ -13549,7 +14553,7 @@ export type MutationNav_MenuItemsInput = {
 
 export type MutationPageInput = {
     createdAt?: InputMaybe<Scalars['String']['input']>;
-    sections?: InputMaybe<Scalars['JSON']['input']>;
+    pageSections?: InputMaybe<Scalars['JSON']['input']>;
     slug?: InputMaybe<Scalars['String']['input']>;
     title?: InputMaybe<Scalars['String']['input']>;
     updatedAt?: InputMaybe<Scalars['String']['input']>;
@@ -13557,41 +14561,33 @@ export type MutationPageInput = {
 
 export type MutationPageUpdateInput = {
     createdAt?: InputMaybe<Scalars['String']['input']>;
-    sections?: InputMaybe<Scalars['JSON']['input']>;
+    pageSections?: InputMaybe<Scalars['JSON']['input']>;
     slug?: InputMaybe<Scalars['String']['input']>;
     title?: InputMaybe<Scalars['String']['input']>;
     updatedAt?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type MutationProjectInput = {
-    cardInfo?: InputMaybe<MutationProject_CardInfoInput>;
     createdAt?: InputMaybe<Scalars['String']['input']>;
     intro?: InputMaybe<MutationProject_IntroInput>;
-    title: Scalars['String']['input'];
-    updatedAt?: InputMaybe<Scalars['String']['input']>;
-};
-
-export type MutationProjectUpdateInput = {
-    cardInfo?: InputMaybe<MutationProjectUpdate_CardInfoInput>;
-    createdAt?: InputMaybe<Scalars['String']['input']>;
-    intro?: InputMaybe<MutationProjectUpdate_IntroInput>;
+    projectSections?: InputMaybe<Scalars['JSON']['input']>;
+    slug?: InputMaybe<Scalars['String']['input']>;
     title?: InputMaybe<Scalars['String']['input']>;
     updatedAt?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type MutationProjectUpdate_CardInfoInput = {
-    image?: InputMaybe<Scalars['String']['input']>;
-    snippet?: InputMaybe<Scalars['String']['input']>;
+export type MutationProjectUpdateInput = {
+    createdAt?: InputMaybe<Scalars['String']['input']>;
+    intro?: InputMaybe<MutationProjectUpdate_IntroInput>;
+    projectSections?: InputMaybe<Scalars['JSON']['input']>;
+    slug?: InputMaybe<Scalars['String']['input']>;
+    title?: InputMaybe<Scalars['String']['input']>;
+    updatedAt?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type MutationProjectUpdate_IntroInput = {
     description?: InputMaybe<Scalars['String']['input']>;
     image?: InputMaybe<Scalars['String']['input']>;
-};
-
-export type MutationProject_CardInfoInput = {
-    image?: InputMaybe<Scalars['String']['input']>;
-    snippet?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type MutationProject_IntroInput = {

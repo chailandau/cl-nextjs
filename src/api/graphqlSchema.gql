@@ -5,20 +5,20 @@ schema {
 
 type About {
   coloredSubhead(depth: Int): JSON
-  content(depth: Int): JSON
   createdAt: DateTime
   image(where: About_Image_where): Image
   pets: About_Pets
+  text(depth: Int): JSON
   title: String
   updatedAt: DateTime
 }
 
 type AboutDocAccessFields {
   coloredSubhead: AboutDocAccessFields_coloredSubhead
-  content: AboutDocAccessFields_content
   createdAt: AboutDocAccessFields_createdAt
   image: AboutDocAccessFields_image
   pets: AboutDocAccessFields_pets
+  text: AboutDocAccessFields_text
   title: AboutDocAccessFields_title
   updatedAt: AboutDocAccessFields_updatedAt
 }
@@ -43,29 +43,6 @@ type AboutDocAccessFields_coloredSubhead_Read {
 }
 
 type AboutDocAccessFields_coloredSubhead_Update {
-  permission: Boolean!
-}
-
-type AboutDocAccessFields_content {
-  create: AboutDocAccessFields_content_Create
-  delete: AboutDocAccessFields_content_Delete
-  read: AboutDocAccessFields_content_Read
-  update: AboutDocAccessFields_content_Update
-}
-
-type AboutDocAccessFields_content_Create {
-  permission: Boolean!
-}
-
-type AboutDocAccessFields_content_Delete {
-  permission: Boolean!
-}
-
-type AboutDocAccessFields_content_Read {
-  permission: Boolean!
-}
-
-type AboutDocAccessFields_content_Update {
   permission: Boolean!
 }
 
@@ -214,6 +191,29 @@ type AboutDocAccessFields_pets_warren_Update {
   permission: Boolean!
 }
 
+type AboutDocAccessFields_text {
+  create: AboutDocAccessFields_text_Create
+  delete: AboutDocAccessFields_text_Delete
+  read: AboutDocAccessFields_text_Read
+  update: AboutDocAccessFields_text_Update
+}
+
+type AboutDocAccessFields_text_Create {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_text_Delete {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_text_Read {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_text_Update {
+  permission: Boolean!
+}
+
 type AboutDocAccessFields_title {
   create: AboutDocAccessFields_title_Create
   delete: AboutDocAccessFields_title_Delete
@@ -262,10 +262,10 @@ type AboutDocAccessFields_updatedAt_Update {
 
 type AboutFields {
   coloredSubhead: AboutFields_coloredSubhead
-  content: AboutFields_content
   createdAt: AboutFields_createdAt
   image: AboutFields_image
   pets: AboutFields_pets
+  text: AboutFields_text
   title: AboutFields_title
   updatedAt: AboutFields_updatedAt
 }
@@ -290,29 +290,6 @@ type AboutFields_coloredSubhead_Read {
 }
 
 type AboutFields_coloredSubhead_Update {
-  permission: Boolean!
-}
-
-type AboutFields_content {
-  create: AboutFields_content_Create
-  delete: AboutFields_content_Delete
-  read: AboutFields_content_Read
-  update: AboutFields_content_Update
-}
-
-type AboutFields_content_Create {
-  permission: Boolean!
-}
-
-type AboutFields_content_Delete {
-  permission: Boolean!
-}
-
-type AboutFields_content_Read {
-  permission: Boolean!
-}
-
-type AboutFields_content_Update {
   permission: Boolean!
 }
 
@@ -458,6 +435,29 @@ type AboutFields_pets_warren_Read {
 }
 
 type AboutFields_pets_warren_Update {
+  permission: Boolean!
+}
+
+type AboutFields_text {
+  create: AboutFields_text_Create
+  delete: AboutFields_text_Delete
+  read: AboutFields_text_Read
+  update: AboutFields_text_Update
+}
+
+type AboutFields_text_Create {
+  permission: Boolean!
+}
+
+type AboutFields_text_Delete {
+  permission: Boolean!
+}
+
+type AboutFields_text_Read {
+  permission: Boolean!
+}
+
+type AboutFields_text_Update {
   permission: Boolean!
 }
 
@@ -1448,6 +1448,7 @@ input About_Pets_Warren_width_operator {
 type Access {
   about: aboutAccess
   canAccessAdmin: Boolean!
+  case_studies: case_studiesAccess
   case_study_listing: case_study_listingAccess
   ctas: ctasAccess
   heroes: heroesAccess
@@ -1462,6 +1463,516 @@ type Access {
   toolbox_listing: toolbox_listingAccess
   tools: toolsAccess
   users: usersAccess
+}
+
+type CaseStudies {
+  docs: [CaseStudy]
+  hasNextPage: Boolean
+  hasPrevPage: Boolean
+  limit: Int
+  nextPage: Int
+  offset: Int
+  page: Int
+  pagingCounter: Int
+  prevPage: Int
+  totalDocs: Int
+  totalPages: Int
+}
+
+type CaseStudiesCreateAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type CaseStudiesCreateDocAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type CaseStudiesDeleteAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type CaseStudiesDeleteDocAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type CaseStudiesDocAccessFields {
+  caseStudySections: CaseStudiesDocAccessFields_caseStudySections
+  createdAt: CaseStudiesDocAccessFields_createdAt
+  intro: CaseStudiesDocAccessFields_intro
+  project: CaseStudiesDocAccessFields_project
+  title: CaseStudiesDocAccessFields_title
+  updatedAt: CaseStudiesDocAccessFields_updatedAt
+}
+
+type CaseStudiesDocAccessFields_caseStudySections {
+  create: CaseStudiesDocAccessFields_caseStudySections_Create
+  delete: CaseStudiesDocAccessFields_caseStudySections_Delete
+  read: CaseStudiesDocAccessFields_caseStudySections_Read
+  update: CaseStudiesDocAccessFields_caseStudySections_Update
+}
+
+type CaseStudiesDocAccessFields_caseStudySections_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_caseStudySections_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_caseStudySections_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_caseStudySections_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_createdAt {
+  create: CaseStudiesDocAccessFields_createdAt_Create
+  delete: CaseStudiesDocAccessFields_createdAt_Delete
+  read: CaseStudiesDocAccessFields_createdAt_Read
+  update: CaseStudiesDocAccessFields_createdAt_Update
+}
+
+type CaseStudiesDocAccessFields_createdAt_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_createdAt_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_createdAt_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_intro {
+  create: CaseStudiesDocAccessFields_intro_Create
+  delete: CaseStudiesDocAccessFields_intro_Delete
+  fields: CaseStudiesDocAccessFields_intro_Fields
+  read: CaseStudiesDocAccessFields_intro_Read
+  update: CaseStudiesDocAccessFields_intro_Update
+}
+
+type CaseStudiesDocAccessFields_intro_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_intro_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_intro_Fields {
+  heading: CaseStudiesDocAccessFields_intro_heading
+  image: CaseStudiesDocAccessFields_intro_image
+  text: CaseStudiesDocAccessFields_intro_text
+}
+
+type CaseStudiesDocAccessFields_intro_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_intro_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_intro_heading {
+  create: CaseStudiesDocAccessFields_intro_heading_Create
+  delete: CaseStudiesDocAccessFields_intro_heading_Delete
+  read: CaseStudiesDocAccessFields_intro_heading_Read
+  update: CaseStudiesDocAccessFields_intro_heading_Update
+}
+
+type CaseStudiesDocAccessFields_intro_heading_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_intro_heading_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_intro_heading_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_intro_heading_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_intro_image {
+  create: CaseStudiesDocAccessFields_intro_image_Create
+  delete: CaseStudiesDocAccessFields_intro_image_Delete
+  read: CaseStudiesDocAccessFields_intro_image_Read
+  update: CaseStudiesDocAccessFields_intro_image_Update
+}
+
+type CaseStudiesDocAccessFields_intro_image_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_intro_image_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_intro_image_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_intro_image_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_intro_text {
+  create: CaseStudiesDocAccessFields_intro_text_Create
+  delete: CaseStudiesDocAccessFields_intro_text_Delete
+  read: CaseStudiesDocAccessFields_intro_text_Read
+  update: CaseStudiesDocAccessFields_intro_text_Update
+}
+
+type CaseStudiesDocAccessFields_intro_text_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_intro_text_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_intro_text_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_intro_text_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_project {
+  create: CaseStudiesDocAccessFields_project_Create
+  delete: CaseStudiesDocAccessFields_project_Delete
+  read: CaseStudiesDocAccessFields_project_Read
+  update: CaseStudiesDocAccessFields_project_Update
+}
+
+type CaseStudiesDocAccessFields_project_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_project_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_project_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_project_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_title {
+  create: CaseStudiesDocAccessFields_title_Create
+  delete: CaseStudiesDocAccessFields_title_Delete
+  read: CaseStudiesDocAccessFields_title_Read
+  update: CaseStudiesDocAccessFields_title_Update
+}
+
+type CaseStudiesDocAccessFields_title_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_title_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_title_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_title_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_updatedAt {
+  create: CaseStudiesDocAccessFields_updatedAt_Create
+  delete: CaseStudiesDocAccessFields_updatedAt_Delete
+  read: CaseStudiesDocAccessFields_updatedAt_Read
+  update: CaseStudiesDocAccessFields_updatedAt_Update
+}
+
+type CaseStudiesDocAccessFields_updatedAt_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_updatedAt_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_updatedAt_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_updatedAt_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesFields {
+  caseStudySections: CaseStudiesFields_caseStudySections
+  createdAt: CaseStudiesFields_createdAt
+  intro: CaseStudiesFields_intro
+  project: CaseStudiesFields_project
+  title: CaseStudiesFields_title
+  updatedAt: CaseStudiesFields_updatedAt
+}
+
+type CaseStudiesFields_caseStudySections {
+  create: CaseStudiesFields_caseStudySections_Create
+  delete: CaseStudiesFields_caseStudySections_Delete
+  read: CaseStudiesFields_caseStudySections_Read
+  update: CaseStudiesFields_caseStudySections_Update
+}
+
+type CaseStudiesFields_caseStudySections_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_caseStudySections_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_caseStudySections_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_caseStudySections_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_createdAt {
+  create: CaseStudiesFields_createdAt_Create
+  delete: CaseStudiesFields_createdAt_Delete
+  read: CaseStudiesFields_createdAt_Read
+  update: CaseStudiesFields_createdAt_Update
+}
+
+type CaseStudiesFields_createdAt_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_createdAt_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_createdAt_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_intro {
+  create: CaseStudiesFields_intro_Create
+  delete: CaseStudiesFields_intro_Delete
+  fields: CaseStudiesFields_intro_Fields
+  read: CaseStudiesFields_intro_Read
+  update: CaseStudiesFields_intro_Update
+}
+
+type CaseStudiesFields_intro_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_intro_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_intro_Fields {
+  heading: CaseStudiesFields_intro_heading
+  image: CaseStudiesFields_intro_image
+  text: CaseStudiesFields_intro_text
+}
+
+type CaseStudiesFields_intro_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_intro_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_intro_heading {
+  create: CaseStudiesFields_intro_heading_Create
+  delete: CaseStudiesFields_intro_heading_Delete
+  read: CaseStudiesFields_intro_heading_Read
+  update: CaseStudiesFields_intro_heading_Update
+}
+
+type CaseStudiesFields_intro_heading_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_intro_heading_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_intro_heading_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_intro_heading_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_intro_image {
+  create: CaseStudiesFields_intro_image_Create
+  delete: CaseStudiesFields_intro_image_Delete
+  read: CaseStudiesFields_intro_image_Read
+  update: CaseStudiesFields_intro_image_Update
+}
+
+type CaseStudiesFields_intro_image_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_intro_image_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_intro_image_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_intro_image_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_intro_text {
+  create: CaseStudiesFields_intro_text_Create
+  delete: CaseStudiesFields_intro_text_Delete
+  read: CaseStudiesFields_intro_text_Read
+  update: CaseStudiesFields_intro_text_Update
+}
+
+type CaseStudiesFields_intro_text_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_intro_text_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_intro_text_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_intro_text_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_project {
+  create: CaseStudiesFields_project_Create
+  delete: CaseStudiesFields_project_Delete
+  read: CaseStudiesFields_project_Read
+  update: CaseStudiesFields_project_Update
+}
+
+type CaseStudiesFields_project_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_project_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_project_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_project_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_title {
+  create: CaseStudiesFields_title_Create
+  delete: CaseStudiesFields_title_Delete
+  read: CaseStudiesFields_title_Read
+  update: CaseStudiesFields_title_Update
+}
+
+type CaseStudiesFields_title_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_title_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_title_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_title_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_updatedAt {
+  create: CaseStudiesFields_updatedAt_Create
+  delete: CaseStudiesFields_updatedAt_Delete
+  read: CaseStudiesFields_updatedAt_Read
+  update: CaseStudiesFields_updatedAt_Update
+}
+
+type CaseStudiesFields_updatedAt_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_updatedAt_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_updatedAt_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_updatedAt_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesReadAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type CaseStudiesReadDocAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type CaseStudiesUpdateAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type CaseStudiesUpdateDocAccess {
+  permission: Boolean!
+  where: JSONObject
+}
+
+type CaseStudy {
+  caseStudySections: [CaseStudy_CaseStudySections!]
+  createdAt: DateTime
+  id: String
+  intro: CaseStudy_Intro
+  project: Project!
+  title: String
+  updatedAt: DateTime
 }
 
 type CaseStudyListing {
@@ -1915,6 +2426,354 @@ input CaseStudyListing_Icon_width_operator {
   less_than: Float
   less_than_equal: Float
   not_equals: Float
+}
+
+union CaseStudy_CaseStudySections = ImageBlock | TextBlock
+
+type CaseStudy_Intro {
+  heading: String
+  image(where: CaseStudy_Intro_Image_where): Image
+  text(depth: Int): JSON
+}
+
+input CaseStudy_Intro_Image_alt_operator {
+  all: [String]
+  contains: String
+  equals: String
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_Intro_Image_createdAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input CaseStudy_Intro_Image_filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_Intro_Image_filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input CaseStudy_Intro_Image_height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input CaseStudy_Intro_Image_id_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_Intro_Image_mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_Intro_Image_sizes__thumbnail__filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_Intro_Image_sizes__thumbnail__filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input CaseStudy_Intro_Image_sizes__thumbnail__height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input CaseStudy_Intro_Image_sizes__thumbnail__mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_Intro_Image_sizes__thumbnail__url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_Intro_Image_sizes__thumbnail__width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input CaseStudy_Intro_Image_updatedAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input CaseStudy_Intro_Image_url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_Intro_Image_where {
+  AND: [CaseStudy_Intro_Image_where_and]
+  OR: [CaseStudy_Intro_Image_where_or]
+  alt: CaseStudy_Intro_Image_alt_operator
+  createdAt: CaseStudy_Intro_Image_createdAt_operator
+  filename: CaseStudy_Intro_Image_filename_operator
+  filesize: CaseStudy_Intro_Image_filesize_operator
+  height: CaseStudy_Intro_Image_height_operator
+  id: CaseStudy_Intro_Image_id_operator
+  mimeType: CaseStudy_Intro_Image_mimeType_operator
+  sizes__thumbnail__filename: CaseStudy_Intro_Image_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: CaseStudy_Intro_Image_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: CaseStudy_Intro_Image_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: CaseStudy_Intro_Image_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: CaseStudy_Intro_Image_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: CaseStudy_Intro_Image_sizes__thumbnail__width_operator
+  updatedAt: CaseStudy_Intro_Image_updatedAt_operator
+  url: CaseStudy_Intro_Image_url_operator
+  width: CaseStudy_Intro_Image_width_operator
+}
+
+input CaseStudy_Intro_Image_where_and {
+  alt: CaseStudy_Intro_Image_alt_operator
+  createdAt: CaseStudy_Intro_Image_createdAt_operator
+  filename: CaseStudy_Intro_Image_filename_operator
+  filesize: CaseStudy_Intro_Image_filesize_operator
+  height: CaseStudy_Intro_Image_height_operator
+  id: CaseStudy_Intro_Image_id_operator
+  mimeType: CaseStudy_Intro_Image_mimeType_operator
+  sizes__thumbnail__filename: CaseStudy_Intro_Image_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: CaseStudy_Intro_Image_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: CaseStudy_Intro_Image_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: CaseStudy_Intro_Image_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: CaseStudy_Intro_Image_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: CaseStudy_Intro_Image_sizes__thumbnail__width_operator
+  updatedAt: CaseStudy_Intro_Image_updatedAt_operator
+  url: CaseStudy_Intro_Image_url_operator
+  width: CaseStudy_Intro_Image_width_operator
+}
+
+input CaseStudy_Intro_Image_where_or {
+  alt: CaseStudy_Intro_Image_alt_operator
+  createdAt: CaseStudy_Intro_Image_createdAt_operator
+  filename: CaseStudy_Intro_Image_filename_operator
+  filesize: CaseStudy_Intro_Image_filesize_operator
+  height: CaseStudy_Intro_Image_height_operator
+  id: CaseStudy_Intro_Image_id_operator
+  mimeType: CaseStudy_Intro_Image_mimeType_operator
+  sizes__thumbnail__filename: CaseStudy_Intro_Image_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: CaseStudy_Intro_Image_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: CaseStudy_Intro_Image_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: CaseStudy_Intro_Image_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: CaseStudy_Intro_Image_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: CaseStudy_Intro_Image_sizes__thumbnail__width_operator
+  updatedAt: CaseStudy_Intro_Image_updatedAt_operator
+  url: CaseStudy_Intro_Image_url_operator
+  width: CaseStudy_Intro_Image_width_operator
+}
+
+input CaseStudy_Intro_Image_width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input CaseStudy_createdAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input CaseStudy_id_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_intro__heading_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_intro__image_operator {
+  equals: String
+  exists: Boolean
+  not_equals: String
+}
+
+input CaseStudy_intro__text_operator {
+  contains: JSON
+  equals: JSON
+  exists: Boolean
+  like: JSON
+  not_equals: JSON
+}
+
+input CaseStudy_project_operator {
+  all: [String]
+  equals: String
+  in: [String]
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_title_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_updatedAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input CaseStudy_where {
+  AND: [CaseStudy_where_and]
+  OR: [CaseStudy_where_or]
+  createdAt: CaseStudy_createdAt_operator
+  id: CaseStudy_id_operator
+  intro__heading: CaseStudy_intro__heading_operator
+  intro__image: CaseStudy_intro__image_operator
+  intro__text: CaseStudy_intro__text_operator
+  project: CaseStudy_project_operator
+  title: CaseStudy_title_operator
+  updatedAt: CaseStudy_updatedAt_operator
+}
+
+input CaseStudy_where_and {
+  createdAt: CaseStudy_createdAt_operator
+  id: CaseStudy_id_operator
+  intro__heading: CaseStudy_intro__heading_operator
+  intro__image: CaseStudy_intro__image_operator
+  intro__text: CaseStudy_intro__text_operator
+  project: CaseStudy_project_operator
+  title: CaseStudy_title_operator
+  updatedAt: CaseStudy_updatedAt_operator
+}
+
+input CaseStudy_where_or {
+  createdAt: CaseStudy_createdAt_operator
+  id: CaseStudy_id_operator
+  intro__heading: CaseStudy_intro__heading_operator
+  intro__image: CaseStudy_intro__image_operator
+  intro__text: CaseStudy_intro__text_operator
+  project: CaseStudy_project_operator
+  title: CaseStudy_title_operator
+  updatedAt: CaseStudy_updatedAt_operator
 }
 
 type Cta {
@@ -4601,6 +5460,241 @@ type Image {
   width: Float
 }
 
+type ImageBlock {
+  blockName: String
+  blockType: String
+  id: String
+  image(where: ImageBlock_Image_where): Image
+}
+
+input ImageBlock_Image_alt_operator {
+  all: [String]
+  contains: String
+  equals: String
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input ImageBlock_Image_createdAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input ImageBlock_Image_filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input ImageBlock_Image_filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input ImageBlock_Image_height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input ImageBlock_Image_id_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input ImageBlock_Image_mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input ImageBlock_Image_sizes__thumbnail__filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input ImageBlock_Image_sizes__thumbnail__filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input ImageBlock_Image_sizes__thumbnail__height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input ImageBlock_Image_sizes__thumbnail__mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input ImageBlock_Image_sizes__thumbnail__url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input ImageBlock_Image_sizes__thumbnail__width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input ImageBlock_Image_updatedAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input ImageBlock_Image_url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input ImageBlock_Image_where {
+  AND: [ImageBlock_Image_where_and]
+  OR: [ImageBlock_Image_where_or]
+  alt: ImageBlock_Image_alt_operator
+  createdAt: ImageBlock_Image_createdAt_operator
+  filename: ImageBlock_Image_filename_operator
+  filesize: ImageBlock_Image_filesize_operator
+  height: ImageBlock_Image_height_operator
+  id: ImageBlock_Image_id_operator
+  mimeType: ImageBlock_Image_mimeType_operator
+  sizes__thumbnail__filename: ImageBlock_Image_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: ImageBlock_Image_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: ImageBlock_Image_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: ImageBlock_Image_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: ImageBlock_Image_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: ImageBlock_Image_sizes__thumbnail__width_operator
+  updatedAt: ImageBlock_Image_updatedAt_operator
+  url: ImageBlock_Image_url_operator
+  width: ImageBlock_Image_width_operator
+}
+
+input ImageBlock_Image_where_and {
+  alt: ImageBlock_Image_alt_operator
+  createdAt: ImageBlock_Image_createdAt_operator
+  filename: ImageBlock_Image_filename_operator
+  filesize: ImageBlock_Image_filesize_operator
+  height: ImageBlock_Image_height_operator
+  id: ImageBlock_Image_id_operator
+  mimeType: ImageBlock_Image_mimeType_operator
+  sizes__thumbnail__filename: ImageBlock_Image_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: ImageBlock_Image_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: ImageBlock_Image_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: ImageBlock_Image_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: ImageBlock_Image_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: ImageBlock_Image_sizes__thumbnail__width_operator
+  updatedAt: ImageBlock_Image_updatedAt_operator
+  url: ImageBlock_Image_url_operator
+  width: ImageBlock_Image_width_operator
+}
+
+input ImageBlock_Image_where_or {
+  alt: ImageBlock_Image_alt_operator
+  createdAt: ImageBlock_Image_createdAt_operator
+  filename: ImageBlock_Image_filename_operator
+  filesize: ImageBlock_Image_filesize_operator
+  height: ImageBlock_Image_height_operator
+  id: ImageBlock_Image_id_operator
+  mimeType: ImageBlock_Image_mimeType_operator
+  sizes__thumbnail__filename: ImageBlock_Image_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: ImageBlock_Image_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: ImageBlock_Image_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: ImageBlock_Image_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: ImageBlock_Image_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: ImageBlock_Image_sizes__thumbnail__width_operator
+  updatedAt: ImageBlock_Image_updatedAt_operator
+  url: ImageBlock_Image_url_operator
+  width: ImageBlock_Image_width_operator
+}
+
+input ImageBlock_Image_width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
 type Image_Sizes {
   thumbnail: Image_Sizes_Thumbnail
 }
@@ -5745,6 +6839,7 @@ The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](
 scalar JSONObject
 
 type Mutation {
+  createCaseStudy(data: mutationCaseStudyInput!, draft: Boolean): CaseStudy
   createCta(data: mutationCtaInput!, draft: Boolean): Cta
   createHero(data: mutationHeroInput!, draft: Boolean): Hero
   createIcon(data: mutationIconInput!, draft: Boolean): Icon
@@ -5755,6 +6850,7 @@ type Mutation {
   createTestimonial(data: mutationTestimonialInput!, draft: Boolean): Testimonial
   createTool(data: mutationToolInput!, draft: Boolean): Tool
   createUser(data: mutationUserInput!, draft: Boolean): User
+  deleteCaseStudy(id: String!): CaseStudy
   deleteCta(id: String!): Cta
   deleteHero(id: String!): Hero
   deleteIcon(id: String!): Icon
@@ -5773,6 +6869,7 @@ type Mutation {
   resetPasswordUser(password: String, token: String): usersResetPassword
   unlockUser(email: String!): Boolean!
   updateAbout(data: mutationAboutInput!, draft: Boolean): About
+  updateCaseStudy(autosave: Boolean, data: mutationCaseStudyUpdateInput!, draft: Boolean, id: String!): CaseStudy
   updateCaseStudyListing(data: mutationCaseStudyListingInput!, draft: Boolean): CaseStudyListing
   updateCta(autosave: Boolean, data: mutationCtaUpdateInput!, draft: Boolean, id: String!): Cta
   updateHero(autosave: Boolean, data: mutationHeroUpdateInput!, draft: Boolean, id: String!): Hero
@@ -6226,13 +7323,13 @@ type Nav_MenuItems {
 type Page {
   createdAt: DateTime
   id: String
-  sections: [Page_Sections!]
+  pageSections: [Page_PageSections!]
   slug: String
   title: String
   updatedAt: DateTime
 }
 
-union Page_Sections = HeroBlock | SingleUseBlock | SocialsBlock
+union Page_PageSections = HeroBlock | SingleUseBlock | SocialsBlock
 
 input Page_createdAt_operator {
   equals: DateTime
@@ -6351,7 +7448,7 @@ type PagesDeleteDocAccess {
 
 type PagesDocAccessFields {
   createdAt: PagesDocAccessFields_createdAt
-  sections: PagesDocAccessFields_sections
+  pageSections: PagesDocAccessFields_pageSections
   slug: PagesDocAccessFields_slug
   title: PagesDocAccessFields_title
   updatedAt: PagesDocAccessFields_updatedAt
@@ -6380,26 +7477,26 @@ type PagesDocAccessFields_createdAt_Update {
   permission: Boolean!
 }
 
-type PagesDocAccessFields_sections {
-  create: PagesDocAccessFields_sections_Create
-  delete: PagesDocAccessFields_sections_Delete
-  read: PagesDocAccessFields_sections_Read
-  update: PagesDocAccessFields_sections_Update
+type PagesDocAccessFields_pageSections {
+  create: PagesDocAccessFields_pageSections_Create
+  delete: PagesDocAccessFields_pageSections_Delete
+  read: PagesDocAccessFields_pageSections_Read
+  update: PagesDocAccessFields_pageSections_Update
 }
 
-type PagesDocAccessFields_sections_Create {
+type PagesDocAccessFields_pageSections_Create {
   permission: Boolean!
 }
 
-type PagesDocAccessFields_sections_Delete {
+type PagesDocAccessFields_pageSections_Delete {
   permission: Boolean!
 }
 
-type PagesDocAccessFields_sections_Read {
+type PagesDocAccessFields_pageSections_Read {
   permission: Boolean!
 }
 
-type PagesDocAccessFields_sections_Update {
+type PagesDocAccessFields_pageSections_Update {
   permission: Boolean!
 }
 
@@ -6474,7 +7571,7 @@ type PagesDocAccessFields_updatedAt_Update {
 
 type PagesFields {
   createdAt: PagesFields_createdAt
-  sections: PagesFields_sections
+  pageSections: PagesFields_pageSections
   slug: PagesFields_slug
   title: PagesFields_title
   updatedAt: PagesFields_updatedAt
@@ -6503,26 +7600,26 @@ type PagesFields_createdAt_Update {
   permission: Boolean!
 }
 
-type PagesFields_sections {
-  create: PagesFields_sections_Create
-  delete: PagesFields_sections_Delete
-  read: PagesFields_sections_Read
-  update: PagesFields_sections_Update
+type PagesFields_pageSections {
+  create: PagesFields_pageSections_Create
+  delete: PagesFields_pageSections_Delete
+  read: PagesFields_pageSections_Read
+  update: PagesFields_pageSections_Update
 }
 
-type PagesFields_sections_Create {
+type PagesFields_pageSections_Create {
   permission: Boolean!
 }
 
-type PagesFields_sections_Delete {
+type PagesFields_pageSections_Delete {
   permission: Boolean!
 }
 
-type PagesFields_sections_Read {
+type PagesFields_pageSections_Read {
   permission: Boolean!
 }
 
-type PagesFields_sections_Update {
+type PagesFields_pageSections_Update {
   permission: Boolean!
 }
 
@@ -6623,245 +7720,13 @@ type Preference {
 }
 
 type Project {
-  cardInfo: Project_CardInfo
   createdAt: DateTime
   id: String
   intro: Project_Intro
-  title: String!
+  projectSections: [Project_ProjectSections!]
+  slug: String
+  title: String
   updatedAt: DateTime
-}
-
-type Project_CardInfo {
-  image(where: Project_CardInfo_Image_where): Image
-  snippet: String
-}
-
-input Project_CardInfo_Image_alt_operator {
-  all: [String]
-  contains: String
-  equals: String
-  in: [String]
-  like: String
-  not_equals: String
-  not_in: [String]
-}
-
-input Project_CardInfo_Image_createdAt_operator {
-  equals: DateTime
-  exists: Boolean
-  greater_than: DateTime
-  greater_than_equal: DateTime
-  less_than: DateTime
-  less_than_equal: DateTime
-  like: DateTime
-  not_equals: DateTime
-}
-
-input Project_CardInfo_Image_filename_operator {
-  all: [String]
-  contains: String
-  equals: String
-  exists: Boolean
-  in: [String]
-  like: String
-  not_equals: String
-  not_in: [String]
-}
-
-input Project_CardInfo_Image_filesize_operator {
-  equals: Float
-  exists: Boolean
-  greater_than: Float
-  greater_than_equal: Float
-  less_than: Float
-  less_than_equal: Float
-  not_equals: Float
-}
-
-input Project_CardInfo_Image_height_operator {
-  equals: Float
-  exists: Boolean
-  greater_than: Float
-  greater_than_equal: Float
-  less_than: Float
-  less_than_equal: Float
-  not_equals: Float
-}
-
-input Project_CardInfo_Image_id_operator {
-  all: [String]
-  contains: String
-  equals: String
-  exists: Boolean
-  in: [String]
-  like: String
-  not_equals: String
-  not_in: [String]
-}
-
-input Project_CardInfo_Image_mimeType_operator {
-  all: [String]
-  contains: String
-  equals: String
-  exists: Boolean
-  in: [String]
-  like: String
-  not_equals: String
-  not_in: [String]
-}
-
-input Project_CardInfo_Image_sizes__thumbnail__filename_operator {
-  all: [String]
-  contains: String
-  equals: String
-  exists: Boolean
-  in: [String]
-  like: String
-  not_equals: String
-  not_in: [String]
-}
-
-input Project_CardInfo_Image_sizes__thumbnail__filesize_operator {
-  equals: Float
-  exists: Boolean
-  greater_than: Float
-  greater_than_equal: Float
-  less_than: Float
-  less_than_equal: Float
-  not_equals: Float
-}
-
-input Project_CardInfo_Image_sizes__thumbnail__height_operator {
-  equals: Float
-  exists: Boolean
-  greater_than: Float
-  greater_than_equal: Float
-  less_than: Float
-  less_than_equal: Float
-  not_equals: Float
-}
-
-input Project_CardInfo_Image_sizes__thumbnail__mimeType_operator {
-  all: [String]
-  contains: String
-  equals: String
-  exists: Boolean
-  in: [String]
-  like: String
-  not_equals: String
-  not_in: [String]
-}
-
-input Project_CardInfo_Image_sizes__thumbnail__url_operator {
-  all: [String]
-  contains: String
-  equals: String
-  exists: Boolean
-  in: [String]
-  like: String
-  not_equals: String
-  not_in: [String]
-}
-
-input Project_CardInfo_Image_sizes__thumbnail__width_operator {
-  equals: Float
-  exists: Boolean
-  greater_than: Float
-  greater_than_equal: Float
-  less_than: Float
-  less_than_equal: Float
-  not_equals: Float
-}
-
-input Project_CardInfo_Image_updatedAt_operator {
-  equals: DateTime
-  exists: Boolean
-  greater_than: DateTime
-  greater_than_equal: DateTime
-  less_than: DateTime
-  less_than_equal: DateTime
-  like: DateTime
-  not_equals: DateTime
-}
-
-input Project_CardInfo_Image_url_operator {
-  all: [String]
-  contains: String
-  equals: String
-  exists: Boolean
-  in: [String]
-  like: String
-  not_equals: String
-  not_in: [String]
-}
-
-input Project_CardInfo_Image_where {
-  AND: [Project_CardInfo_Image_where_and]
-  OR: [Project_CardInfo_Image_where_or]
-  alt: Project_CardInfo_Image_alt_operator
-  createdAt: Project_CardInfo_Image_createdAt_operator
-  filename: Project_CardInfo_Image_filename_operator
-  filesize: Project_CardInfo_Image_filesize_operator
-  height: Project_CardInfo_Image_height_operator
-  id: Project_CardInfo_Image_id_operator
-  mimeType: Project_CardInfo_Image_mimeType_operator
-  sizes__thumbnail__filename: Project_CardInfo_Image_sizes__thumbnail__filename_operator
-  sizes__thumbnail__filesize: Project_CardInfo_Image_sizes__thumbnail__filesize_operator
-  sizes__thumbnail__height: Project_CardInfo_Image_sizes__thumbnail__height_operator
-  sizes__thumbnail__mimeType: Project_CardInfo_Image_sizes__thumbnail__mimeType_operator
-  sizes__thumbnail__url: Project_CardInfo_Image_sizes__thumbnail__url_operator
-  sizes__thumbnail__width: Project_CardInfo_Image_sizes__thumbnail__width_operator
-  updatedAt: Project_CardInfo_Image_updatedAt_operator
-  url: Project_CardInfo_Image_url_operator
-  width: Project_CardInfo_Image_width_operator
-}
-
-input Project_CardInfo_Image_where_and {
-  alt: Project_CardInfo_Image_alt_operator
-  createdAt: Project_CardInfo_Image_createdAt_operator
-  filename: Project_CardInfo_Image_filename_operator
-  filesize: Project_CardInfo_Image_filesize_operator
-  height: Project_CardInfo_Image_height_operator
-  id: Project_CardInfo_Image_id_operator
-  mimeType: Project_CardInfo_Image_mimeType_operator
-  sizes__thumbnail__filename: Project_CardInfo_Image_sizes__thumbnail__filename_operator
-  sizes__thumbnail__filesize: Project_CardInfo_Image_sizes__thumbnail__filesize_operator
-  sizes__thumbnail__height: Project_CardInfo_Image_sizes__thumbnail__height_operator
-  sizes__thumbnail__mimeType: Project_CardInfo_Image_sizes__thumbnail__mimeType_operator
-  sizes__thumbnail__url: Project_CardInfo_Image_sizes__thumbnail__url_operator
-  sizes__thumbnail__width: Project_CardInfo_Image_sizes__thumbnail__width_operator
-  updatedAt: Project_CardInfo_Image_updatedAt_operator
-  url: Project_CardInfo_Image_url_operator
-  width: Project_CardInfo_Image_width_operator
-}
-
-input Project_CardInfo_Image_where_or {
-  alt: Project_CardInfo_Image_alt_operator
-  createdAt: Project_CardInfo_Image_createdAt_operator
-  filename: Project_CardInfo_Image_filename_operator
-  filesize: Project_CardInfo_Image_filesize_operator
-  height: Project_CardInfo_Image_height_operator
-  id: Project_CardInfo_Image_id_operator
-  mimeType: Project_CardInfo_Image_mimeType_operator
-  sizes__thumbnail__filename: Project_CardInfo_Image_sizes__thumbnail__filename_operator
-  sizes__thumbnail__filesize: Project_CardInfo_Image_sizes__thumbnail__filesize_operator
-  sizes__thumbnail__height: Project_CardInfo_Image_sizes__thumbnail__height_operator
-  sizes__thumbnail__mimeType: Project_CardInfo_Image_sizes__thumbnail__mimeType_operator
-  sizes__thumbnail__url: Project_CardInfo_Image_sizes__thumbnail__url_operator
-  sizes__thumbnail__width: Project_CardInfo_Image_sizes__thumbnail__width_operator
-  updatedAt: Project_CardInfo_Image_updatedAt_operator
-  url: Project_CardInfo_Image_url_operator
-  width: Project_CardInfo_Image_width_operator
-}
-
-input Project_CardInfo_Image_width_operator {
-  equals: Float
-  exists: Boolean
-  greater_than: Float
-  greater_than_equal: Float
-  less_than: Float
-  less_than_equal: Float
-  not_equals: Float
 }
 
 type Project_Intro {
@@ -7097,19 +7962,7 @@ input Project_Intro_Image_width_operator {
   not_equals: Float
 }
 
-input Project_cardInfo__image_operator {
-  equals: String
-  exists: Boolean
-  not_equals: String
-}
-
-input Project_cardInfo__snippet_operator {
-  contains: String
-  equals: String
-  exists: Boolean
-  like: String
-  not_equals: String
-}
+union Project_ProjectSections = ImageBlock | TextBlock
 
 input Project_createdAt_operator {
   equals: DateTime
@@ -7147,10 +8000,22 @@ input Project_intro__image_operator {
   not_equals: String
 }
 
+input Project_slug_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
 input Project_title_operator {
   all: [String]
   contains: String
   equals: String
+  exists: Boolean
   in: [String]
   like: String
   not_equals: String
@@ -7171,34 +8036,31 @@ input Project_updatedAt_operator {
 input Project_where {
   AND: [Project_where_and]
   OR: [Project_where_or]
-  cardInfo__image: Project_cardInfo__image_operator
-  cardInfo__snippet: Project_cardInfo__snippet_operator
   createdAt: Project_createdAt_operator
   id: Project_id_operator
   intro__description: Project_intro__description_operator
   intro__image: Project_intro__image_operator
+  slug: Project_slug_operator
   title: Project_title_operator
   updatedAt: Project_updatedAt_operator
 }
 
 input Project_where_and {
-  cardInfo__image: Project_cardInfo__image_operator
-  cardInfo__snippet: Project_cardInfo__snippet_operator
   createdAt: Project_createdAt_operator
   id: Project_id_operator
   intro__description: Project_intro__description_operator
   intro__image: Project_intro__image_operator
+  slug: Project_slug_operator
   title: Project_title_operator
   updatedAt: Project_updatedAt_operator
 }
 
 input Project_where_or {
-  cardInfo__image: Project_cardInfo__image_operator
-  cardInfo__snippet: Project_cardInfo__snippet_operator
   createdAt: Project_createdAt_operator
   id: Project_id_operator
   intro__description: Project_intro__description_operator
   intro__image: Project_intro__image_operator
+  slug: Project_slug_operator
   title: Project_title_operator
   updatedAt: Project_updatedAt_operator
 }
@@ -7238,86 +8100,12 @@ type ProjectsDeleteDocAccess {
 }
 
 type ProjectsDocAccessFields {
-  cardInfo: ProjectsDocAccessFields_cardInfo
   createdAt: ProjectsDocAccessFields_createdAt
   intro: ProjectsDocAccessFields_intro
+  projectSections: ProjectsDocAccessFields_projectSections
+  slug: ProjectsDocAccessFields_slug
   title: ProjectsDocAccessFields_title
   updatedAt: ProjectsDocAccessFields_updatedAt
-}
-
-type ProjectsDocAccessFields_cardInfo {
-  create: ProjectsDocAccessFields_cardInfo_Create
-  delete: ProjectsDocAccessFields_cardInfo_Delete
-  fields: ProjectsDocAccessFields_cardInfo_Fields
-  read: ProjectsDocAccessFields_cardInfo_Read
-  update: ProjectsDocAccessFields_cardInfo_Update
-}
-
-type ProjectsDocAccessFields_cardInfo_Create {
-  permission: Boolean!
-}
-
-type ProjectsDocAccessFields_cardInfo_Delete {
-  permission: Boolean!
-}
-
-type ProjectsDocAccessFields_cardInfo_Fields {
-  image: ProjectsDocAccessFields_cardInfo_image
-  snippet: ProjectsDocAccessFields_cardInfo_snippet
-}
-
-type ProjectsDocAccessFields_cardInfo_Read {
-  permission: Boolean!
-}
-
-type ProjectsDocAccessFields_cardInfo_Update {
-  permission: Boolean!
-}
-
-type ProjectsDocAccessFields_cardInfo_image {
-  create: ProjectsDocAccessFields_cardInfo_image_Create
-  delete: ProjectsDocAccessFields_cardInfo_image_Delete
-  read: ProjectsDocAccessFields_cardInfo_image_Read
-  update: ProjectsDocAccessFields_cardInfo_image_Update
-}
-
-type ProjectsDocAccessFields_cardInfo_image_Create {
-  permission: Boolean!
-}
-
-type ProjectsDocAccessFields_cardInfo_image_Delete {
-  permission: Boolean!
-}
-
-type ProjectsDocAccessFields_cardInfo_image_Read {
-  permission: Boolean!
-}
-
-type ProjectsDocAccessFields_cardInfo_image_Update {
-  permission: Boolean!
-}
-
-type ProjectsDocAccessFields_cardInfo_snippet {
-  create: ProjectsDocAccessFields_cardInfo_snippet_Create
-  delete: ProjectsDocAccessFields_cardInfo_snippet_Delete
-  read: ProjectsDocAccessFields_cardInfo_snippet_Read
-  update: ProjectsDocAccessFields_cardInfo_snippet_Update
-}
-
-type ProjectsDocAccessFields_cardInfo_snippet_Create {
-  permission: Boolean!
-}
-
-type ProjectsDocAccessFields_cardInfo_snippet_Delete {
-  permission: Boolean!
-}
-
-type ProjectsDocAccessFields_cardInfo_snippet_Read {
-  permission: Boolean!
-}
-
-type ProjectsDocAccessFields_cardInfo_snippet_Update {
-  permission: Boolean!
 }
 
 type ProjectsDocAccessFields_createdAt {
@@ -7418,6 +8206,52 @@ type ProjectsDocAccessFields_intro_image_Update {
   permission: Boolean!
 }
 
+type ProjectsDocAccessFields_projectSections {
+  create: ProjectsDocAccessFields_projectSections_Create
+  delete: ProjectsDocAccessFields_projectSections_Delete
+  read: ProjectsDocAccessFields_projectSections_Read
+  update: ProjectsDocAccessFields_projectSections_Update
+}
+
+type ProjectsDocAccessFields_projectSections_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_projectSections_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_projectSections_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_projectSections_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_slug {
+  create: ProjectsDocAccessFields_slug_Create
+  delete: ProjectsDocAccessFields_slug_Delete
+  read: ProjectsDocAccessFields_slug_Read
+  update: ProjectsDocAccessFields_slug_Update
+}
+
+type ProjectsDocAccessFields_slug_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_slug_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_slug_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_slug_Update {
+  permission: Boolean!
+}
+
 type ProjectsDocAccessFields_title {
   create: ProjectsDocAccessFields_title_Create
   delete: ProjectsDocAccessFields_title_Delete
@@ -7465,86 +8299,12 @@ type ProjectsDocAccessFields_updatedAt_Update {
 }
 
 type ProjectsFields {
-  cardInfo: ProjectsFields_cardInfo
   createdAt: ProjectsFields_createdAt
   intro: ProjectsFields_intro
+  projectSections: ProjectsFields_projectSections
+  slug: ProjectsFields_slug
   title: ProjectsFields_title
   updatedAt: ProjectsFields_updatedAt
-}
-
-type ProjectsFields_cardInfo {
-  create: ProjectsFields_cardInfo_Create
-  delete: ProjectsFields_cardInfo_Delete
-  fields: ProjectsFields_cardInfo_Fields
-  read: ProjectsFields_cardInfo_Read
-  update: ProjectsFields_cardInfo_Update
-}
-
-type ProjectsFields_cardInfo_Create {
-  permission: Boolean!
-}
-
-type ProjectsFields_cardInfo_Delete {
-  permission: Boolean!
-}
-
-type ProjectsFields_cardInfo_Fields {
-  image: ProjectsFields_cardInfo_image
-  snippet: ProjectsFields_cardInfo_snippet
-}
-
-type ProjectsFields_cardInfo_Read {
-  permission: Boolean!
-}
-
-type ProjectsFields_cardInfo_Update {
-  permission: Boolean!
-}
-
-type ProjectsFields_cardInfo_image {
-  create: ProjectsFields_cardInfo_image_Create
-  delete: ProjectsFields_cardInfo_image_Delete
-  read: ProjectsFields_cardInfo_image_Read
-  update: ProjectsFields_cardInfo_image_Update
-}
-
-type ProjectsFields_cardInfo_image_Create {
-  permission: Boolean!
-}
-
-type ProjectsFields_cardInfo_image_Delete {
-  permission: Boolean!
-}
-
-type ProjectsFields_cardInfo_image_Read {
-  permission: Boolean!
-}
-
-type ProjectsFields_cardInfo_image_Update {
-  permission: Boolean!
-}
-
-type ProjectsFields_cardInfo_snippet {
-  create: ProjectsFields_cardInfo_snippet_Create
-  delete: ProjectsFields_cardInfo_snippet_Delete
-  read: ProjectsFields_cardInfo_snippet_Read
-  update: ProjectsFields_cardInfo_snippet_Update
-}
-
-type ProjectsFields_cardInfo_snippet_Create {
-  permission: Boolean!
-}
-
-type ProjectsFields_cardInfo_snippet_Delete {
-  permission: Boolean!
-}
-
-type ProjectsFields_cardInfo_snippet_Read {
-  permission: Boolean!
-}
-
-type ProjectsFields_cardInfo_snippet_Update {
-  permission: Boolean!
 }
 
 type ProjectsFields_createdAt {
@@ -7645,6 +8405,52 @@ type ProjectsFields_intro_image_Update {
   permission: Boolean!
 }
 
+type ProjectsFields_projectSections {
+  create: ProjectsFields_projectSections_Create
+  delete: ProjectsFields_projectSections_Delete
+  read: ProjectsFields_projectSections_Read
+  update: ProjectsFields_projectSections_Update
+}
+
+type ProjectsFields_projectSections_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_projectSections_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_projectSections_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_projectSections_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_slug {
+  create: ProjectsFields_slug_Create
+  delete: ProjectsFields_slug_Delete
+  read: ProjectsFields_slug_Read
+  update: ProjectsFields_slug_Update
+}
+
+type ProjectsFields_slug_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_slug_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_slug_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_slug_Update {
+  permission: Boolean!
+}
+
 type ProjectsFields_title {
   create: ProjectsFields_title_Create
   delete: ProjectsFields_title_Delete
@@ -7714,6 +8520,8 @@ type ProjectsUpdateDocAccess {
 type Query {
   About(draft: Boolean): About
   Access: Access
+  CaseStudies(draft: Boolean, limit: Int, page: Int, sort: String, where: CaseStudy_where): CaseStudies
+  CaseStudy(draft: Boolean, id: String!): CaseStudy
   CaseStudyListing(draft: Boolean): CaseStudyListing
   Cta(draft: Boolean, id: String!): Cta
   Ctas(draft: Boolean, limit: Int, page: Int, sort: String, where: Cta_where): Ctas
@@ -7740,6 +8548,7 @@ type Query {
   User(draft: Boolean, id: String!): User
   Users(draft: Boolean, limit: Int, page: Int, sort: String, where: User_where): Users
   docAccessAbout: aboutDocAccess
+  docAccessCaseStudy(id: String!): case_studiesDocAccess
   docAccessCaseStudyListing: case_study_listingDocAccess
   docAccessCta(id: String!): ctasDocAccess
   docAccessHero(id: String!): heroesDocAccess
@@ -9774,6 +10583,14 @@ type TestimonialsUpdateDocAccess {
   where: JSONObject
 }
 
+type TextBlock {
+  blockName: String
+  blockType: String
+  heading: String
+  id: String
+  text(depth: Int): JSON
+}
+
 type Tool {
   createdAt: DateTime
   icon(where: Tool_Icon_where): Icon!
@@ -11363,6 +12180,22 @@ type aboutDocAccess {
   update: AboutUpdateDocAccess
 }
 
+type case_studiesAccess {
+  create: CaseStudiesCreateAccess
+  delete: CaseStudiesDeleteAccess
+  fields: CaseStudiesFields
+  read: CaseStudiesReadAccess
+  update: CaseStudiesUpdateAccess
+}
+
+type case_studiesDocAccess {
+  create: CaseStudiesCreateDocAccess
+  delete: CaseStudiesDeleteDocAccess
+  fields: CaseStudiesDocAccessFields
+  read: CaseStudiesReadDocAccess
+  update: CaseStudiesUpdateDocAccess
+}
+
 type case_study_listingAccess {
   fields: CaseStudyListingFields
   read: CaseStudyListingReadAccess
@@ -11441,10 +12274,10 @@ type imagesDocAccess {
 
 input mutationAboutInput {
   coloredSubhead: JSON
-  content: JSON
   createdAt: String
   image: String
   pets: mutationAbout_PetsInput
+  text: JSON
   title: String
   updatedAt: String
 }
@@ -11455,11 +12288,41 @@ input mutationAbout_PetsInput {
   warren: String
 }
 
+input mutationCaseStudyInput {
+  caseStudySections: JSON
+  createdAt: String
+  intro: mutationCaseStudy_IntroInput
+  project: String
+  title: String
+  updatedAt: String
+}
+
 input mutationCaseStudyListingInput {
   createdAt: String
   icon: String
   title: String
   updatedAt: String
+}
+
+input mutationCaseStudyUpdateInput {
+  caseStudySections: JSON
+  createdAt: String
+  intro: mutationCaseStudyUpdate_IntroInput
+  project: String
+  title: String
+  updatedAt: String
+}
+
+input mutationCaseStudyUpdate_IntroInput {
+  heading: String
+  image: String
+  text: JSON
+}
+
+input mutationCaseStudy_IntroInput {
+  heading: String
+  image: String
+  text: JSON
 }
 
 input mutationCtaInput {
@@ -11628,7 +12491,7 @@ input mutationNav_MenuItemsInput {
 
 input mutationPageInput {
   createdAt: String
-  sections: JSON
+  pageSections: JSON
   slug: String
   title: String
   updatedAt: String
@@ -11636,41 +12499,33 @@ input mutationPageInput {
 
 input mutationPageUpdateInput {
   createdAt: String
-  sections: JSON
+  pageSections: JSON
   slug: String
   title: String
   updatedAt: String
 }
 
 input mutationProjectInput {
-  cardInfo: mutationProject_CardInfoInput
   createdAt: String
   intro: mutationProject_IntroInput
-  title: String!
-  updatedAt: String
-}
-
-input mutationProjectUpdateInput {
-  cardInfo: mutationProjectUpdate_CardInfoInput
-  createdAt: String
-  intro: mutationProjectUpdate_IntroInput
+  projectSections: JSON
+  slug: String
   title: String
   updatedAt: String
 }
 
-input mutationProjectUpdate_CardInfoInput {
-  image: String
-  snippet: String
+input mutationProjectUpdateInput {
+  createdAt: String
+  intro: mutationProjectUpdate_IntroInput
+  projectSections: JSON
+  slug: String
+  title: String
+  updatedAt: String
 }
 
 input mutationProjectUpdate_IntroInput {
   description: String
   image: String
-}
-
-input mutationProject_CardInfoInput {
-  image: String
-  snippet: String
 }
 
 input mutationProject_IntroInput {
