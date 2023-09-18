@@ -1,23 +1,38 @@
 import { FC, Fragment } from 'react';
 
-import { Page_PageSections } from '@/api/graphqlTypes';
+import { Page_PageSections, Project_ProjectSections } from '@/api/graphqlTypes';
+import Image from '@/atoms/Image';
 import Hero from '@/components/Hero';
 import SingleUse from '@/components/SingleUse';
 import Socials from '@/components/Socials';
+import RichText from '@/molecules/RichText';
 
 interface Sections {
     /** Sections to render */
-    components?: Page_PageSections[];
+    components?: Page_PageSections[] | Project_ProjectSections[];
 }
 
 const RenderComponents: FC<Sections> = ({ components }) => {
     if (!components || !components.length) {
         return null;
     }
-    const renderComponent = (component: Page_PageSections) => {
+    const renderComponent = (
+        component: Page_PageSections | Project_ProjectSections
+    ) => {
         switch (component?.__typename) {
             case 'HeroBlock':
                 return <Hero {...component?.hero} />;
+            case 'TextBlock':
+                return <RichText richText={component?.text} />;
+            case 'ImageBlock':
+                return (
+                    <Image
+                        src={component?.image?.url || ''}
+                        alt={component?.image?.alt || ''}
+                        width={component?.image?.width || 1000}
+                        height={component?.image?.height || 1000}
+                    />
+                );
             case 'SocialsBlock':
                 return <Socials socials={component?.socials} />;
             case 'SingleUseBlock':

@@ -27,9 +27,36 @@ export const PAGE_CONTENT_QUERY = gql`
     }
 `;
 
+export const PROJECT_CONTENT_QUERY = gql`
+ query ProjectContentQuery($slug: String!) {
+    Projects(where:{ slug: { equals: $slug }}) {
+            docs {
+            id
+            title
+            slug
+            projectSections {
+            ${IMAGE_BLOCK_FRAGMENT}
+            ${TEXT_BLOCK_FRAGMENT}
+            }
+            intro {
+                description
+                image {
+                    ${IMAGE_FRAGMENT}
+                }
+            }
+        }
+    }
+  }
+`;
+
 export const SLUG_QUERY = gql`
-    query PagesQuery {
+    query SlugQuery {
         Pages {
+            docs {
+                slug
+            }
+        }
+        Projects {
             docs {
                 slug
             }
@@ -108,24 +135,4 @@ query AboutQuery {
             }
         }
     }
-`;
-
-export const PROJECT_CONTENT_QUERY = gql`
-query ProjectsQuery {
-    docs {
-      id
-      title
-      slug
-      projectSections {
-       ${IMAGE_BLOCK_FRAGMENT}
-       ${TEXT_BLOCK_FRAGMENT}
-      }
-      intro {
-        description
-        image {
-            ${IMAGE_FRAGMENT}
-        }
-      }
-    }
-  }
 `;

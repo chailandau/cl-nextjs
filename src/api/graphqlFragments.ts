@@ -74,6 +74,7 @@ export const SINGLE_USE_FRAGMENT = `
 `;
 export const TEXT_BLOCK_FRAGMENT = `
   ...on TextBlock {
+    __typename
     id
     heading
     text
@@ -82,8 +83,9 @@ export const TEXT_BLOCK_FRAGMENT = `
 
 export const IMAGE_BLOCK_FRAGMENT = `
 ...on ImageBlock {
+  __typename
     image {
             ${IMAGE_FRAGMENT}
           }
-}
+  }
 `;
