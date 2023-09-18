@@ -21,7 +21,7 @@ export const getBreadcrumbData = (paths: string) => {
         switch (path.toLowerCase()) {
             case 'projects': {
                 breadcrumbs.push({
-                    label: 'Home',
+                    label: 'Work',
                     link: '/'
                 });
                 break;
