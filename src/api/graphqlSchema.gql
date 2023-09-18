@@ -1503,7 +1503,7 @@ type CaseStudiesDocAccessFields {
   caseStudySections: CaseStudiesDocAccessFields_caseStudySections
   createdAt: CaseStudiesDocAccessFields_createdAt
   intro: CaseStudiesDocAccessFields_intro
-  project: CaseStudiesDocAccessFields_project
+  slug: CaseStudiesDocAccessFields_slug
   title: CaseStudiesDocAccessFields_title
   updatedAt: CaseStudiesDocAccessFields_updatedAt
 }
@@ -1653,26 +1653,26 @@ type CaseStudiesDocAccessFields_intro_text_Update {
   permission: Boolean!
 }
 
-type CaseStudiesDocAccessFields_project {
-  create: CaseStudiesDocAccessFields_project_Create
-  delete: CaseStudiesDocAccessFields_project_Delete
-  read: CaseStudiesDocAccessFields_project_Read
-  update: CaseStudiesDocAccessFields_project_Update
+type CaseStudiesDocAccessFields_slug {
+  create: CaseStudiesDocAccessFields_slug_Create
+  delete: CaseStudiesDocAccessFields_slug_Delete
+  read: CaseStudiesDocAccessFields_slug_Read
+  update: CaseStudiesDocAccessFields_slug_Update
 }
 
-type CaseStudiesDocAccessFields_project_Create {
+type CaseStudiesDocAccessFields_slug_Create {
   permission: Boolean!
 }
 
-type CaseStudiesDocAccessFields_project_Delete {
+type CaseStudiesDocAccessFields_slug_Delete {
   permission: Boolean!
 }
 
-type CaseStudiesDocAccessFields_project_Read {
+type CaseStudiesDocAccessFields_slug_Read {
   permission: Boolean!
 }
 
-type CaseStudiesDocAccessFields_project_Update {
+type CaseStudiesDocAccessFields_slug_Update {
   permission: Boolean!
 }
 
@@ -1726,7 +1726,7 @@ type CaseStudiesFields {
   caseStudySections: CaseStudiesFields_caseStudySections
   createdAt: CaseStudiesFields_createdAt
   intro: CaseStudiesFields_intro
-  project: CaseStudiesFields_project
+  slug: CaseStudiesFields_slug
   title: CaseStudiesFields_title
   updatedAt: CaseStudiesFields_updatedAt
 }
@@ -1876,26 +1876,26 @@ type CaseStudiesFields_intro_text_Update {
   permission: Boolean!
 }
 
-type CaseStudiesFields_project {
-  create: CaseStudiesFields_project_Create
-  delete: CaseStudiesFields_project_Delete
-  read: CaseStudiesFields_project_Read
-  update: CaseStudiesFields_project_Update
+type CaseStudiesFields_slug {
+  create: CaseStudiesFields_slug_Create
+  delete: CaseStudiesFields_slug_Delete
+  read: CaseStudiesFields_slug_Read
+  update: CaseStudiesFields_slug_Update
 }
 
-type CaseStudiesFields_project_Create {
+type CaseStudiesFields_slug_Create {
   permission: Boolean!
 }
 
-type CaseStudiesFields_project_Delete {
+type CaseStudiesFields_slug_Delete {
   permission: Boolean!
 }
 
-type CaseStudiesFields_project_Read {
+type CaseStudiesFields_slug_Read {
   permission: Boolean!
 }
 
-type CaseStudiesFields_project_Update {
+type CaseStudiesFields_slug_Update {
   permission: Boolean!
 }
 
@@ -1970,7 +1970,7 @@ type CaseStudy {
   createdAt: DateTime
   id: String
   intro: CaseStudy_Intro
-  project: Project!
+  slug: String
   title: String
   updatedAt: DateTime
 }
@@ -2711,10 +2711,13 @@ input CaseStudy_intro__text_operator {
   not_equals: JSON
 }
 
-input CaseStudy_project_operator {
+input CaseStudy_slug_operator {
   all: [String]
+  contains: String
   equals: String
+  exists: Boolean
   in: [String]
+  like: String
   not_equals: String
   not_in: [String]
 }
@@ -2749,7 +2752,7 @@ input CaseStudy_where {
   intro__heading: CaseStudy_intro__heading_operator
   intro__image: CaseStudy_intro__image_operator
   intro__text: CaseStudy_intro__text_operator
-  project: CaseStudy_project_operator
+  slug: CaseStudy_slug_operator
   title: CaseStudy_title_operator
   updatedAt: CaseStudy_updatedAt_operator
 }
@@ -2760,7 +2763,7 @@ input CaseStudy_where_and {
   intro__heading: CaseStudy_intro__heading_operator
   intro__image: CaseStudy_intro__image_operator
   intro__text: CaseStudy_intro__text_operator
-  project: CaseStudy_project_operator
+  slug: CaseStudy_slug_operator
   title: CaseStudy_title_operator
   updatedAt: CaseStudy_updatedAt_operator
 }
@@ -2771,7 +2774,7 @@ input CaseStudy_where_or {
   intro__heading: CaseStudy_intro__heading_operator
   intro__image: CaseStudy_intro__image_operator
   intro__text: CaseStudy_intro__text_operator
-  project: CaseStudy_project_operator
+  slug: CaseStudy_slug_operator
   title: CaseStudy_title_operator
   updatedAt: CaseStudy_updatedAt_operator
 }
@@ -7720,6 +7723,7 @@ type Preference {
 }
 
 type Project {
+  caseStudies: [CaseStudy!]
   createdAt: DateTime
   id: String
   intro: Project_Intro
@@ -7964,6 +7968,15 @@ input Project_Intro_Image_width_operator {
 
 union Project_ProjectSections = ImageBlock | TextBlock
 
+input Project_caseStudies_operator {
+  all: [String]
+  equals: String
+  exists: Boolean
+  in: [String]
+  not_equals: String
+  not_in: [String]
+}
+
 input Project_createdAt_operator {
   equals: DateTime
   exists: Boolean
@@ -8036,6 +8049,7 @@ input Project_updatedAt_operator {
 input Project_where {
   AND: [Project_where_and]
   OR: [Project_where_or]
+  caseStudies: Project_caseStudies_operator
   createdAt: Project_createdAt_operator
   id: Project_id_operator
   intro__description: Project_intro__description_operator
@@ -8046,6 +8060,7 @@ input Project_where {
 }
 
 input Project_where_and {
+  caseStudies: Project_caseStudies_operator
   createdAt: Project_createdAt_operator
   id: Project_id_operator
   intro__description: Project_intro__description_operator
@@ -8056,6 +8071,7 @@ input Project_where_and {
 }
 
 input Project_where_or {
+  caseStudies: Project_caseStudies_operator
   createdAt: Project_createdAt_operator
   id: Project_id_operator
   intro__description: Project_intro__description_operator
@@ -8100,12 +8116,36 @@ type ProjectsDeleteDocAccess {
 }
 
 type ProjectsDocAccessFields {
+  caseStudies: ProjectsDocAccessFields_caseStudies
   createdAt: ProjectsDocAccessFields_createdAt
   intro: ProjectsDocAccessFields_intro
   projectSections: ProjectsDocAccessFields_projectSections
   slug: ProjectsDocAccessFields_slug
   title: ProjectsDocAccessFields_title
   updatedAt: ProjectsDocAccessFields_updatedAt
+}
+
+type ProjectsDocAccessFields_caseStudies {
+  create: ProjectsDocAccessFields_caseStudies_Create
+  delete: ProjectsDocAccessFields_caseStudies_Delete
+  read: ProjectsDocAccessFields_caseStudies_Read
+  update: ProjectsDocAccessFields_caseStudies_Update
+}
+
+type ProjectsDocAccessFields_caseStudies_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_caseStudies_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_caseStudies_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_caseStudies_Update {
+  permission: Boolean!
 }
 
 type ProjectsDocAccessFields_createdAt {
@@ -8299,12 +8339,36 @@ type ProjectsDocAccessFields_updatedAt_Update {
 }
 
 type ProjectsFields {
+  caseStudies: ProjectsFields_caseStudies
   createdAt: ProjectsFields_createdAt
   intro: ProjectsFields_intro
   projectSections: ProjectsFields_projectSections
   slug: ProjectsFields_slug
   title: ProjectsFields_title
   updatedAt: ProjectsFields_updatedAt
+}
+
+type ProjectsFields_caseStudies {
+  create: ProjectsFields_caseStudies_Create
+  delete: ProjectsFields_caseStudies_Delete
+  read: ProjectsFields_caseStudies_Read
+  update: ProjectsFields_caseStudies_Update
+}
+
+type ProjectsFields_caseStudies_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_caseStudies_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_caseStudies_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_caseStudies_Update {
+  permission: Boolean!
 }
 
 type ProjectsFields_createdAt {
@@ -12292,7 +12356,7 @@ input mutationCaseStudyInput {
   caseStudySections: JSON
   createdAt: String
   intro: mutationCaseStudy_IntroInput
-  project: String
+  slug: String
   title: String
   updatedAt: String
 }
@@ -12308,7 +12372,7 @@ input mutationCaseStudyUpdateInput {
   caseStudySections: JSON
   createdAt: String
   intro: mutationCaseStudyUpdate_IntroInput
-  project: String
+  slug: String
   title: String
   updatedAt: String
 }
@@ -12506,6 +12570,7 @@ input mutationPageUpdateInput {
 }
 
 input mutationProjectInput {
+  caseStudies: [String]
   createdAt: String
   intro: mutationProject_IntroInput
   projectSections: JSON
@@ -12515,6 +12580,7 @@ input mutationProjectInput {
 }
 
 input mutationProjectUpdateInput {
+  caseStudies: [String]
   createdAt: String
   intro: mutationProjectUpdate_IntroInput
   projectSections: JSON

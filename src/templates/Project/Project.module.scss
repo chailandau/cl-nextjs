@@ -1,0 +1,8 @@
+.project {
+    margin: auto;
+    max-width: rem(660);
+    &-intro {
+        flex-direction: column;
+        gap: rem(16);
+    }
+}

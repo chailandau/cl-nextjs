@@ -1674,7 +1674,7 @@ export type CaseStudiesDocAccessFields = {
     caseStudySections?: Maybe<CaseStudiesDocAccessFields_CaseStudySections>;
     createdAt?: Maybe<CaseStudiesDocAccessFields_CreatedAt>;
     intro?: Maybe<CaseStudiesDocAccessFields_Intro>;
-    project?: Maybe<CaseStudiesDocAccessFields_Project>;
+    slug?: Maybe<CaseStudiesDocAccessFields_Slug>;
     title?: Maybe<CaseStudiesDocAccessFields_Title>;
     updatedAt?: Maybe<CaseStudiesDocAccessFields_UpdatedAt>;
 };
@@ -1855,31 +1855,31 @@ export type CaseStudiesDocAccessFields_Intro_Text_Update = {
     permission: Scalars['Boolean']['output'];
 };
 
-export type CaseStudiesDocAccessFields_Project = {
-    __typename?: 'CaseStudiesDocAccessFields_project';
-    create?: Maybe<CaseStudiesDocAccessFields_Project_Create>;
-    delete?: Maybe<CaseStudiesDocAccessFields_Project_Delete>;
-    read?: Maybe<CaseStudiesDocAccessFields_Project_Read>;
-    update?: Maybe<CaseStudiesDocAccessFields_Project_Update>;
+export type CaseStudiesDocAccessFields_Slug = {
+    __typename?: 'CaseStudiesDocAccessFields_slug';
+    create?: Maybe<CaseStudiesDocAccessFields_Slug_Create>;
+    delete?: Maybe<CaseStudiesDocAccessFields_Slug_Delete>;
+    read?: Maybe<CaseStudiesDocAccessFields_Slug_Read>;
+    update?: Maybe<CaseStudiesDocAccessFields_Slug_Update>;
 };
 
-export type CaseStudiesDocAccessFields_Project_Create = {
-    __typename?: 'CaseStudiesDocAccessFields_project_Create';
+export type CaseStudiesDocAccessFields_Slug_Create = {
+    __typename?: 'CaseStudiesDocAccessFields_slug_Create';
     permission: Scalars['Boolean']['output'];
 };
 
-export type CaseStudiesDocAccessFields_Project_Delete = {
-    __typename?: 'CaseStudiesDocAccessFields_project_Delete';
+export type CaseStudiesDocAccessFields_Slug_Delete = {
+    __typename?: 'CaseStudiesDocAccessFields_slug_Delete';
     permission: Scalars['Boolean']['output'];
 };
 
-export type CaseStudiesDocAccessFields_Project_Read = {
-    __typename?: 'CaseStudiesDocAccessFields_project_Read';
+export type CaseStudiesDocAccessFields_Slug_Read = {
+    __typename?: 'CaseStudiesDocAccessFields_slug_Read';
     permission: Scalars['Boolean']['output'];
 };
 
-export type CaseStudiesDocAccessFields_Project_Update = {
-    __typename?: 'CaseStudiesDocAccessFields_project_Update';
+export type CaseStudiesDocAccessFields_Slug_Update = {
+    __typename?: 'CaseStudiesDocAccessFields_slug_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -1944,7 +1944,7 @@ export type CaseStudiesFields = {
     caseStudySections?: Maybe<CaseStudiesFields_CaseStudySections>;
     createdAt?: Maybe<CaseStudiesFields_CreatedAt>;
     intro?: Maybe<CaseStudiesFields_Intro>;
-    project?: Maybe<CaseStudiesFields_Project>;
+    slug?: Maybe<CaseStudiesFields_Slug>;
     title?: Maybe<CaseStudiesFields_Title>;
     updatedAt?: Maybe<CaseStudiesFields_UpdatedAt>;
 };
@@ -2125,31 +2125,31 @@ export type CaseStudiesFields_Intro_Text_Update = {
     permission: Scalars['Boolean']['output'];
 };
 
-export type CaseStudiesFields_Project = {
-    __typename?: 'CaseStudiesFields_project';
-    create?: Maybe<CaseStudiesFields_Project_Create>;
-    delete?: Maybe<CaseStudiesFields_Project_Delete>;
-    read?: Maybe<CaseStudiesFields_Project_Read>;
-    update?: Maybe<CaseStudiesFields_Project_Update>;
+export type CaseStudiesFields_Slug = {
+    __typename?: 'CaseStudiesFields_slug';
+    create?: Maybe<CaseStudiesFields_Slug_Create>;
+    delete?: Maybe<CaseStudiesFields_Slug_Delete>;
+    read?: Maybe<CaseStudiesFields_Slug_Read>;
+    update?: Maybe<CaseStudiesFields_Slug_Update>;
 };
 
-export type CaseStudiesFields_Project_Create = {
-    __typename?: 'CaseStudiesFields_project_Create';
+export type CaseStudiesFields_Slug_Create = {
+    __typename?: 'CaseStudiesFields_slug_Create';
     permission: Scalars['Boolean']['output'];
 };
 
-export type CaseStudiesFields_Project_Delete = {
-    __typename?: 'CaseStudiesFields_project_Delete';
+export type CaseStudiesFields_Slug_Delete = {
+    __typename?: 'CaseStudiesFields_slug_Delete';
     permission: Scalars['Boolean']['output'];
 };
 
-export type CaseStudiesFields_Project_Read = {
-    __typename?: 'CaseStudiesFields_project_Read';
+export type CaseStudiesFields_Slug_Read = {
+    __typename?: 'CaseStudiesFields_slug_Read';
     permission: Scalars['Boolean']['output'];
 };
 
-export type CaseStudiesFields_Project_Update = {
-    __typename?: 'CaseStudiesFields_project_Update';
+export type CaseStudiesFields_Slug_Update = {
+    __typename?: 'CaseStudiesFields_slug_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -2239,7 +2239,7 @@ export type CaseStudy = {
     createdAt?: Maybe<Scalars['DateTime']['output']>;
     id?: Maybe<Scalars['String']['output']>;
     intro?: Maybe<CaseStudy_Intro>;
-    project: Project;
+    slug?: Maybe<Scalars['String']['output']>;
     title?: Maybe<Scalars['String']['output']>;
     updatedAt?: Maybe<Scalars['DateTime']['output']>;
 };
@@ -3040,10 +3040,13 @@ export type CaseStudy_Intro__Text_Operator = {
     not_equals?: InputMaybe<Scalars['JSON']['input']>;
 };
 
-export type CaseStudy_Project_Operator = {
+export type CaseStudy_Slug_Operator = {
     all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
     equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
     in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
     not_equals?: InputMaybe<Scalars['String']['input']>;
     not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
@@ -3078,7 +3081,7 @@ export type CaseStudy_Where = {
     intro__heading?: InputMaybe<CaseStudy_Intro__Heading_Operator>;
     intro__image?: InputMaybe<CaseStudy_Intro__Image_Operator>;
     intro__text?: InputMaybe<CaseStudy_Intro__Text_Operator>;
-    project?: InputMaybe<CaseStudy_Project_Operator>;
+    slug?: InputMaybe<CaseStudy_Slug_Operator>;
     title?: InputMaybe<CaseStudy_Title_Operator>;
     updatedAt?: InputMaybe<CaseStudy_UpdatedAt_Operator>;
 };
@@ -3089,7 +3092,7 @@ export type CaseStudy_Where_And = {
     intro__heading?: InputMaybe<CaseStudy_Intro__Heading_Operator>;
     intro__image?: InputMaybe<CaseStudy_Intro__Image_Operator>;
     intro__text?: InputMaybe<CaseStudy_Intro__Text_Operator>;
-    project?: InputMaybe<CaseStudy_Project_Operator>;
+    slug?: InputMaybe<CaseStudy_Slug_Operator>;
     title?: InputMaybe<CaseStudy_Title_Operator>;
     updatedAt?: InputMaybe<CaseStudy_UpdatedAt_Operator>;
 };
@@ -3100,7 +3103,7 @@ export type CaseStudy_Where_Or = {
     intro__heading?: InputMaybe<CaseStudy_Intro__Heading_Operator>;
     intro__image?: InputMaybe<CaseStudy_Intro__Image_Operator>;
     intro__text?: InputMaybe<CaseStudy_Intro__Text_Operator>;
-    project?: InputMaybe<CaseStudy_Project_Operator>;
+    slug?: InputMaybe<CaseStudy_Slug_Operator>;
     title?: InputMaybe<CaseStudy_Title_Operator>;
     updatedAt?: InputMaybe<CaseStudy_UpdatedAt_Operator>;
 };
@@ -9013,6 +9016,7 @@ export type Preference = {
 
 export type Project = {
     __typename?: 'Project';
+    caseStudies?: Maybe<Array<CaseStudy>>;
     createdAt?: Maybe<Scalars['DateTime']['output']>;
     id?: Maybe<Scalars['String']['output']>;
     intro?: Maybe<Project_Intro>;
@@ -9262,6 +9266,15 @@ export type Project_Intro_Image_Width_Operator = {
 
 export type Project_ProjectSections = ImageBlock | TextBlock;
 
+export type Project_CaseStudies_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
 export type Project_CreatedAt_Operator = {
     equals?: InputMaybe<Scalars['DateTime']['input']>;
     exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -9334,6 +9347,7 @@ export type Project_UpdatedAt_Operator = {
 export type Project_Where = {
     AND?: InputMaybe<Array<InputMaybe<Project_Where_And>>>;
     OR?: InputMaybe<Array<InputMaybe<Project_Where_Or>>>;
+    caseStudies?: InputMaybe<Project_CaseStudies_Operator>;
     createdAt?: InputMaybe<Project_CreatedAt_Operator>;
     id?: InputMaybe<Project_Id_Operator>;
     intro__description?: InputMaybe<Project_Intro__Description_Operator>;
@@ -9344,6 +9358,7 @@ export type Project_Where = {
 };
 
 export type Project_Where_And = {
+    caseStudies?: InputMaybe<Project_CaseStudies_Operator>;
     createdAt?: InputMaybe<Project_CreatedAt_Operator>;
     id?: InputMaybe<Project_Id_Operator>;
     intro__description?: InputMaybe<Project_Intro__Description_Operator>;
@@ -9354,6 +9369,7 @@ export type Project_Where_And = {
 };
 
 export type Project_Where_Or = {
+    caseStudies?: InputMaybe<Project_CaseStudies_Operator>;
     createdAt?: InputMaybe<Project_CreatedAt_Operator>;
     id?: InputMaybe<Project_Id_Operator>;
     intro__description?: InputMaybe<Project_Intro__Description_Operator>;
@@ -9404,12 +9420,41 @@ export type ProjectsDeleteDocAccess = {
 
 export type ProjectsDocAccessFields = {
     __typename?: 'ProjectsDocAccessFields';
+    caseStudies?: Maybe<ProjectsDocAccessFields_CaseStudies>;
     createdAt?: Maybe<ProjectsDocAccessFields_CreatedAt>;
     intro?: Maybe<ProjectsDocAccessFields_Intro>;
     projectSections?: Maybe<ProjectsDocAccessFields_ProjectSections>;
     slug?: Maybe<ProjectsDocAccessFields_Slug>;
     title?: Maybe<ProjectsDocAccessFields_Title>;
     updatedAt?: Maybe<ProjectsDocAccessFields_UpdatedAt>;
+};
+
+export type ProjectsDocAccessFields_CaseStudies = {
+    __typename?: 'ProjectsDocAccessFields_caseStudies';
+    create?: Maybe<ProjectsDocAccessFields_CaseStudies_Create>;
+    delete?: Maybe<ProjectsDocAccessFields_CaseStudies_Delete>;
+    read?: Maybe<ProjectsDocAccessFields_CaseStudies_Read>;
+    update?: Maybe<ProjectsDocAccessFields_CaseStudies_Update>;
+};
+
+export type ProjectsDocAccessFields_CaseStudies_Create = {
+    __typename?: 'ProjectsDocAccessFields_caseStudies_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsDocAccessFields_CaseStudies_Delete = {
+    __typename?: 'ProjectsDocAccessFields_caseStudies_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsDocAccessFields_CaseStudies_Read = {
+    __typename?: 'ProjectsDocAccessFields_caseStudies_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsDocAccessFields_CaseStudies_Update = {
+    __typename?: 'ProjectsDocAccessFields_caseStudies_Update';
+    permission: Scalars['Boolean']['output'];
 };
 
 export type ProjectsDocAccessFields_CreatedAt = {
@@ -9645,12 +9690,41 @@ export type ProjectsDocAccessFields_UpdatedAt_Update = {
 
 export type ProjectsFields = {
     __typename?: 'ProjectsFields';
+    caseStudies?: Maybe<ProjectsFields_CaseStudies>;
     createdAt?: Maybe<ProjectsFields_CreatedAt>;
     intro?: Maybe<ProjectsFields_Intro>;
     projectSections?: Maybe<ProjectsFields_ProjectSections>;
     slug?: Maybe<ProjectsFields_Slug>;
     title?: Maybe<ProjectsFields_Title>;
     updatedAt?: Maybe<ProjectsFields_UpdatedAt>;
+};
+
+export type ProjectsFields_CaseStudies = {
+    __typename?: 'ProjectsFields_caseStudies';
+    create?: Maybe<ProjectsFields_CaseStudies_Create>;
+    delete?: Maybe<ProjectsFields_CaseStudies_Delete>;
+    read?: Maybe<ProjectsFields_CaseStudies_Read>;
+    update?: Maybe<ProjectsFields_CaseStudies_Update>;
+};
+
+export type ProjectsFields_CaseStudies_Create = {
+    __typename?: 'ProjectsFields_caseStudies_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsFields_CaseStudies_Delete = {
+    __typename?: 'ProjectsFields_caseStudies_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsFields_CaseStudies_Read = {
+    __typename?: 'ProjectsFields_caseStudies_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsFields_CaseStudies_Update = {
+    __typename?: 'ProjectsFields_caseStudies_Update';
+    permission: Scalars['Boolean']['output'];
 };
 
 export type ProjectsFields_CreatedAt = {
@@ -14354,7 +14428,7 @@ export type MutationCaseStudyInput = {
     caseStudySections?: InputMaybe<Scalars['JSON']['input']>;
     createdAt?: InputMaybe<Scalars['String']['input']>;
     intro?: InputMaybe<MutationCaseStudy_IntroInput>;
-    project?: InputMaybe<Scalars['String']['input']>;
+    slug?: InputMaybe<Scalars['String']['input']>;
     title?: InputMaybe<Scalars['String']['input']>;
     updatedAt?: InputMaybe<Scalars['String']['input']>;
 };
@@ -14370,7 +14444,7 @@ export type MutationCaseStudyUpdateInput = {
     caseStudySections?: InputMaybe<Scalars['JSON']['input']>;
     createdAt?: InputMaybe<Scalars['String']['input']>;
     intro?: InputMaybe<MutationCaseStudyUpdate_IntroInput>;
-    project?: InputMaybe<Scalars['String']['input']>;
+    slug?: InputMaybe<Scalars['String']['input']>;
     title?: InputMaybe<Scalars['String']['input']>;
     updatedAt?: InputMaybe<Scalars['String']['input']>;
 };
@@ -14568,6 +14642,7 @@ export type MutationPageUpdateInput = {
 };
 
 export type MutationProjectInput = {
+    caseStudies?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     createdAt?: InputMaybe<Scalars['String']['input']>;
     intro?: InputMaybe<MutationProject_IntroInput>;
     projectSections?: InputMaybe<Scalars['JSON']['input']>;
@@ -14577,6 +14652,7 @@ export type MutationProjectInput = {
 };
 
 export type MutationProjectUpdateInput = {
+    caseStudies?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     createdAt?: InputMaybe<Scalars['String']['input']>;
     intro?: InputMaybe<MutationProjectUpdate_IntroInput>;
     projectSections?: InputMaybe<Scalars['JSON']['input']>;

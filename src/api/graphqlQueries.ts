@@ -22,11 +22,11 @@ export const PAGE_CONTENT_QUERY = gql`
                     ${HERO_FRAGMENT}
                     ${SOCIALS_FRAGMENT}
                     ${SINGLE_USE_FRAGMENT}
-                }}
+                }
+            }
         }
     }
 `;
-
 export const PROJECT_CONTENT_QUERY = gql`
  query ProjectContentQuery($slug: String!) {
     Projects(where:{ slug: { equals: $slug }}) {
@@ -44,9 +44,48 @@ export const PROJECT_CONTENT_QUERY = gql`
                     ${IMAGE_FRAGMENT}
                 }
             }
+            caseStudies {
+                id
+                slug
+                title
+                intro {
+                    heading
+                    text
+                    image {
+                        ${IMAGE_FRAGMENT}
+                    }
+                }
+                caseStudySections {
+                    ${IMAGE_BLOCK_FRAGMENT}
+                    ${TEXT_BLOCK_FRAGMENT}
+                }
+            }
         }
     }
   }
+`;
+
+export const CASE_STUDY_CONTENT_QUERY = gql`
+    query CaseStudyContentQuery($slug: String!) {
+    CaseStudies(where:{ slug: { equals: $slug }}) {
+            docs {
+                id
+                slug
+                title
+                intro {
+                    heading
+                    text
+                    image {
+                        ${IMAGE_FRAGMENT}
+                    }
+                }
+                caseStudySections {
+                    ${IMAGE_BLOCK_FRAGMENT}
+                    ${TEXT_BLOCK_FRAGMENT}
+                }
+            }
+        }
+    }
 `;
 
 export const SLUG_QUERY = gql`
@@ -57,6 +96,11 @@ export const SLUG_QUERY = gql`
             }
         }
         Projects {
+            docs {
+                slug
+            }
+        }
+        CaseStudies {
             docs {
                 slug
             }

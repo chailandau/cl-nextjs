@@ -5,7 +5,7 @@ import Image from '@/atoms/Image';
 import Hero from '@/components/Hero';
 import SingleUse from '@/components/SingleUse';
 import Socials from '@/components/Socials';
-import RichText from '@/molecules/RichText';
+import TextBlock from '@/molecules/TextBlock/TextBlock';
 
 interface Sections {
     /** Sections to render */
@@ -23,7 +23,12 @@ const RenderComponents: FC<Sections> = ({ components }) => {
             case 'HeroBlock':
                 return <Hero {...component?.hero} />;
             case 'TextBlock':
-                return <RichText richText={component?.text} />;
+                return (
+                    <TextBlock
+                        heading={component?.heading}
+                        richText={component?.text}
+                    />
+                );
             case 'ImageBlock':
                 return (
                     <Image

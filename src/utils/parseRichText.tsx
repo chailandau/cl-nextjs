@@ -59,7 +59,7 @@ export const parseRichText = (
                 child?.children?.forEach((listItem) => {
                     listItem?.text &&
                         listItems?.push(
-                            <li key={`li-${index}`}>
+                            <li key={listItem?.text}>
                                 <Text
                                     as='span'
                                     className={styles['rich-text']}
