@@ -14,3 +14,14 @@ export const capitalizeWord = (str: string): string => {
 
     return firstLetter + restOfWord;
 };
+
+export const sentenceCase = (str: string) => {
+    if (!str) {
+        return str;
+    }
+
+    const words = str.split(' ');
+    const capitalizedWords = words.map((word) => capitalizeWord(word));
+
+    return capitalizedWords.join(' ');
+};

@@ -17,7 +17,7 @@ exports[`Fragments "CTA_FRAGMENT" matches snapshot: CTA_FRAGMENT 1`] = `
 
 exports[`Fragments "HERO_FRAGMENT" matches snapshot: HERO_FRAGMENT 1`] = `
 "
-... on HeroBlock {
+...on HeroBlock {
     __typename
     id
     hero {
@@ -66,6 +66,23 @@ exports[`Fragments "ICON_FRAGMENT" matches snapshot: ICON_FRAGMENT 1`] = `
 "
 `;
 
+exports[`Fragments "IMAGE_BLOCK_FRAGMENT" matches snapshot: IMAGE_BLOCK_FRAGMENT 1`] = `
+"
+...on ImageBlock {
+  __typename
+    image {
+            
+    id
+    alt
+    url
+    width
+    height
+
+          }
+  }
+"
+`;
+
 exports[`Fragments "IMAGE_FRAGMENT" matches snapshot: IMAGE_FRAGMENT 1`] = `
 "
     id
@@ -86,7 +103,7 @@ exports[`Fragments "INTERNAL_LINK_FRAGMENT" matches snapshot: INTERNAL_LINK_FRAG
 
 exports[`Fragments "SINGLE_USE_FRAGMENT" matches snapshot: SINGLE_USE_FRAGMENT 1`] = `
 "
-  ... on SingleUseBlock {
+  ...on SingleUseBlock {
     __typename
     id
     singleUse
@@ -96,7 +113,7 @@ exports[`Fragments "SINGLE_USE_FRAGMENT" matches snapshot: SINGLE_USE_FRAGMENT 1
 
 exports[`Fragments "SOCIALS_FRAGMENT" matches snapshot: SOCIALS_FRAGMENT 1`] = `
 "
-  ... on SocialsBlock {
+  ...on SocialsBlock {
     __typename
     id
     socials {
@@ -112,6 +129,17 @@ exports[`Fragments "SOCIALS_FRAGMENT" matches snapshot: SOCIALS_FRAGMENT 1`] = `
       label
       socialLink
     }
+  }
+"
+`;
+
+exports[`Fragments "TEXT_BLOCK_FRAGMENT" matches snapshot: TEXT_BLOCK_FRAGMENT 1`] = `
+"
+  ...on TextBlock {
+    __typename
+    id
+    heading
+    text
   }
 "
 `;

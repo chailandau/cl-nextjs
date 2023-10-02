@@ -1,28 +1,120 @@
-import { JSX } from 'react';
+import { Fragment, JSX } from 'react';
 
 import styles from '../atoms/Text/Text.module.scss';
 
+import Link from '@/atoms/Link';
 import Text from '@/atoms/Text';
 import { textSizes } from '@/atoms/Text/Text';
 
 interface ChildSegment {
-    children: ChildSegment[];
-    text: string;
+    strikethrough: boolean;
+    underline: boolean;
+    italic: boolean;
+    bold: boolean;
+    children?: ChildSegment[];
+    text?: string;
+    url?: string | null | undefined;
+    newTab?: boolean;
+    type?: 'link' | 'ul' | 'ol';
 }
 
 export interface RichTextProps {
+    text: string;
+    url?: string | null | undefined;
+    newTab?: boolean;
     type?: 'ul' | 'ol';
     children: ChildSegment[];
 }
 
 type RichText = JSX.Element[] | null | undefined;
 
-/**
- * Parses rich text and returns an array of Text components.
- *
- * @param richText - An array of objects representing rich text.
- * @returns An array of Text components, or null if the input is falsy.
- */
+const formatText = (
+    text: string,
+    format: string,
+    index: number
+): JSX.Element => {
+    switch (format) {
+        case 'bold':
+            return <b key={index}>{text}</b>;
+        case 'italic':
+            return <i key={index}>{text}</i>;
+        case 'underline':
+            return <u key={index}>{text}</u>;
+        case 'strikethrough':
+            return <s key={index}>{text}</s>;
+        default:
+            return <Fragment key={index}>{text}</Fragment>;
+    }
+};
+
+const processText = (child: ChildSegment, index: number): JSX.Element => {
+    if (child.text) {
+        if (child.bold) {
+            return formatText(child.text, 'bold', index);
+        }
+        if (child.italic) {
+            return formatText(child.text, 'italic', index);
+        }
+        if (child.underline) {
+            return formatText(child.text, 'underline', index);
+        }
+        if (child.strikethrough) {
+            return formatText(child.text, 'strikethrough', index);
+        }
+
+        return formatText(child.text, '', index);
+    }
+
+    return <Fragment key={index}></Fragment>;
+};
+
+const processLink = (
+    child: ChildSegment,
+    index: number
+): JSX.Element | null => {
+    if (child.type === 'link' && child.url && child.children?.[0]?.text) {
+        return (
+            <Link key={index} href={child.url}>
+                {child.children[0].text}
+            </Link>
+        );
+    }
+
+    return null;
+};
+
+const processList = (
+    child: RichTextProps,
+    size: (typeof textSizes)[number]
+): JSX.Element | null => {
+    if (child?.type === 'ul' || child?.type === 'ol') {
+        const listItems = child?.children.map(
+            (item) =>
+                item?.children?.map((listItem, listItemIndex) => (
+                    <li key={listItemIndex}>
+                        <Text
+                            as='span'
+                            className={styles['rich-text']}
+                            size={size}
+                        >
+                            {processText(listItem, listItemIndex)}
+                        </Text>
+                    </li>
+                ))
+        );
+
+        if (listItems?.length) {
+            return child?.type === 'ul' ? (
+                <ul>{listItems}</ul>
+            ) : (
+                <ol>{listItems}</ol>
+            );
+        }
+    }
+
+    return null;
+};
+
 export const parseRichText = (
     richText: RichTextProps[],
     size: (typeof textSizes)[number] = 'xs'
@@ -34,54 +126,38 @@ export const parseRichText = (
     const results: JSX.Element[] = [];
 
     richText.forEach((segment, index) => {
-        const listItems: JSX.Element[] = [];
+        const content: JSX.Element[] = [];
 
-        segment?.children?.forEach((child) => {
-            const paragraphs = child?.text
-                ?.split('\n')
-                ?.filter((paragraph) => paragraph?.trim() !== '');
+        const list = processList(segment, size);
+        if (list) {
+            results.push(list);
+        }
 
-            if (paragraphs) {
-                paragraphs?.forEach((par, parIndex) => {
-                    results?.push(
-                        <Text
-                            className={styles['rich-text']}
-                            size={size}
-                            key={`par-${parIndex}`}
-                        >
-                            {par}
-                        </Text>
-                    );
-                });
+        segment?.children?.forEach((child, segmentIndex) => {
+            if (child.text) {
+                content.push(processText(child, segmentIndex));
             }
 
-            if (segment?.type === 'ul' || segment?.type === 'ol') {
-                child?.children?.forEach((listItem) => {
-                    listItem?.text &&
-                        listItems?.push(
-                            <li key={listItem?.text}>
-                                <Text
-                                    as='span'
-                                    className={styles['rich-text']}
-                                    size={size}
-                                >
-                                    {listItem.text}
-                                </Text>
-                            </li>
-                        );
-                });
+            const link = processLink(child, segmentIndex);
+            if (link) {
+                content.push(link);
             }
         });
 
-        if (listItems.length > 0) {
-            if (segment?.type === 'ul') {
-                results?.push(<ul key={`ul-${index}`}>{listItems}</ul>);
-            }
-            if (segment?.type === 'ol') {
-                results?.push(<ol key={`ol-${index}`}>{listItems}</ol>);
-            }
+        if (content.length > 0) {
+            results.push(
+                <Text key={index} size={size} className={styles['rich-text']}>
+                    {content}
+                </Text>
+            );
+        } else if (segment.text) {
+            results.push(
+                <Text key={index} size={size} className={styles['rich-text']}>
+                    {segment.text}
+                </Text>
+            );
         }
     });
 
-    return results;
+    return results.length > 0 ? results : null;
 };

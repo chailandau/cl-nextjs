@@ -1571,6 +1571,7 @@ type CaseStudiesDocAccessFields_intro_Delete {
 }
 
 type CaseStudiesDocAccessFields_intro_Fields {
+  cta: CaseStudiesDocAccessFields_intro_cta
   heading: CaseStudiesDocAccessFields_intro_heading
   image: CaseStudiesDocAccessFields_intro_image
   text: CaseStudiesDocAccessFields_intro_text
@@ -1581,6 +1582,29 @@ type CaseStudiesDocAccessFields_intro_Read {
 }
 
 type CaseStudiesDocAccessFields_intro_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_intro_cta {
+  create: CaseStudiesDocAccessFields_intro_cta_Create
+  delete: CaseStudiesDocAccessFields_intro_cta_Delete
+  read: CaseStudiesDocAccessFields_intro_cta_Read
+  update: CaseStudiesDocAccessFields_intro_cta_Update
+}
+
+type CaseStudiesDocAccessFields_intro_cta_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_intro_cta_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_intro_cta_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_intro_cta_Update {
   permission: Boolean!
 }
 
@@ -1794,6 +1818,7 @@ type CaseStudiesFields_intro_Delete {
 }
 
 type CaseStudiesFields_intro_Fields {
+  cta: CaseStudiesFields_intro_cta
   heading: CaseStudiesFields_intro_heading
   image: CaseStudiesFields_intro_image
   text: CaseStudiesFields_intro_text
@@ -1804,6 +1829,29 @@ type CaseStudiesFields_intro_Read {
 }
 
 type CaseStudiesFields_intro_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_intro_cta {
+  create: CaseStudiesFields_intro_cta_Create
+  delete: CaseStudiesFields_intro_cta_Delete
+  read: CaseStudiesFields_intro_cta_Read
+  update: CaseStudiesFields_intro_cta_Update
+}
+
+type CaseStudiesFields_intro_cta_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_intro_cta_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_intro_cta_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_intro_cta_Update {
   permission: Boolean!
 }
 
@@ -2431,6 +2479,7 @@ input CaseStudyListing_Icon_width_operator {
 union CaseStudy_CaseStudySections = ImageBlock | TextBlock
 
 type CaseStudy_Intro {
+  cta: [Cta!]
   heading: String
   image(where: CaseStudy_Intro_Image_where): Image
   text(depth: Int): JSON
@@ -2686,6 +2735,15 @@ input CaseStudy_id_operator {
   not_in: [String]
 }
 
+input CaseStudy_intro__cta_operator {
+  all: [String]
+  equals: String
+  exists: Boolean
+  in: [String]
+  not_equals: String
+  not_in: [String]
+}
+
 input CaseStudy_intro__heading_operator {
   all: [String]
   contains: String
@@ -2749,6 +2807,7 @@ input CaseStudy_where {
   OR: [CaseStudy_where_or]
   createdAt: CaseStudy_createdAt_operator
   id: CaseStudy_id_operator
+  intro__cta: CaseStudy_intro__cta_operator
   intro__heading: CaseStudy_intro__heading_operator
   intro__image: CaseStudy_intro__image_operator
   intro__text: CaseStudy_intro__text_operator
@@ -2760,6 +2819,7 @@ input CaseStudy_where {
 input CaseStudy_where_and {
   createdAt: CaseStudy_createdAt_operator
   id: CaseStudy_id_operator
+  intro__cta: CaseStudy_intro__cta_operator
   intro__heading: CaseStudy_intro__heading_operator
   intro__image: CaseStudy_intro__image_operator
   intro__text: CaseStudy_intro__text_operator
@@ -2771,6 +2831,7 @@ input CaseStudy_where_and {
 input CaseStudy_where_or {
   createdAt: CaseStudy_createdAt_operator
   id: CaseStudy_id_operator
+  intro__cta: CaseStudy_intro__cta_operator
   intro__heading: CaseStudy_intro__heading_operator
   intro__image: CaseStudy_intro__image_operator
   intro__text: CaseStudy_intro__text_operator
@@ -7734,6 +7795,7 @@ type Project {
 }
 
 type Project_Intro {
+  cta: [Cta!]
   description: String
   image(where: Project_Intro_Image_where): Image
 }
@@ -7999,6 +8061,15 @@ input Project_id_operator {
   not_in: [String]
 }
 
+input Project_intro__cta_operator {
+  all: [String]
+  equals: String
+  exists: Boolean
+  in: [String]
+  not_equals: String
+  not_in: [String]
+}
+
 input Project_intro__description_operator {
   contains: String
   equals: String
@@ -8052,6 +8123,7 @@ input Project_where {
   caseStudies: Project_caseStudies_operator
   createdAt: Project_createdAt_operator
   id: Project_id_operator
+  intro__cta: Project_intro__cta_operator
   intro__description: Project_intro__description_operator
   intro__image: Project_intro__image_operator
   slug: Project_slug_operator
@@ -8063,6 +8135,7 @@ input Project_where_and {
   caseStudies: Project_caseStudies_operator
   createdAt: Project_createdAt_operator
   id: Project_id_operator
+  intro__cta: Project_intro__cta_operator
   intro__description: Project_intro__description_operator
   intro__image: Project_intro__image_operator
   slug: Project_slug_operator
@@ -8074,6 +8147,7 @@ input Project_where_or {
   caseStudies: Project_caseStudies_operator
   createdAt: Project_createdAt_operator
   id: Project_id_operator
+  intro__cta: Project_intro__cta_operator
   intro__description: Project_intro__description_operator
   intro__image: Project_intro__image_operator
   slug: Project_slug_operator
@@ -8188,6 +8262,7 @@ type ProjectsDocAccessFields_intro_Delete {
 }
 
 type ProjectsDocAccessFields_intro_Fields {
+  cta: ProjectsDocAccessFields_intro_cta
   description: ProjectsDocAccessFields_intro_description
   image: ProjectsDocAccessFields_intro_image
 }
@@ -8197,6 +8272,29 @@ type ProjectsDocAccessFields_intro_Read {
 }
 
 type ProjectsDocAccessFields_intro_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_intro_cta {
+  create: ProjectsDocAccessFields_intro_cta_Create
+  delete: ProjectsDocAccessFields_intro_cta_Delete
+  read: ProjectsDocAccessFields_intro_cta_Read
+  update: ProjectsDocAccessFields_intro_cta_Update
+}
+
+type ProjectsDocAccessFields_intro_cta_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_intro_cta_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_intro_cta_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_intro_cta_Update {
   permission: Boolean!
 }
 
@@ -8411,6 +8509,7 @@ type ProjectsFields_intro_Delete {
 }
 
 type ProjectsFields_intro_Fields {
+  cta: ProjectsFields_intro_cta
   description: ProjectsFields_intro_description
   image: ProjectsFields_intro_image
 }
@@ -8420,6 +8519,29 @@ type ProjectsFields_intro_Read {
 }
 
 type ProjectsFields_intro_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_intro_cta {
+  create: ProjectsFields_intro_cta_Create
+  delete: ProjectsFields_intro_cta_Delete
+  read: ProjectsFields_intro_cta_Read
+  update: ProjectsFields_intro_cta_Update
+}
+
+type ProjectsFields_intro_cta_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_intro_cta_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_intro_cta_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_intro_cta_Update {
   permission: Boolean!
 }
 
@@ -12378,12 +12500,14 @@ input mutationCaseStudyUpdateInput {
 }
 
 input mutationCaseStudyUpdate_IntroInput {
+  cta: [String]
   heading: String
   image: String
   text: JSON
 }
 
 input mutationCaseStudy_IntroInput {
+  cta: [String]
   heading: String
   image: String
   text: JSON
@@ -12590,11 +12714,13 @@ input mutationProjectUpdateInput {
 }
 
 input mutationProjectUpdate_IntroInput {
+  cta: [String]
   description: String
   image: String
 }
 
 input mutationProject_IntroInput {
+  cta: [String]
   description: String
   image: String
 }

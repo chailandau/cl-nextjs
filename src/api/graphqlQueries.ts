@@ -1,6 +1,7 @@
 import { gql } from 'graphql-request';
 
 import {
+    CTA_FRAGMENT,
     HERO_FRAGMENT,
     ICON_FRAGMENT,
     IMAGE_BLOCK_FRAGMENT,
@@ -55,10 +56,6 @@ export const PROJECT_CONTENT_QUERY = gql`
                         ${IMAGE_FRAGMENT}
                     }
                 }
-                caseStudySections {
-                    ${IMAGE_BLOCK_FRAGMENT}
-                    ${TEXT_BLOCK_FRAGMENT}
-                }
             }
         }
     }
@@ -75,6 +72,7 @@ export const CASE_STUDY_CONTENT_QUERY = gql`
                 intro {
                     heading
                     text
+                    ${CTA_FRAGMENT}
                     image {
                         ${IMAGE_FRAGMENT}
                     }

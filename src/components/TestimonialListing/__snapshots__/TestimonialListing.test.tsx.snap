@@ -439,11 +439,8 @@ exports[`Testimonial Listing matches snapshot 1`] = `
               class="text xs primary rich-text"
             >
               Working with Chai was a treat! She's my favorite kind of engineer - one who can take the most complex ideas and simplify them for those of us who need the extra help understanding. She always took the time to make sure I was grasping these concepts for myself but also that I was relaying accurate information to our clients.
-            </p>
-            <p
-              class="text xs primary rich-text"
-            >
-              She's a true master of her craft with an accessibility-first approach to everything she does. Any engineering team would be fortunate to have her!
+
+She's a true master of her craft with an accessibility-first approach to everything she does. Any engineering team would be fortunate to have her!
             </p>
           </div>
           <div

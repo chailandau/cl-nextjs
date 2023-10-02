@@ -1,4 +1,4 @@
-import { capitalizeWord } from '@/utils/capitalizeWord';
+import { sentenceCase } from '@/utils/capitalizeWord';
 
 /**
  * Splits the given "paths" string by "/" and filters out any empty paths.
@@ -33,9 +33,15 @@ export const getBreadcrumbData = (paths: string) => {
                 });
                 break;
             }
+            case 'lineup-roi-calculator':
+                breadcrumbs.push({
+                    label: 'Lineup ROI Calculator',
+                    link: fullSlug
+                });
+                break;
             default: {
                 breadcrumbs.push({
-                    label: capitalizeWord(path.replaceAll('-', ' ')),
+                    label: sentenceCase(path.replaceAll('-', ' ')),
                     link: fullSlug
                 });
             }

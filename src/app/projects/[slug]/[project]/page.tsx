@@ -24,10 +24,8 @@ export const generateStaticParams = async () => {
         }));
 };
 
-const NextPage = ({ params: { project } }: Params) => {
-    console.log('slug', project);
-
-    return <CaseStudy project={project} />;
-};
+const NextPage = ({ params: { project } }: Params) => (
+    <CaseStudy project={project} />
+);
 
 export default NextPage;

@@ -10,6 +10,7 @@ import {
 } from '@/api/graphqlTypes';
 import Heading from '@/atoms/Heading';
 import Image from '@/atoms/Image';
+import Link from '@/atoms/Link';
 import Breadcrumbs from '@/molecules/Breadcrumbs/Breadcrumbs';
 import Flex from '@/molecules/Flex';
 import RichText from '@/molecules/RichText';
@@ -26,7 +27,6 @@ let intro: CaseStudy_Intro;
 const CaseStudy: FC<CaseStudyProps> = async ({ project }) => {
     const { CaseStudies } = await getData(CASE_STUDY_CONTENT_QUERY, project);
     const caseStudySections: CaseStudy_CaseStudySections[] = [];
-
     CaseStudies?.docs?.forEach((caseStudy) => {
         caseStudy?.title && (title = caseStudy.title);
         caseStudy?.intro && (intro = caseStudy.intro);
@@ -46,7 +46,6 @@ const CaseStudy: FC<CaseStudyProps> = async ({ project }) => {
                 {title && <Heading as='h1'>{title}</Heading>}
                 {intro?.text && <RichText richText={intro.text} />}
             </Flex>
-
             {intro?.image?.url && (
                 <Image
                     src={intro.image.url}
@@ -55,6 +54,12 @@ const CaseStudy: FC<CaseStudyProps> = async ({ project }) => {
                     height={intro.image.height || 1000}
                 />
             )}
+            {intro?.cta &&
+                intro.cta?.map((cta) => (
+                    <Link key={cta?.id} href={cta?.externalLink || ''}>
+                        {cta?.label}
+                    </Link>
+                ))}
             <RenderComponents components={caseStudySections} />
         </Section>
     );
