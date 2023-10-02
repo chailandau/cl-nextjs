@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import About from '../About';
+import CaseStudyListing from '../CaseStudyListing';
 import TestimonialListing from '../TestimonialListing';
 import ToolboxListing from '../ToolboxListing';
 
@@ -20,6 +21,8 @@ const SingleUse: FC<SingleUseProps> = ({ component }) => {
             return <TestimonialListing />;
         case 'about':
             return <About />;
+        case 'case_study_listing':
+            return <CaseStudyListing />;
         default:
             return null;
     }

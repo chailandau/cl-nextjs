@@ -2024,6 +2024,7 @@ type CaseStudy {
 }
 
 type CaseStudyListing {
+  caseStudies: [Project!]
   createdAt: DateTime
   icon(where: CaseStudyListing_Icon_where): Icon
   title: String
@@ -2031,10 +2032,34 @@ type CaseStudyListing {
 }
 
 type CaseStudyListingDocAccessFields {
+  caseStudies: CaseStudyListingDocAccessFields_caseStudies
   createdAt: CaseStudyListingDocAccessFields_createdAt
   icon: CaseStudyListingDocAccessFields_icon
   title: CaseStudyListingDocAccessFields_title
   updatedAt: CaseStudyListingDocAccessFields_updatedAt
+}
+
+type CaseStudyListingDocAccessFields_caseStudies {
+  create: CaseStudyListingDocAccessFields_caseStudies_Create
+  delete: CaseStudyListingDocAccessFields_caseStudies_Delete
+  read: CaseStudyListingDocAccessFields_caseStudies_Read
+  update: CaseStudyListingDocAccessFields_caseStudies_Update
+}
+
+type CaseStudyListingDocAccessFields_caseStudies_Create {
+  permission: Boolean!
+}
+
+type CaseStudyListingDocAccessFields_caseStudies_Delete {
+  permission: Boolean!
+}
+
+type CaseStudyListingDocAccessFields_caseStudies_Read {
+  permission: Boolean!
+}
+
+type CaseStudyListingDocAccessFields_caseStudies_Update {
+  permission: Boolean!
 }
 
 type CaseStudyListingDocAccessFields_createdAt {
@@ -2130,10 +2155,34 @@ type CaseStudyListingDocAccessFields_updatedAt_Update {
 }
 
 type CaseStudyListingFields {
+  caseStudies: CaseStudyListingFields_caseStudies
   createdAt: CaseStudyListingFields_createdAt
   icon: CaseStudyListingFields_icon
   title: CaseStudyListingFields_title
   updatedAt: CaseStudyListingFields_updatedAt
+}
+
+type CaseStudyListingFields_caseStudies {
+  create: CaseStudyListingFields_caseStudies_Create
+  delete: CaseStudyListingFields_caseStudies_Delete
+  read: CaseStudyListingFields_caseStudies_Read
+  update: CaseStudyListingFields_caseStudies_Update
+}
+
+type CaseStudyListingFields_caseStudies_Create {
+  permission: Boolean!
+}
+
+type CaseStudyListingFields_caseStudies_Delete {
+  permission: Boolean!
+}
+
+type CaseStudyListingFields_caseStudies_Read {
+  permission: Boolean!
+}
+
+type CaseStudyListingFields_caseStudies_Update {
+  permission: Boolean!
 }
 
 type CaseStudyListingFields_createdAt {
@@ -7786,12 +7835,241 @@ type Preference {
 type Project {
   caseStudies: [CaseStudy!]
   createdAt: DateTime
+  featuredImage(where: Project_FeaturedImage_where): Image
   id: String
   intro: Project_Intro
   projectSections: [Project_ProjectSections!]
   slug: String
   title: String
   updatedAt: DateTime
+}
+
+input Project_FeaturedImage_alt_operator {
+  all: [String]
+  contains: String
+  equals: String
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Project_FeaturedImage_createdAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input Project_FeaturedImage_filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Project_FeaturedImage_filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input Project_FeaturedImage_height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input Project_FeaturedImage_id_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Project_FeaturedImage_mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Project_FeaturedImage_sizes__thumbnail__filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Project_FeaturedImage_sizes__thumbnail__filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input Project_FeaturedImage_sizes__thumbnail__height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input Project_FeaturedImage_sizes__thumbnail__mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Project_FeaturedImage_sizes__thumbnail__url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Project_FeaturedImage_sizes__thumbnail__width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input Project_FeaturedImage_updatedAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input Project_FeaturedImage_url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Project_FeaturedImage_where {
+  AND: [Project_FeaturedImage_where_and]
+  OR: [Project_FeaturedImage_where_or]
+  alt: Project_FeaturedImage_alt_operator
+  createdAt: Project_FeaturedImage_createdAt_operator
+  filename: Project_FeaturedImage_filename_operator
+  filesize: Project_FeaturedImage_filesize_operator
+  height: Project_FeaturedImage_height_operator
+  id: Project_FeaturedImage_id_operator
+  mimeType: Project_FeaturedImage_mimeType_operator
+  sizes__thumbnail__filename: Project_FeaturedImage_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: Project_FeaturedImage_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: Project_FeaturedImage_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: Project_FeaturedImage_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: Project_FeaturedImage_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: Project_FeaturedImage_sizes__thumbnail__width_operator
+  updatedAt: Project_FeaturedImage_updatedAt_operator
+  url: Project_FeaturedImage_url_operator
+  width: Project_FeaturedImage_width_operator
+}
+
+input Project_FeaturedImage_where_and {
+  alt: Project_FeaturedImage_alt_operator
+  createdAt: Project_FeaturedImage_createdAt_operator
+  filename: Project_FeaturedImage_filename_operator
+  filesize: Project_FeaturedImage_filesize_operator
+  height: Project_FeaturedImage_height_operator
+  id: Project_FeaturedImage_id_operator
+  mimeType: Project_FeaturedImage_mimeType_operator
+  sizes__thumbnail__filename: Project_FeaturedImage_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: Project_FeaturedImage_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: Project_FeaturedImage_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: Project_FeaturedImage_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: Project_FeaturedImage_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: Project_FeaturedImage_sizes__thumbnail__width_operator
+  updatedAt: Project_FeaturedImage_updatedAt_operator
+  url: Project_FeaturedImage_url_operator
+  width: Project_FeaturedImage_width_operator
+}
+
+input Project_FeaturedImage_where_or {
+  alt: Project_FeaturedImage_alt_operator
+  createdAt: Project_FeaturedImage_createdAt_operator
+  filename: Project_FeaturedImage_filename_operator
+  filesize: Project_FeaturedImage_filesize_operator
+  height: Project_FeaturedImage_height_operator
+  id: Project_FeaturedImage_id_operator
+  mimeType: Project_FeaturedImage_mimeType_operator
+  sizes__thumbnail__filename: Project_FeaturedImage_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: Project_FeaturedImage_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: Project_FeaturedImage_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: Project_FeaturedImage_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: Project_FeaturedImage_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: Project_FeaturedImage_sizes__thumbnail__width_operator
+  updatedAt: Project_FeaturedImage_updatedAt_operator
+  url: Project_FeaturedImage_url_operator
+  width: Project_FeaturedImage_width_operator
+}
+
+input Project_FeaturedImage_width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
 }
 
 type Project_Intro {
@@ -8050,6 +8328,12 @@ input Project_createdAt_operator {
   not_equals: DateTime
 }
 
+input Project_featuredImage_operator {
+  equals: String
+  exists: Boolean
+  not_equals: String
+}
+
 input Project_id_operator {
   all: [String]
   contains: String
@@ -8122,6 +8406,7 @@ input Project_where {
   OR: [Project_where_or]
   caseStudies: Project_caseStudies_operator
   createdAt: Project_createdAt_operator
+  featuredImage: Project_featuredImage_operator
   id: Project_id_operator
   intro__cta: Project_intro__cta_operator
   intro__description: Project_intro__description_operator
@@ -8134,6 +8419,7 @@ input Project_where {
 input Project_where_and {
   caseStudies: Project_caseStudies_operator
   createdAt: Project_createdAt_operator
+  featuredImage: Project_featuredImage_operator
   id: Project_id_operator
   intro__cta: Project_intro__cta_operator
   intro__description: Project_intro__description_operator
@@ -8146,6 +8432,7 @@ input Project_where_and {
 input Project_where_or {
   caseStudies: Project_caseStudies_operator
   createdAt: Project_createdAt_operator
+  featuredImage: Project_featuredImage_operator
   id: Project_id_operator
   intro__cta: Project_intro__cta_operator
   intro__description: Project_intro__description_operator
@@ -8192,6 +8479,7 @@ type ProjectsDeleteDocAccess {
 type ProjectsDocAccessFields {
   caseStudies: ProjectsDocAccessFields_caseStudies
   createdAt: ProjectsDocAccessFields_createdAt
+  featuredImage: ProjectsDocAccessFields_featuredImage
   intro: ProjectsDocAccessFields_intro
   projectSections: ProjectsDocAccessFields_projectSections
   slug: ProjectsDocAccessFields_slug
@@ -8242,6 +8530,29 @@ type ProjectsDocAccessFields_createdAt_Read {
 }
 
 type ProjectsDocAccessFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_featuredImage {
+  create: ProjectsDocAccessFields_featuredImage_Create
+  delete: ProjectsDocAccessFields_featuredImage_Delete
+  read: ProjectsDocAccessFields_featuredImage_Read
+  update: ProjectsDocAccessFields_featuredImage_Update
+}
+
+type ProjectsDocAccessFields_featuredImage_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_featuredImage_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_featuredImage_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_featuredImage_Update {
   permission: Boolean!
 }
 
@@ -8439,6 +8750,7 @@ type ProjectsDocAccessFields_updatedAt_Update {
 type ProjectsFields {
   caseStudies: ProjectsFields_caseStudies
   createdAt: ProjectsFields_createdAt
+  featuredImage: ProjectsFields_featuredImage
   intro: ProjectsFields_intro
   projectSections: ProjectsFields_projectSections
   slug: ProjectsFields_slug
@@ -8489,6 +8801,29 @@ type ProjectsFields_createdAt_Read {
 }
 
 type ProjectsFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_featuredImage {
+  create: ProjectsFields_featuredImage_Create
+  delete: ProjectsFields_featuredImage_Delete
+  read: ProjectsFields_featuredImage_Read
+  update: ProjectsFields_featuredImage_Update
+}
+
+type ProjectsFields_featuredImage_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_featuredImage_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_featuredImage_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_featuredImage_Update {
   permission: Boolean!
 }
 
@@ -12484,6 +12819,7 @@ input mutationCaseStudyInput {
 }
 
 input mutationCaseStudyListingInput {
+  caseStudies: [String]
   createdAt: String
   icon: String
   title: String
@@ -12696,6 +13032,7 @@ input mutationPageUpdateInput {
 input mutationProjectInput {
   caseStudies: [String]
   createdAt: String
+  featuredImage: String
   intro: mutationProject_IntroInput
   projectSections: JSON
   slug: String
@@ -12706,6 +13043,7 @@ input mutationProjectInput {
 input mutationProjectUpdateInput {
   caseStudies: [String]
   createdAt: String
+  featuredImage: String
   intro: mutationProjectUpdate_IntroInput
   projectSections: JSON
   slug: String

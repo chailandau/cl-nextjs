@@ -178,3 +178,26 @@ query AboutQuery {
         }
     }
 `;
+
+export const CASE_STUDIES_QUERY = gql`
+    query CaseStudiesQuery {
+        CaseStudyListing {
+            title
+            icon {
+                ${IMAGE_FRAGMENT}
+
+            }
+            caseStudies {
+                id
+                title
+                slug
+                featuredImage {
+                    ${IMAGE_FRAGMENT}
+                }
+                intro {
+                    description
+                }
+            }
+        }
+    }
+`;

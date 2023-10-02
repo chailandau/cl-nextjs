@@ -2304,6 +2304,7 @@ export type CaseStudy = {
 
 export type CaseStudyListing = {
     __typename?: 'CaseStudyListing';
+    caseStudies?: Maybe<Array<Project>>;
     createdAt?: Maybe<Scalars['DateTime']['output']>;
     icon?: Maybe<Icon>;
     title?: Maybe<Scalars['String']['output']>;
@@ -2316,10 +2317,39 @@ export type CaseStudyListingIconArgs = {
 
 export type CaseStudyListingDocAccessFields = {
     __typename?: 'CaseStudyListingDocAccessFields';
+    caseStudies?: Maybe<CaseStudyListingDocAccessFields_CaseStudies>;
     createdAt?: Maybe<CaseStudyListingDocAccessFields_CreatedAt>;
     icon?: Maybe<CaseStudyListingDocAccessFields_Icon>;
     title?: Maybe<CaseStudyListingDocAccessFields_Title>;
     updatedAt?: Maybe<CaseStudyListingDocAccessFields_UpdatedAt>;
+};
+
+export type CaseStudyListingDocAccessFields_CaseStudies = {
+    __typename?: 'CaseStudyListingDocAccessFields_caseStudies';
+    create?: Maybe<CaseStudyListingDocAccessFields_CaseStudies_Create>;
+    delete?: Maybe<CaseStudyListingDocAccessFields_CaseStudies_Delete>;
+    read?: Maybe<CaseStudyListingDocAccessFields_CaseStudies_Read>;
+    update?: Maybe<CaseStudyListingDocAccessFields_CaseStudies_Update>;
+};
+
+export type CaseStudyListingDocAccessFields_CaseStudies_Create = {
+    __typename?: 'CaseStudyListingDocAccessFields_caseStudies_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudyListingDocAccessFields_CaseStudies_Delete = {
+    __typename?: 'CaseStudyListingDocAccessFields_caseStudies_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudyListingDocAccessFields_CaseStudies_Read = {
+    __typename?: 'CaseStudyListingDocAccessFields_caseStudies_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudyListingDocAccessFields_CaseStudies_Update = {
+    __typename?: 'CaseStudyListingDocAccessFields_caseStudies_Update';
+    permission: Scalars['Boolean']['output'];
 };
 
 export type CaseStudyListingDocAccessFields_CreatedAt = {
@@ -2436,10 +2466,39 @@ export type CaseStudyListingDocAccessFields_UpdatedAt_Update = {
 
 export type CaseStudyListingFields = {
     __typename?: 'CaseStudyListingFields';
+    caseStudies?: Maybe<CaseStudyListingFields_CaseStudies>;
     createdAt?: Maybe<CaseStudyListingFields_CreatedAt>;
     icon?: Maybe<CaseStudyListingFields_Icon>;
     title?: Maybe<CaseStudyListingFields_Title>;
     updatedAt?: Maybe<CaseStudyListingFields_UpdatedAt>;
+};
+
+export type CaseStudyListingFields_CaseStudies = {
+    __typename?: 'CaseStudyListingFields_caseStudies';
+    create?: Maybe<CaseStudyListingFields_CaseStudies_Create>;
+    delete?: Maybe<CaseStudyListingFields_CaseStudies_Delete>;
+    read?: Maybe<CaseStudyListingFields_CaseStudies_Read>;
+    update?: Maybe<CaseStudyListingFields_CaseStudies_Update>;
+};
+
+export type CaseStudyListingFields_CaseStudies_Create = {
+    __typename?: 'CaseStudyListingFields_caseStudies_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudyListingFields_CaseStudies_Delete = {
+    __typename?: 'CaseStudyListingFields_caseStudies_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudyListingFields_CaseStudies_Read = {
+    __typename?: 'CaseStudyListingFields_caseStudies_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type CaseStudyListingFields_CaseStudies_Update = {
+    __typename?: 'CaseStudyListingFields_caseStudies_Update';
+    permission: Scalars['Boolean']['output'];
 };
 
 export type CaseStudyListingFields_CreatedAt = {
@@ -9089,12 +9148,245 @@ export type Project = {
     __typename?: 'Project';
     caseStudies?: Maybe<Array<CaseStudy>>;
     createdAt?: Maybe<Scalars['DateTime']['output']>;
+    featuredImage?: Maybe<Image>;
     id?: Maybe<Scalars['String']['output']>;
     intro?: Maybe<Project_Intro>;
     projectSections?: Maybe<Array<Project_ProjectSections>>;
     slug?: Maybe<Scalars['String']['output']>;
     title?: Maybe<Scalars['String']['output']>;
     updatedAt?: Maybe<Scalars['DateTime']['output']>;
+};
+
+export type ProjectFeaturedImageArgs = {
+    where?: InputMaybe<Project_FeaturedImage_Where>;
+};
+
+export type Project_FeaturedImage_Alt_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Project_FeaturedImage_CreatedAt_Operator = {
+    equals?: InputMaybe<Scalars['DateTime']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['DateTime']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    like?: InputMaybe<Scalars['DateTime']['input']>;
+    not_equals?: InputMaybe<Scalars['DateTime']['input']>;
+};
+
+export type Project_FeaturedImage_Filename_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Project_FeaturedImage_Filesize_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type Project_FeaturedImage_Height_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type Project_FeaturedImage_Id_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Project_FeaturedImage_MimeType_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Project_FeaturedImage_Sizes__Thumbnail__Filename_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Project_FeaturedImage_Sizes__Thumbnail__Filesize_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type Project_FeaturedImage_Sizes__Thumbnail__Height_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type Project_FeaturedImage_Sizes__Thumbnail__MimeType_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Project_FeaturedImage_Sizes__Thumbnail__Url_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Project_FeaturedImage_Sizes__Thumbnail__Width_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type Project_FeaturedImage_UpdatedAt_Operator = {
+    equals?: InputMaybe<Scalars['DateTime']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['DateTime']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    like?: InputMaybe<Scalars['DateTime']['input']>;
+    not_equals?: InputMaybe<Scalars['DateTime']['input']>;
+};
+
+export type Project_FeaturedImage_Url_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Project_FeaturedImage_Where = {
+    AND?: InputMaybe<Array<InputMaybe<Project_FeaturedImage_Where_And>>>;
+    OR?: InputMaybe<Array<InputMaybe<Project_FeaturedImage_Where_Or>>>;
+    alt?: InputMaybe<Project_FeaturedImage_Alt_Operator>;
+    createdAt?: InputMaybe<Project_FeaturedImage_CreatedAt_Operator>;
+    filename?: InputMaybe<Project_FeaturedImage_Filename_Operator>;
+    filesize?: InputMaybe<Project_FeaturedImage_Filesize_Operator>;
+    height?: InputMaybe<Project_FeaturedImage_Height_Operator>;
+    id?: InputMaybe<Project_FeaturedImage_Id_Operator>;
+    mimeType?: InputMaybe<Project_FeaturedImage_MimeType_Operator>;
+    sizes__thumbnail__filename?: InputMaybe<Project_FeaturedImage_Sizes__Thumbnail__Filename_Operator>;
+    sizes__thumbnail__filesize?: InputMaybe<Project_FeaturedImage_Sizes__Thumbnail__Filesize_Operator>;
+    sizes__thumbnail__height?: InputMaybe<Project_FeaturedImage_Sizes__Thumbnail__Height_Operator>;
+    sizes__thumbnail__mimeType?: InputMaybe<Project_FeaturedImage_Sizes__Thumbnail__MimeType_Operator>;
+    sizes__thumbnail__url?: InputMaybe<Project_FeaturedImage_Sizes__Thumbnail__Url_Operator>;
+    sizes__thumbnail__width?: InputMaybe<Project_FeaturedImage_Sizes__Thumbnail__Width_Operator>;
+    updatedAt?: InputMaybe<Project_FeaturedImage_UpdatedAt_Operator>;
+    url?: InputMaybe<Project_FeaturedImage_Url_Operator>;
+    width?: InputMaybe<Project_FeaturedImage_Width_Operator>;
+};
+
+export type Project_FeaturedImage_Where_And = {
+    alt?: InputMaybe<Project_FeaturedImage_Alt_Operator>;
+    createdAt?: InputMaybe<Project_FeaturedImage_CreatedAt_Operator>;
+    filename?: InputMaybe<Project_FeaturedImage_Filename_Operator>;
+    filesize?: InputMaybe<Project_FeaturedImage_Filesize_Operator>;
+    height?: InputMaybe<Project_FeaturedImage_Height_Operator>;
+    id?: InputMaybe<Project_FeaturedImage_Id_Operator>;
+    mimeType?: InputMaybe<Project_FeaturedImage_MimeType_Operator>;
+    sizes__thumbnail__filename?: InputMaybe<Project_FeaturedImage_Sizes__Thumbnail__Filename_Operator>;
+    sizes__thumbnail__filesize?: InputMaybe<Project_FeaturedImage_Sizes__Thumbnail__Filesize_Operator>;
+    sizes__thumbnail__height?: InputMaybe<Project_FeaturedImage_Sizes__Thumbnail__Height_Operator>;
+    sizes__thumbnail__mimeType?: InputMaybe<Project_FeaturedImage_Sizes__Thumbnail__MimeType_Operator>;
+    sizes__thumbnail__url?: InputMaybe<Project_FeaturedImage_Sizes__Thumbnail__Url_Operator>;
+    sizes__thumbnail__width?: InputMaybe<Project_FeaturedImage_Sizes__Thumbnail__Width_Operator>;
+    updatedAt?: InputMaybe<Project_FeaturedImage_UpdatedAt_Operator>;
+    url?: InputMaybe<Project_FeaturedImage_Url_Operator>;
+    width?: InputMaybe<Project_FeaturedImage_Width_Operator>;
+};
+
+export type Project_FeaturedImage_Where_Or = {
+    alt?: InputMaybe<Project_FeaturedImage_Alt_Operator>;
+    createdAt?: InputMaybe<Project_FeaturedImage_CreatedAt_Operator>;
+    filename?: InputMaybe<Project_FeaturedImage_Filename_Operator>;
+    filesize?: InputMaybe<Project_FeaturedImage_Filesize_Operator>;
+    height?: InputMaybe<Project_FeaturedImage_Height_Operator>;
+    id?: InputMaybe<Project_FeaturedImage_Id_Operator>;
+    mimeType?: InputMaybe<Project_FeaturedImage_MimeType_Operator>;
+    sizes__thumbnail__filename?: InputMaybe<Project_FeaturedImage_Sizes__Thumbnail__Filename_Operator>;
+    sizes__thumbnail__filesize?: InputMaybe<Project_FeaturedImage_Sizes__Thumbnail__Filesize_Operator>;
+    sizes__thumbnail__height?: InputMaybe<Project_FeaturedImage_Sizes__Thumbnail__Height_Operator>;
+    sizes__thumbnail__mimeType?: InputMaybe<Project_FeaturedImage_Sizes__Thumbnail__MimeType_Operator>;
+    sizes__thumbnail__url?: InputMaybe<Project_FeaturedImage_Sizes__Thumbnail__Url_Operator>;
+    sizes__thumbnail__width?: InputMaybe<Project_FeaturedImage_Sizes__Thumbnail__Width_Operator>;
+    updatedAt?: InputMaybe<Project_FeaturedImage_UpdatedAt_Operator>;
+    url?: InputMaybe<Project_FeaturedImage_Url_Operator>;
+    width?: InputMaybe<Project_FeaturedImage_Width_Operator>;
+};
+
+export type Project_FeaturedImage_Width_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
 };
 
 export type Project_Intro = {
@@ -9358,6 +9650,12 @@ export type Project_CreatedAt_Operator = {
     not_equals?: InputMaybe<Scalars['DateTime']['input']>;
 };
 
+export type Project_FeaturedImage_Operator = {
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type Project_Id_Operator = {
     all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     contains?: InputMaybe<Scalars['String']['input']>;
@@ -9430,6 +9728,7 @@ export type Project_Where = {
     OR?: InputMaybe<Array<InputMaybe<Project_Where_Or>>>;
     caseStudies?: InputMaybe<Project_CaseStudies_Operator>;
     createdAt?: InputMaybe<Project_CreatedAt_Operator>;
+    featuredImage?: InputMaybe<Project_FeaturedImage_Operator>;
     id?: InputMaybe<Project_Id_Operator>;
     intro__cta?: InputMaybe<Project_Intro__Cta_Operator>;
     intro__description?: InputMaybe<Project_Intro__Description_Operator>;
@@ -9442,6 +9741,7 @@ export type Project_Where = {
 export type Project_Where_And = {
     caseStudies?: InputMaybe<Project_CaseStudies_Operator>;
     createdAt?: InputMaybe<Project_CreatedAt_Operator>;
+    featuredImage?: InputMaybe<Project_FeaturedImage_Operator>;
     id?: InputMaybe<Project_Id_Operator>;
     intro__cta?: InputMaybe<Project_Intro__Cta_Operator>;
     intro__description?: InputMaybe<Project_Intro__Description_Operator>;
@@ -9454,6 +9754,7 @@ export type Project_Where_And = {
 export type Project_Where_Or = {
     caseStudies?: InputMaybe<Project_CaseStudies_Operator>;
     createdAt?: InputMaybe<Project_CreatedAt_Operator>;
+    featuredImage?: InputMaybe<Project_FeaturedImage_Operator>;
     id?: InputMaybe<Project_Id_Operator>;
     intro__cta?: InputMaybe<Project_Intro__Cta_Operator>;
     intro__description?: InputMaybe<Project_Intro__Description_Operator>;
@@ -9506,6 +9807,7 @@ export type ProjectsDocAccessFields = {
     __typename?: 'ProjectsDocAccessFields';
     caseStudies?: Maybe<ProjectsDocAccessFields_CaseStudies>;
     createdAt?: Maybe<ProjectsDocAccessFields_CreatedAt>;
+    featuredImage?: Maybe<ProjectsDocAccessFields_FeaturedImage>;
     intro?: Maybe<ProjectsDocAccessFields_Intro>;
     projectSections?: Maybe<ProjectsDocAccessFields_ProjectSections>;
     slug?: Maybe<ProjectsDocAccessFields_Slug>;
@@ -9566,6 +9868,34 @@ export type ProjectsDocAccessFields_CreatedAt_Read = {
 
 export type ProjectsDocAccessFields_CreatedAt_Update = {
     __typename?: 'ProjectsDocAccessFields_createdAt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsDocAccessFields_FeaturedImage = {
+    __typename?: 'ProjectsDocAccessFields_featuredImage';
+    create?: Maybe<ProjectsDocAccessFields_FeaturedImage_Create>;
+    delete?: Maybe<ProjectsDocAccessFields_FeaturedImage_Delete>;
+    read?: Maybe<ProjectsDocAccessFields_FeaturedImage_Read>;
+    update?: Maybe<ProjectsDocAccessFields_FeaturedImage_Update>;
+};
+
+export type ProjectsDocAccessFields_FeaturedImage_Create = {
+    __typename?: 'ProjectsDocAccessFields_featuredImage_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsDocAccessFields_FeaturedImage_Delete = {
+    __typename?: 'ProjectsDocAccessFields_featuredImage_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsDocAccessFields_FeaturedImage_Read = {
+    __typename?: 'ProjectsDocAccessFields_featuredImage_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsDocAccessFields_FeaturedImage_Update = {
+    __typename?: 'ProjectsDocAccessFields_featuredImage_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -9805,6 +10135,7 @@ export type ProjectsFields = {
     __typename?: 'ProjectsFields';
     caseStudies?: Maybe<ProjectsFields_CaseStudies>;
     createdAt?: Maybe<ProjectsFields_CreatedAt>;
+    featuredImage?: Maybe<ProjectsFields_FeaturedImage>;
     intro?: Maybe<ProjectsFields_Intro>;
     projectSections?: Maybe<ProjectsFields_ProjectSections>;
     slug?: Maybe<ProjectsFields_Slug>;
@@ -9865,6 +10196,34 @@ export type ProjectsFields_CreatedAt_Read = {
 
 export type ProjectsFields_CreatedAt_Update = {
     __typename?: 'ProjectsFields_createdAt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsFields_FeaturedImage = {
+    __typename?: 'ProjectsFields_featuredImage';
+    create?: Maybe<ProjectsFields_FeaturedImage_Create>;
+    delete?: Maybe<ProjectsFields_FeaturedImage_Delete>;
+    read?: Maybe<ProjectsFields_FeaturedImage_Read>;
+    update?: Maybe<ProjectsFields_FeaturedImage_Update>;
+};
+
+export type ProjectsFields_FeaturedImage_Create = {
+    __typename?: 'ProjectsFields_featuredImage_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsFields_FeaturedImage_Delete = {
+    __typename?: 'ProjectsFields_featuredImage_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsFields_FeaturedImage_Read = {
+    __typename?: 'ProjectsFields_featuredImage_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ProjectsFields_FeaturedImage_Update = {
+    __typename?: 'ProjectsFields_featuredImage_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -14576,6 +14935,7 @@ export type MutationCaseStudyInput = {
 };
 
 export type MutationCaseStudyListingInput = {
+    caseStudies?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     createdAt?: InputMaybe<Scalars['String']['input']>;
     icon?: InputMaybe<Scalars['String']['input']>;
     title?: InputMaybe<Scalars['String']['input']>;
@@ -14788,6 +15148,7 @@ export type MutationPageUpdateInput = {
 export type MutationProjectInput = {
     caseStudies?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     createdAt?: InputMaybe<Scalars['String']['input']>;
+    featuredImage?: InputMaybe<Scalars['String']['input']>;
     intro?: InputMaybe<MutationProject_IntroInput>;
     projectSections?: InputMaybe<Scalars['JSON']['input']>;
     slug?: InputMaybe<Scalars['String']['input']>;
@@ -14798,6 +15159,7 @@ export type MutationProjectInput = {
 export type MutationProjectUpdateInput = {
     caseStudies?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     createdAt?: InputMaybe<Scalars['String']['input']>;
+    featuredImage?: InputMaybe<Scalars['String']['input']>;
     intro?: InputMaybe<MutationProjectUpdate_IntroInput>;
     projectSections?: InputMaybe<Scalars['JSON']['input']>;
     slug?: InputMaybe<Scalars['String']['input']>;
