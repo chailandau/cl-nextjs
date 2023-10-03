@@ -1,0 +1,31 @@
+.back-to-top {
+    position: fixed;
+    bottom: rem(12);
+    right: rem(12);
+    font-weight: bold;
+    color: color(common, 'black');
+    width: rem(40);
+    height: rem(40);
+    @include transition(bottom, right);
+    @include laptop {
+        bottom: rem(24);
+        right: rem(24);
+    }
+    @include desktopSm {
+        bottom: rem(40);
+        right: rem(40);
+    }
+    &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        width: rem(40);
+        height: rem(40);
+        border-radius: 50%;
+        border: rem(1) color(common, 'black') solid;
+        top: rem(-1);
+        left: 0;
+        z-index: -1;
+        background: color(pastel, 'blurple');
+    }
+}

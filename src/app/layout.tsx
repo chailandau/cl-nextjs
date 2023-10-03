@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import '@/assets/fonts/fonts.css';
 import '@/styles/main.scss';
+import BackToTop from '@/molecules/BackToTop';
 import { getData } from '@/utils/getData';
 
 export const revalidate = 60;
@@ -25,6 +26,7 @@ export default async function RootLayout({
                         copyrightText={Nav?.footerCopyrightText}
                     />
                 )}
+                <BackToTop />
             </body>
         </html>
     );
