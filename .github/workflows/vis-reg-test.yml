@@ -64,6 +64,7 @@ jobs:
 
             - name: VRT no errors - Deploy Success Comment
               uses: mshick/add-pr-comment@v2
+              if: ${{ steps.loki.outcome == 'success' }}
               with:
                   message: |
                       ## ✅ No visual regressions detected in Storybook!
