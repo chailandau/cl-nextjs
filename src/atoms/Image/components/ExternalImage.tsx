@@ -8,6 +8,7 @@ import Flex from '@/molecules/Flex';
 
 interface ExternalImageProps extends Omit<ImageProps, 'src'> {
     src: string;
+    base64?: string;
 }
 
 const ExternalImage: FC<ExternalImageProps> = ({
@@ -16,7 +17,8 @@ const ExternalImage: FC<ExternalImageProps> = ({
     className,
     width,
     height,
-    priority
+    priority,
+    base64
 }) => (
     <Flex className={className}>
         <NextImage
@@ -25,6 +27,8 @@ const ExternalImage: FC<ExternalImageProps> = ({
             width={width}
             height={height}
             priority={priority}
+            placeholder={base64 ? 'blur' : 'empty'}
+            blurDataURL={base64 ? base64 : ''}
         />
     </Flex>
 );

@@ -51,6 +51,7 @@ const Testimonial: FC<TestimonialProps> = ({ testimonial }) => {
                             width={image?.width || 64}
                             height={image?.height || 64}
                             hasBorder={false}
+                            base64={image?.base64 || undefined}
                         />
                     )}
                 </Link>

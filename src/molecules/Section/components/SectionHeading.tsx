@@ -35,6 +35,7 @@ const SectionHeading: FC<SectionHeadingProps> = ({ heading, icon }) => {
                         width={icon?.width || 64}
                         height={icon?.height || 64}
                         hasBorder={false}
+                        base64={icon?.base64 || undefined}
                     />
                 </Container>
             )}

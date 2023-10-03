@@ -53,6 +53,7 @@ const Hero: FC<HeroProps> = ({
                         height={icon?.height || 64}
                         alt={icon?.alt || ''}
                         hasBorder={false}
+                        base64={icon?.base64 || undefined}
                     />
                 </Flex>
             )}

@@ -22,6 +22,8 @@ export interface ImageProps {
     hasBorder?: boolean;
     /** If true, `next/image` will be set to priority (https://nextjs.org/docs/app/api-reference/components/image#priority) */
     priority?: boolean;
+    /** BlurDataURL for external images */
+    base64?: string;
 }
 
 const Image: FC<ImageProps> = ({
@@ -31,7 +33,8 @@ const Image: FC<ImageProps> = ({
     width,
     height,
     hasBorder = true,
-    priority
+    priority,
+    base64
 }) => {
     const classList = classNames(
         styles['container'],
@@ -52,6 +55,7 @@ const Image: FC<ImageProps> = ({
                 src={src}
                 width={width}
                 height={height}
+                base64={base64}
                 {...imageProps}
             />
         );

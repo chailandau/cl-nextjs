@@ -7,6 +7,7 @@ exports[`graphqlQueries mocks ABOUT_QUERY successfully 1`] = `
       "coloredSubhead": null,
       "image": {
         "alt": "Hello World",
+        "base64": "Hello World",
         "height": 100,
         "id": "Hello World",
         "url": "Hello World",
@@ -15,6 +16,7 @@ exports[`graphqlQueries mocks ABOUT_QUERY successfully 1`] = `
       "pets": {
         "athena": {
           "alt": "Hello World",
+          "base64": "Hello World",
           "height": 100,
           "id": "Hello World",
           "url": "Hello World",
@@ -22,6 +24,7 @@ exports[`graphqlQueries mocks ABOUT_QUERY successfully 1`] = `
         },
         "harvey": {
           "alt": "Hello World",
+          "base64": "Hello World",
           "height": 100,
           "id": "Hello World",
           "url": "Hello World",
@@ -29,6 +32,7 @@ exports[`graphqlQueries mocks ABOUT_QUERY successfully 1`] = `
         },
         "warren": {
           "alt": "Hello World",
+          "base64": "Hello World",
           "height": 100,
           "id": "Hello World",
           "url": "Hello World",
@@ -54,6 +58,7 @@ exports[`graphqlQueries mocks CASE_STUDIES_QUERY successfully 1`] = `
         {
           "featuredImage": {
             "alt": "Hello World",
+            "base64": "Hello World",
             "height": 100,
             "id": "Hello World",
             "url": "Hello World",
@@ -69,6 +74,7 @@ exports[`graphqlQueries mocks CASE_STUDIES_QUERY successfully 1`] = `
         {
           "featuredImage": {
             "alt": "Hello World",
+            "base64": "Hello World",
             "height": 100,
             "id": "Hello World",
             "url": "Hello World",
@@ -84,6 +90,7 @@ exports[`graphqlQueries mocks CASE_STUDIES_QUERY successfully 1`] = `
       ],
       "icon": {
         "alt": "Hello World",
+        "base64": "Hello World",
         "height": 64,
         "id": "Hello World",
         "url": "Hello World",
@@ -192,6 +199,7 @@ exports[`graphqlQueries mocks TESTIMONIALS_QUERY successfully 1`] = `
     "TestimonialListing": {
       "icon": {
         "alt": "Hello World",
+        "base64": "Hello World",
         "height": 64,
         "id": "Hello World",
         "url": "Hello World",
@@ -214,6 +222,7 @@ exports[`graphqlQueries mocks TOOLBOX_QUERY successfully 1`] = `
       "description": "Hello World",
       "icon": {
         "alt": "Hello World",
+        "base64": "Hello World",
         "height": 64,
         "id": "Hello World",
         "url": "Hello World",
@@ -224,6 +233,7 @@ exports[`graphqlQueries mocks TOOLBOX_QUERY successfully 1`] = `
         {
           "icon": {
             "alt": "Hello World",
+            "base64": "Hello World",
             "height": 64,
             "id": "Hello World",
             "url": "Hello World",
@@ -235,6 +245,7 @@ exports[`graphqlQueries mocks TOOLBOX_QUERY successfully 1`] = `
         {
           "icon": {
             "alt": "Hello World",
+            "base64": "Hello World",
             "height": 64,
             "id": "Hello World",
             "url": "Hello World",

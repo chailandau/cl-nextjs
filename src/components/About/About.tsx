@@ -34,6 +34,7 @@ export const AboutContent: FC<AboutContentProps> = ({ data }) => {
                         alt={image.alt || ''}
                         width={image?.width || 1000}
                         height={image?.height || 1000}
+                        base64={image?.base64 || undefined}
                     />
                 )}
                 {pets && (
@@ -46,6 +47,7 @@ export const AboutContent: FC<AboutContentProps> = ({ data }) => {
                                 height={pets?.warren?.height || 60}
                                 hasBorder={false}
                                 className={styles['warren']}
+                                base64={pets?.warren?.base64 || undefined}
                             />
                         )}
                         {pets?.harvey && pets?.harvey?.url && (
@@ -56,6 +58,7 @@ export const AboutContent: FC<AboutContentProps> = ({ data }) => {
                                 height={pets?.harvey?.height || 58}
                                 hasBorder={false}
                                 className={styles['harvey']}
+                                base64={pets?.harvey?.base64 || undefined}
                             />
                         )}
                         {pets?.athena && pets?.athena?.url && (
@@ -66,6 +69,7 @@ export const AboutContent: FC<AboutContentProps> = ({ data }) => {
                                 height={pets?.athena?.height || 54}
                                 hasBorder={false}
                                 className={styles['athena']}
+                                base64={pets?.athena?.base64 || undefined}
                             />
                         )}
                     </Container>

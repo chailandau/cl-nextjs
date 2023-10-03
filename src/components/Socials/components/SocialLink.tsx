@@ -25,6 +25,7 @@ const SocialLink: FC<Social> = ({ icon, label, socialLink }) => {
                     height={icon?.height || 64}
                     hasBorder={false}
                     className={styles['social-link-icon']}
+                    base64={icon?.base64 || undefined}
                 />
             )}
             <Link href={socialLink}>
