@@ -1,91 +1,86 @@
 export const INTERNAL_LINK_FRAGMENT = `
-    id
-    title
-    slug
+id
+title
+slug
 `;
 
 export const CTA_FRAGMENT = `
-  cta {
+cta {
+  id
+  label
+  linkType
+  externalLink
+  internalLink {
     id
-    label
-    linkType
-    externalLink
-    internalLink {
-      id
-      slug
-    }
+    slug
   }
-`;
-
-export const ICON_FRAGMENT = `
-  icon {
-    id
-    alt
-    url
-    width
-    height
-  }
+}
 `;
 
 export const IMAGE_FRAGMENT = `
-    id
-    alt
-    url
-    width
-    height
+id
+alt
+url
+width
+height
+base64
 `;
 
 export const SOCIALS_FRAGMENT = `
-  ...on SocialsBlock {
-    __typename
-    id
-    socials {
-      ${ICON_FRAGMENT}
-      label
-      socialLink
+...on SocialsBlock {
+  __typename
+  id
+  socials {
+    icon {
+      ${IMAGE_FRAGMENT}
     }
+    label
+    socialLink
   }
+}
 `;
 
 export const HERO_FRAGMENT = `
 ...on HeroBlock {
-    __typename
+  __typename
+  id
+  hero {
     id
-    hero {
-      id
-      ${ICON_FRAGMENT}
-      heading
-      headingTag
-      coloredSubhead
-      subhead
-      doodles
-      homepage
-      ${CTA_FRAGMENT}
+    icon {
+      ${IMAGE_FRAGMENT}
     }
+    heading
+    headingTag
+    coloredSubhead
+    subhead
+    doodles
+    homepage
+    ${CTA_FRAGMENT}
   }
+}
 `;
 
 export const SINGLE_USE_FRAGMENT = `
-  ...on SingleUseBlock {
-    __typename
-    id
-    singleUse
-  }
+...on SingleUseBlock {
+  __typename
+  id
+  singleUse
+}
 `;
 export const TEXT_BLOCK_FRAGMENT = `
-  ...on TextBlock {
-    __typename
-    id
-    heading
-    text
-  }
+...on TextBlock {
+  __typename
+  id
+  heading
+  text
+}
 `;
 
 export const IMAGE_BLOCK_FRAGMENT = `
 ...on ImageBlock {
   __typename
-    image {
-            ${IMAGE_FRAGMENT}
-          }
+  image {
+    ${IMAGE_FRAGMENT}
   }
+}
 `;

@@ -688,6 +688,17 @@ export type About_Image_Alt_Operator = {
     not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
+export type About_Image_Base64_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
 export type About_Image_CreatedAt_Operator = {
     equals?: InputMaybe<Scalars['DateTime']['input']>;
     exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -841,6 +852,7 @@ export type About_Image_Where = {
     AND?: InputMaybe<Array<InputMaybe<About_Image_Where_And>>>;
     OR?: InputMaybe<Array<InputMaybe<About_Image_Where_Or>>>;
     alt?: InputMaybe<About_Image_Alt_Operator>;
+    base64?: InputMaybe<About_Image_Base64_Operator>;
     createdAt?: InputMaybe<About_Image_CreatedAt_Operator>;
     filename?: InputMaybe<About_Image_Filename_Operator>;
     filesize?: InputMaybe<About_Image_Filesize_Operator>;
@@ -860,6 +872,7 @@ export type About_Image_Where = {
 
 export type About_Image_Where_And = {
     alt?: InputMaybe<About_Image_Alt_Operator>;
+    base64?: InputMaybe<About_Image_Base64_Operator>;
     createdAt?: InputMaybe<About_Image_CreatedAt_Operator>;
     filename?: InputMaybe<About_Image_Filename_Operator>;
     filesize?: InputMaybe<About_Image_Filesize_Operator>;
@@ -879,6 +892,7 @@ export type About_Image_Where_And = {
 
 export type About_Image_Where_Or = {
     alt?: InputMaybe<About_Image_Alt_Operator>;
+    base64?: InputMaybe<About_Image_Base64_Operator>;
     createdAt?: InputMaybe<About_Image_CreatedAt_Operator>;
     filename?: InputMaybe<About_Image_Filename_Operator>;
     filesize?: InputMaybe<About_Image_Filesize_Operator>;
@@ -929,6 +943,17 @@ export type About_Pets_Athena_Alt_Operator = {
     all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     contains?: InputMaybe<Scalars['String']['input']>;
     equals?: InputMaybe<Scalars['String']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type About_Pets_Athena_Base64_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
     in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     like?: InputMaybe<Scalars['String']['input']>;
     not_equals?: InputMaybe<Scalars['String']['input']>;
@@ -1088,6 +1113,7 @@ export type About_Pets_Athena_Where = {
     AND?: InputMaybe<Array<InputMaybe<About_Pets_Athena_Where_And>>>;
     OR?: InputMaybe<Array<InputMaybe<About_Pets_Athena_Where_Or>>>;
     alt?: InputMaybe<About_Pets_Athena_Alt_Operator>;
+    base64?: InputMaybe<About_Pets_Athena_Base64_Operator>;
     createdAt?: InputMaybe<About_Pets_Athena_CreatedAt_Operator>;
     filename?: InputMaybe<About_Pets_Athena_Filename_Operator>;
     filesize?: InputMaybe<About_Pets_Athena_Filesize_Operator>;
@@ -1107,6 +1133,7 @@ export type About_Pets_Athena_Where = {
 
 export type About_Pets_Athena_Where_And = {
     alt?: InputMaybe<About_Pets_Athena_Alt_Operator>;
+    base64?: InputMaybe<About_Pets_Athena_Base64_Operator>;
     createdAt?: InputMaybe<About_Pets_Athena_CreatedAt_Operator>;
     filename?: InputMaybe<About_Pets_Athena_Filename_Operator>;
     filesize?: InputMaybe<About_Pets_Athena_Filesize_Operator>;
@@ -1126,6 +1153,7 @@ export type About_Pets_Athena_Where_And = {
 
 export type About_Pets_Athena_Where_Or = {
     alt?: InputMaybe<About_Pets_Athena_Alt_Operator>;
+    base64?: InputMaybe<About_Pets_Athena_Base64_Operator>;
     createdAt?: InputMaybe<About_Pets_Athena_CreatedAt_Operator>;
     filename?: InputMaybe<About_Pets_Athena_Filename_Operator>;
     filesize?: InputMaybe<About_Pets_Athena_Filesize_Operator>;
@@ -1157,6 +1185,17 @@ export type About_Pets_Harvey_Alt_Operator = {
     all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     contains?: InputMaybe<Scalars['String']['input']>;
     equals?: InputMaybe<Scalars['String']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type About_Pets_Harvey_Base64_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
     in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     like?: InputMaybe<Scalars['String']['input']>;
     not_equals?: InputMaybe<Scalars['String']['input']>;
@@ -1316,6 +1355,7 @@ export type About_Pets_Harvey_Where = {
     AND?: InputMaybe<Array<InputMaybe<About_Pets_Harvey_Where_And>>>;
     OR?: InputMaybe<Array<InputMaybe<About_Pets_Harvey_Where_Or>>>;
     alt?: InputMaybe<About_Pets_Harvey_Alt_Operator>;
+    base64?: InputMaybe<About_Pets_Harvey_Base64_Operator>;
     createdAt?: InputMaybe<About_Pets_Harvey_CreatedAt_Operator>;
     filename?: InputMaybe<About_Pets_Harvey_Filename_Operator>;
     filesize?: InputMaybe<About_Pets_Harvey_Filesize_Operator>;
@@ -1335,6 +1375,7 @@ export type About_Pets_Harvey_Where = {
 
 export type About_Pets_Harvey_Where_And = {
     alt?: InputMaybe<About_Pets_Harvey_Alt_Operator>;
+    base64?: InputMaybe<About_Pets_Harvey_Base64_Operator>;
     createdAt?: InputMaybe<About_Pets_Harvey_CreatedAt_Operator>;
     filename?: InputMaybe<About_Pets_Harvey_Filename_Operator>;
     filesize?: InputMaybe<About_Pets_Harvey_Filesize_Operator>;
@@ -1354,6 +1395,7 @@ export type About_Pets_Harvey_Where_And = {
 
 export type About_Pets_Harvey_Where_Or = {
     alt?: InputMaybe<About_Pets_Harvey_Alt_Operator>;
+    base64?: InputMaybe<About_Pets_Harvey_Base64_Operator>;
     createdAt?: InputMaybe<About_Pets_Harvey_CreatedAt_Operator>;
     filename?: InputMaybe<About_Pets_Harvey_Filename_Operator>;
     filesize?: InputMaybe<About_Pets_Harvey_Filesize_Operator>;
@@ -1385,6 +1427,17 @@ export type About_Pets_Warren_Alt_Operator = {
     all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     contains?: InputMaybe<Scalars['String']['input']>;
     equals?: InputMaybe<Scalars['String']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type About_Pets_Warren_Base64_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
     in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     like?: InputMaybe<Scalars['String']['input']>;
     not_equals?: InputMaybe<Scalars['String']['input']>;
@@ -1544,6 +1597,7 @@ export type About_Pets_Warren_Where = {
     AND?: InputMaybe<Array<InputMaybe<About_Pets_Warren_Where_And>>>;
     OR?: InputMaybe<Array<InputMaybe<About_Pets_Warren_Where_Or>>>;
     alt?: InputMaybe<About_Pets_Warren_Alt_Operator>;
+    base64?: InputMaybe<About_Pets_Warren_Base64_Operator>;
     createdAt?: InputMaybe<About_Pets_Warren_CreatedAt_Operator>;
     filename?: InputMaybe<About_Pets_Warren_Filename_Operator>;
     filesize?: InputMaybe<About_Pets_Warren_Filesize_Operator>;
@@ -1563,6 +1617,7 @@ export type About_Pets_Warren_Where = {
 
 export type About_Pets_Warren_Where_And = {
     alt?: InputMaybe<About_Pets_Warren_Alt_Operator>;
+    base64?: InputMaybe<About_Pets_Warren_Base64_Operator>;
     createdAt?: InputMaybe<About_Pets_Warren_CreatedAt_Operator>;
     filename?: InputMaybe<About_Pets_Warren_Filename_Operator>;
     filesize?: InputMaybe<About_Pets_Warren_Filesize_Operator>;
@@ -1582,6 +1637,7 @@ export type About_Pets_Warren_Where_And = {
 
 export type About_Pets_Warren_Where_Or = {
     alt?: InputMaybe<About_Pets_Warren_Alt_Operator>;
+    base64?: InputMaybe<About_Pets_Warren_Base64_Operator>;
     createdAt?: InputMaybe<About_Pets_Warren_CreatedAt_Operator>;
     filename?: InputMaybe<About_Pets_Warren_Filename_Operator>;
     filesize?: InputMaybe<About_Pets_Warren_Filesize_Operator>;
@@ -2647,6 +2703,17 @@ export type CaseStudyListing_Icon_Alt_Operator = {
     not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
+export type CaseStudyListing_Icon_Base64_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
 export type CaseStudyListing_Icon_CreatedAt_Operator = {
     equals?: InputMaybe<Scalars['DateTime']['input']>;
     exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -2800,6 +2867,7 @@ export type CaseStudyListing_Icon_Where = {
     AND?: InputMaybe<Array<InputMaybe<CaseStudyListing_Icon_Where_And>>>;
     OR?: InputMaybe<Array<InputMaybe<CaseStudyListing_Icon_Where_Or>>>;
     alt?: InputMaybe<CaseStudyListing_Icon_Alt_Operator>;
+    base64?: InputMaybe<CaseStudyListing_Icon_Base64_Operator>;
     createdAt?: InputMaybe<CaseStudyListing_Icon_CreatedAt_Operator>;
     filename?: InputMaybe<CaseStudyListing_Icon_Filename_Operator>;
     filesize?: InputMaybe<CaseStudyListing_Icon_Filesize_Operator>;
@@ -2819,6 +2887,7 @@ export type CaseStudyListing_Icon_Where = {
 
 export type CaseStudyListing_Icon_Where_And = {
     alt?: InputMaybe<CaseStudyListing_Icon_Alt_Operator>;
+    base64?: InputMaybe<CaseStudyListing_Icon_Base64_Operator>;
     createdAt?: InputMaybe<CaseStudyListing_Icon_CreatedAt_Operator>;
     filename?: InputMaybe<CaseStudyListing_Icon_Filename_Operator>;
     filesize?: InputMaybe<CaseStudyListing_Icon_Filesize_Operator>;
@@ -2838,6 +2907,7 @@ export type CaseStudyListing_Icon_Where_And = {
 
 export type CaseStudyListing_Icon_Where_Or = {
     alt?: InputMaybe<CaseStudyListing_Icon_Alt_Operator>;
+    base64?: InputMaybe<CaseStudyListing_Icon_Base64_Operator>;
     createdAt?: InputMaybe<CaseStudyListing_Icon_CreatedAt_Operator>;
     filename?: InputMaybe<CaseStudyListing_Icon_Filename_Operator>;
     filesize?: InputMaybe<CaseStudyListing_Icon_Filesize_Operator>;
@@ -2887,6 +2957,17 @@ export type CaseStudy_Intro_Image_Alt_Operator = {
     all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     contains?: InputMaybe<Scalars['String']['input']>;
     equals?: InputMaybe<Scalars['String']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type CaseStudy_Intro_Image_Base64_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
     in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     like?: InputMaybe<Scalars['String']['input']>;
     not_equals?: InputMaybe<Scalars['String']['input']>;
@@ -3046,6 +3127,7 @@ export type CaseStudy_Intro_Image_Where = {
     AND?: InputMaybe<Array<InputMaybe<CaseStudy_Intro_Image_Where_And>>>;
     OR?: InputMaybe<Array<InputMaybe<CaseStudy_Intro_Image_Where_Or>>>;
     alt?: InputMaybe<CaseStudy_Intro_Image_Alt_Operator>;
+    base64?: InputMaybe<CaseStudy_Intro_Image_Base64_Operator>;
     createdAt?: InputMaybe<CaseStudy_Intro_Image_CreatedAt_Operator>;
     filename?: InputMaybe<CaseStudy_Intro_Image_Filename_Operator>;
     filesize?: InputMaybe<CaseStudy_Intro_Image_Filesize_Operator>;
@@ -3065,6 +3147,7 @@ export type CaseStudy_Intro_Image_Where = {
 
 export type CaseStudy_Intro_Image_Where_And = {
     alt?: InputMaybe<CaseStudy_Intro_Image_Alt_Operator>;
+    base64?: InputMaybe<CaseStudy_Intro_Image_Base64_Operator>;
     createdAt?: InputMaybe<CaseStudy_Intro_Image_CreatedAt_Operator>;
     filename?: InputMaybe<CaseStudy_Intro_Image_Filename_Operator>;
     filesize?: InputMaybe<CaseStudy_Intro_Image_Filesize_Operator>;
@@ -3084,6 +3167,7 @@ export type CaseStudy_Intro_Image_Where_And = {
 
 export type CaseStudy_Intro_Image_Where_Or = {
     alt?: InputMaybe<CaseStudy_Intro_Image_Alt_Operator>;
+    base64?: InputMaybe<CaseStudy_Intro_Image_Base64_Operator>;
     createdAt?: InputMaybe<CaseStudy_Intro_Image_CreatedAt_Operator>;
     filename?: InputMaybe<CaseStudy_Intro_Image_Filename_Operator>;
     filesize?: InputMaybe<CaseStudy_Intro_Image_Filesize_Operator>;
@@ -3322,12 +3406,11 @@ export type Cta_LinkType_Input =
     | '%future added value';
 
 export type Cta_LinkType_Operator = {
-    all?: InputMaybe<Array<InputMaybe<Cta_LinkType_Input>>>;
+    contains?: InputMaybe<Cta_LinkType_Input>;
     equals?: InputMaybe<Cta_LinkType_Input>;
     exists?: InputMaybe<Scalars['Boolean']['input']>;
-    in?: InputMaybe<Array<InputMaybe<Cta_LinkType_Input>>>;
+    like?: InputMaybe<Cta_LinkType_Input>;
     not_equals?: InputMaybe<Cta_LinkType_Input>;
-    not_in?: InputMaybe<Array<InputMaybe<Cta_LinkType_Input>>>;
 };
 
 export type Cta_UpdatedAt_Operator = {
@@ -3952,6 +4035,17 @@ export type Hero_Icon_Alt_Operator = {
     not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
+export type Hero_Icon_Base64_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
 export type Hero_Icon_CreatedAt_Operator = {
     equals?: InputMaybe<Scalars['DateTime']['input']>;
     exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -4105,6 +4199,7 @@ export type Hero_Icon_Where = {
     AND?: InputMaybe<Array<InputMaybe<Hero_Icon_Where_And>>>;
     OR?: InputMaybe<Array<InputMaybe<Hero_Icon_Where_Or>>>;
     alt?: InputMaybe<Hero_Icon_Alt_Operator>;
+    base64?: InputMaybe<Hero_Icon_Base64_Operator>;
     createdAt?: InputMaybe<Hero_Icon_CreatedAt_Operator>;
     filename?: InputMaybe<Hero_Icon_Filename_Operator>;
     filesize?: InputMaybe<Hero_Icon_Filesize_Operator>;
@@ -4124,6 +4219,7 @@ export type Hero_Icon_Where = {
 
 export type Hero_Icon_Where_And = {
     alt?: InputMaybe<Hero_Icon_Alt_Operator>;
+    base64?: InputMaybe<Hero_Icon_Base64_Operator>;
     createdAt?: InputMaybe<Hero_Icon_CreatedAt_Operator>;
     filename?: InputMaybe<Hero_Icon_Filename_Operator>;
     filesize?: InputMaybe<Hero_Icon_Filesize_Operator>;
@@ -4143,6 +4239,7 @@ export type Hero_Icon_Where_And = {
 
 export type Hero_Icon_Where_Or = {
     alt?: InputMaybe<Hero_Icon_Alt_Operator>;
+    base64?: InputMaybe<Hero_Icon_Base64_Operator>;
     createdAt?: InputMaybe<Hero_Icon_CreatedAt_Operator>;
     filename?: InputMaybe<Hero_Icon_Filename_Operator>;
     filesize?: InputMaybe<Hero_Icon_Filesize_Operator>;
@@ -4964,6 +5061,7 @@ export type HeroesUpdateDocAccess = {
 export type Icon = {
     __typename?: 'Icon';
     alt: Scalars['String']['output'];
+    base64?: Maybe<Scalars['String']['output']>;
     createdAt?: Maybe<Scalars['DateTime']['output']>;
     filename?: Maybe<Scalars['String']['output']>;
     filesize?: Maybe<Scalars['Float']['output']>;
@@ -4995,6 +5093,17 @@ export type Icon_Alt_Operator = {
     all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     contains?: InputMaybe<Scalars['String']['input']>;
     equals?: InputMaybe<Scalars['String']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Icon_Base64_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
     in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     like?: InputMaybe<Scalars['String']['input']>;
     not_equals?: InputMaybe<Scalars['String']['input']>;
@@ -5154,6 +5263,7 @@ export type Icon_Where = {
     AND?: InputMaybe<Array<InputMaybe<Icon_Where_And>>>;
     OR?: InputMaybe<Array<InputMaybe<Icon_Where_Or>>>;
     alt?: InputMaybe<Icon_Alt_Operator>;
+    base64?: InputMaybe<Icon_Base64_Operator>;
     createdAt?: InputMaybe<Icon_CreatedAt_Operator>;
     filename?: InputMaybe<Icon_Filename_Operator>;
     filesize?: InputMaybe<Icon_Filesize_Operator>;
@@ -5173,6 +5283,7 @@ export type Icon_Where = {
 
 export type Icon_Where_And = {
     alt?: InputMaybe<Icon_Alt_Operator>;
+    base64?: InputMaybe<Icon_Base64_Operator>;
     createdAt?: InputMaybe<Icon_CreatedAt_Operator>;
     filename?: InputMaybe<Icon_Filename_Operator>;
     filesize?: InputMaybe<Icon_Filesize_Operator>;
@@ -5192,6 +5303,7 @@ export type Icon_Where_And = {
 
 export type Icon_Where_Or = {
     alt?: InputMaybe<Icon_Alt_Operator>;
+    base64?: InputMaybe<Icon_Base64_Operator>;
     createdAt?: InputMaybe<Icon_CreatedAt_Operator>;
     filename?: InputMaybe<Icon_Filename_Operator>;
     filesize?: InputMaybe<Icon_Filesize_Operator>;
@@ -5261,6 +5373,7 @@ export type IconsDeleteDocAccess = {
 export type IconsDocAccessFields = {
     __typename?: 'IconsDocAccessFields';
     alt?: Maybe<IconsDocAccessFields_Alt>;
+    base64?: Maybe<IconsDocAccessFields_Base64>;
     createdAt?: Maybe<IconsDocAccessFields_CreatedAt>;
     filename?: Maybe<IconsDocAccessFields_Filename>;
     filesize?: Maybe<IconsDocAccessFields_Filesize>;
@@ -5297,6 +5410,34 @@ export type IconsDocAccessFields_Alt_Read = {
 
 export type IconsDocAccessFields_Alt_Update = {
     __typename?: 'IconsDocAccessFields_alt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type IconsDocAccessFields_Base64 = {
+    __typename?: 'IconsDocAccessFields_base64';
+    create?: Maybe<IconsDocAccessFields_Base64_Create>;
+    delete?: Maybe<IconsDocAccessFields_Base64_Delete>;
+    read?: Maybe<IconsDocAccessFields_Base64_Read>;
+    update?: Maybe<IconsDocAccessFields_Base64_Update>;
+};
+
+export type IconsDocAccessFields_Base64_Create = {
+    __typename?: 'IconsDocAccessFields_base64_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type IconsDocAccessFields_Base64_Delete = {
+    __typename?: 'IconsDocAccessFields_base64_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type IconsDocAccessFields_Base64_Read = {
+    __typename?: 'IconsDocAccessFields_base64_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type IconsDocAccessFields_Base64_Update = {
+    __typename?: 'IconsDocAccessFields_base64_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -5768,6 +5909,7 @@ export type IconsDocAccessFields_Width_Update = {
 export type IconsFields = {
     __typename?: 'IconsFields';
     alt?: Maybe<IconsFields_Alt>;
+    base64?: Maybe<IconsFields_Base64>;
     createdAt?: Maybe<IconsFields_CreatedAt>;
     filename?: Maybe<IconsFields_Filename>;
     filesize?: Maybe<IconsFields_Filesize>;
@@ -5804,6 +5946,34 @@ export type IconsFields_Alt_Read = {
 
 export type IconsFields_Alt_Update = {
     __typename?: 'IconsFields_alt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type IconsFields_Base64 = {
+    __typename?: 'IconsFields_base64';
+    create?: Maybe<IconsFields_Base64_Create>;
+    delete?: Maybe<IconsFields_Base64_Delete>;
+    read?: Maybe<IconsFields_Base64_Read>;
+    update?: Maybe<IconsFields_Base64_Update>;
+};
+
+export type IconsFields_Base64_Create = {
+    __typename?: 'IconsFields_base64_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type IconsFields_Base64_Delete = {
+    __typename?: 'IconsFields_base64_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type IconsFields_Base64_Read = {
+    __typename?: 'IconsFields_base64_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type IconsFields_Base64_Update = {
+    __typename?: 'IconsFields_base64_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -6299,6 +6469,7 @@ export type IconsUpdateDocAccess = {
 export type Image = {
     __typename?: 'Image';
     alt: Scalars['String']['output'];
+    base64?: Maybe<Scalars['String']['output']>;
     createdAt?: Maybe<Scalars['DateTime']['output']>;
     filename?: Maybe<Scalars['String']['output']>;
     filesize?: Maybe<Scalars['Float']['output']>;
@@ -6327,6 +6498,17 @@ export type ImageBlock_Image_Alt_Operator = {
     all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     contains?: InputMaybe<Scalars['String']['input']>;
     equals?: InputMaybe<Scalars['String']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type ImageBlock_Image_Base64_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
     in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     like?: InputMaybe<Scalars['String']['input']>;
     not_equals?: InputMaybe<Scalars['String']['input']>;
@@ -6486,6 +6668,7 @@ export type ImageBlock_Image_Where = {
     AND?: InputMaybe<Array<InputMaybe<ImageBlock_Image_Where_And>>>;
     OR?: InputMaybe<Array<InputMaybe<ImageBlock_Image_Where_Or>>>;
     alt?: InputMaybe<ImageBlock_Image_Alt_Operator>;
+    base64?: InputMaybe<ImageBlock_Image_Base64_Operator>;
     createdAt?: InputMaybe<ImageBlock_Image_CreatedAt_Operator>;
     filename?: InputMaybe<ImageBlock_Image_Filename_Operator>;
     filesize?: InputMaybe<ImageBlock_Image_Filesize_Operator>;
@@ -6505,6 +6688,7 @@ export type ImageBlock_Image_Where = {
 
 export type ImageBlock_Image_Where_And = {
     alt?: InputMaybe<ImageBlock_Image_Alt_Operator>;
+    base64?: InputMaybe<ImageBlock_Image_Base64_Operator>;
     createdAt?: InputMaybe<ImageBlock_Image_CreatedAt_Operator>;
     filename?: InputMaybe<ImageBlock_Image_Filename_Operator>;
     filesize?: InputMaybe<ImageBlock_Image_Filesize_Operator>;
@@ -6524,6 +6708,7 @@ export type ImageBlock_Image_Where_And = {
 
 export type ImageBlock_Image_Where_Or = {
     alt?: InputMaybe<ImageBlock_Image_Alt_Operator>;
+    base64?: InputMaybe<ImageBlock_Image_Base64_Operator>;
     createdAt?: InputMaybe<ImageBlock_Image_CreatedAt_Operator>;
     filename?: InputMaybe<ImageBlock_Image_Filename_Operator>;
     filesize?: InputMaybe<ImageBlock_Image_Filesize_Operator>;
@@ -6570,6 +6755,17 @@ export type Image_Alt_Operator = {
     all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     contains?: InputMaybe<Scalars['String']['input']>;
     equals?: InputMaybe<Scalars['String']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Image_Base64_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
     in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     like?: InputMaybe<Scalars['String']['input']>;
     not_equals?: InputMaybe<Scalars['String']['input']>;
@@ -6729,6 +6925,7 @@ export type Image_Where = {
     AND?: InputMaybe<Array<InputMaybe<Image_Where_And>>>;
     OR?: InputMaybe<Array<InputMaybe<Image_Where_Or>>>;
     alt?: InputMaybe<Image_Alt_Operator>;
+    base64?: InputMaybe<Image_Base64_Operator>;
     createdAt?: InputMaybe<Image_CreatedAt_Operator>;
     filename?: InputMaybe<Image_Filename_Operator>;
     filesize?: InputMaybe<Image_Filesize_Operator>;
@@ -6748,6 +6945,7 @@ export type Image_Where = {
 
 export type Image_Where_And = {
     alt?: InputMaybe<Image_Alt_Operator>;
+    base64?: InputMaybe<Image_Base64_Operator>;
     createdAt?: InputMaybe<Image_CreatedAt_Operator>;
     filename?: InputMaybe<Image_Filename_Operator>;
     filesize?: InputMaybe<Image_Filesize_Operator>;
@@ -6767,6 +6965,7 @@ export type Image_Where_And = {
 
 export type Image_Where_Or = {
     alt?: InputMaybe<Image_Alt_Operator>;
+    base64?: InputMaybe<Image_Base64_Operator>;
     createdAt?: InputMaybe<Image_CreatedAt_Operator>;
     filename?: InputMaybe<Image_Filename_Operator>;
     filesize?: InputMaybe<Image_Filesize_Operator>;
@@ -6836,6 +7035,7 @@ export type ImagesDeleteDocAccess = {
 export type ImagesDocAccessFields = {
     __typename?: 'ImagesDocAccessFields';
     alt?: Maybe<ImagesDocAccessFields_Alt>;
+    base64?: Maybe<ImagesDocAccessFields_Base64>;
     createdAt?: Maybe<ImagesDocAccessFields_CreatedAt>;
     filename?: Maybe<ImagesDocAccessFields_Filename>;
     filesize?: Maybe<ImagesDocAccessFields_Filesize>;
@@ -6872,6 +7072,34 @@ export type ImagesDocAccessFields_Alt_Read = {
 
 export type ImagesDocAccessFields_Alt_Update = {
     __typename?: 'ImagesDocAccessFields_alt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ImagesDocAccessFields_Base64 = {
+    __typename?: 'ImagesDocAccessFields_base64';
+    create?: Maybe<ImagesDocAccessFields_Base64_Create>;
+    delete?: Maybe<ImagesDocAccessFields_Base64_Delete>;
+    read?: Maybe<ImagesDocAccessFields_Base64_Read>;
+    update?: Maybe<ImagesDocAccessFields_Base64_Update>;
+};
+
+export type ImagesDocAccessFields_Base64_Create = {
+    __typename?: 'ImagesDocAccessFields_base64_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ImagesDocAccessFields_Base64_Delete = {
+    __typename?: 'ImagesDocAccessFields_base64_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ImagesDocAccessFields_Base64_Read = {
+    __typename?: 'ImagesDocAccessFields_base64_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ImagesDocAccessFields_Base64_Update = {
+    __typename?: 'ImagesDocAccessFields_base64_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -7343,6 +7571,7 @@ export type ImagesDocAccessFields_Width_Update = {
 export type ImagesFields = {
     __typename?: 'ImagesFields';
     alt?: Maybe<ImagesFields_Alt>;
+    base64?: Maybe<ImagesFields_Base64>;
     createdAt?: Maybe<ImagesFields_CreatedAt>;
     filename?: Maybe<ImagesFields_Filename>;
     filesize?: Maybe<ImagesFields_Filesize>;
@@ -7379,6 +7608,34 @@ export type ImagesFields_Alt_Read = {
 
 export type ImagesFields_Alt_Update = {
     __typename?: 'ImagesFields_alt_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ImagesFields_Base64 = {
+    __typename?: 'ImagesFields_base64';
+    create?: Maybe<ImagesFields_Base64_Create>;
+    delete?: Maybe<ImagesFields_Base64_Delete>;
+    read?: Maybe<ImagesFields_Base64_Read>;
+    update?: Maybe<ImagesFields_Base64_Update>;
+};
+
+export type ImagesFields_Base64_Create = {
+    __typename?: 'ImagesFields_base64_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ImagesFields_Base64_Delete = {
+    __typename?: 'ImagesFields_base64_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ImagesFields_Base64_Read = {
+    __typename?: 'ImagesFields_base64_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type ImagesFields_Base64_Update = {
+    __typename?: 'ImagesFields_base64_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -9171,6 +9428,17 @@ export type Project_FeaturedImage_Alt_Operator = {
     not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
+export type Project_FeaturedImage_Base64_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
 export type Project_FeaturedImage_CreatedAt_Operator = {
     equals?: InputMaybe<Scalars['DateTime']['input']>;
     exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -9324,6 +9592,7 @@ export type Project_FeaturedImage_Where = {
     AND?: InputMaybe<Array<InputMaybe<Project_FeaturedImage_Where_And>>>;
     OR?: InputMaybe<Array<InputMaybe<Project_FeaturedImage_Where_Or>>>;
     alt?: InputMaybe<Project_FeaturedImage_Alt_Operator>;
+    base64?: InputMaybe<Project_FeaturedImage_Base64_Operator>;
     createdAt?: InputMaybe<Project_FeaturedImage_CreatedAt_Operator>;
     filename?: InputMaybe<Project_FeaturedImage_Filename_Operator>;
     filesize?: InputMaybe<Project_FeaturedImage_Filesize_Operator>;
@@ -9343,6 +9612,7 @@ export type Project_FeaturedImage_Where = {
 
 export type Project_FeaturedImage_Where_And = {
     alt?: InputMaybe<Project_FeaturedImage_Alt_Operator>;
+    base64?: InputMaybe<Project_FeaturedImage_Base64_Operator>;
     createdAt?: InputMaybe<Project_FeaturedImage_CreatedAt_Operator>;
     filename?: InputMaybe<Project_FeaturedImage_Filename_Operator>;
     filesize?: InputMaybe<Project_FeaturedImage_Filesize_Operator>;
@@ -9362,6 +9632,7 @@ export type Project_FeaturedImage_Where_And = {
 
 export type Project_FeaturedImage_Where_Or = {
     alt?: InputMaybe<Project_FeaturedImage_Alt_Operator>;
+    base64?: InputMaybe<Project_FeaturedImage_Base64_Operator>;
     createdAt?: InputMaybe<Project_FeaturedImage_CreatedAt_Operator>;
     filename?: InputMaybe<Project_FeaturedImage_Filename_Operator>;
     filesize?: InputMaybe<Project_FeaturedImage_Filesize_Operator>;
@@ -9404,6 +9675,17 @@ export type Project_Intro_Image_Alt_Operator = {
     all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     contains?: InputMaybe<Scalars['String']['input']>;
     equals?: InputMaybe<Scalars['String']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Project_Intro_Image_Base64_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
     in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     like?: InputMaybe<Scalars['String']['input']>;
     not_equals?: InputMaybe<Scalars['String']['input']>;
@@ -9563,6 +9845,7 @@ export type Project_Intro_Image_Where = {
     AND?: InputMaybe<Array<InputMaybe<Project_Intro_Image_Where_And>>>;
     OR?: InputMaybe<Array<InputMaybe<Project_Intro_Image_Where_Or>>>;
     alt?: InputMaybe<Project_Intro_Image_Alt_Operator>;
+    base64?: InputMaybe<Project_Intro_Image_Base64_Operator>;
     createdAt?: InputMaybe<Project_Intro_Image_CreatedAt_Operator>;
     filename?: InputMaybe<Project_Intro_Image_Filename_Operator>;
     filesize?: InputMaybe<Project_Intro_Image_Filesize_Operator>;
@@ -9582,6 +9865,7 @@ export type Project_Intro_Image_Where = {
 
 export type Project_Intro_Image_Where_And = {
     alt?: InputMaybe<Project_Intro_Image_Alt_Operator>;
+    base64?: InputMaybe<Project_Intro_Image_Base64_Operator>;
     createdAt?: InputMaybe<Project_Intro_Image_CreatedAt_Operator>;
     filename?: InputMaybe<Project_Intro_Image_Filename_Operator>;
     filesize?: InputMaybe<Project_Intro_Image_Filesize_Operator>;
@@ -9601,6 +9885,7 @@ export type Project_Intro_Image_Where_And = {
 
 export type Project_Intro_Image_Where_Or = {
     alt?: InputMaybe<Project_Intro_Image_Alt_Operator>;
+    base64?: InputMaybe<Project_Intro_Image_Base64_Operator>;
     createdAt?: InputMaybe<Project_Intro_Image_CreatedAt_Operator>;
     filename?: InputMaybe<Project_Intro_Image_Filename_Operator>;
     filesize?: InputMaybe<Project_Intro_Image_Filesize_Operator>;
@@ -10784,6 +11069,17 @@ export type Social_Icon_Alt_Operator = {
     not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
+export type Social_Icon_Base64_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
 export type Social_Icon_CreatedAt_Operator = {
     equals?: InputMaybe<Scalars['DateTime']['input']>;
     exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -10937,6 +11233,7 @@ export type Social_Icon_Where = {
     AND?: InputMaybe<Array<InputMaybe<Social_Icon_Where_And>>>;
     OR?: InputMaybe<Array<InputMaybe<Social_Icon_Where_Or>>>;
     alt?: InputMaybe<Social_Icon_Alt_Operator>;
+    base64?: InputMaybe<Social_Icon_Base64_Operator>;
     createdAt?: InputMaybe<Social_Icon_CreatedAt_Operator>;
     filename?: InputMaybe<Social_Icon_Filename_Operator>;
     filesize?: InputMaybe<Social_Icon_Filesize_Operator>;
@@ -10956,6 +11253,7 @@ export type Social_Icon_Where = {
 
 export type Social_Icon_Where_And = {
     alt?: InputMaybe<Social_Icon_Alt_Operator>;
+    base64?: InputMaybe<Social_Icon_Base64_Operator>;
     createdAt?: InputMaybe<Social_Icon_CreatedAt_Operator>;
     filename?: InputMaybe<Social_Icon_Filename_Operator>;
     filesize?: InputMaybe<Social_Icon_Filesize_Operator>;
@@ -10975,6 +11273,7 @@ export type Social_Icon_Where_And = {
 
 export type Social_Icon_Where_Or = {
     alt?: InputMaybe<Social_Icon_Alt_Operator>;
+    base64?: InputMaybe<Social_Icon_Base64_Operator>;
     createdAt?: InputMaybe<Social_Icon_CreatedAt_Operator>;
     filename?: InputMaybe<Social_Icon_Filename_Operator>;
     filesize?: InputMaybe<Social_Icon_Filesize_Operator>;
@@ -11826,6 +12125,17 @@ export type TestimonialListing_Icon_Alt_Operator = {
     not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
+export type TestimonialListing_Icon_Base64_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
 export type TestimonialListing_Icon_CreatedAt_Operator = {
     equals?: InputMaybe<Scalars['DateTime']['input']>;
     exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -11979,6 +12289,7 @@ export type TestimonialListing_Icon_Where = {
     AND?: InputMaybe<Array<InputMaybe<TestimonialListing_Icon_Where_And>>>;
     OR?: InputMaybe<Array<InputMaybe<TestimonialListing_Icon_Where_Or>>>;
     alt?: InputMaybe<TestimonialListing_Icon_Alt_Operator>;
+    base64?: InputMaybe<TestimonialListing_Icon_Base64_Operator>;
     createdAt?: InputMaybe<TestimonialListing_Icon_CreatedAt_Operator>;
     filename?: InputMaybe<TestimonialListing_Icon_Filename_Operator>;
     filesize?: InputMaybe<TestimonialListing_Icon_Filesize_Operator>;
@@ -11998,6 +12309,7 @@ export type TestimonialListing_Icon_Where = {
 
 export type TestimonialListing_Icon_Where_And = {
     alt?: InputMaybe<TestimonialListing_Icon_Alt_Operator>;
+    base64?: InputMaybe<TestimonialListing_Icon_Base64_Operator>;
     createdAt?: InputMaybe<TestimonialListing_Icon_CreatedAt_Operator>;
     filename?: InputMaybe<TestimonialListing_Icon_Filename_Operator>;
     filesize?: InputMaybe<TestimonialListing_Icon_Filesize_Operator>;
@@ -12017,6 +12329,7 @@ export type TestimonialListing_Icon_Where_And = {
 
 export type TestimonialListing_Icon_Where_Or = {
     alt?: InputMaybe<TestimonialListing_Icon_Alt_Operator>;
+    base64?: InputMaybe<TestimonialListing_Icon_Base64_Operator>;
     createdAt?: InputMaybe<TestimonialListing_Icon_CreatedAt_Operator>;
     filename?: InputMaybe<TestimonialListing_Icon_Filename_Operator>;
     filesize?: InputMaybe<TestimonialListing_Icon_Filesize_Operator>;
@@ -12048,6 +12361,17 @@ export type Testimonial_Image_Alt_Operator = {
     all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     contains?: InputMaybe<Scalars['String']['input']>;
     equals?: InputMaybe<Scalars['String']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Testimonial_Image_Base64_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
     in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
     like?: InputMaybe<Scalars['String']['input']>;
     not_equals?: InputMaybe<Scalars['String']['input']>;
@@ -12207,6 +12531,7 @@ export type Testimonial_Image_Where = {
     AND?: InputMaybe<Array<InputMaybe<Testimonial_Image_Where_And>>>;
     OR?: InputMaybe<Array<InputMaybe<Testimonial_Image_Where_Or>>>;
     alt?: InputMaybe<Testimonial_Image_Alt_Operator>;
+    base64?: InputMaybe<Testimonial_Image_Base64_Operator>;
     createdAt?: InputMaybe<Testimonial_Image_CreatedAt_Operator>;
     filename?: InputMaybe<Testimonial_Image_Filename_Operator>;
     filesize?: InputMaybe<Testimonial_Image_Filesize_Operator>;
@@ -12226,6 +12551,7 @@ export type Testimonial_Image_Where = {
 
 export type Testimonial_Image_Where_And = {
     alt?: InputMaybe<Testimonial_Image_Alt_Operator>;
+    base64?: InputMaybe<Testimonial_Image_Base64_Operator>;
     createdAt?: InputMaybe<Testimonial_Image_CreatedAt_Operator>;
     filename?: InputMaybe<Testimonial_Image_Filename_Operator>;
     filesize?: InputMaybe<Testimonial_Image_Filesize_Operator>;
@@ -12245,6 +12571,7 @@ export type Testimonial_Image_Where_And = {
 
 export type Testimonial_Image_Where_Or = {
     alt?: InputMaybe<Testimonial_Image_Alt_Operator>;
+    base64?: InputMaybe<Testimonial_Image_Base64_Operator>;
     createdAt?: InputMaybe<Testimonial_Image_CreatedAt_Operator>;
     filename?: InputMaybe<Testimonial_Image_Filename_Operator>;
     filesize?: InputMaybe<Testimonial_Image_Filesize_Operator>;
@@ -13036,6 +13363,17 @@ export type Tool_Icon_Alt_Operator = {
     not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
+export type Tool_Icon_Base64_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
 export type Tool_Icon_CreatedAt_Operator = {
     equals?: InputMaybe<Scalars['DateTime']['input']>;
     exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -13189,6 +13527,7 @@ export type Tool_Icon_Where = {
     AND?: InputMaybe<Array<InputMaybe<Tool_Icon_Where_And>>>;
     OR?: InputMaybe<Array<InputMaybe<Tool_Icon_Where_Or>>>;
     alt?: InputMaybe<Tool_Icon_Alt_Operator>;
+    base64?: InputMaybe<Tool_Icon_Base64_Operator>;
     createdAt?: InputMaybe<Tool_Icon_CreatedAt_Operator>;
     filename?: InputMaybe<Tool_Icon_Filename_Operator>;
     filesize?: InputMaybe<Tool_Icon_Filesize_Operator>;
@@ -13208,6 +13547,7 @@ export type Tool_Icon_Where = {
 
 export type Tool_Icon_Where_And = {
     alt?: InputMaybe<Tool_Icon_Alt_Operator>;
+    base64?: InputMaybe<Tool_Icon_Base64_Operator>;
     createdAt?: InputMaybe<Tool_Icon_CreatedAt_Operator>;
     filename?: InputMaybe<Tool_Icon_Filename_Operator>;
     filesize?: InputMaybe<Tool_Icon_Filesize_Operator>;
@@ -13227,6 +13567,7 @@ export type Tool_Icon_Where_And = {
 
 export type Tool_Icon_Where_Or = {
     alt?: InputMaybe<Tool_Icon_Alt_Operator>;
+    base64?: InputMaybe<Tool_Icon_Base64_Operator>;
     createdAt?: InputMaybe<Tool_Icon_CreatedAt_Operator>;
     filename?: InputMaybe<Tool_Icon_Filename_Operator>;
     filesize?: InputMaybe<Tool_Icon_Filesize_Operator>;
@@ -13732,6 +14073,17 @@ export type ToolboxListing_Icon_Alt_Operator = {
     not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
+export type ToolboxListing_Icon_Base64_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
 export type ToolboxListing_Icon_CreatedAt_Operator = {
     equals?: InputMaybe<Scalars['DateTime']['input']>;
     exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -13885,6 +14237,7 @@ export type ToolboxListing_Icon_Where = {
     AND?: InputMaybe<Array<InputMaybe<ToolboxListing_Icon_Where_And>>>;
     OR?: InputMaybe<Array<InputMaybe<ToolboxListing_Icon_Where_Or>>>;
     alt?: InputMaybe<ToolboxListing_Icon_Alt_Operator>;
+    base64?: InputMaybe<ToolboxListing_Icon_Base64_Operator>;
     createdAt?: InputMaybe<ToolboxListing_Icon_CreatedAt_Operator>;
     filename?: InputMaybe<ToolboxListing_Icon_Filename_Operator>;
     filesize?: InputMaybe<ToolboxListing_Icon_Filesize_Operator>;
@@ -13904,6 +14257,7 @@ export type ToolboxListing_Icon_Where = {
 
 export type ToolboxListing_Icon_Where_And = {
     alt?: InputMaybe<ToolboxListing_Icon_Alt_Operator>;
+    base64?: InputMaybe<ToolboxListing_Icon_Base64_Operator>;
     createdAt?: InputMaybe<ToolboxListing_Icon_CreatedAt_Operator>;
     filename?: InputMaybe<ToolboxListing_Icon_Filename_Operator>;
     filesize?: InputMaybe<ToolboxListing_Icon_Filesize_Operator>;
@@ -13923,6 +14277,7 @@ export type ToolboxListing_Icon_Where_And = {
 
 export type ToolboxListing_Icon_Where_Or = {
     alt?: InputMaybe<ToolboxListing_Icon_Alt_Operator>;
+    base64?: InputMaybe<ToolboxListing_Icon_Base64_Operator>;
     createdAt?: InputMaybe<ToolboxListing_Icon_CreatedAt_Operator>;
     filename?: InputMaybe<ToolboxListing_Icon_Filename_Operator>;
     filesize?: InputMaybe<ToolboxListing_Icon_Filesize_Operator>;
@@ -15013,6 +15368,7 @@ export type MutationHeroUpdateInput = {
 
 export type MutationIconInput = {
     alt: Scalars['String']['input'];
+    base64?: InputMaybe<Scalars['String']['input']>;
     createdAt?: InputMaybe<Scalars['String']['input']>;
     filename?: InputMaybe<Scalars['String']['input']>;
     filesize?: InputMaybe<Scalars['Float']['input']>;
@@ -15026,6 +15382,7 @@ export type MutationIconInput = {
 
 export type MutationIconUpdateInput = {
     alt?: InputMaybe<Scalars['String']['input']>;
+    base64?: InputMaybe<Scalars['String']['input']>;
     createdAt?: InputMaybe<Scalars['String']['input']>;
     filename?: InputMaybe<Scalars['String']['input']>;
     filesize?: InputMaybe<Scalars['Float']['input']>;
@@ -15065,6 +15422,7 @@ export type MutationIcon_Sizes_ThumbnailInput = {
 
 export type MutationImageInput = {
     alt: Scalars['String']['input'];
+    base64?: InputMaybe<Scalars['String']['input']>;
     createdAt?: InputMaybe<Scalars['String']['input']>;
     filename?: InputMaybe<Scalars['String']['input']>;
     filesize?: InputMaybe<Scalars['Float']['input']>;
@@ -15078,6 +15436,7 @@ export type MutationImageInput = {
 
 export type MutationImageUpdateInput = {
     alt?: InputMaybe<Scalars['String']['input']>;
+    base64?: InputMaybe<Scalars['String']['input']>;
     createdAt?: InputMaybe<Scalars['String']['input']>;
     filename?: InputMaybe<Scalars['String']['input']>;
     filesize?: InputMaybe<Scalars['Float']['input']>;

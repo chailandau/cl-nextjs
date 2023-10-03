@@ -57,8 +57,9 @@ const Project: FC<ProjectProps> = async ({ slug }) => {
                     <Image
                         src={intro.image.url}
                         alt={intro.image.alt}
-                        width={intro.image.width || 1000}
-                        height={intro.image.height || 1000}
+                        width={intro?.image.width || 1000}
+                        height={intro?.image.height || 1000}
+                        base64={intro?.image.base64 || undefined}
                     />
                 )}
                 <RenderComponents components={projectSections} />

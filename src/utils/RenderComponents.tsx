@@ -36,6 +36,7 @@ const RenderComponents: FC<Sections> = ({ components }) => {
                         alt={component?.image?.alt || ''}
                         width={component?.image?.width || 1000}
                         height={component?.image?.height || 1000}
+                        base64={component?.image?.base64 || undefined}
                     />
                 );
             case 'SocialsBlock':

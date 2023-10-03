@@ -47,6 +47,7 @@ export const CaseStudyListingContent: FC<CaseStudyListingData> = ({ data }) => {
                                 alt={featuredImage.alt}
                                 width={featuredImage.width || 100}
                                 height={featuredImage.height || 100}
+                                base64={featuredImage.base64 || undefined}
                             />
                         )}
                         <Flex className={styles['case-study-listing__content']}>

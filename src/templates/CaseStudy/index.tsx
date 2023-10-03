@@ -50,8 +50,9 @@ const CaseStudy: FC<CaseStudyProps> = async ({ project }) => {
                 <Image
                     src={intro.image.url}
                     alt={intro.image.alt}
-                    width={intro.image.width || 1000}
-                    height={intro.image.height || 1000}
+                    width={intro?.image.width || 1000}
+                    height={intro?.image.height || 1000}
+                    base64={intro?.image.base64 || undefined}
                 />
             )}
             {intro?.cta &&

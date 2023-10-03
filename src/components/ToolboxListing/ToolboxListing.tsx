@@ -38,6 +38,7 @@ export const ToolboxListingContent: FC<ToolboxListingData> = ({ data }) => {
                                     width={tool?.icon?.width || 64}
                                     height={tool?.icon?.height || 64}
                                     hasBorder={false}
+                                    base64={tool?.icon?.base64 || undefined}
                                 />
                             )}
                         </Container>
