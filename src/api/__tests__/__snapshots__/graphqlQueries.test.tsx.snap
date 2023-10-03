@@ -5,7 +5,6 @@ exports[`graphqlQueries mocks ABOUT_QUERY successfully 1`] = `
   "data": {
     "About": {
       "coloredSubhead": null,
-      "content": null,
       "image": {
         "alt": "Hello World",
         "height": 100,
@@ -36,12 +35,70 @@ exports[`graphqlQueries mocks ABOUT_QUERY successfully 1`] = `
           "width": 100,
         },
       },
+      "text": null,
       "title": "Hello World",
     },
   },
   "errors": [
     [GraphQLError: No mock defined for type "JSON"],
     [GraphQLError: No mock defined for type "JSON"],
+  ],
+}
+`;
+
+exports[`graphqlQueries mocks CASE_STUDIES_QUERY successfully 1`] = `
+{
+  "data": {
+    "CaseStudyListing": {
+      "caseStudies": [
+        {
+          "featuredImage": {
+            "alt": "Hello World",
+            "height": 100,
+            "id": "Hello World",
+            "url": "Hello World",
+            "width": 100,
+          },
+          "id": "Hello World",
+          "intro": {
+            "description": "Hello World",
+          },
+          "slug": "Hello World",
+          "title": "Hello World",
+        },
+        {
+          "featuredImage": {
+            "alt": "Hello World",
+            "height": 100,
+            "id": "Hello World",
+            "url": "Hello World",
+            "width": 100,
+          },
+          "id": "Hello World",
+          "intro": {
+            "description": "Hello World",
+          },
+          "slug": "Hello World",
+          "title": "Hello World",
+        },
+      ],
+      "icon": {
+        "alt": "Hello World",
+        "height": 64,
+        "id": "Hello World",
+        "url": "Hello World",
+        "width": 64,
+      },
+      "title": "Hello World",
+    },
+  },
+}
+`;
+
+exports[`graphqlQueries mocks CASE_STUDY_CONTENT_QUERY successfully 1`] = `
+{
+  "errors": [
+    [GraphQLError: Variable "$slug" of required type "String!" was not provided.],
   ],
 }
 `;
@@ -84,10 +141,38 @@ exports[`graphqlQueries mocks PAGE_CONTENT_QUERY successfully 1`] = `
 }
 `;
 
+exports[`graphqlQueries mocks PROJECT_CONTENT_QUERY successfully 1`] = `
+{
+  "errors": [
+    [GraphQLError: Variable "$slug" of required type "String!" was not provided.],
+  ],
+}
+`;
+
 exports[`graphqlQueries mocks SLUG_QUERY successfully 1`] = `
 {
   "data": {
+    "CaseStudies": {
+      "docs": [
+        {
+          "slug": "Hello World",
+        },
+        {
+          "slug": "Hello World",
+        },
+      ],
+    },
     "Pages": {
+      "docs": [
+        {
+          "slug": "Hello World",
+        },
+        {
+          "slug": "Hello World",
+        },
+      ],
+    },
+    "Projects": {
       "docs": [
         {
           "slug": "Hello World",

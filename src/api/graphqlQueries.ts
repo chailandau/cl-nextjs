@@ -1,12 +1,15 @@
 import { gql } from 'graphql-request';
 
 import {
+    CTA_FRAGMENT,
     HERO_FRAGMENT,
     ICON_FRAGMENT,
+    IMAGE_BLOCK_FRAGMENT,
     IMAGE_FRAGMENT,
     INTERNAL_LINK_FRAGMENT,
     SINGLE_USE_FRAGMENT,
-    SOCIALS_FRAGMENT
+    SOCIALS_FRAGMENT,
+    TEXT_BLOCK_FRAGMENT
 } from './graphqlFragments';
 
 export const PAGE_CONTENT_QUERY = gql`
@@ -16,17 +19,86 @@ export const PAGE_CONTENT_QUERY = gql`
                 id
                 slug
                 title
-                sections {
+                pageSections {
                     ${HERO_FRAGMENT}
                     ${SOCIALS_FRAGMENT}
                     ${SINGLE_USE_FRAGMENT}
-                }}
+                }
+            }
         }
-    }`;
+    }
+`;
+export const PROJECT_CONTENT_QUERY = gql`
+ query ProjectContentQuery($slug: String!) {
+    Projects(where:{ slug: { equals: $slug }}) {
+            docs {
+            id
+            title
+            slug
+            projectSections {
+            ${IMAGE_BLOCK_FRAGMENT}
+            ${TEXT_BLOCK_FRAGMENT}
+            }
+            intro {
+                description
+                image {
+                    ${IMAGE_FRAGMENT}
+                }
+            }
+            caseStudies {
+                id
+                slug
+                title
+                intro {
+                    heading
+                    text
+                    image {
+                        ${IMAGE_FRAGMENT}
+                    }
+                }
+            }
+        }
+    }
+  }
+`;
+
+export const CASE_STUDY_CONTENT_QUERY = gql`
+    query CaseStudyContentQuery($slug: String!) {
+    CaseStudies(where:{ slug: { equals: $slug }}) {
+            docs {
+                id
+                slug
+                title
+                intro {
+                    heading
+                    text
+                    ${CTA_FRAGMENT}
+                    image {
+                        ${IMAGE_FRAGMENT}
+                    }
+                }
+                caseStudySections {
+                    ${IMAGE_BLOCK_FRAGMENT}
+                    ${TEXT_BLOCK_FRAGMENT}
+                }
+            }
+        }
+    }
+`;
 
 export const SLUG_QUERY = gql`
-    query PagesQuery {
+    query SlugQuery {
         Pages {
+            docs {
+                slug
+            }
+        }
+        Projects {
+            docs {
+                slug
+            }
+        }
+        CaseStudies {
             docs {
                 slug
             }
@@ -91,7 +163,7 @@ query AboutQuery {
             image {
                 ${IMAGE_FRAGMENT}
             }
-            content
+            text
             pets {
                 athena {
                     ${IMAGE_FRAGMENT}
@@ -101,6 +173,29 @@ query AboutQuery {
                 }
                 warren {
                     ${IMAGE_FRAGMENT}
+                }
+            }
+        }
+    }
+`;
+
+export const CASE_STUDIES_QUERY = gql`
+    query CaseStudiesQuery {
+        CaseStudyListing {
+            title
+            icon {
+                ${IMAGE_FRAGMENT}
+
+            }
+            caseStudies {
+                id
+                title
+                slug
+                featuredImage {
+                    ${IMAGE_FRAGMENT}
+                }
+                intro {
+                    description
                 }
             }
         }

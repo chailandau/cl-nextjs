@@ -36,7 +36,7 @@ export const IMAGE_FRAGMENT = `
 `;
 
 export const SOCIALS_FRAGMENT = `
-  ... on SocialsBlock {
+  ...on SocialsBlock {
     __typename
     id
     socials {
@@ -48,7 +48,7 @@ export const SOCIALS_FRAGMENT = `
 `;
 
 export const HERO_FRAGMENT = `
-... on HeroBlock {
+...on HeroBlock {
     __typename
     id
     hero {
@@ -66,9 +66,26 @@ export const HERO_FRAGMENT = `
 `;
 
 export const SINGLE_USE_FRAGMENT = `
-  ... on SingleUseBlock {
+  ...on SingleUseBlock {
     __typename
     id
     singleUse
+  }
+`;
+export const TEXT_BLOCK_FRAGMENT = `
+  ...on TextBlock {
+    __typename
+    id
+    heading
+    text
+  }
+`;
+
+export const IMAGE_BLOCK_FRAGMENT = `
+...on ImageBlock {
+  __typename
+    image {
+            ${IMAGE_FRAGMENT}
+          }
   }
 `;

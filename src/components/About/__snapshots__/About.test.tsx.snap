@@ -120,23 +120,6 @@ exports[`About matches snapshot 1`] = `
            user experiences.
         </span>
       </div>
-      <div>
-        <p
-          class="text sm primary rich-text"
-        >
-          I prioritize accessibility and functionality in everything I do, whether it is sewing, woodworking, or architecting a component library. 
-        </p>
-        <p
-          class="text sm primary rich-text"
-        >
-          My design background ensures that my code choices are well-informed and part of a bigger picture.
-        </p>
-        <p
-          class="text sm primary rich-text"
-        >
-          When I’m not customizing my mechanical keyboard (Keychron K1 Pro, brown switch, RGB backlighting), chances are I am messing around on my Linux server, daydreaming about my next sewing project, or enjoying quality time with my partner and pets.
-        </p>
-      </div>
     </div>
   </section>
 </DocumentFragment>

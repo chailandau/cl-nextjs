@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
+import styles from './RichText.module.scss';
+
 import Container from '@/atoms/Container';
 import { textSizes } from '@/atoms/Text/Text';
 import {
@@ -16,8 +18,10 @@ interface RichTextProps {
     size?: (typeof textSizes)[number];
 }
 
-const RichText: FC<RichTextProps> = ({ richText, size, className }) => (
-    <Container className={className}>{parseRichText(richText, size)}</Container>
+const RichText: FC<RichTextProps> = ({ richText, size }) => (
+    <Container className={styles['rich-text']}>
+        {parseRichText(richText, size)}
+    </Container>
 );
 
 export default RichText;

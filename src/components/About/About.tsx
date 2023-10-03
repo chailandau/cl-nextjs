@@ -23,7 +23,7 @@ export const AboutContent: FC<AboutContentProps> = ({ data }) => {
     if (!data) {
         return <></>;
     }
-    const { title, coloredSubhead, image, pets, content } = data || {};
+    const { title, coloredSubhead, image, pets, text } = data || {};
 
     return (
         <Section className={styles['about']}>
@@ -84,7 +84,7 @@ export const AboutContent: FC<AboutContentProps> = ({ data }) => {
                         coloredSubhead={coloredSubhead}
                     />
                 )}
-                {content && <RichText size='sm' richText={content} />}
+                {text && <RichText size='sm' richText={text} />}
             </Flex>
         </Section>
     );
