@@ -8,7 +8,7 @@
     "lint": "next lint",
     "loki:ci": "yarn run storybook:build; yarn run loki:test",
     "loki:report": "yarn run reg-cli ./.loki/current ./.loki/reference ./.loki/diff --extendedErrors --enableAntialias --matchingThreshold .2 --report ./.loki/index.html --json ./.loki/report.json",
-    "loki:test": "loki test --requireReference --chromeTolerance 12 --reactUri file:./storybook-static; yarn run loki:report --chromeRetries 2",
+    "loki:test": "loki test --requireReference --chromeTolerance 12 --reactUri file:./storybook-static; yarn run loki:report --chromeRetries 4",
     "loki:update": "yarn run loki:ci; yarn run loki update --requireReference --chromeTolerance 12 --reactUri file:./storybook-static;",
     "prepare": "husky install",
     "reg-cli:update": "yarn run reg-cli ./.loki/current ./.loki/reference ./.loki/diff --json ./.loki/report.json -U",
