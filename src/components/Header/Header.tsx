@@ -1,5 +1,6 @@
 'use client';
 
+import classNames from 'classnames';
 import FocusTrap from 'focus-trap-react';
 import { FC, useEffect } from 'react';
 
@@ -34,24 +35,33 @@ const Header: FC<HeaderProps> = ({ menuItems }) => {
         }
     }, [isTabletLg]);
 
+    const classList = classNames(
+        styles['header'],
+        menuOpen && styles['menu-open']
+    );
+
     return (
         <FocusTrap active={menuOpen}>
-            <Section as='header' className={styles['header']}>
-                <Link
-                    href={process.env.NEXT_PUBLIC_BASE_URL as string}
-                    className={styles['logo']}
-                    underline={false}
-                    icon={false}
-                >
-                    <Image src={Logo} alt='C.' priority hasBorder={false} />
-                </Link>
+            <Section as='header' className={classList}>
+                <Flex className={styles['header__content']}>
+                    <Link
+                        href={process.env.NEXT_PUBLIC_BASE_URL as string}
+                        className={styles['logo']}
+                        underline={false}
+                        icon={false}
+                    >
+                        <Image src={Logo} alt='C.' priority hasBorder={false} />
+                    </Link>
 
-                <Flex className={styles['nav']}>
-                    {isTabletLg && <DesktopNav menuItems={menuItems} />}
+                    <Flex className={styles['nav']}>
+                        {isTabletLg && <DesktopNav menuItems={menuItems} />}
 
-                    <MenuToggle />
+                        <MenuToggle />
+                    </Flex>
+                    {!isTabletLg && menuOpen && (
+                        <MobileNav menuItems={menuItems} />
+                    )}
                 </Flex>
-                {!isTabletLg && menuOpen && <MobileNav menuItems={menuItems} />}
             </Section>
         </FocusTrap>
     );
