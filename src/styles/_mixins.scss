@@ -256,6 +256,12 @@
     @return map-get($breakpoints, $size);
 }
 
+@mixin mobileMd {
+    @media screen and (min-width: breakpoint('mobileMd')) {
+        @content;
+    }
+}
+
 @mixin mobileLg {
     @media screen and (min-width: breakpoint('mobileLg')) {
         @content;
