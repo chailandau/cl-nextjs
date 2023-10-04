@@ -13,6 +13,7 @@
     padding-top: rem(24);
     padding-bottom: rem(30);
     @include boxShadow;
+
     li {
         &:before {
             display: block;

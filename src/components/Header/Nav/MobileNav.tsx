@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { m } from 'framer-motion';
 import { FC } from 'react';
 
@@ -12,10 +13,15 @@ import LazyAnimatePresence from '@/utils/framer/LazyAnimatePresence';
 const MobileNav: FC<HeaderProps> = ({ menuItems }) => {
     const { menuOpen } = useStore();
 
+    const classList = classNames(
+        styles['mobile-nav'],
+        menuOpen && styles['open']
+    );
+
     return (
         <LazyAnimatePresence>
             <m.nav
-                className={styles['mobile-nav']}
+                className={classList}
                 variants={menuAnimations}
                 animate={menuOpen ? 'open' : 'closed'}
                 initial='closed'

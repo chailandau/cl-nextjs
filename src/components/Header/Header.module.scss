@@ -1,40 +1,63 @@
 .header {
-    flex-direction: row !important;
-    @include paddingY(0);
-    margin-bottom: rem(24);
-    position: relative;
-    gap: rem(40);
-    justify-content: space-between;
-    align-items: center;
-    @include boxShadow;
-    @include transition(margin, padding);
-    @include tabletLg {
-        @include paddingY(6);
-    }
-    @include laptop {
-        margin-bottom: rem(48);
-    }
-    &,
-    &:before {
-        @include borderRadius;
-    }
-    .logo,
-    .nav {
-        z-index: 101;
-    }
-    .logo {
-        width: rem(46);
-        padding: unset;
-        @include addTargetArea(7);
-        @include hover {
-            @include hoverOpacity;
-            & > span:before {
-                display: none !important;
+    padding: 0;
+    &__content {
+        z-index: 1;
+        flex-direction: row !important;
+        padding: rem(0) rem(12);
+        margin-bottom: rem(24);
+        position: relative;
+        gap: rem(40);
+        justify-content: space-between;
+        align-items: center;
+        @include boxShadow;
+        @include transition(margin, padding);
+        @include mobileLg {
+            @include paddingX(24);
+        }
+        @include tabletLg {
+            @include paddingY(6);
+        }
+
+        @include laptop {
+            margin-bottom: rem(48);
+        }
+        &,
+        &:before {
+            @include borderRadius;
+        }
+        .logo,
+        .nav {
+            z-index: 101;
+        }
+        .logo {
+            width: rem(46);
+            padding: unset;
+            @include addTargetArea(7);
+            @include hover {
+                @include hoverOpacity;
+                & > span:before {
+                    display: none !important;
+                }
+            }
+            & > span {
+                margin-right: 0;
+                margin-top: rem(3);
             }
         }
-        & > span {
-            margin-right: 0;
-            margin-top: rem(3);
+    }
+    &.menu-open {
+        position: relative;
+        &:before {
+            display: block;
+            content: '';
+            position: absolute;
+            width: 200vw;
+            height: 200vh;
+            top: -100vh;
+            left: -100vw;
+            z-index: 1;
+            background: color(pastel, 'purple');
+            opacity: 0.875;
         }
     }
 }
