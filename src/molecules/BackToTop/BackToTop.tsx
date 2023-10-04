@@ -1,17 +1,20 @@
 'use client';
 
 import classNames from 'classnames';
-import { m } from 'framer-motion';
+import { m, useReducedMotion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 import styles from './BackToTop.module.scss';
 
 import Text from '@/atoms/Text';
+import { backToTop } from '@/utils/framer/animations';
 import LazyAnimatePresence from '@/utils/framer/LazyAnimatePresence';
 import { useScrollDirection } from '@/utils/useScrollDirection';
 
 const BackToTopButton = () => {
     const [isVisible, setIsVisible] = useState(false);
+
+    const prefersReducedMotion = useReducedMotion() || false;
 
     const scrollDirection = useScrollDirection();
 
@@ -48,18 +51,12 @@ const BackToTopButton = () => {
                 <m.button
                     className={classList}
                     onClick={scrollToTop}
-                    initial={{ y: 100, opacity: 0 }}
-                    animate={{
-                        y: 0,
-                        opacity: 1,
-                        transition: { duration: 0.6 }
-                    }}
-                    exit={{ y: 100, opacity: 0, transition: { duration: 0.6 } }}
-                    whileHover={{
-                        scale: 1.2,
-                        transition: { duration: 0.2 }
-                    }}
-                    whileTap={{ scale: 1 }}
+                    variants={backToTop(prefersReducedMotion)}
+                    initial='hidden'
+                    animate={isVisible ? 'visible' : 'hidden'}
+                    exit='hidden'
+                    whileHover='hovered'
+                    whileTap='tapped'
                 >
                     <Text size='md'>{'^'}</Text>
                 </m.button>

@@ -153,6 +153,9 @@
         $transition: append($transition, ($property 0.25s ease-in-out), comma);
     }
     transition: $transition;
+    @media (prefers-reduced-motion) {
+        transition: none;
+    }
 }
 
 @mixin bgSlideHover($color1, $color2) {

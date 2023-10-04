@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { m } from 'framer-motion';
+import { m, useReducedMotion } from 'framer-motion';
 import { FC } from 'react';
 
 import styles from './MobileNav.module.scss';
@@ -11,6 +11,8 @@ import { menuAnimations } from '@/utils/framer/animations';
 import LazyAnimatePresence from '@/utils/framer/LazyAnimatePresence';
 
 const MobileNav: FC<HeaderProps> = ({ menuItems }) => {
+    const prefersReducedMotion = useReducedMotion() || false;
+
     const { menuOpen } = useStore();
 
     const classList = classNames(
@@ -22,7 +24,7 @@ const MobileNav: FC<HeaderProps> = ({ menuItems }) => {
         <LazyAnimatePresence>
             <m.nav
                 className={classList}
-                variants={menuAnimations}
+                variants={menuAnimations(prefersReducedMotion)}
                 animate={menuOpen ? 'open' : 'closed'}
                 initial='closed'
                 exit='closed'
