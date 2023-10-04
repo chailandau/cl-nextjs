@@ -373,7 +373,7 @@ export const mockTestimonialsData = {
             image: {
                 id: '64d7fe30a8e01e8a91ba08b1',
                 alt: 'Justin Wallace headshot',
-                url: 'https://cl-payload.cr.chailandau.com/images/1675655635559.jpeg',
+                url: 'https://cl-payload.cr.chailandau.com/images/justin_wallace.jpeg',
                 width: 800,
                 height: 800
             }
@@ -398,7 +398,7 @@ export const mockTestimonialsData = {
             image: {
                 id: '64d7fe15a8e01e8a91ba089f',
                 alt: 'Joe DeSoto headshot',
-                url: 'https://cl-payload.cr.chailandau.com/images/1517616622136.jpeg',
+                url: 'https://cl-payload.cr.chailandau.com/images/joe_desoto.jpeg',
                 width: 450,
                 height: 450
             }
@@ -423,7 +423,7 @@ export const mockTestimonialsData = {
             image: {
                 id: '64d7fd5ba8e01e8a91ba0814',
                 alt: 'Erica Snyder headshot',
-                url: 'https://cl-payload.cr.chailandau.com/images/1665862253678.jpeg',
+                url: 'https://cl-payload.cr.chailandau.com/images/erica_snyder.jpeg',
                 width: 800,
                 height: 800
             }
@@ -447,7 +447,7 @@ export const mockTestimonialsData = {
             image: {
                 id: '64e61eee98abd76e452152e5',
                 alt: 'Katie Naum headshot',
-                url: 'https://cl-payload.cr.chailandau.com/images/1672091894973.jpeg',
+                url: 'https://cl-payload.cr.chailandau.com/images/katie_naum.jpeg',
                 width: 800,
                 height: 800
             }
@@ -478,7 +478,7 @@ export const mockTestimonialsData = {
             image: {
                 id: '64e61eab98abd76e4521527c',
                 alt: 'Mo Chen headshot',
-                url: 'https://cl-payload.cr.chailandau.com/images/1642635937793.jpeg',
+                url: 'https://cl-payload.cr.chailandau.com/images/mo_chen.jpeg',
                 width: 285,
                 height: 285
             }
@@ -503,7 +503,7 @@ export const mockTestimonialsData = {
             image: {
                 id: '64d7fd9ca8e01e8a91ba0831',
                 alt: 'Sarah Rooney headshot',
-                url: 'https://cl-payload.cr.chailandau.com/images/download.jpeg',
+                url: 'https://cl-payload.cr.chailandau.com/images/sarah_rooney.jpeg',
                 width: 225,
                 height: 225
             }
@@ -527,7 +527,7 @@ export const mockTestimonialsData = {
             image: {
                 id: '64f73c3a11aa6a77d5f105d1',
                 alt: 'Andrés J. Muñoz Rodriguez headshot',
-                url: 'https://cl-payload.cr.chailandau.com/images/1622448875956.jpeg',
+                url: 'https://cl-payload.cr.chailandau.com/images/andres_rodriguez.jpeg',
                 width: 800,
                 height: 800
             }
@@ -552,7 +552,7 @@ export const mockTestimonialsData = {
             image: {
                 id: '64d7fdd1a8e01e8a91ba0850',
                 alt: 'Joe Kowalczyk headshot',
-                url: 'https://cl-payload.cr.chailandau.com/images/1657139627821.jpeg',
+                url: 'https://cl-payload.cr.chailandau.com/images/joe_kowalczyk.jpeg',
                 width: 800,
                 height: 800
             }
@@ -577,7 +577,7 @@ export const mockTestimonialsData = {
             image: {
                 id: '64d7fdf5a8e01e8a91ba087e',
                 alt: 'Nina Guido',
-                url: 'https://cl-payload.cr.chailandau.com/images/bb16bcd6-a33b-4381-8224-017819d1d3ef_rw_1920.jpeg',
+                url: 'https://cl-payload.cr.chailandau.com/images/nina_guido.jpeg',
                 width: 1920,
                 height: 1920
             }
@@ -602,7 +602,7 @@ export const mockTestimonialsData = {
             image: {
                 id: '64d7fe49a8e01e8a91ba08d4',
                 alt: 'Kevin Sterling headshot',
-                url: 'https://cl-payload.cr.chailandau.com/images/1517706005083.jpeg',
+                url: 'https://cl-payload.cr.chailandau.com/images/kevin_sterling.jpeg',
                 width: 450,
                 height: 450
             }

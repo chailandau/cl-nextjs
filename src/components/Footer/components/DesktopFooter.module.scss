@@ -7,7 +7,7 @@
     width: 100%;
     flex: 1;
     @include boxShadow(color(common, 'primary'));
-
+    align-items: center;
     @include tabletLg {
         display: flex !important;
     }

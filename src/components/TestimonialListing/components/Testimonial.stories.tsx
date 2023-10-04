@@ -11,7 +11,7 @@ const testimonial = {
     image: {
         id: '64d7fe30a8e01e8a91ba08b1',
         alt: 'Justin Wallace headshot',
-        url: 'https://cl-payload.cr.chailandau.com/images/1675655635559.jpeg',
+        url: 'https://cl-payload.cr.chailandau.com/images/justin_wallace.jpeg',
         width: 800,
         height: 800
     },
