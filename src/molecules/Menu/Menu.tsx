@@ -27,10 +27,6 @@ const Menu: FC<MenuProps> = ({
 
         const menuLabel = getPageLabel(menuItem);
 
-        const handleClick = () => {
-            setMenuOpen(false);
-        };
-
         return (
             <li key={menuItem?.page?.id}>
                 <Link
@@ -39,7 +35,7 @@ const Menu: FC<MenuProps> = ({
                     className={styles['menu-link']}
                     underline={false}
                     icon={icon}
-                    onClick={handleClick}
+                    onClick={() => setMenuOpen(false)}
                 >
                     {menuLabel}
                 </Link>
