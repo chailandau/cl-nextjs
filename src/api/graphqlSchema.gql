@@ -3585,6 +3585,7 @@ type HeroBlock {
   blockType: String
   hero: Hero
   id: String
+  sectionId: String
 }
 
 input Hero_Icon_alt_operator {
@@ -5739,6 +5740,7 @@ type ImageBlock {
   blockType: String
   id: String
   image(where: ImageBlock_Image_where): Image
+  sectionId: String
 }
 
 input ImageBlock_Image_alt_operator {
@@ -7317,8 +7319,10 @@ type NavDocAccessFields_menuItems_Delete {
 type NavDocAccessFields_menuItems_Fields {
   customLabel: NavDocAccessFields_menuItems_customLabel
   id: NavDocAccessFields_menuItems_id
+  linkToSection: NavDocAccessFields_menuItems_linkToSection
   overridePageName: NavDocAccessFields_menuItems_overridePageName
   page: NavDocAccessFields_menuItems_page
+  sectionId: NavDocAccessFields_menuItems_sectionId
 }
 
 type NavDocAccessFields_menuItems_Read {
@@ -7375,6 +7379,29 @@ type NavDocAccessFields_menuItems_id_Update {
   permission: Boolean!
 }
 
+type NavDocAccessFields_menuItems_linkToSection {
+  create: NavDocAccessFields_menuItems_linkToSection_Create
+  delete: NavDocAccessFields_menuItems_linkToSection_Delete
+  read: NavDocAccessFields_menuItems_linkToSection_Read
+  update: NavDocAccessFields_menuItems_linkToSection_Update
+}
+
+type NavDocAccessFields_menuItems_linkToSection_Create {
+  permission: Boolean!
+}
+
+type NavDocAccessFields_menuItems_linkToSection_Delete {
+  permission: Boolean!
+}
+
+type NavDocAccessFields_menuItems_linkToSection_Read {
+  permission: Boolean!
+}
+
+type NavDocAccessFields_menuItems_linkToSection_Update {
+  permission: Boolean!
+}
+
 type NavDocAccessFields_menuItems_overridePageName {
   create: NavDocAccessFields_menuItems_overridePageName_Create
   delete: NavDocAccessFields_menuItems_overridePageName_Delete
@@ -7418,6 +7445,29 @@ type NavDocAccessFields_menuItems_page_Read {
 }
 
 type NavDocAccessFields_menuItems_page_Update {
+  permission: Boolean!
+}
+
+type NavDocAccessFields_menuItems_sectionId {
+  create: NavDocAccessFields_menuItems_sectionId_Create
+  delete: NavDocAccessFields_menuItems_sectionId_Delete
+  read: NavDocAccessFields_menuItems_sectionId_Read
+  update: NavDocAccessFields_menuItems_sectionId_Update
+}
+
+type NavDocAccessFields_menuItems_sectionId_Create {
+  permission: Boolean!
+}
+
+type NavDocAccessFields_menuItems_sectionId_Delete {
+  permission: Boolean!
+}
+
+type NavDocAccessFields_menuItems_sectionId_Read {
+  permission: Boolean!
+}
+
+type NavDocAccessFields_menuItems_sectionId_Update {
   permission: Boolean!
 }
 
@@ -7516,8 +7566,10 @@ type NavFields_menuItems_Delete {
 type NavFields_menuItems_Fields {
   customLabel: NavFields_menuItems_customLabel
   id: NavFields_menuItems_id
+  linkToSection: NavFields_menuItems_linkToSection
   overridePageName: NavFields_menuItems_overridePageName
   page: NavFields_menuItems_page
+  sectionId: NavFields_menuItems_sectionId
 }
 
 type NavFields_menuItems_Read {
@@ -7574,6 +7626,29 @@ type NavFields_menuItems_id_Update {
   permission: Boolean!
 }
 
+type NavFields_menuItems_linkToSection {
+  create: NavFields_menuItems_linkToSection_Create
+  delete: NavFields_menuItems_linkToSection_Delete
+  read: NavFields_menuItems_linkToSection_Read
+  update: NavFields_menuItems_linkToSection_Update
+}
+
+type NavFields_menuItems_linkToSection_Create {
+  permission: Boolean!
+}
+
+type NavFields_menuItems_linkToSection_Delete {
+  permission: Boolean!
+}
+
+type NavFields_menuItems_linkToSection_Read {
+  permission: Boolean!
+}
+
+type NavFields_menuItems_linkToSection_Update {
+  permission: Boolean!
+}
+
 type NavFields_menuItems_overridePageName {
   create: NavFields_menuItems_overridePageName_Create
   delete: NavFields_menuItems_overridePageName_Delete
@@ -7617,6 +7692,29 @@ type NavFields_menuItems_page_Read {
 }
 
 type NavFields_menuItems_page_Update {
+  permission: Boolean!
+}
+
+type NavFields_menuItems_sectionId {
+  create: NavFields_menuItems_sectionId_Create
+  delete: NavFields_menuItems_sectionId_Delete
+  read: NavFields_menuItems_sectionId_Read
+  update: NavFields_menuItems_sectionId_Update
+}
+
+type NavFields_menuItems_sectionId_Create {
+  permission: Boolean!
+}
+
+type NavFields_menuItems_sectionId_Delete {
+  permission: Boolean!
+}
+
+type NavFields_menuItems_sectionId_Read {
+  permission: Boolean!
+}
+
+type NavFields_menuItems_sectionId_Update {
   permission: Boolean!
 }
 
@@ -7666,8 +7764,10 @@ type NavUpdateDocAccess {
 type Nav_MenuItems {
   customLabel: String
   id: String
+  linkToSection: Boolean
   overridePageName: Boolean
   page: Page
+  sectionId: String
 }
 
 type Page {
@@ -9357,6 +9457,7 @@ type SingleUseBlock {
   blockName: String
   blockType: String
   id: String
+  sectionId: String
   singleUse: SingleUseBlock_singleUse
 }
 
@@ -9724,6 +9825,7 @@ type SocialsBlock {
   blockName: String
   blockType: String
   id: String
+  sectionId: String
   socials: [Social!]
 }
 
@@ -11416,6 +11518,7 @@ type TextBlock {
   blockType: String
   heading: String
   id: String
+  sectionId: String
   text(depth: Int): JSON
 }
 
@@ -13348,8 +13451,10 @@ input mutationNavInput {
 input mutationNav_MenuItemsInput {
   customLabel: String
   id: String
+  linkToSection: Boolean
   overridePageName: Boolean
   page: String
+  sectionId: String
 }
 
 input mutationPageInput {

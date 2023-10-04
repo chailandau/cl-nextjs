@@ -40,9 +40,19 @@ const RenderComponents: FC<Sections> = ({ components }) => {
                     />
                 );
             case 'SocialsBlock':
-                return <Socials socials={component?.socials} />;
+                return (
+                    <Socials
+                        socials={component?.socials}
+                        sectionId={component?.sectionId}
+                    />
+                );
             case 'SingleUseBlock':
-                return <SingleUse component={component?.singleUse} />;
+                return (
+                    <SingleUse
+                        component={component?.singleUse}
+                        sectionId={component?.sectionId}
+                    />
+                );
             default:
                 return null;
         }

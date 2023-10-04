@@ -3,6 +3,7 @@ import { FC } from 'react';
 import styles from './Hero.module.scss';
 
 import { Hero as HeroType, Maybe } from '@/api/graphqlTypes';
+import { SectionId } from '@/atoms/Container/Container';
 import Heading from '@/atoms/Heading';
 import Image from '@/atoms/Image';
 import Link from '@/atoms/Link';
@@ -26,6 +27,8 @@ export interface HeroProps {
     icon?: HeroType['icon'];
     /** Hero CTA */
     cta?: HeroType['cta'];
+    /** Section id for anchor links*/
+    sectionId?: SectionId;
 }
 const Hero: FC<HeroProps> = ({
     heading,
@@ -34,7 +37,8 @@ const Hero: FC<HeroProps> = ({
     icon,
     doodles,
     homepage,
-    cta
+    cta,
+    sectionId
 }) => {
     const isInternalCta = cta?.linkType === 'internal';
     const headingSize = homepage ? 'xl' : 'lg';
@@ -44,7 +48,7 @@ const Hero: FC<HeroProps> = ({
             : cta?.externalLink) || '';
 
     return (
-        <Section className={styles['hero']}>
+        <Section className={styles['hero']} sectionId={sectionId}>
             {icon?.url && (
                 <Flex className={styles['icon']}>
                     <Image

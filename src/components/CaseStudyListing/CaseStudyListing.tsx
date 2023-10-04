@@ -7,6 +7,7 @@ import {
     CaseStudyListing as CaseStudyListingType,
     Maybe
 } from '@/api/graphqlTypes';
+import { SectionId } from '@/atoms/Container/Container';
 import Heading from '@/atoms/Heading';
 import Image from '@/atoms/Image';
 import Link from '@/atoms/Link';
@@ -18,8 +19,12 @@ import { getData } from '@/utils/getData';
 
 interface CaseStudyListingData {
     data?: Maybe<CaseStudyListingType> | undefined;
+    sectionId?: SectionId;
 }
-export const CaseStudyListingContent: FC<CaseStudyListingData> = ({ data }) => {
+export const CaseStudyListingContent: FC<CaseStudyListingData> = ({
+    data,
+    sectionId
+}) => {
     const { title, icon, caseStudies } = data || {};
 
     return (
@@ -27,6 +32,7 @@ export const CaseStudyListingContent: FC<CaseStudyListingData> = ({ data }) => {
             className={styles['case-study-listing']}
             heading={title}
             icon={icon}
+            sectionId={sectionId}
         >
             {caseStudies?.map((caseStudy) => {
                 const {
@@ -74,11 +80,17 @@ export const CaseStudyListingContent: FC<CaseStudyListingData> = ({ data }) => {
     );
 };
 
-const CaseStudyListing: FC = async () => {
+interface CaseStudyListingProps {
+    sectionId?: SectionId;
+}
+
+const CaseStudyListing: FC<CaseStudyListingProps> = async ({ sectionId }) => {
     const { CaseStudyListing: caseStudyData } =
         await getData(CASE_STUDIES_QUERY);
 
-    return <CaseStudyListingContent data={caseStudyData} />;
+    return (
+        <CaseStudyListingContent data={caseStudyData} sectionId={sectionId} />
+    );
 };
 
 export default CaseStudyListing;
