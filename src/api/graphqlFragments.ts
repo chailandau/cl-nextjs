@@ -37,6 +37,7 @@ export const SOCIALS_FRAGMENT = `
     label
     socialLink
   }
+  sectionId
 }
 `;
 
@@ -57,6 +58,7 @@ export const HERO_FRAGMENT = `
     homepage
     ${CTA_FRAGMENT}
   }
+  sectionId
 }
 `;
 
@@ -65,6 +67,7 @@ export const SINGLE_USE_FRAGMENT = `
   __typename
   id
   singleUse
+  sectionId
 }
 `;
 export const TEXT_BLOCK_FRAGMENT = `

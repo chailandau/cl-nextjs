@@ -51,6 +51,7 @@ cta {
 }
 
   }
+  sectionId
 }
 "
 `;
@@ -98,6 +99,7 @@ exports[`Fragments "SINGLE_USE_FRAGMENT" matches snapshot: SINGLE_USE_FRAGMENT 1
   __typename
   id
   singleUse
+  sectionId
 }
 "
 `;
@@ -121,6 +123,7 @@ base64
     label
     socialLink
   }
+  sectionId
 }
 "
 `;

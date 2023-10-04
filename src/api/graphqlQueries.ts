@@ -114,6 +114,8 @@ query NavQuery  {
             }
             overridePageName
             customLabel
+            linkToSection
+            sectionId
         }
         footerCopyrightText
     }

@@ -8,16 +8,19 @@ import {
     Maybe,
     TestimonialListing as TestimonialListingType
 } from '@/api/graphqlTypes';
+import { SectionId } from '@/atoms/Container/Container';
 import Flex from '@/molecules/Flex';
 import Section from '@/molecules/Section';
 import { getData } from '@/utils/getData';
 
 interface TestimonialListingData {
     data?: Maybe<TestimonialListingType> | undefined;
+    sectionId?: SectionId;
 }
 
 export const TestimonialListingContent: FC<TestimonialListingData> = ({
-    data
+    data,
+    sectionId
 }) => {
     const { title, icon, testimonials } = data || {};
 
@@ -26,6 +29,7 @@ export const TestimonialListingContent: FC<TestimonialListingData> = ({
             className={styles['testimonial-listing']}
             heading={title}
             icon={icon}
+            sectionId={sectionId}
         >
             <Flex className={styles['testimonials']}>
                 {testimonials?.map((testimonial) => (
@@ -39,11 +43,22 @@ export const TestimonialListingContent: FC<TestimonialListingData> = ({
     );
 };
 
-const TestimonialListing: FC = async () => {
+interface TestimonialListingProps {
+    sectionId?: SectionId;
+}
+
+const TestimonialListing: FC<TestimonialListingProps> = async ({
+    sectionId
+}) => {
     const { TestimonialListing: testimonialsData } =
         await getData(TESTIMONIALS_QUERY);
 
-    return <TestimonialListingContent data={testimonialsData} />;
+    return (
+        <TestimonialListingContent
+            data={testimonialsData}
+            sectionId={sectionId}
+        />
+    );
 };
 
 export default TestimonialListing;

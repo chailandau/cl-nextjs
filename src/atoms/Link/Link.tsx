@@ -20,11 +20,14 @@ interface LinkProps {
     /** Enables icon */
     icon?: boolean;
     /** Optional onClick event */
-    onClick?: () => void;
+    onClick?: (e: { preventDefault: () => void }) => void;
+    /** Anchor link */
+    anchorLink?: string | undefined | null;
 }
 
 const Link: FC<LinkProps> = ({
     href: destination,
+    anchorLink,
     children,
     className,
     underline = true,
@@ -46,7 +49,7 @@ const Link: FC<LinkProps> = ({
     return (
         <NextLink
             className={classList}
-            href={href}
+            href={anchorLink ? `${href}#${anchorLink}` : href}
             rel={rel}
             target={target}
             onClick={onClick}

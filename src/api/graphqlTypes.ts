@@ -4023,6 +4023,7 @@ export type HeroBlock = {
     blockType?: Maybe<Scalars['String']['output']>;
     hero?: Maybe<Hero>;
     id?: Maybe<Scalars['String']['output']>;
+    sectionId?: Maybe<Scalars['String']['output']>;
 };
 
 export type Hero_Icon_Alt_Operator = {
@@ -6488,6 +6489,7 @@ export type ImageBlock = {
     blockType?: Maybe<Scalars['String']['output']>;
     id?: Maybe<Scalars['String']['output']>;
     image?: Maybe<Image>;
+    sectionId?: Maybe<Scalars['String']['output']>;
 };
 
 export type ImageBlockImageArgs = {
@@ -8512,8 +8514,10 @@ export type NavDocAccessFields_MenuItems_Fields = {
     __typename?: 'NavDocAccessFields_menuItems_Fields';
     customLabel?: Maybe<NavDocAccessFields_MenuItems_CustomLabel>;
     id?: Maybe<NavDocAccessFields_MenuItems_Id>;
+    linkToSection?: Maybe<NavDocAccessFields_MenuItems_LinkToSection>;
     overridePageName?: Maybe<NavDocAccessFields_MenuItems_OverridePageName>;
     page?: Maybe<NavDocAccessFields_MenuItems_Page>;
+    sectionId?: Maybe<NavDocAccessFields_MenuItems_SectionId>;
 };
 
 export type NavDocAccessFields_MenuItems_Read = {
@@ -8582,6 +8586,34 @@ export type NavDocAccessFields_MenuItems_Id_Update = {
     permission: Scalars['Boolean']['output'];
 };
 
+export type NavDocAccessFields_MenuItems_LinkToSection = {
+    __typename?: 'NavDocAccessFields_menuItems_linkToSection';
+    create?: Maybe<NavDocAccessFields_MenuItems_LinkToSection_Create>;
+    delete?: Maybe<NavDocAccessFields_MenuItems_LinkToSection_Delete>;
+    read?: Maybe<NavDocAccessFields_MenuItems_LinkToSection_Read>;
+    update?: Maybe<NavDocAccessFields_MenuItems_LinkToSection_Update>;
+};
+
+export type NavDocAccessFields_MenuItems_LinkToSection_Create = {
+    __typename?: 'NavDocAccessFields_menuItems_linkToSection_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type NavDocAccessFields_MenuItems_LinkToSection_Delete = {
+    __typename?: 'NavDocAccessFields_menuItems_linkToSection_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type NavDocAccessFields_MenuItems_LinkToSection_Read = {
+    __typename?: 'NavDocAccessFields_menuItems_linkToSection_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type NavDocAccessFields_MenuItems_LinkToSection_Update = {
+    __typename?: 'NavDocAccessFields_menuItems_linkToSection_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
 export type NavDocAccessFields_MenuItems_OverridePageName = {
     __typename?: 'NavDocAccessFields_menuItems_overridePageName';
     create?: Maybe<NavDocAccessFields_MenuItems_OverridePageName_Create>;
@@ -8635,6 +8667,34 @@ export type NavDocAccessFields_MenuItems_Page_Read = {
 
 export type NavDocAccessFields_MenuItems_Page_Update = {
     __typename?: 'NavDocAccessFields_menuItems_page_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type NavDocAccessFields_MenuItems_SectionId = {
+    __typename?: 'NavDocAccessFields_menuItems_sectionId';
+    create?: Maybe<NavDocAccessFields_MenuItems_SectionId_Create>;
+    delete?: Maybe<NavDocAccessFields_MenuItems_SectionId_Delete>;
+    read?: Maybe<NavDocAccessFields_MenuItems_SectionId_Read>;
+    update?: Maybe<NavDocAccessFields_MenuItems_SectionId_Update>;
+};
+
+export type NavDocAccessFields_MenuItems_SectionId_Create = {
+    __typename?: 'NavDocAccessFields_menuItems_sectionId_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type NavDocAccessFields_MenuItems_SectionId_Delete = {
+    __typename?: 'NavDocAccessFields_menuItems_sectionId_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type NavDocAccessFields_MenuItems_SectionId_Read = {
+    __typename?: 'NavDocAccessFields_menuItems_sectionId_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type NavDocAccessFields_MenuItems_SectionId_Update = {
+    __typename?: 'NavDocAccessFields_menuItems_sectionId_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -8753,8 +8813,10 @@ export type NavFields_MenuItems_Fields = {
     __typename?: 'NavFields_menuItems_Fields';
     customLabel?: Maybe<NavFields_MenuItems_CustomLabel>;
     id?: Maybe<NavFields_MenuItems_Id>;
+    linkToSection?: Maybe<NavFields_MenuItems_LinkToSection>;
     overridePageName?: Maybe<NavFields_MenuItems_OverridePageName>;
     page?: Maybe<NavFields_MenuItems_Page>;
+    sectionId?: Maybe<NavFields_MenuItems_SectionId>;
 };
 
 export type NavFields_MenuItems_Read = {
@@ -8823,6 +8885,34 @@ export type NavFields_MenuItems_Id_Update = {
     permission: Scalars['Boolean']['output'];
 };
 
+export type NavFields_MenuItems_LinkToSection = {
+    __typename?: 'NavFields_menuItems_linkToSection';
+    create?: Maybe<NavFields_MenuItems_LinkToSection_Create>;
+    delete?: Maybe<NavFields_MenuItems_LinkToSection_Delete>;
+    read?: Maybe<NavFields_MenuItems_LinkToSection_Read>;
+    update?: Maybe<NavFields_MenuItems_LinkToSection_Update>;
+};
+
+export type NavFields_MenuItems_LinkToSection_Create = {
+    __typename?: 'NavFields_menuItems_linkToSection_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type NavFields_MenuItems_LinkToSection_Delete = {
+    __typename?: 'NavFields_menuItems_linkToSection_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type NavFields_MenuItems_LinkToSection_Read = {
+    __typename?: 'NavFields_menuItems_linkToSection_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type NavFields_MenuItems_LinkToSection_Update = {
+    __typename?: 'NavFields_menuItems_linkToSection_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
 export type NavFields_MenuItems_OverridePageName = {
     __typename?: 'NavFields_menuItems_overridePageName';
     create?: Maybe<NavFields_MenuItems_OverridePageName_Create>;
@@ -8876,6 +8966,34 @@ export type NavFields_MenuItems_Page_Read = {
 
 export type NavFields_MenuItems_Page_Update = {
     __typename?: 'NavFields_menuItems_page_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type NavFields_MenuItems_SectionId = {
+    __typename?: 'NavFields_menuItems_sectionId';
+    create?: Maybe<NavFields_MenuItems_SectionId_Create>;
+    delete?: Maybe<NavFields_MenuItems_SectionId_Delete>;
+    read?: Maybe<NavFields_MenuItems_SectionId_Read>;
+    update?: Maybe<NavFields_MenuItems_SectionId_Update>;
+};
+
+export type NavFields_MenuItems_SectionId_Create = {
+    __typename?: 'NavFields_menuItems_sectionId_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type NavFields_MenuItems_SectionId_Delete = {
+    __typename?: 'NavFields_menuItems_sectionId_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type NavFields_MenuItems_SectionId_Read = {
+    __typename?: 'NavFields_menuItems_sectionId_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type NavFields_MenuItems_SectionId_Update = {
+    __typename?: 'NavFields_menuItems_sectionId_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -8935,8 +9053,10 @@ export type Nav_MenuItems = {
     __typename?: 'Nav_MenuItems';
     customLabel?: Maybe<Scalars['String']['output']>;
     id?: Maybe<Scalars['String']['output']>;
+    linkToSection?: Maybe<Scalars['Boolean']['output']>;
     overridePageName?: Maybe<Scalars['Boolean']['output']>;
     page?: Maybe<Page>;
+    sectionId?: Maybe<Scalars['String']['output']>;
 };
 
 export type Page = {
@@ -11035,6 +11155,7 @@ export type SingleUseBlock = {
     blockName?: Maybe<Scalars['String']['output']>;
     blockType?: Maybe<Scalars['String']['output']>;
     id?: Maybe<Scalars['String']['output']>;
+    sectionId?: Maybe<Scalars['String']['output']>;
     singleUse?: Maybe<SingleUseBlock_SingleUse>;
 };
 
@@ -11409,6 +11530,7 @@ export type SocialsBlock = {
     blockName?: Maybe<Scalars['String']['output']>;
     blockType?: Maybe<Scalars['String']['output']>;
     id?: Maybe<Scalars['String']['output']>;
+    sectionId?: Maybe<Scalars['String']['output']>;
     socials?: Maybe<Array<Social>>;
 };
 
@@ -13333,6 +13455,7 @@ export type TextBlock = {
     blockType?: Maybe<Scalars['String']['output']>;
     heading?: Maybe<Scalars['String']['output']>;
     id?: Maybe<Scalars['String']['output']>;
+    sectionId?: Maybe<Scalars['String']['output']>;
     text?: Maybe<Scalars['JSON']['output']>;
 };
 
@@ -15484,8 +15607,10 @@ export type MutationNavInput = {
 export type MutationNav_MenuItemsInput = {
     customLabel?: InputMaybe<Scalars['String']['input']>;
     id?: InputMaybe<Scalars['String']['input']>;
+    linkToSection?: InputMaybe<Scalars['Boolean']['input']>;
     overridePageName?: InputMaybe<Scalars['Boolean']['input']>;
     page?: InputMaybe<Scalars['String']['input']>;
+    sectionId?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type MutationPageInput = {

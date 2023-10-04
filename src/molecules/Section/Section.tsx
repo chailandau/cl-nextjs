@@ -22,7 +22,8 @@ const Section: FC<SectionProps> = forwardRef(
             className,
             heading,
             icon,
-            borderTop = false
+            borderTop = false,
+            sectionId
         },
         ref
     ) => {
@@ -33,7 +34,12 @@ const Section: FC<SectionProps> = forwardRef(
         );
 
         return (
-            <Flex as={SectionTag} className={classList} ref={ref}>
+            <Flex
+                as={SectionTag}
+                className={classList}
+                ref={ref}
+                sectionId={sectionId}
+            >
                 <SectionHeading heading={heading} icon={icon} />
                 {children}
             </Flex>

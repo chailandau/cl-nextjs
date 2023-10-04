@@ -1,6 +1,7 @@
 export const mockDefaults = {
     Nav_MenuItems: () => ({
-        overridePageName: () => false
+        overridePageName: () => false,
+        linkToSection: () => false
     }),
     Icon: () => ({
         width: () => 64,

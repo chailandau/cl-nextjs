@@ -3,6 +3,7 @@ import { FC } from 'react';
 import { ABOUT_QUERY } from '@/api/graphqlQueries';
 import { About as AboutType, Maybe } from '@/api/graphqlTypes';
 import Container from '@/atoms/Container';
+import { SectionId } from '@/atoms/Container/Container';
 import Heading from '@/atoms/Heading';
 import Image from '@/atoms/Image';
 import ColoredSubhead from '@/molecules/ColoredSubhead';
@@ -17,16 +18,17 @@ import styles from './About.module.scss';
 
 interface AboutContentProps {
     data?: Maybe<AboutType> | undefined;
+    sectionId?: SectionId;
 }
 
-export const AboutContent: FC<AboutContentProps> = ({ data }) => {
+export const AboutContent: FC<AboutContentProps> = ({ data, sectionId }) => {
     if (!data) {
         return <></>;
     }
     const { title, coloredSubhead, image, pets, text } = data || {};
 
     return (
-        <Section className={styles['about']}>
+        <Section className={styles['about']} sectionId={sectionId}>
             <Container className={styles['image']}>
                 {image && image?.url && (
                     <Image
@@ -94,10 +96,14 @@ export const AboutContent: FC<AboutContentProps> = ({ data }) => {
     );
 };
 
-const About: FC = async () => {
+interface AboutProps {
+    sectionId?: SectionId;
+}
+
+const About: FC<AboutProps> = async ({ sectionId }) => {
     const { About: aboutData } = await getData(ABOUT_QUERY);
 
-    return <AboutContent data={aboutData} />;
+    return <AboutContent data={aboutData} sectionId={sectionId} />;
 };
 
 export default About;

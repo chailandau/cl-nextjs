@@ -7,8 +7,8 @@ import { SocialsBlock } from '@/api/graphqlTypes';
 import Grid from '@/molecules/Grid';
 import Section from '@/molecules/Section';
 
-const Socials: FC<SocialsBlock> = ({ socials }) => (
-    <Section borderTop>
+const Socials: FC<SocialsBlock> = ({ socials, sectionId }) => (
+    <Section borderTop sectionId={sectionId}>
         <Grid className={styles['socials']}>
             {socials?.map((social) => (
                 <SocialLink

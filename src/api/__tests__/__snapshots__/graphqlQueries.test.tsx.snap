@@ -118,21 +118,25 @@ exports[`graphqlQueries mocks NAV_QUERY successfully 1`] = `
       "menuItems": [
         {
           "customLabel": "Hello World",
+          "linkToSection": false,
           "overridePageName": false,
           "page": {
             "id": "Hello World",
             "slug": "Hello World",
             "title": "Hello World",
           },
+          "sectionId": "Hello World",
         },
         {
           "customLabel": "Hello World",
+          "linkToSection": false,
           "overridePageName": false,
           "page": {
             "id": "Hello World",
             "slug": "Hello World",
             "title": "Hello World",
           },
+          "sectionId": "Hello World",
         },
       ],
     },

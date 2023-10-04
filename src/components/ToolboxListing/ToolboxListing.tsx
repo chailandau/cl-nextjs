@@ -8,6 +8,7 @@ import {
     ToolboxListing as ToolboxListingType
 } from '@/api/graphqlTypes';
 import Container from '@/atoms/Container';
+import { SectionId } from '@/atoms/Container/Container';
 import Image from '@/atoms/Image';
 import Text from '@/atoms/Text';
 import Grid from '@/molecules/Grid';
@@ -16,8 +17,12 @@ import { getData } from '@/utils/getData';
 
 interface ToolboxListingData {
     data?: Maybe<ToolboxListingType> | undefined;
+    sectionId?: SectionId;
 }
-export const ToolboxListingContent: FC<ToolboxListingData> = ({ data }) => {
+export const ToolboxListingContent: FC<ToolboxListingData> = ({
+    data,
+    sectionId
+}) => {
     const { title, description, icon, tools } = data || {};
 
     return (
@@ -25,6 +30,7 @@ export const ToolboxListingContent: FC<ToolboxListingData> = ({ data }) => {
             className={styles['toolbox-listing']}
             heading={title}
             icon={icon}
+            sectionId={sectionId}
         >
             {description && <Text size='sm'>{description}</Text>}
             <Grid as='ul'>
@@ -51,10 +57,13 @@ export const ToolboxListingContent: FC<ToolboxListingData> = ({ data }) => {
     );
 };
 
-const ToolboxListing: FC = async () => {
+interface ToolboxListingProps {
+    sectionId?: SectionId;
+}
+const ToolboxListing: FC<ToolboxListingProps> = async ({ sectionId }) => {
     const { ToolboxListing: toolboxData } = await getData(TOOLBOX_QUERY);
 
-    return <ToolboxListingContent data={toolboxData} />;
+    return <ToolboxListingContent data={toolboxData} sectionId={sectionId} />;
 };
 
 export default ToolboxListing;
