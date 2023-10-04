@@ -8,21 +8,27 @@ import styles from './BackToTop.module.scss';
 
 import Text from '@/atoms/Text';
 import LazyAnimatePresence from '@/utils/framer/LazyAnimatePresence';
+import { useScrollDirection } from '@/utils/useScrollDirection';
 
 const BackToTopButton = () => {
     const [isVisible, setIsVisible] = useState(false);
 
+    const scrollDirection = useScrollDirection();
+
     useEffect(() => {
         const toggleVisibility = () => {
-            window.scrollY > 500 ? setIsVisible(true) : setIsVisible(false);
+            if (window.scrollY > 200 && scrollDirection === 'up') {
+                setIsVisible(true);
+            } else {
+                setIsVisible(false);
+            }
         };
-        window.addEventListener('scroll', toggleVisibility);
+        window.addEventListener('scroll', toggleVisibility, { passive: true });
 
         return () => {
             window.removeEventListener('scroll', toggleVisibility);
         };
-    }, []);
-
+    }, [scrollDirection]);
     const scrollToTop = () => {
         isVisible &&
             window.scrollTo({

@@ -8,9 +8,12 @@
     ul {
         margin-top: rem(12);
         list-style: none;
-        grid-template-columns: repeat(3, 1fr);
-        gap: rem(32);
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(24);
         @include transition(gap);
+        @include mobileMd {
+            grid-template-columns: repeat(3, 1fr);
+        }
         @include mobileLg {
             gap: rem(40);
         }

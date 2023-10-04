@@ -1,7 +1,7 @@
 .back-to-top {
     position: fixed;
-    bottom: rem(12);
-    right: rem(12);
+    bottom: rem(24);
+    right: rem(24);
     font-weight: bold;
     color: color(common, 'black');
     width: rem(40);
@@ -15,17 +15,14 @@
         bottom: rem(40);
         right: rem(40);
     }
-    &:before {
-        display: block;
-        content: '';
-        position: absolute;
-        width: rem(40);
-        height: rem(40);
+    @include boxShadow(color(pastel, 'blue'));
+    &,
+    &:before,
+    &:after {
         border-radius: 50%;
-        border: rem(1) color(common, 'black') solid;
-        top: rem(-1);
-        left: 0;
-        z-index: -1;
-        background: color(pastel, 'blurple');
+    }
+    &:before {
+        top: rem(3);
+        left: rem(3);
     }
 }
