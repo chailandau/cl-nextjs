@@ -17,6 +17,8 @@ interface LinkProps {
     underline?: boolean;
     /** Enables icon */
     icon?: boolean;
+    /** Optional onClick event */
+    onClick?: () => void;
 }
 
 const Link: FC<LinkProps> = ({
@@ -24,7 +26,8 @@ const Link: FC<LinkProps> = ({
     children,
     className,
     underline = true,
-    icon = true
+    icon = true,
+    onClick
 }) => {
     const classList = classNames(
         styles['link'],
@@ -39,7 +42,13 @@ const Link: FC<LinkProps> = ({
     } = parseUrl(destination) || {};
 
     return (
-        <NextLink className={classList} href={href} rel={rel} target={target}>
+        <NextLink
+            className={classList}
+            href={href}
+            rel={rel}
+            target={target}
+            onClick={onClick}
+        >
             <span className={styles['link-text']}>{children}</span>
             {icon && <span className={styles['link-icon']}>{'>'}</span>}
         </NextLink>

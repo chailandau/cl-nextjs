@@ -1,9 +1,12 @@
+'use client';
+
 import { FC } from 'react';
 
 import styles from './Menu.module.scss';
 
 import Link from '@/atoms/Link';
 import { HeaderProps } from '@/components/Header';
+import useStore from '@/store/useStore';
 import { getPageLabel } from '@/utils/getPageLabel';
 
 export interface MenuProps extends HeaderProps {
@@ -16,12 +19,17 @@ const Menu: FC<MenuProps> = ({
     className = styles['menu'],
     icon
 }) => {
+    const { setMenuOpen } = useStore();
     const menuContent = menuItems?.map((menuItem) => {
         if (!menuItem?.page || Object.keys(menuItem?.page).length === 0) {
             return null;
         }
 
         const menuLabel = getPageLabel(menuItem);
+
+        const handleClick = () => {
+            setMenuOpen(false);
+        };
 
         return (
             <li key={menuItem?.page?.id}>
@@ -31,6 +39,7 @@ const Menu: FC<MenuProps> = ({
                     className={styles['menu-link']}
                     underline={false}
                     icon={icon}
+                    onClick={handleClick}
                 >
                     {menuLabel}
                 </Link>
