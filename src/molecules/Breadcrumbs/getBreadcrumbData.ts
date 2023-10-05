@@ -22,7 +22,7 @@ export const getBreadcrumbData = (paths: string) => {
             case 'projects': {
                 breadcrumbs.push({
                     label: 'Work',
-                    link: '/'
+                    link: '/#work'
                 });
                 break;
             }
@@ -33,9 +33,9 @@ export const getBreadcrumbData = (paths: string) => {
                 });
                 break;
             }
-            case 'lineup-roi-calculator':
+            case 'roi-calculator':
                 breadcrumbs.push({
-                    label: 'Lineup ROI Calculator',
+                    label: 'ROI Calculator',
                     link: fullSlug
                 });
                 break;

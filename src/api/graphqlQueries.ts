@@ -6,6 +6,7 @@ import {
     IMAGE_BLOCK_FRAGMENT,
     IMAGE_FRAGMENT,
     INTERNAL_LINK_FRAGMENT,
+    META_FRAGMENT,
     SINGLE_USE_FRAGMENT,
     SOCIALS_FRAGMENT,
     TEXT_BLOCK_FRAGMENT
@@ -17,6 +18,7 @@ query PageContentQuery($slug: String!) {
         docs {
             id
             slug
+            ${META_FRAGMENT}
             title
             pageSections {
                 ${HERO_FRAGMENT}
@@ -32,8 +34,9 @@ query ProjectContentQuery($slug: String!) {
     Projects(where:{ slug: { equals: $slug }}) {
         docs {
             id
-            title
             slug
+            ${META_FRAGMENT}
+            title
             projectSections {
                 ${IMAGE_BLOCK_FRAGMENT}
                 ${TEXT_BLOCK_FRAGMENT}
@@ -67,6 +70,7 @@ query CaseStudyContentQuery($slug: String!) {
         docs {
             id
             slug
+            ${META_FRAGMENT}
             title
             intro {
                 heading
@@ -85,8 +89,8 @@ query CaseStudyContentQuery($slug: String!) {
 }
 `;
 
-export const SLUG_QUERY = gql`
-    query SlugQuery {
+export const METADATA_QUERY = gql`
+    query MetadataQuery {
         Pages {
             docs {
                 slug
