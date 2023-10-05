@@ -2,6 +2,11 @@ import { useEffect, useState } from 'react';
 
 type ScrollDirection = 'up' | 'down';
 
+/**
+ * Returns the scroll direction based on the user's scrolling behavior.
+ *
+ * @returns The scroll direction ('up' or 'down').
+ */
 export const useScrollDirection = () => {
     const [scrollDirection, setScrollDirection] =
         useState<ScrollDirection>('down');
