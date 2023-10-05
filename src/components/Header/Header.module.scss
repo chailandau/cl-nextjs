@@ -1,5 +1,8 @@
 .header {
     padding: 0;
+    position: sticky;
+    top: rem(16);
+    z-index: 101;
     &__content {
         z-index: 1;
         flex-direction: row !important;
@@ -46,15 +49,14 @@
         }
     }
     &.menu-open {
-        position: relative;
         &:before {
             display: block;
             content: '';
             position: absolute;
-            width: 200vw;
-            height: 200vh;
-            top: -100vh;
-            left: -100vw;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            left: 0;
             z-index: 1;
             background: color(pastel, 'purple');
             opacity: 0.875;

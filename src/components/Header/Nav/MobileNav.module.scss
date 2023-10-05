@@ -1,14 +1,14 @@
 .mobile-nav {
-    position: absolute;
+    position: fixed;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     justify-content: space-between;
     @include paddingX(24);
-    top: rem(48);
-    left: 0;
+    top: rem(66);
+    left: rem(14);
     z-index: 100;
-    width: 100%;
+    width: calc(100% - rem(26));
     height: auto;
     padding-top: rem(24);
     padding-bottom: rem(30);

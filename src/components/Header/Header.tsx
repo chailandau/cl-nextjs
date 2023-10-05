@@ -17,6 +17,7 @@ import { tabletLgQuery, useMediaQuery } from '@/utils/hooks/useMediaQuery';
 
 // eslint-disable-next-line import/order
 import styles from './Header.module.scss';
+import { setNoScroll } from '@/utils/setNoScroll';
 
 export interface HeaderProps {
     /* Nav to pass into header */
@@ -28,6 +29,10 @@ const Header: FC<HeaderProps> = ({ menuItems }) => {
     const isTabletLg = useMediaQuery(tabletLgQuery);
 
     const { menuOpen, setMenuOpen } = useStore();
+
+    useEffect(() => {
+        setNoScroll(menuOpen);
+    }, [menuOpen]);
 
     useEffect(() => {
         if (isTabletLg) {
