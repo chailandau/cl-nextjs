@@ -110,6 +110,43 @@ exports[`graphqlQueries mocks CASE_STUDY_CONTENT_QUERY successfully 1`] = `
 }
 `;
 
+exports[`graphqlQueries mocks METADATA_QUERY successfully 1`] = `
+{
+  "data": {
+    "CaseStudies": {
+      "docs": [
+        {
+          "slug": "Hello World",
+        },
+        {
+          "slug": "Hello World",
+        },
+      ],
+    },
+    "Pages": {
+      "docs": [
+        {
+          "slug": "Hello World",
+        },
+        {
+          "slug": "Hello World",
+        },
+      ],
+    },
+    "Projects": {
+      "docs": [
+        {
+          "slug": "Hello World",
+        },
+        {
+          "slug": "Hello World",
+        },
+      ],
+    },
+  },
+}
+`;
+
 exports[`graphqlQueries mocks NAV_QUERY successfully 1`] = `
 {
   "data": {
@@ -157,43 +194,6 @@ exports[`graphqlQueries mocks PROJECT_CONTENT_QUERY successfully 1`] = `
   "errors": [
     [GraphQLError: Variable "$slug" of required type "String!" was not provided.],
   ],
-}
-`;
-
-exports[`graphqlQueries mocks SLUG_QUERY successfully 1`] = `
-{
-  "data": {
-    "CaseStudies": {
-      "docs": [
-        {
-          "slug": "Hello World",
-        },
-        {
-          "slug": "Hello World",
-        },
-      ],
-    },
-    "Pages": {
-      "docs": [
-        {
-          "slug": "Hello World",
-        },
-        {
-          "slug": "Hello World",
-        },
-      ],
-    },
-    "Projects": {
-      "docs": [
-        {
-          "slug": "Hello World",
-        },
-        {
-          "slug": "Hello World",
-        },
-      ],
-    },
-  },
 }
 `;
 

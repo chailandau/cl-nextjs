@@ -87,3 +87,13 @@ export const IMAGE_BLOCK_FRAGMENT = `
   }
 }
 `;
+
+export const META_FRAGMENT = `
+meta {
+  title
+  description
+  image {
+    ${IMAGE_FRAGMENT}
+  }
+}
+`;

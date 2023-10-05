@@ -93,6 +93,25 @@ slug
 "
 `;
 
+exports[`Fragments "META_FRAGMENT" matches snapshot: META_FRAGMENT 1`] = `
+"
+meta {
+  title
+  description
+  image {
+    
+id
+alt
+url
+width
+height
+base64
+
+  }
+}
+"
+`;
+
 exports[`Fragments "SINGLE_USE_FRAGMENT" matches snapshot: SINGLE_USE_FRAGMENT 1`] = `
 "
 ...on SingleUseBlock {
