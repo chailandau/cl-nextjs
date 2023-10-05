@@ -1558,7 +1558,11 @@ type CaseStudiesDeleteDocAccess {
 type CaseStudiesDocAccessFields {
   caseStudySections: CaseStudiesDocAccessFields_caseStudySections
   createdAt: CaseStudiesDocAccessFields_createdAt
+  excerpt: CaseStudiesDocAccessFields_excerpt
+  featuredImage: CaseStudiesDocAccessFields_featuredImage
+  internalTitle: CaseStudiesDocAccessFields_internalTitle
   intro: CaseStudiesDocAccessFields_intro
+  meta: CaseStudiesDocAccessFields_meta
   slug: CaseStudiesDocAccessFields_slug
   title: CaseStudiesDocAccessFields_title
   updatedAt: CaseStudiesDocAccessFields_updatedAt
@@ -1607,6 +1611,75 @@ type CaseStudiesDocAccessFields_createdAt_Read {
 }
 
 type CaseStudiesDocAccessFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_excerpt {
+  create: CaseStudiesDocAccessFields_excerpt_Create
+  delete: CaseStudiesDocAccessFields_excerpt_Delete
+  read: CaseStudiesDocAccessFields_excerpt_Read
+  update: CaseStudiesDocAccessFields_excerpt_Update
+}
+
+type CaseStudiesDocAccessFields_excerpt_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_excerpt_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_excerpt_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_excerpt_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_featuredImage {
+  create: CaseStudiesDocAccessFields_featuredImage_Create
+  delete: CaseStudiesDocAccessFields_featuredImage_Delete
+  read: CaseStudiesDocAccessFields_featuredImage_Read
+  update: CaseStudiesDocAccessFields_featuredImage_Update
+}
+
+type CaseStudiesDocAccessFields_featuredImage_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_featuredImage_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_featuredImage_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_featuredImage_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_internalTitle {
+  create: CaseStudiesDocAccessFields_internalTitle_Create
+  delete: CaseStudiesDocAccessFields_internalTitle_Delete
+  read: CaseStudiesDocAccessFields_internalTitle_Read
+  update: CaseStudiesDocAccessFields_internalTitle_Update
+}
+
+type CaseStudiesDocAccessFields_internalTitle_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_internalTitle_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_internalTitle_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_internalTitle_Update {
   permission: Boolean!
 }
 
@@ -1733,6 +1806,177 @@ type CaseStudiesDocAccessFields_intro_text_Update {
   permission: Boolean!
 }
 
+type CaseStudiesDocAccessFields_meta {
+  create: CaseStudiesDocAccessFields_meta_Create
+  delete: CaseStudiesDocAccessFields_meta_Delete
+  fields: CaseStudiesDocAccessFields_meta_Fields
+  read: CaseStudiesDocAccessFields_meta_Read
+  update: CaseStudiesDocAccessFields_meta_Update
+}
+
+type CaseStudiesDocAccessFields_meta_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_Fields {
+  description: CaseStudiesDocAccessFields_meta_description
+  image: CaseStudiesDocAccessFields_meta_image
+  noIndex: CaseStudiesDocAccessFields_meta_noIndex
+  overview: CaseStudiesDocAccessFields_meta_overview
+  preview: CaseStudiesDocAccessFields_meta_preview
+  title: CaseStudiesDocAccessFields_meta_title
+}
+
+type CaseStudiesDocAccessFields_meta_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_description {
+  create: CaseStudiesDocAccessFields_meta_description_Create
+  delete: CaseStudiesDocAccessFields_meta_description_Delete
+  read: CaseStudiesDocAccessFields_meta_description_Read
+  update: CaseStudiesDocAccessFields_meta_description_Update
+}
+
+type CaseStudiesDocAccessFields_meta_description_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_description_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_description_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_description_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_image {
+  create: CaseStudiesDocAccessFields_meta_image_Create
+  delete: CaseStudiesDocAccessFields_meta_image_Delete
+  read: CaseStudiesDocAccessFields_meta_image_Read
+  update: CaseStudiesDocAccessFields_meta_image_Update
+}
+
+type CaseStudiesDocAccessFields_meta_image_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_image_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_image_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_image_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_noIndex {
+  create: CaseStudiesDocAccessFields_meta_noIndex_Create
+  delete: CaseStudiesDocAccessFields_meta_noIndex_Delete
+  read: CaseStudiesDocAccessFields_meta_noIndex_Read
+  update: CaseStudiesDocAccessFields_meta_noIndex_Update
+}
+
+type CaseStudiesDocAccessFields_meta_noIndex_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_noIndex_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_noIndex_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_noIndex_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_overview {
+  create: CaseStudiesDocAccessFields_meta_overview_Create
+  delete: CaseStudiesDocAccessFields_meta_overview_Delete
+  read: CaseStudiesDocAccessFields_meta_overview_Read
+  update: CaseStudiesDocAccessFields_meta_overview_Update
+}
+
+type CaseStudiesDocAccessFields_meta_overview_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_overview_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_overview_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_overview_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_preview {
+  create: CaseStudiesDocAccessFields_meta_preview_Create
+  delete: CaseStudiesDocAccessFields_meta_preview_Delete
+  read: CaseStudiesDocAccessFields_meta_preview_Read
+  update: CaseStudiesDocAccessFields_meta_preview_Update
+}
+
+type CaseStudiesDocAccessFields_meta_preview_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_preview_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_preview_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_preview_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_title {
+  create: CaseStudiesDocAccessFields_meta_title_Create
+  delete: CaseStudiesDocAccessFields_meta_title_Delete
+  read: CaseStudiesDocAccessFields_meta_title_Read
+  update: CaseStudiesDocAccessFields_meta_title_Update
+}
+
+type CaseStudiesDocAccessFields_meta_title_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_title_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_title_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesDocAccessFields_meta_title_Update {
+  permission: Boolean!
+}
+
 type CaseStudiesDocAccessFields_slug {
   create: CaseStudiesDocAccessFields_slug_Create
   delete: CaseStudiesDocAccessFields_slug_Delete
@@ -1805,7 +2049,11 @@ type CaseStudiesDocAccessFields_updatedAt_Update {
 type CaseStudiesFields {
   caseStudySections: CaseStudiesFields_caseStudySections
   createdAt: CaseStudiesFields_createdAt
+  excerpt: CaseStudiesFields_excerpt
+  featuredImage: CaseStudiesFields_featuredImage
+  internalTitle: CaseStudiesFields_internalTitle
   intro: CaseStudiesFields_intro
+  meta: CaseStudiesFields_meta
   slug: CaseStudiesFields_slug
   title: CaseStudiesFields_title
   updatedAt: CaseStudiesFields_updatedAt
@@ -1854,6 +2102,75 @@ type CaseStudiesFields_createdAt_Read {
 }
 
 type CaseStudiesFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_excerpt {
+  create: CaseStudiesFields_excerpt_Create
+  delete: CaseStudiesFields_excerpt_Delete
+  read: CaseStudiesFields_excerpt_Read
+  update: CaseStudiesFields_excerpt_Update
+}
+
+type CaseStudiesFields_excerpt_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_excerpt_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_excerpt_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_excerpt_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_featuredImage {
+  create: CaseStudiesFields_featuredImage_Create
+  delete: CaseStudiesFields_featuredImage_Delete
+  read: CaseStudiesFields_featuredImage_Read
+  update: CaseStudiesFields_featuredImage_Update
+}
+
+type CaseStudiesFields_featuredImage_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_featuredImage_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_featuredImage_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_featuredImage_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_internalTitle {
+  create: CaseStudiesFields_internalTitle_Create
+  delete: CaseStudiesFields_internalTitle_Delete
+  read: CaseStudiesFields_internalTitle_Read
+  update: CaseStudiesFields_internalTitle_Update
+}
+
+type CaseStudiesFields_internalTitle_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_internalTitle_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_internalTitle_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_internalTitle_Update {
   permission: Boolean!
 }
 
@@ -1980,6 +2297,177 @@ type CaseStudiesFields_intro_text_Update {
   permission: Boolean!
 }
 
+type CaseStudiesFields_meta {
+  create: CaseStudiesFields_meta_Create
+  delete: CaseStudiesFields_meta_Delete
+  fields: CaseStudiesFields_meta_Fields
+  read: CaseStudiesFields_meta_Read
+  update: CaseStudiesFields_meta_Update
+}
+
+type CaseStudiesFields_meta_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_Fields {
+  description: CaseStudiesFields_meta_description
+  image: CaseStudiesFields_meta_image
+  noIndex: CaseStudiesFields_meta_noIndex
+  overview: CaseStudiesFields_meta_overview
+  preview: CaseStudiesFields_meta_preview
+  title: CaseStudiesFields_meta_title
+}
+
+type CaseStudiesFields_meta_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_description {
+  create: CaseStudiesFields_meta_description_Create
+  delete: CaseStudiesFields_meta_description_Delete
+  read: CaseStudiesFields_meta_description_Read
+  update: CaseStudiesFields_meta_description_Update
+}
+
+type CaseStudiesFields_meta_description_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_description_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_description_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_description_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_image {
+  create: CaseStudiesFields_meta_image_Create
+  delete: CaseStudiesFields_meta_image_Delete
+  read: CaseStudiesFields_meta_image_Read
+  update: CaseStudiesFields_meta_image_Update
+}
+
+type CaseStudiesFields_meta_image_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_image_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_image_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_image_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_noIndex {
+  create: CaseStudiesFields_meta_noIndex_Create
+  delete: CaseStudiesFields_meta_noIndex_Delete
+  read: CaseStudiesFields_meta_noIndex_Read
+  update: CaseStudiesFields_meta_noIndex_Update
+}
+
+type CaseStudiesFields_meta_noIndex_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_noIndex_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_noIndex_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_noIndex_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_overview {
+  create: CaseStudiesFields_meta_overview_Create
+  delete: CaseStudiesFields_meta_overview_Delete
+  read: CaseStudiesFields_meta_overview_Read
+  update: CaseStudiesFields_meta_overview_Update
+}
+
+type CaseStudiesFields_meta_overview_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_overview_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_overview_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_overview_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_preview {
+  create: CaseStudiesFields_meta_preview_Create
+  delete: CaseStudiesFields_meta_preview_Delete
+  read: CaseStudiesFields_meta_preview_Read
+  update: CaseStudiesFields_meta_preview_Update
+}
+
+type CaseStudiesFields_meta_preview_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_preview_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_preview_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_preview_Update {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_title {
+  create: CaseStudiesFields_meta_title_Create
+  delete: CaseStudiesFields_meta_title_Delete
+  read: CaseStudiesFields_meta_title_Read
+  update: CaseStudiesFields_meta_title_Update
+}
+
+type CaseStudiesFields_meta_title_Create {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_title_Delete {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_title_Read {
+  permission: Boolean!
+}
+
+type CaseStudiesFields_meta_title_Update {
+  permission: Boolean!
+}
+
 type CaseStudiesFields_slug {
   create: CaseStudiesFields_slug_Create
   delete: CaseStudiesFields_slug_Delete
@@ -2072,8 +2560,12 @@ type CaseStudiesUpdateDocAccess {
 type CaseStudy {
   caseStudySections: [CaseStudy_CaseStudySections!]
   createdAt: DateTime
+  excerpt: String
+  featuredImage(where: CaseStudy_FeaturedImage_where): Image
   id: String
+  internalTitle: String
   intro: CaseStudy_Intro
+  meta: CaseStudy_Meta
   slug: String
   title: String
   updatedAt: DateTime
@@ -2597,6 +3089,248 @@ input CaseStudyListing_Icon_width_operator {
 
 union CaseStudy_CaseStudySections = ImageBlock | TextBlock
 
+input CaseStudy_FeaturedImage_alt_operator {
+  all: [String]
+  contains: String
+  equals: String
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_FeaturedImage_base64_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_FeaturedImage_createdAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input CaseStudy_FeaturedImage_filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_FeaturedImage_filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input CaseStudy_FeaturedImage_height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input CaseStudy_FeaturedImage_id_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_FeaturedImage_mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_FeaturedImage_sizes__thumbnail__filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_FeaturedImage_sizes__thumbnail__filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input CaseStudy_FeaturedImage_sizes__thumbnail__height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input CaseStudy_FeaturedImage_sizes__thumbnail__mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_FeaturedImage_sizes__thumbnail__url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_FeaturedImage_sizes__thumbnail__width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input CaseStudy_FeaturedImage_updatedAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input CaseStudy_FeaturedImage_url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_FeaturedImage_where {
+  AND: [CaseStudy_FeaturedImage_where_and]
+  OR: [CaseStudy_FeaturedImage_where_or]
+  alt: CaseStudy_FeaturedImage_alt_operator
+  base64: CaseStudy_FeaturedImage_base64_operator
+  createdAt: CaseStudy_FeaturedImage_createdAt_operator
+  filename: CaseStudy_FeaturedImage_filename_operator
+  filesize: CaseStudy_FeaturedImage_filesize_operator
+  height: CaseStudy_FeaturedImage_height_operator
+  id: CaseStudy_FeaturedImage_id_operator
+  mimeType: CaseStudy_FeaturedImage_mimeType_operator
+  sizes__thumbnail__filename: CaseStudy_FeaturedImage_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: CaseStudy_FeaturedImage_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: CaseStudy_FeaturedImage_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: CaseStudy_FeaturedImage_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: CaseStudy_FeaturedImage_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: CaseStudy_FeaturedImage_sizes__thumbnail__width_operator
+  updatedAt: CaseStudy_FeaturedImage_updatedAt_operator
+  url: CaseStudy_FeaturedImage_url_operator
+  width: CaseStudy_FeaturedImage_width_operator
+}
+
+input CaseStudy_FeaturedImage_where_and {
+  alt: CaseStudy_FeaturedImage_alt_operator
+  base64: CaseStudy_FeaturedImage_base64_operator
+  createdAt: CaseStudy_FeaturedImage_createdAt_operator
+  filename: CaseStudy_FeaturedImage_filename_operator
+  filesize: CaseStudy_FeaturedImage_filesize_operator
+  height: CaseStudy_FeaturedImage_height_operator
+  id: CaseStudy_FeaturedImage_id_operator
+  mimeType: CaseStudy_FeaturedImage_mimeType_operator
+  sizes__thumbnail__filename: CaseStudy_FeaturedImage_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: CaseStudy_FeaturedImage_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: CaseStudy_FeaturedImage_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: CaseStudy_FeaturedImage_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: CaseStudy_FeaturedImage_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: CaseStudy_FeaturedImage_sizes__thumbnail__width_operator
+  updatedAt: CaseStudy_FeaturedImage_updatedAt_operator
+  url: CaseStudy_FeaturedImage_url_operator
+  width: CaseStudy_FeaturedImage_width_operator
+}
+
+input CaseStudy_FeaturedImage_where_or {
+  alt: CaseStudy_FeaturedImage_alt_operator
+  base64: CaseStudy_FeaturedImage_base64_operator
+  createdAt: CaseStudy_FeaturedImage_createdAt_operator
+  filename: CaseStudy_FeaturedImage_filename_operator
+  filesize: CaseStudy_FeaturedImage_filesize_operator
+  height: CaseStudy_FeaturedImage_height_operator
+  id: CaseStudy_FeaturedImage_id_operator
+  mimeType: CaseStudy_FeaturedImage_mimeType_operator
+  sizes__thumbnail__filename: CaseStudy_FeaturedImage_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: CaseStudy_FeaturedImage_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: CaseStudy_FeaturedImage_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: CaseStudy_FeaturedImage_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: CaseStudy_FeaturedImage_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: CaseStudy_FeaturedImage_sizes__thumbnail__width_operator
+  updatedAt: CaseStudy_FeaturedImage_updatedAt_operator
+  url: CaseStudy_FeaturedImage_url_operator
+  width: CaseStudy_FeaturedImage_width_operator
+}
+
+input CaseStudy_FeaturedImage_width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
 type CaseStudy_Intro {
   cta: [Cta!]
   heading: String
@@ -2846,6 +3580,255 @@ input CaseStudy_Intro_Image_width_operator {
   not_equals: Float
 }
 
+type CaseStudy_Meta {
+  description: String
+  image(where: CaseStudy_Meta_Image_where): Image
+  noIndex: Boolean
+  title: String
+}
+
+input CaseStudy_Meta_Image_alt_operator {
+  all: [String]
+  contains: String
+  equals: String
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_Meta_Image_base64_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_Meta_Image_createdAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input CaseStudy_Meta_Image_filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_Meta_Image_filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input CaseStudy_Meta_Image_height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input CaseStudy_Meta_Image_id_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_Meta_Image_mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_Meta_Image_sizes__thumbnail__filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_Meta_Image_sizes__thumbnail__filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input CaseStudy_Meta_Image_sizes__thumbnail__height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input CaseStudy_Meta_Image_sizes__thumbnail__mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_Meta_Image_sizes__thumbnail__url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_Meta_Image_sizes__thumbnail__width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input CaseStudy_Meta_Image_updatedAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input CaseStudy_Meta_Image_url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_Meta_Image_where {
+  AND: [CaseStudy_Meta_Image_where_and]
+  OR: [CaseStudy_Meta_Image_where_or]
+  alt: CaseStudy_Meta_Image_alt_operator
+  base64: CaseStudy_Meta_Image_base64_operator
+  createdAt: CaseStudy_Meta_Image_createdAt_operator
+  filename: CaseStudy_Meta_Image_filename_operator
+  filesize: CaseStudy_Meta_Image_filesize_operator
+  height: CaseStudy_Meta_Image_height_operator
+  id: CaseStudy_Meta_Image_id_operator
+  mimeType: CaseStudy_Meta_Image_mimeType_operator
+  sizes__thumbnail__filename: CaseStudy_Meta_Image_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: CaseStudy_Meta_Image_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: CaseStudy_Meta_Image_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: CaseStudy_Meta_Image_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: CaseStudy_Meta_Image_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: CaseStudy_Meta_Image_sizes__thumbnail__width_operator
+  updatedAt: CaseStudy_Meta_Image_updatedAt_operator
+  url: CaseStudy_Meta_Image_url_operator
+  width: CaseStudy_Meta_Image_width_operator
+}
+
+input CaseStudy_Meta_Image_where_and {
+  alt: CaseStudy_Meta_Image_alt_operator
+  base64: CaseStudy_Meta_Image_base64_operator
+  createdAt: CaseStudy_Meta_Image_createdAt_operator
+  filename: CaseStudy_Meta_Image_filename_operator
+  filesize: CaseStudy_Meta_Image_filesize_operator
+  height: CaseStudy_Meta_Image_height_operator
+  id: CaseStudy_Meta_Image_id_operator
+  mimeType: CaseStudy_Meta_Image_mimeType_operator
+  sizes__thumbnail__filename: CaseStudy_Meta_Image_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: CaseStudy_Meta_Image_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: CaseStudy_Meta_Image_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: CaseStudy_Meta_Image_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: CaseStudy_Meta_Image_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: CaseStudy_Meta_Image_sizes__thumbnail__width_operator
+  updatedAt: CaseStudy_Meta_Image_updatedAt_operator
+  url: CaseStudy_Meta_Image_url_operator
+  width: CaseStudy_Meta_Image_width_operator
+}
+
+input CaseStudy_Meta_Image_where_or {
+  alt: CaseStudy_Meta_Image_alt_operator
+  base64: CaseStudy_Meta_Image_base64_operator
+  createdAt: CaseStudy_Meta_Image_createdAt_operator
+  filename: CaseStudy_Meta_Image_filename_operator
+  filesize: CaseStudy_Meta_Image_filesize_operator
+  height: CaseStudy_Meta_Image_height_operator
+  id: CaseStudy_Meta_Image_id_operator
+  mimeType: CaseStudy_Meta_Image_mimeType_operator
+  sizes__thumbnail__filename: CaseStudy_Meta_Image_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: CaseStudy_Meta_Image_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: CaseStudy_Meta_Image_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: CaseStudy_Meta_Image_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: CaseStudy_Meta_Image_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: CaseStudy_Meta_Image_sizes__thumbnail__width_operator
+  updatedAt: CaseStudy_Meta_Image_updatedAt_operator
+  url: CaseStudy_Meta_Image_url_operator
+  width: CaseStudy_Meta_Image_width_operator
+}
+
+input CaseStudy_Meta_Image_width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
 input CaseStudy_createdAt_operator {
   equals: DateTime
   exists: Boolean
@@ -2857,7 +3840,32 @@ input CaseStudy_createdAt_operator {
   not_equals: DateTime
 }
 
+input CaseStudy_excerpt_operator {
+  contains: String
+  equals: String
+  exists: Boolean
+  like: String
+  not_equals: String
+}
+
+input CaseStudy_featuredImage_operator {
+  equals: String
+  exists: Boolean
+  not_equals: String
+}
+
 input CaseStudy_id_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input CaseStudy_internalTitle_operator {
   all: [String]
   contains: String
   equals: String
@@ -2902,6 +3910,37 @@ input CaseStudy_intro__text_operator {
   not_equals: JSON
 }
 
+input CaseStudy_meta__description_operator {
+  contains: String
+  equals: String
+  exists: Boolean
+  like: String
+  not_equals: String
+}
+
+input CaseStudy_meta__image_operator {
+  equals: String
+  exists: Boolean
+  not_equals: String
+}
+
+input CaseStudy_meta__noIndex_operator {
+  equals: Boolean
+  exists: Boolean
+  not_equals: Boolean
+}
+
+input CaseStudy_meta__title_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
 input CaseStudy_slug_operator {
   all: [String]
   contains: String
@@ -2939,11 +3978,18 @@ input CaseStudy_where {
   AND: [CaseStudy_where_and]
   OR: [CaseStudy_where_or]
   createdAt: CaseStudy_createdAt_operator
+  excerpt: CaseStudy_excerpt_operator
+  featuredImage: CaseStudy_featuredImage_operator
   id: CaseStudy_id_operator
+  internalTitle: CaseStudy_internalTitle_operator
   intro__cta: CaseStudy_intro__cta_operator
   intro__heading: CaseStudy_intro__heading_operator
   intro__image: CaseStudy_intro__image_operator
   intro__text: CaseStudy_intro__text_operator
+  meta__description: CaseStudy_meta__description_operator
+  meta__image: CaseStudy_meta__image_operator
+  meta__noIndex: CaseStudy_meta__noIndex_operator
+  meta__title: CaseStudy_meta__title_operator
   slug: CaseStudy_slug_operator
   title: CaseStudy_title_operator
   updatedAt: CaseStudy_updatedAt_operator
@@ -2951,11 +3997,18 @@ input CaseStudy_where {
 
 input CaseStudy_where_and {
   createdAt: CaseStudy_createdAt_operator
+  excerpt: CaseStudy_excerpt_operator
+  featuredImage: CaseStudy_featuredImage_operator
   id: CaseStudy_id_operator
+  internalTitle: CaseStudy_internalTitle_operator
   intro__cta: CaseStudy_intro__cta_operator
   intro__heading: CaseStudy_intro__heading_operator
   intro__image: CaseStudy_intro__image_operator
   intro__text: CaseStudy_intro__text_operator
+  meta__description: CaseStudy_meta__description_operator
+  meta__image: CaseStudy_meta__image_operator
+  meta__noIndex: CaseStudy_meta__noIndex_operator
+  meta__title: CaseStudy_meta__title_operator
   slug: CaseStudy_slug_operator
   title: CaseStudy_title_operator
   updatedAt: CaseStudy_updatedAt_operator
@@ -2963,11 +4016,18 @@ input CaseStudy_where_and {
 
 input CaseStudy_where_or {
   createdAt: CaseStudy_createdAt_operator
+  excerpt: CaseStudy_excerpt_operator
+  featuredImage: CaseStudy_featuredImage_operator
   id: CaseStudy_id_operator
+  internalTitle: CaseStudy_internalTitle_operator
   intro__cta: CaseStudy_intro__cta_operator
   intro__heading: CaseStudy_intro__heading_operator
   intro__image: CaseStudy_intro__image_operator
   intro__text: CaseStudy_intro__text_operator
+  meta__description: CaseStudy_meta__description_operator
+  meta__image: CaseStudy_meta__image_operator
+  meta__noIndex: CaseStudy_meta__noIndex_operator
+  meta__title: CaseStudy_meta__title_operator
   slug: CaseStudy_slug_operator
   title: CaseStudy_title_operator
   updatedAt: CaseStudy_updatedAt_operator
@@ -5740,7 +6800,6 @@ type ImageBlock {
   blockType: String
   id: String
   image(where: ImageBlock_Image_where): Image
-  sectionId: String
 }
 
 input ImageBlock_Image_alt_operator {
@@ -7773,10 +8832,260 @@ type Nav_MenuItems {
 type Page {
   createdAt: DateTime
   id: String
+  meta: Page_Meta
   pageSections: [Page_PageSections!]
   slug: String
   title: String
   updatedAt: DateTime
+}
+
+type Page_Meta {
+  description: String
+  image(where: Page_Meta_Image_where): Image
+  noIndex: Boolean
+  title: String
+}
+
+input Page_Meta_Image_alt_operator {
+  all: [String]
+  contains: String
+  equals: String
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Page_Meta_Image_base64_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Page_Meta_Image_createdAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input Page_Meta_Image_filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Page_Meta_Image_filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input Page_Meta_Image_height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input Page_Meta_Image_id_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Page_Meta_Image_mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Page_Meta_Image_sizes__thumbnail__filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Page_Meta_Image_sizes__thumbnail__filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input Page_Meta_Image_sizes__thumbnail__height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input Page_Meta_Image_sizes__thumbnail__mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Page_Meta_Image_sizes__thumbnail__url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Page_Meta_Image_sizes__thumbnail__width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input Page_Meta_Image_updatedAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input Page_Meta_Image_url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Page_Meta_Image_where {
+  AND: [Page_Meta_Image_where_and]
+  OR: [Page_Meta_Image_where_or]
+  alt: Page_Meta_Image_alt_operator
+  base64: Page_Meta_Image_base64_operator
+  createdAt: Page_Meta_Image_createdAt_operator
+  filename: Page_Meta_Image_filename_operator
+  filesize: Page_Meta_Image_filesize_operator
+  height: Page_Meta_Image_height_operator
+  id: Page_Meta_Image_id_operator
+  mimeType: Page_Meta_Image_mimeType_operator
+  sizes__thumbnail__filename: Page_Meta_Image_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: Page_Meta_Image_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: Page_Meta_Image_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: Page_Meta_Image_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: Page_Meta_Image_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: Page_Meta_Image_sizes__thumbnail__width_operator
+  updatedAt: Page_Meta_Image_updatedAt_operator
+  url: Page_Meta_Image_url_operator
+  width: Page_Meta_Image_width_operator
+}
+
+input Page_Meta_Image_where_and {
+  alt: Page_Meta_Image_alt_operator
+  base64: Page_Meta_Image_base64_operator
+  createdAt: Page_Meta_Image_createdAt_operator
+  filename: Page_Meta_Image_filename_operator
+  filesize: Page_Meta_Image_filesize_operator
+  height: Page_Meta_Image_height_operator
+  id: Page_Meta_Image_id_operator
+  mimeType: Page_Meta_Image_mimeType_operator
+  sizes__thumbnail__filename: Page_Meta_Image_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: Page_Meta_Image_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: Page_Meta_Image_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: Page_Meta_Image_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: Page_Meta_Image_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: Page_Meta_Image_sizes__thumbnail__width_operator
+  updatedAt: Page_Meta_Image_updatedAt_operator
+  url: Page_Meta_Image_url_operator
+  width: Page_Meta_Image_width_operator
+}
+
+input Page_Meta_Image_where_or {
+  alt: Page_Meta_Image_alt_operator
+  base64: Page_Meta_Image_base64_operator
+  createdAt: Page_Meta_Image_createdAt_operator
+  filename: Page_Meta_Image_filename_operator
+  filesize: Page_Meta_Image_filesize_operator
+  height: Page_Meta_Image_height_operator
+  id: Page_Meta_Image_id_operator
+  mimeType: Page_Meta_Image_mimeType_operator
+  sizes__thumbnail__filename: Page_Meta_Image_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: Page_Meta_Image_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: Page_Meta_Image_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: Page_Meta_Image_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: Page_Meta_Image_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: Page_Meta_Image_sizes__thumbnail__width_operator
+  updatedAt: Page_Meta_Image_updatedAt_operator
+  url: Page_Meta_Image_url_operator
+  width: Page_Meta_Image_width_operator
+}
+
+input Page_Meta_Image_width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
 }
 
 union Page_PageSections = HeroBlock | SingleUseBlock | SocialsBlock
@@ -7793,6 +9102,37 @@ input Page_createdAt_operator {
 }
 
 input Page_id_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Page_meta__description_operator {
+  contains: String
+  equals: String
+  exists: Boolean
+  like: String
+  not_equals: String
+}
+
+input Page_meta__image_operator {
+  equals: String
+  exists: Boolean
+  not_equals: String
+}
+
+input Page_meta__noIndex_operator {
+  equals: Boolean
+  exists: Boolean
+  not_equals: Boolean
+}
+
+input Page_meta__title_operator {
   all: [String]
   contains: String
   equals: String
@@ -7841,6 +9181,10 @@ input Page_where {
   OR: [Page_where_or]
   createdAt: Page_createdAt_operator
   id: Page_id_operator
+  meta__description: Page_meta__description_operator
+  meta__image: Page_meta__image_operator
+  meta__noIndex: Page_meta__noIndex_operator
+  meta__title: Page_meta__title_operator
   slug: Page_slug_operator
   title: Page_title_operator
   updatedAt: Page_updatedAt_operator
@@ -7849,6 +9193,10 @@ input Page_where {
 input Page_where_and {
   createdAt: Page_createdAt_operator
   id: Page_id_operator
+  meta__description: Page_meta__description_operator
+  meta__image: Page_meta__image_operator
+  meta__noIndex: Page_meta__noIndex_operator
+  meta__title: Page_meta__title_operator
   slug: Page_slug_operator
   title: Page_title_operator
   updatedAt: Page_updatedAt_operator
@@ -7857,6 +9205,10 @@ input Page_where_and {
 input Page_where_or {
   createdAt: Page_createdAt_operator
   id: Page_id_operator
+  meta__description: Page_meta__description_operator
+  meta__image: Page_meta__image_operator
+  meta__noIndex: Page_meta__noIndex_operator
+  meta__title: Page_meta__title_operator
   slug: Page_slug_operator
   title: Page_title_operator
   updatedAt: Page_updatedAt_operator
@@ -7898,6 +9250,7 @@ type PagesDeleteDocAccess {
 
 type PagesDocAccessFields {
   createdAt: PagesDocAccessFields_createdAt
+  meta: PagesDocAccessFields_meta
   pageSections: PagesDocAccessFields_pageSections
   slug: PagesDocAccessFields_slug
   title: PagesDocAccessFields_title
@@ -7924,6 +9277,177 @@ type PagesDocAccessFields_createdAt_Read {
 }
 
 type PagesDocAccessFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta {
+  create: PagesDocAccessFields_meta_Create
+  delete: PagesDocAccessFields_meta_Delete
+  fields: PagesDocAccessFields_meta_Fields
+  read: PagesDocAccessFields_meta_Read
+  update: PagesDocAccessFields_meta_Update
+}
+
+type PagesDocAccessFields_meta_Create {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_Delete {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_Fields {
+  description: PagesDocAccessFields_meta_description
+  image: PagesDocAccessFields_meta_image
+  noIndex: PagesDocAccessFields_meta_noIndex
+  overview: PagesDocAccessFields_meta_overview
+  preview: PagesDocAccessFields_meta_preview
+  title: PagesDocAccessFields_meta_title
+}
+
+type PagesDocAccessFields_meta_Read {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_Update {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_description {
+  create: PagesDocAccessFields_meta_description_Create
+  delete: PagesDocAccessFields_meta_description_Delete
+  read: PagesDocAccessFields_meta_description_Read
+  update: PagesDocAccessFields_meta_description_Update
+}
+
+type PagesDocAccessFields_meta_description_Create {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_description_Delete {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_description_Read {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_description_Update {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_image {
+  create: PagesDocAccessFields_meta_image_Create
+  delete: PagesDocAccessFields_meta_image_Delete
+  read: PagesDocAccessFields_meta_image_Read
+  update: PagesDocAccessFields_meta_image_Update
+}
+
+type PagesDocAccessFields_meta_image_Create {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_image_Delete {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_image_Read {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_image_Update {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_noIndex {
+  create: PagesDocAccessFields_meta_noIndex_Create
+  delete: PagesDocAccessFields_meta_noIndex_Delete
+  read: PagesDocAccessFields_meta_noIndex_Read
+  update: PagesDocAccessFields_meta_noIndex_Update
+}
+
+type PagesDocAccessFields_meta_noIndex_Create {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_noIndex_Delete {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_noIndex_Read {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_noIndex_Update {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_overview {
+  create: PagesDocAccessFields_meta_overview_Create
+  delete: PagesDocAccessFields_meta_overview_Delete
+  read: PagesDocAccessFields_meta_overview_Read
+  update: PagesDocAccessFields_meta_overview_Update
+}
+
+type PagesDocAccessFields_meta_overview_Create {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_overview_Delete {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_overview_Read {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_overview_Update {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_preview {
+  create: PagesDocAccessFields_meta_preview_Create
+  delete: PagesDocAccessFields_meta_preview_Delete
+  read: PagesDocAccessFields_meta_preview_Read
+  update: PagesDocAccessFields_meta_preview_Update
+}
+
+type PagesDocAccessFields_meta_preview_Create {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_preview_Delete {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_preview_Read {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_preview_Update {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_title {
+  create: PagesDocAccessFields_meta_title_Create
+  delete: PagesDocAccessFields_meta_title_Delete
+  read: PagesDocAccessFields_meta_title_Read
+  update: PagesDocAccessFields_meta_title_Update
+}
+
+type PagesDocAccessFields_meta_title_Create {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_title_Delete {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_title_Read {
+  permission: Boolean!
+}
+
+type PagesDocAccessFields_meta_title_Update {
   permission: Boolean!
 }
 
@@ -8021,6 +9545,7 @@ type PagesDocAccessFields_updatedAt_Update {
 
 type PagesFields {
   createdAt: PagesFields_createdAt
+  meta: PagesFields_meta
   pageSections: PagesFields_pageSections
   slug: PagesFields_slug
   title: PagesFields_title
@@ -8047,6 +9572,177 @@ type PagesFields_createdAt_Read {
 }
 
 type PagesFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type PagesFields_meta {
+  create: PagesFields_meta_Create
+  delete: PagesFields_meta_Delete
+  fields: PagesFields_meta_Fields
+  read: PagesFields_meta_Read
+  update: PagesFields_meta_Update
+}
+
+type PagesFields_meta_Create {
+  permission: Boolean!
+}
+
+type PagesFields_meta_Delete {
+  permission: Boolean!
+}
+
+type PagesFields_meta_Fields {
+  description: PagesFields_meta_description
+  image: PagesFields_meta_image
+  noIndex: PagesFields_meta_noIndex
+  overview: PagesFields_meta_overview
+  preview: PagesFields_meta_preview
+  title: PagesFields_meta_title
+}
+
+type PagesFields_meta_Read {
+  permission: Boolean!
+}
+
+type PagesFields_meta_Update {
+  permission: Boolean!
+}
+
+type PagesFields_meta_description {
+  create: PagesFields_meta_description_Create
+  delete: PagesFields_meta_description_Delete
+  read: PagesFields_meta_description_Read
+  update: PagesFields_meta_description_Update
+}
+
+type PagesFields_meta_description_Create {
+  permission: Boolean!
+}
+
+type PagesFields_meta_description_Delete {
+  permission: Boolean!
+}
+
+type PagesFields_meta_description_Read {
+  permission: Boolean!
+}
+
+type PagesFields_meta_description_Update {
+  permission: Boolean!
+}
+
+type PagesFields_meta_image {
+  create: PagesFields_meta_image_Create
+  delete: PagesFields_meta_image_Delete
+  read: PagesFields_meta_image_Read
+  update: PagesFields_meta_image_Update
+}
+
+type PagesFields_meta_image_Create {
+  permission: Boolean!
+}
+
+type PagesFields_meta_image_Delete {
+  permission: Boolean!
+}
+
+type PagesFields_meta_image_Read {
+  permission: Boolean!
+}
+
+type PagesFields_meta_image_Update {
+  permission: Boolean!
+}
+
+type PagesFields_meta_noIndex {
+  create: PagesFields_meta_noIndex_Create
+  delete: PagesFields_meta_noIndex_Delete
+  read: PagesFields_meta_noIndex_Read
+  update: PagesFields_meta_noIndex_Update
+}
+
+type PagesFields_meta_noIndex_Create {
+  permission: Boolean!
+}
+
+type PagesFields_meta_noIndex_Delete {
+  permission: Boolean!
+}
+
+type PagesFields_meta_noIndex_Read {
+  permission: Boolean!
+}
+
+type PagesFields_meta_noIndex_Update {
+  permission: Boolean!
+}
+
+type PagesFields_meta_overview {
+  create: PagesFields_meta_overview_Create
+  delete: PagesFields_meta_overview_Delete
+  read: PagesFields_meta_overview_Read
+  update: PagesFields_meta_overview_Update
+}
+
+type PagesFields_meta_overview_Create {
+  permission: Boolean!
+}
+
+type PagesFields_meta_overview_Delete {
+  permission: Boolean!
+}
+
+type PagesFields_meta_overview_Read {
+  permission: Boolean!
+}
+
+type PagesFields_meta_overview_Update {
+  permission: Boolean!
+}
+
+type PagesFields_meta_preview {
+  create: PagesFields_meta_preview_Create
+  delete: PagesFields_meta_preview_Delete
+  read: PagesFields_meta_preview_Read
+  update: PagesFields_meta_preview_Update
+}
+
+type PagesFields_meta_preview_Create {
+  permission: Boolean!
+}
+
+type PagesFields_meta_preview_Delete {
+  permission: Boolean!
+}
+
+type PagesFields_meta_preview_Read {
+  permission: Boolean!
+}
+
+type PagesFields_meta_preview_Update {
+  permission: Boolean!
+}
+
+type PagesFields_meta_title {
+  create: PagesFields_meta_title_Create
+  delete: PagesFields_meta_title_Delete
+  read: PagesFields_meta_title_Read
+  update: PagesFields_meta_title_Update
+}
+
+type PagesFields_meta_title_Create {
+  permission: Boolean!
+}
+
+type PagesFields_meta_title_Delete {
+  permission: Boolean!
+}
+
+type PagesFields_meta_title_Read {
+  permission: Boolean!
+}
+
+type PagesFields_meta_title_Update {
   permission: Boolean!
 }
 
@@ -8172,9 +9868,11 @@ type Preference {
 type Project {
   caseStudies: [CaseStudy!]
   createdAt: DateTime
+  excerpt: String
   featuredImage(where: Project_FeaturedImage_where): Image
   id: String
   intro: Project_Intro
+  meta: Project_Meta
   projectSections: [Project_ProjectSections!]
   slug: String
   title: String
@@ -8671,6 +10369,255 @@ input Project_Intro_Image_width_operator {
   not_equals: Float
 }
 
+type Project_Meta {
+  description: String
+  image(where: Project_Meta_Image_where): Image
+  noIndex: Boolean
+  title: String
+}
+
+input Project_Meta_Image_alt_operator {
+  all: [String]
+  contains: String
+  equals: String
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Project_Meta_Image_base64_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Project_Meta_Image_createdAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input Project_Meta_Image_filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Project_Meta_Image_filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input Project_Meta_Image_height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input Project_Meta_Image_id_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Project_Meta_Image_mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Project_Meta_Image_sizes__thumbnail__filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Project_Meta_Image_sizes__thumbnail__filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input Project_Meta_Image_sizes__thumbnail__height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input Project_Meta_Image_sizes__thumbnail__mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Project_Meta_Image_sizes__thumbnail__url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Project_Meta_Image_sizes__thumbnail__width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input Project_Meta_Image_updatedAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input Project_Meta_Image_url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input Project_Meta_Image_where {
+  AND: [Project_Meta_Image_where_and]
+  OR: [Project_Meta_Image_where_or]
+  alt: Project_Meta_Image_alt_operator
+  base64: Project_Meta_Image_base64_operator
+  createdAt: Project_Meta_Image_createdAt_operator
+  filename: Project_Meta_Image_filename_operator
+  filesize: Project_Meta_Image_filesize_operator
+  height: Project_Meta_Image_height_operator
+  id: Project_Meta_Image_id_operator
+  mimeType: Project_Meta_Image_mimeType_operator
+  sizes__thumbnail__filename: Project_Meta_Image_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: Project_Meta_Image_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: Project_Meta_Image_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: Project_Meta_Image_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: Project_Meta_Image_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: Project_Meta_Image_sizes__thumbnail__width_operator
+  updatedAt: Project_Meta_Image_updatedAt_operator
+  url: Project_Meta_Image_url_operator
+  width: Project_Meta_Image_width_operator
+}
+
+input Project_Meta_Image_where_and {
+  alt: Project_Meta_Image_alt_operator
+  base64: Project_Meta_Image_base64_operator
+  createdAt: Project_Meta_Image_createdAt_operator
+  filename: Project_Meta_Image_filename_operator
+  filesize: Project_Meta_Image_filesize_operator
+  height: Project_Meta_Image_height_operator
+  id: Project_Meta_Image_id_operator
+  mimeType: Project_Meta_Image_mimeType_operator
+  sizes__thumbnail__filename: Project_Meta_Image_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: Project_Meta_Image_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: Project_Meta_Image_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: Project_Meta_Image_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: Project_Meta_Image_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: Project_Meta_Image_sizes__thumbnail__width_operator
+  updatedAt: Project_Meta_Image_updatedAt_operator
+  url: Project_Meta_Image_url_operator
+  width: Project_Meta_Image_width_operator
+}
+
+input Project_Meta_Image_where_or {
+  alt: Project_Meta_Image_alt_operator
+  base64: Project_Meta_Image_base64_operator
+  createdAt: Project_Meta_Image_createdAt_operator
+  filename: Project_Meta_Image_filename_operator
+  filesize: Project_Meta_Image_filesize_operator
+  height: Project_Meta_Image_height_operator
+  id: Project_Meta_Image_id_operator
+  mimeType: Project_Meta_Image_mimeType_operator
+  sizes__thumbnail__filename: Project_Meta_Image_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: Project_Meta_Image_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: Project_Meta_Image_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: Project_Meta_Image_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: Project_Meta_Image_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: Project_Meta_Image_sizes__thumbnail__width_operator
+  updatedAt: Project_Meta_Image_updatedAt_operator
+  url: Project_Meta_Image_url_operator
+  width: Project_Meta_Image_width_operator
+}
+
+input Project_Meta_Image_width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
 union Project_ProjectSections = ImageBlock | TextBlock
 
 input Project_caseStudies_operator {
@@ -8691,6 +10638,14 @@ input Project_createdAt_operator {
   less_than_equal: DateTime
   like: DateTime
   not_equals: DateTime
+}
+
+input Project_excerpt_operator {
+  contains: String
+  equals: String
+  exists: Boolean
+  like: String
+  not_equals: String
 }
 
 input Project_featuredImage_operator {
@@ -8733,6 +10688,37 @@ input Project_intro__image_operator {
   not_equals: String
 }
 
+input Project_meta__description_operator {
+  contains: String
+  equals: String
+  exists: Boolean
+  like: String
+  not_equals: String
+}
+
+input Project_meta__image_operator {
+  equals: String
+  exists: Boolean
+  not_equals: String
+}
+
+input Project_meta__noIndex_operator {
+  equals: Boolean
+  exists: Boolean
+  not_equals: Boolean
+}
+
+input Project_meta__title_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
 input Project_slug_operator {
   all: [String]
   contains: String
@@ -8771,11 +10757,16 @@ input Project_where {
   OR: [Project_where_or]
   caseStudies: Project_caseStudies_operator
   createdAt: Project_createdAt_operator
+  excerpt: Project_excerpt_operator
   featuredImage: Project_featuredImage_operator
   id: Project_id_operator
   intro__cta: Project_intro__cta_operator
   intro__description: Project_intro__description_operator
   intro__image: Project_intro__image_operator
+  meta__description: Project_meta__description_operator
+  meta__image: Project_meta__image_operator
+  meta__noIndex: Project_meta__noIndex_operator
+  meta__title: Project_meta__title_operator
   slug: Project_slug_operator
   title: Project_title_operator
   updatedAt: Project_updatedAt_operator
@@ -8784,11 +10775,16 @@ input Project_where {
 input Project_where_and {
   caseStudies: Project_caseStudies_operator
   createdAt: Project_createdAt_operator
+  excerpt: Project_excerpt_operator
   featuredImage: Project_featuredImage_operator
   id: Project_id_operator
   intro__cta: Project_intro__cta_operator
   intro__description: Project_intro__description_operator
   intro__image: Project_intro__image_operator
+  meta__description: Project_meta__description_operator
+  meta__image: Project_meta__image_operator
+  meta__noIndex: Project_meta__noIndex_operator
+  meta__title: Project_meta__title_operator
   slug: Project_slug_operator
   title: Project_title_operator
   updatedAt: Project_updatedAt_operator
@@ -8797,11 +10793,16 @@ input Project_where_and {
 input Project_where_or {
   caseStudies: Project_caseStudies_operator
   createdAt: Project_createdAt_operator
+  excerpt: Project_excerpt_operator
   featuredImage: Project_featuredImage_operator
   id: Project_id_operator
   intro__cta: Project_intro__cta_operator
   intro__description: Project_intro__description_operator
   intro__image: Project_intro__image_operator
+  meta__description: Project_meta__description_operator
+  meta__image: Project_meta__image_operator
+  meta__noIndex: Project_meta__noIndex_operator
+  meta__title: Project_meta__title_operator
   slug: Project_slug_operator
   title: Project_title_operator
   updatedAt: Project_updatedAt_operator
@@ -8844,8 +10845,10 @@ type ProjectsDeleteDocAccess {
 type ProjectsDocAccessFields {
   caseStudies: ProjectsDocAccessFields_caseStudies
   createdAt: ProjectsDocAccessFields_createdAt
+  excerpt: ProjectsDocAccessFields_excerpt
   featuredImage: ProjectsDocAccessFields_featuredImage
   intro: ProjectsDocAccessFields_intro
+  meta: ProjectsDocAccessFields_meta
   projectSections: ProjectsDocAccessFields_projectSections
   slug: ProjectsDocAccessFields_slug
   title: ProjectsDocAccessFields_title
@@ -8895,6 +10898,29 @@ type ProjectsDocAccessFields_createdAt_Read {
 }
 
 type ProjectsDocAccessFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_excerpt {
+  create: ProjectsDocAccessFields_excerpt_Create
+  delete: ProjectsDocAccessFields_excerpt_Delete
+  read: ProjectsDocAccessFields_excerpt_Read
+  update: ProjectsDocAccessFields_excerpt_Update
+}
+
+type ProjectsDocAccessFields_excerpt_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_excerpt_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_excerpt_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_excerpt_Update {
   permission: Boolean!
 }
 
@@ -9020,6 +11046,177 @@ type ProjectsDocAccessFields_intro_image_Update {
   permission: Boolean!
 }
 
+type ProjectsDocAccessFields_meta {
+  create: ProjectsDocAccessFields_meta_Create
+  delete: ProjectsDocAccessFields_meta_Delete
+  fields: ProjectsDocAccessFields_meta_Fields
+  read: ProjectsDocAccessFields_meta_Read
+  update: ProjectsDocAccessFields_meta_Update
+}
+
+type ProjectsDocAccessFields_meta_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_Fields {
+  description: ProjectsDocAccessFields_meta_description
+  image: ProjectsDocAccessFields_meta_image
+  noIndex: ProjectsDocAccessFields_meta_noIndex
+  overview: ProjectsDocAccessFields_meta_overview
+  preview: ProjectsDocAccessFields_meta_preview
+  title: ProjectsDocAccessFields_meta_title
+}
+
+type ProjectsDocAccessFields_meta_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_description {
+  create: ProjectsDocAccessFields_meta_description_Create
+  delete: ProjectsDocAccessFields_meta_description_Delete
+  read: ProjectsDocAccessFields_meta_description_Read
+  update: ProjectsDocAccessFields_meta_description_Update
+}
+
+type ProjectsDocAccessFields_meta_description_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_description_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_description_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_description_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_image {
+  create: ProjectsDocAccessFields_meta_image_Create
+  delete: ProjectsDocAccessFields_meta_image_Delete
+  read: ProjectsDocAccessFields_meta_image_Read
+  update: ProjectsDocAccessFields_meta_image_Update
+}
+
+type ProjectsDocAccessFields_meta_image_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_image_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_image_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_image_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_noIndex {
+  create: ProjectsDocAccessFields_meta_noIndex_Create
+  delete: ProjectsDocAccessFields_meta_noIndex_Delete
+  read: ProjectsDocAccessFields_meta_noIndex_Read
+  update: ProjectsDocAccessFields_meta_noIndex_Update
+}
+
+type ProjectsDocAccessFields_meta_noIndex_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_noIndex_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_noIndex_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_noIndex_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_overview {
+  create: ProjectsDocAccessFields_meta_overview_Create
+  delete: ProjectsDocAccessFields_meta_overview_Delete
+  read: ProjectsDocAccessFields_meta_overview_Read
+  update: ProjectsDocAccessFields_meta_overview_Update
+}
+
+type ProjectsDocAccessFields_meta_overview_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_overview_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_overview_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_overview_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_preview {
+  create: ProjectsDocAccessFields_meta_preview_Create
+  delete: ProjectsDocAccessFields_meta_preview_Delete
+  read: ProjectsDocAccessFields_meta_preview_Read
+  update: ProjectsDocAccessFields_meta_preview_Update
+}
+
+type ProjectsDocAccessFields_meta_preview_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_preview_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_preview_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_preview_Update {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_title {
+  create: ProjectsDocAccessFields_meta_title_Create
+  delete: ProjectsDocAccessFields_meta_title_Delete
+  read: ProjectsDocAccessFields_meta_title_Read
+  update: ProjectsDocAccessFields_meta_title_Update
+}
+
+type ProjectsDocAccessFields_meta_title_Create {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_title_Delete {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_title_Read {
+  permission: Boolean!
+}
+
+type ProjectsDocAccessFields_meta_title_Update {
+  permission: Boolean!
+}
+
 type ProjectsDocAccessFields_projectSections {
   create: ProjectsDocAccessFields_projectSections_Create
   delete: ProjectsDocAccessFields_projectSections_Delete
@@ -9115,8 +11312,10 @@ type ProjectsDocAccessFields_updatedAt_Update {
 type ProjectsFields {
   caseStudies: ProjectsFields_caseStudies
   createdAt: ProjectsFields_createdAt
+  excerpt: ProjectsFields_excerpt
   featuredImage: ProjectsFields_featuredImage
   intro: ProjectsFields_intro
+  meta: ProjectsFields_meta
   projectSections: ProjectsFields_projectSections
   slug: ProjectsFields_slug
   title: ProjectsFields_title
@@ -9166,6 +11365,29 @@ type ProjectsFields_createdAt_Read {
 }
 
 type ProjectsFields_createdAt_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_excerpt {
+  create: ProjectsFields_excerpt_Create
+  delete: ProjectsFields_excerpt_Delete
+  read: ProjectsFields_excerpt_Read
+  update: ProjectsFields_excerpt_Update
+}
+
+type ProjectsFields_excerpt_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_excerpt_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_excerpt_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_excerpt_Update {
   permission: Boolean!
 }
 
@@ -9288,6 +11510,177 @@ type ProjectsFields_intro_image_Read {
 }
 
 type ProjectsFields_intro_image_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta {
+  create: ProjectsFields_meta_Create
+  delete: ProjectsFields_meta_Delete
+  fields: ProjectsFields_meta_Fields
+  read: ProjectsFields_meta_Read
+  update: ProjectsFields_meta_Update
+}
+
+type ProjectsFields_meta_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_Fields {
+  description: ProjectsFields_meta_description
+  image: ProjectsFields_meta_image
+  noIndex: ProjectsFields_meta_noIndex
+  overview: ProjectsFields_meta_overview
+  preview: ProjectsFields_meta_preview
+  title: ProjectsFields_meta_title
+}
+
+type ProjectsFields_meta_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_description {
+  create: ProjectsFields_meta_description_Create
+  delete: ProjectsFields_meta_description_Delete
+  read: ProjectsFields_meta_description_Read
+  update: ProjectsFields_meta_description_Update
+}
+
+type ProjectsFields_meta_description_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_description_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_description_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_description_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_image {
+  create: ProjectsFields_meta_image_Create
+  delete: ProjectsFields_meta_image_Delete
+  read: ProjectsFields_meta_image_Read
+  update: ProjectsFields_meta_image_Update
+}
+
+type ProjectsFields_meta_image_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_image_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_image_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_image_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_noIndex {
+  create: ProjectsFields_meta_noIndex_Create
+  delete: ProjectsFields_meta_noIndex_Delete
+  read: ProjectsFields_meta_noIndex_Read
+  update: ProjectsFields_meta_noIndex_Update
+}
+
+type ProjectsFields_meta_noIndex_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_noIndex_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_noIndex_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_noIndex_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_overview {
+  create: ProjectsFields_meta_overview_Create
+  delete: ProjectsFields_meta_overview_Delete
+  read: ProjectsFields_meta_overview_Read
+  update: ProjectsFields_meta_overview_Update
+}
+
+type ProjectsFields_meta_overview_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_overview_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_overview_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_overview_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_preview {
+  create: ProjectsFields_meta_preview_Create
+  delete: ProjectsFields_meta_preview_Delete
+  read: ProjectsFields_meta_preview_Read
+  update: ProjectsFields_meta_preview_Update
+}
+
+type ProjectsFields_meta_preview_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_preview_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_preview_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_preview_Update {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_title {
+  create: ProjectsFields_meta_title_Create
+  delete: ProjectsFields_meta_title_Delete
+  read: ProjectsFields_meta_title_Read
+  update: ProjectsFields_meta_title_Update
+}
+
+type ProjectsFields_meta_title_Create {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_title_Delete {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_title_Read {
+  permission: Boolean!
+}
+
+type ProjectsFields_meta_title_Update {
   permission: Boolean!
 }
 
@@ -11518,7 +13911,6 @@ type TextBlock {
   blockType: String
   heading: String
   id: String
-  sectionId: String
   text(depth: Int): JSON
 }
 
@@ -13250,7 +15642,11 @@ input mutationAbout_PetsInput {
 input mutationCaseStudyInput {
   caseStudySections: JSON
   createdAt: String
+  excerpt: String
+  featuredImage: String
+  internalTitle: String
   intro: mutationCaseStudy_IntroInput
+  meta: mutationCaseStudy_MetaInput
   slug: String
   title: String
   updatedAt: String
@@ -13267,7 +15663,11 @@ input mutationCaseStudyListingInput {
 input mutationCaseStudyUpdateInput {
   caseStudySections: JSON
   createdAt: String
+  excerpt: String
+  featuredImage: String
+  internalTitle: String
   intro: mutationCaseStudyUpdate_IntroInput
+  meta: mutationCaseStudyUpdate_MetaInput
   slug: String
   title: String
   updatedAt: String
@@ -13280,11 +15680,25 @@ input mutationCaseStudyUpdate_IntroInput {
   text: JSON
 }
 
+input mutationCaseStudyUpdate_MetaInput {
+  description: String
+  image: String
+  noIndex: Boolean
+  title: String
+}
+
 input mutationCaseStudy_IntroInput {
   cta: [String]
   heading: String
   image: String
   text: JSON
+}
+
+input mutationCaseStudy_MetaInput {
+  description: String
+  image: String
+  noIndex: Boolean
+  title: String
 }
 
 input mutationCtaInput {
@@ -13459,6 +15873,7 @@ input mutationNav_MenuItemsInput {
 
 input mutationPageInput {
   createdAt: String
+  meta: mutationPage_MetaInput
   pageSections: JSON
   slug: String
   title: String
@@ -13467,17 +15882,34 @@ input mutationPageInput {
 
 input mutationPageUpdateInput {
   createdAt: String
+  meta: mutationPageUpdate_MetaInput
   pageSections: JSON
   slug: String
   title: String
   updatedAt: String
 }
 
+input mutationPageUpdate_MetaInput {
+  description: String
+  image: String
+  noIndex: Boolean
+  title: String
+}
+
+input mutationPage_MetaInput {
+  description: String
+  image: String
+  noIndex: Boolean
+  title: String
+}
+
 input mutationProjectInput {
   caseStudies: [String]
   createdAt: String
+  excerpt: String
   featuredImage: String
   intro: mutationProject_IntroInput
+  meta: mutationProject_MetaInput
   projectSections: JSON
   slug: String
   title: String
@@ -13487,8 +15919,10 @@ input mutationProjectInput {
 input mutationProjectUpdateInput {
   caseStudies: [String]
   createdAt: String
+  excerpt: String
   featuredImage: String
   intro: mutationProjectUpdate_IntroInput
+  meta: mutationProjectUpdate_MetaInput
   projectSections: JSON
   slug: String
   title: String
@@ -13501,10 +15935,24 @@ input mutationProjectUpdate_IntroInput {
   image: String
 }
 
+input mutationProjectUpdate_MetaInput {
+  description: String
+  image: String
+  noIndex: Boolean
+  title: String
+}
+
 input mutationProject_IntroInput {
   cta: [String]
   description: String
   image: String
+}
+
+input mutationProject_MetaInput {
+  description: String
+  image: String
+  noIndex: Boolean
+  title: String
 }
 
 input mutationSocialInput {
