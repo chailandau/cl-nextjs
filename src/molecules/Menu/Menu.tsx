@@ -49,7 +49,7 @@ const Menu: FC<MenuProps> = ({
                     menuItem?.sectionId
                 );
                 window.scrollTo({
-                    top: anchoredSection?.getBoundingClientRect().top,
+                    top: anchoredSection?.offsetTop,
                     behavior: 'smooth'
                 });
 
