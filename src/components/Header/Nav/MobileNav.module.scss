@@ -6,14 +6,17 @@
     justify-content: space-between;
     @include paddingX(24);
     top: rem(66);
-    left: rem(20);
+    left: rem(12);
     z-index: 100;
-    width: calc(100% - rem(40));
+    width: calc(100% - rem(24));
     height: auto;
     padding-top: rem(24);
     padding-bottom: rem(30);
     @include boxShadow;
-
+    @include mobileLg {
+        left: rem(20);
+        width: calc(100% - rem(40));
+    }
     li {
         &:before {
             display: block;
