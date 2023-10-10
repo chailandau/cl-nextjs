@@ -64,16 +64,18 @@ const Project: FC<ProjectProps> = async ({ slug }) => {
                 )}
                 <RenderComponents components={projectSections} />
             </Section>
-            <Section heading='Selected Case Studies'>
-                {caseStudies?.map((caseStudy) => (
-                    <Link
-                        key={caseStudy?.slug}
-                        href={`${process.env.NEXT_PUBLIC_BASE_URL}/projects/${slug}/${caseStudy?.slug}`}
-                    >
-                        {caseStudy?.title}
-                    </Link>
-                ))}
-            </Section>
+            {caseStudies?.length > 0 && (
+                <Section heading='Selected Case Studies'>
+                    {caseStudies?.map((caseStudy) => (
+                        <Link
+                            key={caseStudy?.slug}
+                            href={`${process.env.NEXT_PUBLIC_BASE_URL}/projects/${slug}/${caseStudy?.slug}`}
+                        >
+                            {caseStudy?.title}
+                        </Link>
+                    ))}
+                </Section>
+            )}
         </>
     );
 };

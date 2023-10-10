@@ -13,4 +13,10 @@
         display: inline-block;
         margin-right: rem(10);
     }
+    &__rich-text {
+        @include font(16, 20);
+        .link-text {
+            margin-right: 0;
+        }
+    }
 }
