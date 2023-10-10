@@ -52,6 +52,9 @@ query ProjectContentQuery($slug: String!) {
                 id
                 slug
                 title
+                featuredImage {
+                    ${IMAGE_FRAGMENT}
+                }
                 intro {
                     heading
                     text

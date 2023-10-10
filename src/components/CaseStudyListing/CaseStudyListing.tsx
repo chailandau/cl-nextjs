@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import styles from './CaseStudyListing.module.scss';
+import CaseStudies from './components/CaseStudies';
 
 import { CASE_STUDIES_QUERY } from '@/api/graphqlQueries';
 import {
@@ -8,12 +9,6 @@ import {
     Maybe
 } from '@/api/graphqlTypes';
 import { SectionId } from '@/atoms/Container/Container';
-import Heading from '@/atoms/Heading';
-import Image from '@/atoms/Image';
-import Link from '@/atoms/Link';
-import Text from '@/atoms/Text';
-import Flex from '@/molecules/Flex';
-import Grid from '@/molecules/Grid';
 import Section from '@/molecules/Section';
 import { getData } from '@/utils/getData';
 
@@ -34,48 +29,7 @@ export const CaseStudyListingContent: FC<CaseStudyListingData> = ({
             icon={icon}
             sectionId={sectionId}
         >
-            {caseStudies?.map((caseStudy) => {
-                const {
-                    intro,
-                    title: caseStudyTitle,
-                    slug,
-                    featuredImage
-                } = caseStudy;
-
-                return (
-                    <Grid
-                        key={caseStudy?.id}
-                        className={styles['case-study-listing__card']}
-                    >
-                        {featuredImage?.url && (
-                            <Image
-                                src={featuredImage.url}
-                                alt={featuredImage.alt}
-                                width={featuredImage.width || 100}
-                                height={featuredImage.height || 100}
-                                base64={featuredImage.base64 || undefined}
-                            />
-                        )}
-                        <Flex className={styles['case-study-listing__content']}>
-                            {caseStudyTitle && (
-                                <Heading as='h3' size='sm' color='black'>
-                                    {caseStudyTitle}
-                                </Heading>
-                            )}
-                            {intro?.description && (
-                                <Text size='xs'>{intro.description}</Text>
-                            )}
-                            {slug && (
-                                <Link
-                                    href={`${process.env.NEXT_PUBLIC_BASE_URL}/projects/${slug}`}
-                                >
-                                    view project
-                                </Link>
-                            )}
-                        </Flex>
-                    </Grid>
-                );
-            })}
+            <CaseStudies caseStudies={caseStudies} />
         </Section>
     );
 };
