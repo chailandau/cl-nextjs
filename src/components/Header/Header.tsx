@@ -69,7 +69,13 @@ const Header: FC<HeaderProps> = ({ menuItems }) => {
                         underline={false}
                         icon={false}
                     >
-                        <Image src={Logo} alt='C.' priority hasBorder={false} />
+                        <Image
+                            className={styles['logo-image']}
+                            src={Logo}
+                            alt='C.'
+                            priority
+                            hasBorder={false}
+                        />
                     </Link>
 
                     <Flex className={styles['nav']}>
