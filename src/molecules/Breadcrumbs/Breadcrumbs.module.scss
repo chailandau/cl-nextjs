@@ -1,5 +1,9 @@
 .breadcrumbs {
     list-style: none;
-    gap: rem(8);
+    column-gap: rem(8);
     padding-left: 0;
+    flex-wrap: wrap;
+    a {
+        display: flex;
+    }
 }
