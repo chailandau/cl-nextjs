@@ -39,7 +39,6 @@ const Project: FC<ProjectProps> = async ({ slug }) => {
             projectSections.push(...project.projectSections);
         project?.caseStudies && caseStudies.push(...project.caseStudies);
     });
-
     if (!intro && (!projectSections || !projectSections.length)) {
         return <NotFound />;
     }
@@ -52,7 +51,12 @@ const Project: FC<ProjectProps> = async ({ slug }) => {
                     {title && <Heading as='h1'>{title}</Heading>}
                     {intro?.description && <Text>{intro.description}</Text>}
                 </Flex>
-
+                {intro?.cta &&
+                    intro.cta?.map((cta) => (
+                        <Link key={cta?.id} href={cta?.externalLink || ''}>
+                            {cta?.label}
+                        </Link>
+                    ))}
                 {intro?.image?.url && (
                     <Image
                         src={intro.image.url}
@@ -62,6 +66,7 @@ const Project: FC<ProjectProps> = async ({ slug }) => {
                         base64={intro?.image.base64 || undefined}
                     />
                 )}
+
                 <RenderComponents components={projectSections} />
             </Section>
             {caseStudies?.length > 0 && (

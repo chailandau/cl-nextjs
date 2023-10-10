@@ -43,6 +43,7 @@ query ProjectContentQuery($slug: String!) {
             }
             intro {
                 description
+                ${CTA_FRAGMENT}
                 image {
                     ${IMAGE_FRAGMENT}
                 }
