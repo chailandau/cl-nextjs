@@ -6,9 +6,9 @@
     justify-content: space-between;
     @include paddingX(24);
     top: rem(66);
-    left: rem(14);
+    left: rem(20);
     z-index: 100;
-    width: calc(100% - rem(26));
+    width: calc(100% - rem(40));
     height: auto;
     padding-top: rem(24);
     padding-bottom: rem(30);

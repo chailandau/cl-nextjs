@@ -30,6 +30,20 @@ const Header: FC<HeaderProps> = ({ menuItems }) => {
 
     const { menuOpen, setMenuOpen } = useStore();
 
+    const handleEscapeKey = (event: KeyboardEvent) => {
+        if (event.key === 'Escape') {
+            setMenuOpen(false);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('keydown', handleEscapeKey);
+
+        return () => {
+            window.removeEventListener('keydown', handleEscapeKey);
+        };
+    }, []);
+
     useEffect(() => {
         setNoScroll(menuOpen);
     }, [menuOpen]);
