@@ -1,5 +1,6 @@
 'use client';
 
+import { useReducedMotion } from 'framer-motion';
 import { usePathname, useRouter } from 'next/navigation';
 import { FC } from 'react';
 
@@ -37,6 +38,9 @@ const Menu: FC<MenuProps> = ({
         const currentPath = usePathname()?.replace('/', '');
 
         const router = useRouter();
+
+        const prefersReducedMotion = useReducedMotion() || false;
+
         const anchorScroll = (e: { preventDefault: () => void }) => {
             if (
                 currentPath === pageSlug &&
@@ -50,7 +54,7 @@ const Menu: FC<MenuProps> = ({
                 );
                 window.scrollTo({
                     top: anchoredSection?.offsetTop,
-                    behavior: 'smooth'
+                    behavior: prefersReducedMotion ? 'auto' : 'smooth'
                 });
 
                 setTimeout(() => {
