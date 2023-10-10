@@ -43,6 +43,7 @@ query ProjectContentQuery($slug: String!) {
             }
             intro {
                 description
+                ${CTA_FRAGMENT}
                 image {
                     ${IMAGE_FRAGMENT}
                 }
@@ -51,6 +52,9 @@ query ProjectContentQuery($slug: String!) {
                 id
                 slug
                 title
+                featuredImage {
+                    ${IMAGE_FRAGMENT}
+                }
                 intro {
                     heading
                     text

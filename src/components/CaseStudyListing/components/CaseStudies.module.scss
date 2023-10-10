@@ -1,0 +1,22 @@
+.case-study {
+    gap: rem(56);
+    margin-bottom: rem(64);
+    @include laptop {
+        gap: rem(112);
+    }
+    &__card {
+        gap: rem(32);
+        @include tabletLg {
+            grid-template-columns: 1fr 1.15fr;
+            gap: rem(56);
+        }
+        @include laptop {
+            grid-template-columns: 1fr 1.25fr;
+            gap: rem(64);
+        }
+    }
+    &__content {
+        flex-direction: column;
+        gap: rem(12);
+    }
+}

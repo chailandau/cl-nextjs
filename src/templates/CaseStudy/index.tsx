@@ -46,6 +46,12 @@ const CaseStudy: FC<CaseStudyProps> = async ({ project }) => {
                 {title && <Heading as='h1'>{title}</Heading>}
                 {intro?.text && <RichText richText={intro.text} />}
             </Flex>
+            {intro?.cta &&
+                intro.cta?.map((cta) => (
+                    <Link key={cta?.id} href={cta?.externalLink || ''}>
+                        {cta?.label}
+                    </Link>
+                ))}
             {intro?.image?.url && (
                 <Image
                     src={intro.image.url}
@@ -55,12 +61,7 @@ const CaseStudy: FC<CaseStudyProps> = async ({ project }) => {
                     base64={intro?.image.base64 || undefined}
                 />
             )}
-            {intro?.cta &&
-                intro.cta?.map((cta) => (
-                    <Link key={cta?.id} href={cta?.externalLink || ''}>
-                        {cta?.label}
-                    </Link>
-                ))}
+
             <RenderComponents components={caseStudySections} />
         </Section>
     );

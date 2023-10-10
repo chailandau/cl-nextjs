@@ -14,6 +14,7 @@ import Heading from '@/atoms/Heading';
 import Image from '@/atoms/Image';
 import Link from '@/atoms/Link';
 import Text from '@/atoms/Text';
+import CaseStudies from '@/components/CaseStudyListing/components/CaseStudies';
 import Breadcrumbs from '@/molecules/Breadcrumbs/Breadcrumbs';
 import Flex from '@/molecules/Flex';
 import Section from '@/molecules/Section';
@@ -39,7 +40,6 @@ const Project: FC<ProjectProps> = async ({ slug }) => {
             projectSections.push(...project.projectSections);
         project?.caseStudies && caseStudies.push(...project.caseStudies);
     });
-
     if (!intro && (!projectSections || !projectSections.length)) {
         return <NotFound />;
     }
@@ -52,7 +52,12 @@ const Project: FC<ProjectProps> = async ({ slug }) => {
                     {title && <Heading as='h1'>{title}</Heading>}
                     {intro?.description && <Text>{intro.description}</Text>}
                 </Flex>
-
+                {intro?.cta &&
+                    intro.cta?.map((cta) => (
+                        <Link key={cta?.id} href={cta?.externalLink || ''}>
+                            {cta?.label}
+                        </Link>
+                    ))}
                 {intro?.image?.url && (
                     <Image
                         src={intro.image.url}
@@ -62,18 +67,14 @@ const Project: FC<ProjectProps> = async ({ slug }) => {
                         base64={intro?.image.base64 || undefined}
                     />
                 )}
+
                 <RenderComponents components={projectSections} />
             </Section>
-            <Section heading='Selected Case Studies'>
-                {caseStudies?.map((caseStudy) => (
-                    <Link
-                        key={caseStudy?.slug}
-                        href={`${process.env.NEXT_PUBLIC_BASE_URL}/projects/${slug}/${caseStudy?.slug}`}
-                    >
-                        {caseStudy?.title}
-                    </Link>
-                ))}
-            </Section>
+            {caseStudies?.length > 0 && (
+                <Section heading='Selected Case Studies'>
+                    <CaseStudies caseStudies={caseStudies} parent={slug} />
+                </Section>
+            )}
         </>
     );
 };

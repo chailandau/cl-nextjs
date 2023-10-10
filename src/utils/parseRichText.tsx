@@ -1,5 +1,6 @@
 import { Fragment, JSX } from 'react';
 
+import linkStyles from '../atoms/Link/Link.module.scss';
 import styles from '../atoms/Text/Text.module.scss';
 
 import Link from '@/atoms/Link';
@@ -7,10 +8,16 @@ import Text from '@/atoms/Text';
 import { textSizes } from '@/atoms/Text/Text';
 
 interface ChildSegment {
-    strikethrough: boolean;
-    underline: boolean;
-    italic: boolean;
-    bold: boolean;
+    doc?: {
+        value?: {
+            slug?: string;
+        };
+    };
+    linkType?: string;
+    strikethrough?: boolean;
+    underline?: boolean;
+    italic?: boolean;
+    bold?: boolean;
     children?: ChildSegment[];
     text?: string;
     url?: string | null | undefined;
@@ -67,17 +74,35 @@ const processText = (child: ChildSegment, index: number): JSX.Element => {
 
     return <Fragment key={index}></Fragment>;
 };
-
 const processLink = (
     child: ChildSegment,
     index: number
 ): JSX.Element | null => {
-    if (child.type === 'link' && child.url && child.children?.[0]?.text) {
-        return (
-            <Link key={index} href={child.url}>
-                {child.children[0].text}
-            </Link>
-        );
+    if (child?.type === 'link' && child?.children && child?.children[0]?.text) {
+        if (child.linkType === 'custom' && child.url) {
+            return (
+                <Link
+                    key={index}
+                    href={child.url}
+                    icon={false}
+                    className={linkStyles['link__rich-text']}
+                >
+                    {child.children[0].text}
+                </Link>
+            );
+        }
+        if (child.linkType === 'internal' && child?.doc?.value?.slug) {
+            return (
+                <Link
+                    key={index}
+                    href={`${process.env.NEXT_PUBLIC_BASE_URL}/projects/${child?.doc?.value?.slug}`}
+                    icon={false}
+                    className={linkStyles['link__rich-text']}
+                >
+                    {child.children[0].text}
+                </Link>
+            );
+        }
     }
 
     return null;
@@ -137,7 +162,6 @@ export const parseRichText = (
             if (child.text) {
                 content.push(processText(child, segmentIndex));
             }
-
             const link = processLink(child, segmentIndex);
             if (link) {
                 content.push(link);

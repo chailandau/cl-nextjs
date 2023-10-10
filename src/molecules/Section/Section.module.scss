@@ -2,6 +2,14 @@
     padding: rem(20) rem(12);
     flex-direction: column;
     gap: rem(32);
+    @at-root {
+        section#{&} {
+            margin-top: rem(-25);
+            &:first-of-type {
+                margin-top: rem(25);
+            }
+        }
+    }
     @include mobileLg {
         @include paddingX(24);
     }
@@ -20,6 +28,7 @@
         align-items: center;
         @include dashBorder;
         padding-bottom: rem(16);
+        padding-top: rem(75);
         .icon {
             width: rem(32);
             @include transition(width);
