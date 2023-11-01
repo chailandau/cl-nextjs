@@ -1,5 +1,3 @@
-import Script from 'next/script';
-
 import { METADATA_QUERY, PAGE_CONTENT_QUERY } from '@/api/graphqlQueries';
 import { Page_Meta } from '@/api/graphqlTypes';
 import Page from '@/templates/Page';
@@ -35,27 +33,6 @@ export const generateMetadata = async ({ params: { slug } }: Params) => {
     return getMetadataInfo(meta);
 };
 
-const NextPage = async ({ params: { slug } }: Params) => (
-    <>
-        <Script
-            strategy='afterInteractive'
-            src='https://www.googletagmanager.com/gtag/js?id=G-7Y1YQ9834N'
-        />
-        <Script
-            id='google-analytics'
-            strategy='afterInteractive'
-            dangerouslySetInnerHTML={{
-                __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    
-                    gtag('config', 'G-7Y1YQ9834N');
-                `
-            }}
-        />
-        <Page slug={slug} />
-    </>
-);
+const NextPage = async ({ params: { slug } }: Params) => <Page slug={slug} />;
 
 export default NextPage;
