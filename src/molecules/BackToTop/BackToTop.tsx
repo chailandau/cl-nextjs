@@ -36,7 +36,7 @@ const BackToTopButton = () => {
         isVisible &&
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth'
+                behavior: prefersReducedMotion ? 'auto' : 'smooth'
             });
     };
 
