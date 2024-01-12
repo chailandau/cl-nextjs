@@ -111,6 +111,7 @@ type AboutDocAccessFields_pets_Delete {
 type AboutDocAccessFields_pets_Fields {
   athena: AboutDocAccessFields_pets_athena
   harvey: AboutDocAccessFields_pets_harvey
+  jasper: AboutDocAccessFields_pets_jasper
   warren: AboutDocAccessFields_pets_warren
 }
 
@@ -165,6 +166,29 @@ type AboutDocAccessFields_pets_harvey_Read {
 }
 
 type AboutDocAccessFields_pets_harvey_Update {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_pets_jasper {
+  create: AboutDocAccessFields_pets_jasper_Create
+  delete: AboutDocAccessFields_pets_jasper_Delete
+  read: AboutDocAccessFields_pets_jasper_Read
+  update: AboutDocAccessFields_pets_jasper_Update
+}
+
+type AboutDocAccessFields_pets_jasper_Create {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_pets_jasper_Delete {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_pets_jasper_Read {
+  permission: Boolean!
+}
+
+type AboutDocAccessFields_pets_jasper_Update {
   permission: Boolean!
 }
 
@@ -358,6 +382,7 @@ type AboutFields_pets_Delete {
 type AboutFields_pets_Fields {
   athena: AboutFields_pets_athena
   harvey: AboutFields_pets_harvey
+  jasper: AboutFields_pets_jasper
   warren: AboutFields_pets_warren
 }
 
@@ -412,6 +437,29 @@ type AboutFields_pets_harvey_Read {
 }
 
 type AboutFields_pets_harvey_Update {
+  permission: Boolean!
+}
+
+type AboutFields_pets_jasper {
+  create: AboutFields_pets_jasper_Create
+  delete: AboutFields_pets_jasper_Delete
+  read: AboutFields_pets_jasper_Read
+  update: AboutFields_pets_jasper_Update
+}
+
+type AboutFields_pets_jasper_Create {
+  permission: Boolean!
+}
+
+type AboutFields_pets_jasper_Delete {
+  permission: Boolean!
+}
+
+type AboutFields_pets_jasper_Read {
+  permission: Boolean!
+}
+
+type AboutFields_pets_jasper_Update {
   permission: Boolean!
 }
 
@@ -772,6 +820,7 @@ input About_Image_width_operator {
 type About_Pets {
   athena(where: About_Pets_Athena_where): Image
   harvey(where: About_Pets_Harvey_where): Image
+  jasper(where: About_Pets_Jasper_where): Image
   warren(where: About_Pets_Warren_where): Image
 }
 
@@ -1250,6 +1299,248 @@ input About_Pets_Harvey_where_or {
 }
 
 input About_Pets_Harvey_width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Jasper_alt_operator {
+  all: [String]
+  contains: String
+  equals: String
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Jasper_base64_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Jasper_createdAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input About_Pets_Jasper_filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Jasper_filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Jasper_height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Jasper_id_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Jasper_mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Jasper_sizes__thumbnail__filename_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Jasper_sizes__thumbnail__filesize_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Jasper_sizes__thumbnail__height_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Jasper_sizes__thumbnail__mimeType_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Jasper_sizes__thumbnail__url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Jasper_sizes__thumbnail__width_operator {
+  equals: Float
+  exists: Boolean
+  greater_than: Float
+  greater_than_equal: Float
+  less_than: Float
+  less_than_equal: Float
+  not_equals: Float
+}
+
+input About_Pets_Jasper_updatedAt_operator {
+  equals: DateTime
+  exists: Boolean
+  greater_than: DateTime
+  greater_than_equal: DateTime
+  less_than: DateTime
+  less_than_equal: DateTime
+  like: DateTime
+  not_equals: DateTime
+}
+
+input About_Pets_Jasper_url_operator {
+  all: [String]
+  contains: String
+  equals: String
+  exists: Boolean
+  in: [String]
+  like: String
+  not_equals: String
+  not_in: [String]
+}
+
+input About_Pets_Jasper_where {
+  AND: [About_Pets_Jasper_where_and]
+  OR: [About_Pets_Jasper_where_or]
+  alt: About_Pets_Jasper_alt_operator
+  base64: About_Pets_Jasper_base64_operator
+  createdAt: About_Pets_Jasper_createdAt_operator
+  filename: About_Pets_Jasper_filename_operator
+  filesize: About_Pets_Jasper_filesize_operator
+  height: About_Pets_Jasper_height_operator
+  id: About_Pets_Jasper_id_operator
+  mimeType: About_Pets_Jasper_mimeType_operator
+  sizes__thumbnail__filename: About_Pets_Jasper_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: About_Pets_Jasper_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: About_Pets_Jasper_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: About_Pets_Jasper_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: About_Pets_Jasper_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: About_Pets_Jasper_sizes__thumbnail__width_operator
+  updatedAt: About_Pets_Jasper_updatedAt_operator
+  url: About_Pets_Jasper_url_operator
+  width: About_Pets_Jasper_width_operator
+}
+
+input About_Pets_Jasper_where_and {
+  alt: About_Pets_Jasper_alt_operator
+  base64: About_Pets_Jasper_base64_operator
+  createdAt: About_Pets_Jasper_createdAt_operator
+  filename: About_Pets_Jasper_filename_operator
+  filesize: About_Pets_Jasper_filesize_operator
+  height: About_Pets_Jasper_height_operator
+  id: About_Pets_Jasper_id_operator
+  mimeType: About_Pets_Jasper_mimeType_operator
+  sizes__thumbnail__filename: About_Pets_Jasper_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: About_Pets_Jasper_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: About_Pets_Jasper_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: About_Pets_Jasper_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: About_Pets_Jasper_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: About_Pets_Jasper_sizes__thumbnail__width_operator
+  updatedAt: About_Pets_Jasper_updatedAt_operator
+  url: About_Pets_Jasper_url_operator
+  width: About_Pets_Jasper_width_operator
+}
+
+input About_Pets_Jasper_where_or {
+  alt: About_Pets_Jasper_alt_operator
+  base64: About_Pets_Jasper_base64_operator
+  createdAt: About_Pets_Jasper_createdAt_operator
+  filename: About_Pets_Jasper_filename_operator
+  filesize: About_Pets_Jasper_filesize_operator
+  height: About_Pets_Jasper_height_operator
+  id: About_Pets_Jasper_id_operator
+  mimeType: About_Pets_Jasper_mimeType_operator
+  sizes__thumbnail__filename: About_Pets_Jasper_sizes__thumbnail__filename_operator
+  sizes__thumbnail__filesize: About_Pets_Jasper_sizes__thumbnail__filesize_operator
+  sizes__thumbnail__height: About_Pets_Jasper_sizes__thumbnail__height_operator
+  sizes__thumbnail__mimeType: About_Pets_Jasper_sizes__thumbnail__mimeType_operator
+  sizes__thumbnail__url: About_Pets_Jasper_sizes__thumbnail__url_operator
+  sizes__thumbnail__width: About_Pets_Jasper_sizes__thumbnail__width_operator
+  updatedAt: About_Pets_Jasper_updatedAt_operator
+  url: About_Pets_Jasper_url_operator
+  width: About_Pets_Jasper_width_operator
+}
+
+input About_Pets_Jasper_width_operator {
   equals: Float
   exists: Boolean
   greater_than: Float
@@ -15636,6 +15927,7 @@ input mutationAboutInput {
 input mutationAbout_PetsInput {
   athena: String
   harvey: String
+  jasper: String
   warren: String
 }
 

@@ -174,6 +174,7 @@ export type AboutDocAccessFields_Pets_Fields = {
     __typename?: 'AboutDocAccessFields_pets_Fields';
     athena?: Maybe<AboutDocAccessFields_Pets_Athena>;
     harvey?: Maybe<AboutDocAccessFields_Pets_Harvey>;
+    jasper?: Maybe<AboutDocAccessFields_Pets_Jasper>;
     warren?: Maybe<AboutDocAccessFields_Pets_Warren>;
 };
 
@@ -240,6 +241,34 @@ export type AboutDocAccessFields_Pets_Harvey_Read = {
 
 export type AboutDocAccessFields_Pets_Harvey_Update = {
     __typename?: 'AboutDocAccessFields_pets_harvey_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type AboutDocAccessFields_Pets_Jasper = {
+    __typename?: 'AboutDocAccessFields_pets_jasper';
+    create?: Maybe<AboutDocAccessFields_Pets_Jasper_Create>;
+    delete?: Maybe<AboutDocAccessFields_Pets_Jasper_Delete>;
+    read?: Maybe<AboutDocAccessFields_Pets_Jasper_Read>;
+    update?: Maybe<AboutDocAccessFields_Pets_Jasper_Update>;
+};
+
+export type AboutDocAccessFields_Pets_Jasper_Create = {
+    __typename?: 'AboutDocAccessFields_pets_jasper_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type AboutDocAccessFields_Pets_Jasper_Delete = {
+    __typename?: 'AboutDocAccessFields_pets_jasper_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type AboutDocAccessFields_Pets_Jasper_Read = {
+    __typename?: 'AboutDocAccessFields_pets_jasper_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type AboutDocAccessFields_Pets_Jasper_Update = {
+    __typename?: 'AboutDocAccessFields_pets_jasper_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -473,6 +502,7 @@ export type AboutFields_Pets_Fields = {
     __typename?: 'AboutFields_pets_Fields';
     athena?: Maybe<AboutFields_Pets_Athena>;
     harvey?: Maybe<AboutFields_Pets_Harvey>;
+    jasper?: Maybe<AboutFields_Pets_Jasper>;
     warren?: Maybe<AboutFields_Pets_Warren>;
 };
 
@@ -539,6 +569,34 @@ export type AboutFields_Pets_Harvey_Read = {
 
 export type AboutFields_Pets_Harvey_Update = {
     __typename?: 'AboutFields_pets_harvey_Update';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type AboutFields_Pets_Jasper = {
+    __typename?: 'AboutFields_pets_jasper';
+    create?: Maybe<AboutFields_Pets_Jasper_Create>;
+    delete?: Maybe<AboutFields_Pets_Jasper_Delete>;
+    read?: Maybe<AboutFields_Pets_Jasper_Read>;
+    update?: Maybe<AboutFields_Pets_Jasper_Update>;
+};
+
+export type AboutFields_Pets_Jasper_Create = {
+    __typename?: 'AboutFields_pets_jasper_Create';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type AboutFields_Pets_Jasper_Delete = {
+    __typename?: 'AboutFields_pets_jasper_Delete';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type AboutFields_Pets_Jasper_Read = {
+    __typename?: 'AboutFields_pets_jasper_Read';
+    permission: Scalars['Boolean']['output'];
+};
+
+export type AboutFields_Pets_Jasper_Update = {
+    __typename?: 'AboutFields_pets_jasper_Update';
     permission: Scalars['Boolean']['output'];
 };
 
@@ -924,6 +982,7 @@ export type About_Pets = {
     __typename?: 'About_Pets';
     athena?: Maybe<Image>;
     harvey?: Maybe<Image>;
+    jasper?: Maybe<Image>;
     warren?: Maybe<Image>;
 };
 
@@ -933,6 +992,10 @@ export type About_PetsAthenaArgs = {
 
 export type About_PetsHarveyArgs = {
     where?: InputMaybe<About_Pets_Harvey_Where>;
+};
+
+export type About_PetsJasperArgs = {
+    where?: InputMaybe<About_Pets_Jasper_Where>;
 };
 
 export type About_PetsWarrenArgs = {
@@ -1414,6 +1477,248 @@ export type About_Pets_Harvey_Where_Or = {
 };
 
 export type About_Pets_Harvey_Width_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type About_Pets_Jasper_Alt_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type About_Pets_Jasper_Base64_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type About_Pets_Jasper_CreatedAt_Operator = {
+    equals?: InputMaybe<Scalars['DateTime']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['DateTime']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    like?: InputMaybe<Scalars['DateTime']['input']>;
+    not_equals?: InputMaybe<Scalars['DateTime']['input']>;
+};
+
+export type About_Pets_Jasper_Filename_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type About_Pets_Jasper_Filesize_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type About_Pets_Jasper_Height_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type About_Pets_Jasper_Id_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type About_Pets_Jasper_MimeType_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type About_Pets_Jasper_Sizes__Thumbnail__Filename_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type About_Pets_Jasper_Sizes__Thumbnail__Filesize_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type About_Pets_Jasper_Sizes__Thumbnail__Height_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type About_Pets_Jasper_Sizes__Thumbnail__MimeType_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type About_Pets_Jasper_Sizes__Thumbnail__Url_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type About_Pets_Jasper_Sizes__Thumbnail__Width_Operator = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['Float']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    less_than?: InputMaybe<Scalars['Float']['input']>;
+    less_than_equal?: InputMaybe<Scalars['Float']['input']>;
+    not_equals?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type About_Pets_Jasper_UpdatedAt_Operator = {
+    equals?: InputMaybe<Scalars['DateTime']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    greater_than?: InputMaybe<Scalars['DateTime']['input']>;
+    greater_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than?: InputMaybe<Scalars['DateTime']['input']>;
+    less_than_equal?: InputMaybe<Scalars['DateTime']['input']>;
+    like?: InputMaybe<Scalars['DateTime']['input']>;
+    not_equals?: InputMaybe<Scalars['DateTime']['input']>;
+};
+
+export type About_Pets_Jasper_Url_Operator = {
+    all?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    contains?: InputMaybe<Scalars['String']['input']>;
+    equals?: InputMaybe<Scalars['String']['input']>;
+    exists?: InputMaybe<Scalars['Boolean']['input']>;
+    in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+    like?: InputMaybe<Scalars['String']['input']>;
+    not_equals?: InputMaybe<Scalars['String']['input']>;
+    not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type About_Pets_Jasper_Where = {
+    AND?: InputMaybe<Array<InputMaybe<About_Pets_Jasper_Where_And>>>;
+    OR?: InputMaybe<Array<InputMaybe<About_Pets_Jasper_Where_Or>>>;
+    alt?: InputMaybe<About_Pets_Jasper_Alt_Operator>;
+    base64?: InputMaybe<About_Pets_Jasper_Base64_Operator>;
+    createdAt?: InputMaybe<About_Pets_Jasper_CreatedAt_Operator>;
+    filename?: InputMaybe<About_Pets_Jasper_Filename_Operator>;
+    filesize?: InputMaybe<About_Pets_Jasper_Filesize_Operator>;
+    height?: InputMaybe<About_Pets_Jasper_Height_Operator>;
+    id?: InputMaybe<About_Pets_Jasper_Id_Operator>;
+    mimeType?: InputMaybe<About_Pets_Jasper_MimeType_Operator>;
+    sizes__thumbnail__filename?: InputMaybe<About_Pets_Jasper_Sizes__Thumbnail__Filename_Operator>;
+    sizes__thumbnail__filesize?: InputMaybe<About_Pets_Jasper_Sizes__Thumbnail__Filesize_Operator>;
+    sizes__thumbnail__height?: InputMaybe<About_Pets_Jasper_Sizes__Thumbnail__Height_Operator>;
+    sizes__thumbnail__mimeType?: InputMaybe<About_Pets_Jasper_Sizes__Thumbnail__MimeType_Operator>;
+    sizes__thumbnail__url?: InputMaybe<About_Pets_Jasper_Sizes__Thumbnail__Url_Operator>;
+    sizes__thumbnail__width?: InputMaybe<About_Pets_Jasper_Sizes__Thumbnail__Width_Operator>;
+    updatedAt?: InputMaybe<About_Pets_Jasper_UpdatedAt_Operator>;
+    url?: InputMaybe<About_Pets_Jasper_Url_Operator>;
+    width?: InputMaybe<About_Pets_Jasper_Width_Operator>;
+};
+
+export type About_Pets_Jasper_Where_And = {
+    alt?: InputMaybe<About_Pets_Jasper_Alt_Operator>;
+    base64?: InputMaybe<About_Pets_Jasper_Base64_Operator>;
+    createdAt?: InputMaybe<About_Pets_Jasper_CreatedAt_Operator>;
+    filename?: InputMaybe<About_Pets_Jasper_Filename_Operator>;
+    filesize?: InputMaybe<About_Pets_Jasper_Filesize_Operator>;
+    height?: InputMaybe<About_Pets_Jasper_Height_Operator>;
+    id?: InputMaybe<About_Pets_Jasper_Id_Operator>;
+    mimeType?: InputMaybe<About_Pets_Jasper_MimeType_Operator>;
+    sizes__thumbnail__filename?: InputMaybe<About_Pets_Jasper_Sizes__Thumbnail__Filename_Operator>;
+    sizes__thumbnail__filesize?: InputMaybe<About_Pets_Jasper_Sizes__Thumbnail__Filesize_Operator>;
+    sizes__thumbnail__height?: InputMaybe<About_Pets_Jasper_Sizes__Thumbnail__Height_Operator>;
+    sizes__thumbnail__mimeType?: InputMaybe<About_Pets_Jasper_Sizes__Thumbnail__MimeType_Operator>;
+    sizes__thumbnail__url?: InputMaybe<About_Pets_Jasper_Sizes__Thumbnail__Url_Operator>;
+    sizes__thumbnail__width?: InputMaybe<About_Pets_Jasper_Sizes__Thumbnail__Width_Operator>;
+    updatedAt?: InputMaybe<About_Pets_Jasper_UpdatedAt_Operator>;
+    url?: InputMaybe<About_Pets_Jasper_Url_Operator>;
+    width?: InputMaybe<About_Pets_Jasper_Width_Operator>;
+};
+
+export type About_Pets_Jasper_Where_Or = {
+    alt?: InputMaybe<About_Pets_Jasper_Alt_Operator>;
+    base64?: InputMaybe<About_Pets_Jasper_Base64_Operator>;
+    createdAt?: InputMaybe<About_Pets_Jasper_CreatedAt_Operator>;
+    filename?: InputMaybe<About_Pets_Jasper_Filename_Operator>;
+    filesize?: InputMaybe<About_Pets_Jasper_Filesize_Operator>;
+    height?: InputMaybe<About_Pets_Jasper_Height_Operator>;
+    id?: InputMaybe<About_Pets_Jasper_Id_Operator>;
+    mimeType?: InputMaybe<About_Pets_Jasper_MimeType_Operator>;
+    sizes__thumbnail__filename?: InputMaybe<About_Pets_Jasper_Sizes__Thumbnail__Filename_Operator>;
+    sizes__thumbnail__filesize?: InputMaybe<About_Pets_Jasper_Sizes__Thumbnail__Filesize_Operator>;
+    sizes__thumbnail__height?: InputMaybe<About_Pets_Jasper_Sizes__Thumbnail__Height_Operator>;
+    sizes__thumbnail__mimeType?: InputMaybe<About_Pets_Jasper_Sizes__Thumbnail__MimeType_Operator>;
+    sizes__thumbnail__url?: InputMaybe<About_Pets_Jasper_Sizes__Thumbnail__Url_Operator>;
+    sizes__thumbnail__width?: InputMaybe<About_Pets_Jasper_Sizes__Thumbnail__Width_Operator>;
+    updatedAt?: InputMaybe<About_Pets_Jasper_UpdatedAt_Operator>;
+    url?: InputMaybe<About_Pets_Jasper_Url_Operator>;
+    width?: InputMaybe<About_Pets_Jasper_Width_Operator>;
+};
+
+export type About_Pets_Jasper_Width_Operator = {
     equals?: InputMaybe<Scalars['Float']['input']>;
     exists?: InputMaybe<Scalars['Boolean']['input']>;
     greater_than?: InputMaybe<Scalars['Float']['input']>;
@@ -18067,6 +18372,7 @@ export type MutationAboutInput = {
 export type MutationAbout_PetsInput = {
     athena?: InputMaybe<Scalars['String']['input']>;
     harvey?: InputMaybe<Scalars['String']['input']>;
+    jasper?: InputMaybe<Scalars['String']['input']>;
     warren?: InputMaybe<Scalars['String']['input']>;
 };
 
