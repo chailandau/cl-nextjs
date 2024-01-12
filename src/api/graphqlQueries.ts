@@ -189,6 +189,9 @@ query AboutQuery {
             warren {
                 ${IMAGE_FRAGMENT}
             }
+            jasper {
+                ${IMAGE_FRAGMENT}
+            }
         }
     }
 }

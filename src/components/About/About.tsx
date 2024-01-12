@@ -52,6 +52,17 @@ export const AboutContent: FC<AboutContentProps> = ({ data, sectionId }) => {
                                 base64={pets?.warren?.base64 || undefined}
                             />
                         )}
+                        {pets?.jasper && pets?.jasper?.url && (
+                            <Image
+                                src={pets?.jasper?.url}
+                                alt={pets?.jasper?.alt || ''}
+                                width={pets?.jasper?.width || 144}
+                                height={pets?.jasper?.height || 119}
+                                hasBorder={false}
+                                className={styles['jasper']}
+                                base64={pets?.jasper?.base64 || undefined}
+                            />
+                        )}
                         {pets?.harvey && pets?.harvey?.url && (
                             <Image
                                 src={pets?.harvey?.url}

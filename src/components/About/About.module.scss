@@ -39,6 +39,22 @@
                     width: rem(136);
                 }
             }
+            .jasper {
+                width: rem(70);
+                left: -8%;
+                top: rem(-144);
+                @include tablet {
+                    width: rem(84);
+                    top: rem(-180);
+                }
+                @include tabletLg {
+                    top: rem(-144);
+                }
+                @include laptop {
+                    left: -14%;
+                    top: rem(-128);
+                }
+            }
             .harvey {
                 width: rem(66);
                 left: 46%;
