@@ -10,7 +10,11 @@ import useStore from '@/store/useStore';
 import { menuAnimations } from '@/utils/framer/animations';
 import LazyAnimatePresence from '@/utils/framer/LazyAnimatePresence';
 
-const MobileNav: FC<HeaderProps> = ({ menuItems }) => {
+interface MobileNavProps extends HeaderProps {
+    ariaHidden: boolean;
+}
+
+const MobileNav: FC<MobileNavProps> = ({ menuItems, ariaHidden }) => {
     const prefersReducedMotion = useReducedMotion() || false;
 
     const { menuOpen } = useStore();
@@ -28,6 +32,7 @@ const MobileNav: FC<HeaderProps> = ({ menuItems }) => {
                 animate={menuOpen ? 'open' : 'closed'}
                 initial='closed'
                 exit='closed'
+                aria-hidden={ariaHidden}
             >
                 <Menu menuItems={menuItems} />
             </m.nav>

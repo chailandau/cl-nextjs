@@ -23,6 +23,8 @@ interface LinkProps {
     onClick?: (e: { preventDefault: () => void }) => void;
     /** Anchor link */
     anchorLink?: string | undefined | null;
+    /** Aria label */
+    ariaLabel?: string;
 }
 
 const Link: FC<LinkProps> = ({
@@ -32,7 +34,8 @@ const Link: FC<LinkProps> = ({
     className,
     underline = true,
     icon = true,
-    onClick
+    onClick,
+    ariaLabel
 }) => {
     const classList = classNames(
         styles['link'],
@@ -53,6 +56,7 @@ const Link: FC<LinkProps> = ({
             rel={rel}
             target={target}
             onClick={onClick}
+            aria-label={ariaLabel}
         >
             <span className={styles['link-text']}>{children}</span>
             {icon && <span className={styles['link-icon']}>{'>'}</span>}

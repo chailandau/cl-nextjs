@@ -19,6 +19,7 @@ const MenuToggle = () => {
             className={classList}
             onClick={() => setMenuOpen(!menuOpen)}
             ariaLabel={'menu toggle'}
+            ariaExpanded={menuOpen}
         >
             <Container className={styles['menu-toggle-container']}>
                 <Container className={styles['menu-toggle-inner']}></Container>
