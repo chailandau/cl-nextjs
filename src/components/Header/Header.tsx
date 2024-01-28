@@ -84,7 +84,10 @@ const Header: FC<HeaderProps> = ({ menuItems }) => {
                         <MenuToggle />
                     </Flex>
                     {!isTabletLg && menuOpen && (
-                        <MobileNav menuItems={menuItems} />
+                        <MobileNav
+                            ariaHidden={!menuOpen}
+                            menuItems={menuItems}
+                        />
                     )}
                 </Flex>
             </Section>

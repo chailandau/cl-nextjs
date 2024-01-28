@@ -26,6 +26,8 @@ export interface ContainerProps {
     ref?: Ref<never>;
     /** Aria label */
     ariaLabel?: string;
+    /** Aria expanded */
+    ariaExpanded?: boolean;
     /** Section id for anchor links*/
     sectionId?: SectionId;
 }
@@ -38,6 +40,7 @@ const Container: FC<ContainerProps> = forwardRef(
             className,
             onClick,
             ariaLabel,
+            ariaExpanded,
             sectionId
         },
         ref
@@ -48,6 +51,7 @@ const Container: FC<ContainerProps> = forwardRef(
             aria-label={ariaLabel}
             ref={ref}
             id={sectionId ? sectionId : undefined}
+            aria-expanded={ariaExpanded}
         >
             {children}
         </ContainerTag>

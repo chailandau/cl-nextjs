@@ -78,6 +78,7 @@ const Menu: FC<MenuProps> = ({
                     icon={icon}
                     onClick={(e) => handleClick(e)}
                     anchorLink={hasAnchorLink ? menuItem?.sectionId : null}
+                    ariaLabel={menuLabel || ''}
                 >
                     {menuLabel}
                 </Link>
