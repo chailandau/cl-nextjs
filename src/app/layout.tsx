@@ -1,21 +1,18 @@
 import Script from 'next/script';
 
-import { NAV_QUERY } from '@/api/graphqlQueries';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import '@/assets/fonts/fonts.css';
 import '@/styles/main.scss';
+import { getNavData } from '@/lib/data';
 import BackToTop from '@/molecules/BackToTop';
-import { getData } from '@/utils/getData';
 
-export const revalidate = 60;
-
-export default async function RootLayout({
+export default function RootLayout({
     children
 }: {
     children: React.ReactNode;
 }) {
-    const { Nav } = await getData(NAV_QUERY);
+    const navData = getNavData();
 
     return (
         <html lang='en'>
@@ -31,18 +28,18 @@ export default async function RootLayout({
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
-                    
+
                     gtag('config', 'G-7Y1YQ9834N');
                 `
                 }}
             />
             <body>
-                {Nav?.menuItems && <Header menuItems={Nav.menuItems} />}
+                {navData?.menuItems && <Header menuItems={navData.menuItems} />}
                 {children}
-                {Nav?.menuItems && (
+                {navData?.menuItems && (
                     <Footer
-                        menuItems={Nav.menuItems}
-                        copyrightText={Nav?.footerCopyrightText}
+                        menuItems={navData.menuItems}
+                        copyrightText={navData?.footerCopyrightText}
                     />
                 )}
                 <BackToTop />

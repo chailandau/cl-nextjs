@@ -4,14 +4,14 @@ import DesktopFooter from './components/DesktopFooter';
 import MobileFooter from './components/MobileFooter';
 import styles from './Footer.module.scss';
 
-import { Nav, Nav_MenuItems } from '@/api/graphqlTypes';
 import Section from '@/molecules/Section';
+import { NavData, NavMenuItem } from '@/types/content';
 
 export interface FooterProps {
     /* Nav to pass into footer */
-    menuItems?: Nav_MenuItems[] | null;
+    menuItems?: NavMenuItem[] | null;
     /* Footer copyright text */
-    copyrightText?: Nav['footerCopyrightText'];
+    copyrightText?: NavData['footerCopyrightText'];
 }
 const Footer: FC<FooterProps> = ({ menuItems, copyrightText }) => (
     <Section as='footer' className={styles['footer']}>

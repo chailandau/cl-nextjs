@@ -7,9 +7,9 @@ exports[`Link matches snapshot 1`] = `
   >
     <a
       class="link underline"
-      href="/"
-      rel=""
-      target=""
+      href="http://localhost:6006/"
+      rel="noreferrer noopener"
+      target="_blank"
     >
       <span
         class="link-text"

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { ToolboxListingContent as ToolboxListing } from './ToolboxListing';
 
-import { mockToolboxData } from '@/__mocks__/graphqlQueries.mock';
+import { mockToolboxData } from '@/__mocks__/content.mock';
 
 const meta: Meta<typeof ToolboxListing> = {
     title: 'Components/Toolbox Listing',

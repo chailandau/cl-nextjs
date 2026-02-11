@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { AboutContent as About } from './About';
 
-import { mockAboutData } from '@/__mocks__/graphqlQueries.mock';
+import { mockAboutData } from '@/__mocks__/content.mock';
 
 const meta: Meta<typeof About> = {
     title: 'Components/About',

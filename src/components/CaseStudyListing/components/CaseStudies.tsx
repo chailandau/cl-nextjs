@@ -2,17 +2,16 @@ import { FC } from 'react';
 
 import styles from './CaseStudies.module.scss';
 
-import { CaseStudy, Project } from '@/api/graphqlTypes';
 import Heading from '@/atoms/Heading';
 import Image from '@/atoms/Image';
 import Link from '@/atoms/Link';
 import Text from '@/atoms/Text';
 import Flex from '@/molecules/Flex';
 import Grid from '@/molecules/Grid';
-import RichText from '@/molecules/RichText';
+import { CaseStudyListingProject } from '@/types/content';
 
 interface CaseStudiesProps {
-    caseStudies?: CaseStudy[] | Project[] | null;
+    caseStudies?: CaseStudyListingProject[] | null;
     parent?: string;
 }
 
@@ -24,15 +23,14 @@ const CaseStudies: FC<CaseStudiesProps> = ({ caseStudies, parent }) => {
     return caseStudies?.map((caseStudy) => {
         const { intro, title, slug, featuredImage } = caseStudy;
 
-        const isCaseStudy = intro && 'text' in intro;
-        const isProject = intro && 'description' in intro;
+        const isProject = !parent;
 
         return (
             <Grid key={caseStudy?.id} className={styles['case-study__card']}>
                 {featuredImage?.url && (
                     <Image
                         src={featuredImage.url}
-                        alt={featuredImage.alt}
+                        alt={featuredImage.alt || ''}
                         width={featuredImage.width || 100}
                         height={featuredImage.height || 100}
                         base64={featuredImage.base64 || undefined}
@@ -44,8 +42,9 @@ const CaseStudies: FC<CaseStudiesProps> = ({ caseStudies, parent }) => {
                             {title}
                         </Heading>
                     )}
-                    {isCaseStudy && <RichText richText={intro.text} />}
-                    {isProject && <Text size='xs'>{intro.description}</Text>}
+                    {intro?.description && (
+                        <Text size='xs'>{intro.description}</Text>
+                    )}
                     {slug && (
                         <Link
                             href={`${process.env.NEXT_PUBLIC_BASE_URL}/${

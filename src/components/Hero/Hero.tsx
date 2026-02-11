@@ -2,7 +2,6 @@ import { FC } from 'react';
 
 import styles from './Hero.module.scss';
 
-import { Hero as HeroType, Maybe } from '@/api/graphqlTypes';
 import { SectionId } from '@/atoms/Container/Container';
 import Heading from '@/atoms/Heading';
 import Image from '@/atoms/Image';
@@ -11,22 +10,23 @@ import Text from '@/atoms/Text';
 import ColoredSubhead from '@/molecules/ColoredSubhead';
 import Flex from '@/molecules/Flex';
 import Section from '@/molecules/Section';
+import { HeroData, Maybe } from '@/types/content';
 
 export interface HeroProps {
     /** Hero heading */
     heading?: string;
     /** Optional colored subheading */
-    coloredSubhead?: HeroType['coloredSubhead'];
+    coloredSubhead?: HeroData['coloredSubhead'];
     /** Optional non-colored subheading */
-    subhead?: HeroType['subhead'];
+    subhead?: HeroData['subhead'];
     /** Indicates whether to display doodles */
     doodles?: Maybe<boolean>;
     /** Indicates if hero is on homepage */
     homepage?: Maybe<boolean>;
     /** Hero icon */
-    icon?: HeroType['icon'];
+    icon?: HeroData['icon'];
     /** Hero CTA */
-    cta?: HeroType['cta'];
+    cta?: HeroData['cta'];
     /** Section id for anchor links*/
     sectionId?: SectionId;
 }

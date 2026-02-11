@@ -3,20 +3,16 @@ import { FC } from 'react';
 import styles from './CaseStudyListing.module.scss';
 import CaseStudies from './components/CaseStudies';
 
-import { CASE_STUDIES_QUERY } from '@/api/graphqlQueries';
-import {
-    CaseStudyListing as CaseStudyListingType,
-    Maybe
-} from '@/api/graphqlTypes';
 import { SectionId } from '@/atoms/Container/Container';
+import { getCaseStudyListingData } from '@/lib/data';
 import Section from '@/molecules/Section';
-import { getData } from '@/utils/getData';
+import { CaseStudyListingData, Maybe } from '@/types/content';
 
-interface CaseStudyListingData {
-    data?: Maybe<CaseStudyListingType> | undefined;
+interface CaseStudyListingContentProps {
+    data?: Maybe<CaseStudyListingData> | undefined;
     sectionId?: SectionId;
 }
-export const CaseStudyListingContent: FC<CaseStudyListingData> = ({
+export const CaseStudyListingContent: FC<CaseStudyListingContentProps> = ({
     data,
     sectionId
 }) => {
@@ -38,9 +34,8 @@ interface CaseStudyListingProps {
     sectionId?: SectionId;
 }
 
-const CaseStudyListing: FC<CaseStudyListingProps> = async ({ sectionId }) => {
-    const { CaseStudyListing: caseStudyData } =
-        await getData(CASE_STUDIES_QUERY);
+const CaseStudyListing: FC<CaseStudyListingProps> = ({ sectionId }) => {
+    const caseStudyData = getCaseStudyListingData();
 
     return (
         <CaseStudyListingContent data={caseStudyData} sectionId={sectionId} />

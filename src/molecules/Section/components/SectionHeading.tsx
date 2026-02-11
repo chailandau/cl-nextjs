@@ -2,11 +2,11 @@ import { FC } from 'react';
 
 import styles from '../Section.module.scss';
 
-import { Icon } from '@/api/graphqlTypes';
 import Container from '@/atoms/Container';
 import Heading from '@/atoms/Heading';
 import Image from '@/atoms/Image';
 import Flex from '@/molecules/Flex';
+import { Icon } from '@/types/content';
 
 export interface SectionHeadingProps {
     /** Optional section heading */
@@ -31,7 +31,7 @@ const SectionHeading: FC<SectionHeadingProps> = ({ heading, icon }) => {
                 <Container className={styles['icon']}>
                     <Image
                         src={icon?.url}
-                        alt={icon?.alt}
+                        alt={icon?.alt || ''}
                         width={icon?.width || 64}
                         height={icon?.height || 64}
                         hasBorder={false}

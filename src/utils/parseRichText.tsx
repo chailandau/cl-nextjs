@@ -26,7 +26,7 @@ interface ChildSegment {
 }
 
 export interface RichTextProps {
-    text: string;
+    text?: string;
     url?: string | null | undefined;
     newTab?: boolean;
     type?: 'ul' | 'ol';
@@ -113,19 +113,14 @@ const processList = (
     size: (typeof textSizes)[number]
 ): JSX.Element | null => {
     if (child?.type === 'ul' || child?.type === 'ol') {
-        const listItems = child?.children.map(
-            (item) =>
-                item?.children?.map((listItem, listItemIndex) => (
-                    <li key={listItemIndex}>
-                        <Text
-                            as='span'
-                            className={styles['rich-text']}
-                            size={size}
-                        >
-                            {processText(listItem, listItemIndex)}
-                        </Text>
-                    </li>
-                ))
+        const listItems = child?.children.map((item) =>
+            item?.children?.map((listItem, listItemIndex) => (
+                <li key={listItemIndex}>
+                    <Text as='span' className={styles['rich-text']} size={size}>
+                        {processText(listItem, listItemIndex)}
+                    </Text>
+                </li>
+            ))
         );
 
         if (listItems?.length) {

@@ -3,18 +3,14 @@ import { FC } from 'react';
 import Testimonial from './components/Testimonial';
 import styles from './TestimonialListing.module.scss';
 
-import { TESTIMONIALS_QUERY } from '@/api/graphqlQueries';
-import {
-    Maybe,
-    TestimonialListing as TestimonialListingType
-} from '@/api/graphqlTypes';
 import { SectionId } from '@/atoms/Container/Container';
+import { getTestimonialsData } from '@/lib/data';
 import Flex from '@/molecules/Flex';
 import Section from '@/molecules/Section';
-import { getData } from '@/utils/getData';
+import { Maybe, TestimonialsData } from '@/types/content';
 
 interface TestimonialListingData {
-    data?: Maybe<TestimonialListingType> | undefined;
+    data?: Maybe<TestimonialsData> | undefined;
     sectionId?: SectionId;
 }
 
@@ -47,11 +43,8 @@ interface TestimonialListingProps {
     sectionId?: SectionId;
 }
 
-const TestimonialListing: FC<TestimonialListingProps> = async ({
-    sectionId
-}) => {
-    const { TestimonialListing: testimonialsData } =
-        await getData(TESTIMONIALS_QUERY);
+const TestimonialListing: FC<TestimonialListingProps> = ({ sectionId }) => {
+    const testimonialsData = getTestimonialsData();
 
     return (
         <TestimonialListingContent

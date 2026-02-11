@@ -29,6 +29,9 @@
       "@/*": [
         "./src/*"
       ],
+      "@content/*": [
+        "./content/*"
+      ],
       "@storybookAssets/*": [
         "./.storybook/public/*"
       ]
@@ -42,8 +45,7 @@
     "jest.setup.js",
     "**/*.ts",
     "**/*.tsx",
-    "**/*.gql",
-    "setupTests.js",
+"setupTests.js",
     ".next/types/**/*.ts",
     "loki.config.js",
     "**/*.scss",

@@ -1,40 +1,36 @@
-import { CASE_STUDY_CONTENT_QUERY, METADATA_QUERY } from '@/api/graphqlQueries';
-import { Page_Meta } from '@/api/graphqlTypes';
+import { Metadata } from 'next';
+
+import { getAllCaseStudySlugs, getCaseStudyContent } from '@/lib/content';
 import CaseStudy from '@/templates/CaseStudy';
-import { getData } from '@/utils/getData';
 import { getMetadataInfo } from '@/utils/getMetadataInfo';
 
 type Params = {
     params: {
+        slug: string;
         project: string;
     };
 };
 
-export const generateStaticParams = async () => {
-    const { CaseStudies } = await getData(METADATA_QUERY);
+export const generateStaticParams = () =>
+    getAllCaseStudySlugs().map(({ projectSlug, caseStudySlug }) => ({
+        slug: projectSlug,
+        project: caseStudySlug
+    }));
 
-    if (!CaseStudies?.docs || CaseStudies.docs.length === 0) {
-        return [];
+export const generateMetadata = ({
+    params: { slug, project }
+}: Params): Metadata => {
+    const caseStudy = getCaseStudyContent(slug, project);
+
+    if (!caseStudy?.frontmatter?.meta) {
+        return { title: caseStudy?.frontmatter?.title || project };
     }
 
-    return CaseStudies.docs
-        .filter((caseStudy) => typeof caseStudy?.slug === 'string')
-        .map((caseStudy) => ({
-            params: {
-                project: caseStudy?.slug
-            }
-        }));
+    return getMetadataInfo(caseStudy.frontmatter.meta);
 };
 
-export const generateMetadata = async ({ params: { project } }: Params) => {
-    const { CaseStudies } = await getData(CASE_STUDY_CONTENT_QUERY, project);
-    const meta = CaseStudies?.docs?.map((doc) => doc?.meta) as Page_Meta[];
-
-    return getMetadataInfo(meta);
-};
-
-const NextPage = ({ params: { project } }: Params) => (
-    <CaseStudy project={project} />
+const NextPage = ({ params: { slug, project } }: Params) => (
+    <CaseStudy projectSlug={slug} caseStudySlug={project} />
 );
 
 export default NextPage;

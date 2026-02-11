@@ -56,10 +56,10 @@ If you don't have nvm installed yet, you can get it [here](https://github.com/nv
 
 ### Dependencies
 
-Install all necessary dependencies using yarn.
+Install all necessary dependencies using pnpm.
 
 ```
-yarn
+pnpm install
 ```
 
 ### Secrets
@@ -73,7 +73,7 @@ You will need to add the appropriate secrets in an `.env` file.
 Run the development server
 
 ```
-yarn dev
+pnpm dev
 ```
 
 #### Production server
@@ -81,13 +81,13 @@ yarn dev
 Generate an optimized production build
 
 ```
-yarn build
+pnpm build
 ```
 
 Run the production build locally
 
 ```
-yarn start
+pnpm start
 ```
 
 
@@ -98,7 +98,7 @@ yarn start
 Run Storybook's development server
 
 ```
-yarn storybook
+pnpm storybook
 ```
 
 ### Codegen
@@ -108,7 +108,7 @@ yarn storybook
 Codegen is used to create or update GraphQL types for use with TypeScript. The app must be running for this to work.
 
 ```
-yarn update-types
+pnpm update-types
 ```
 
 
@@ -117,7 +117,7 @@ yarn update-types
 Generate an optimized production build of Storybook
 
 ```
-yarn storybook:build
+pnpm storybook:build
 ```
 
 ### Jest
@@ -127,7 +127,7 @@ yarn storybook:build
 Run Jest in watch mode
 
 ```
-yarn test
+pnpm test
 ```
 
 #### Coverage
@@ -135,7 +135,7 @@ yarn test
 Run Jest and generate an updated coverage report
 
 ```
-yarn test:coverage
+pnpm test:coverage
 ```
 
 #### Update
@@ -143,7 +143,7 @@ yarn test:coverage
 Run Jest and update snapshots
 
 ```
-yarn test:update
+pnpm test:update
 ```
 
 ### Loki
@@ -153,7 +153,7 @@ You will need a production Storybook [build](#production-build-1) before running
 #### Run tests
 
 ```
- yarn loki:test
+ pnpm loki:test
 ```
 
 #### Generate report
@@ -161,7 +161,7 @@ You will need a production Storybook [build](#production-build-1) before running
 Uses reg-cli to generate HTML and JSON reports
 
 ```
-yarn loki:report
+pnpm loki:report
 ```
 
 #### Update references
@@ -169,7 +169,7 @@ yarn loki:report
 Updates Loki and ref-cli references. This is typically used after expected visual regressions are flagged in a PR.
 
 ```
-yarn loki:update
+pnpm loki:update
 ```
 
 ### Deploy

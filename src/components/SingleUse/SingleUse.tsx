@@ -5,11 +5,11 @@ import CaseStudyListing from '../CaseStudyListing';
 import TestimonialListing from '../TestimonialListing';
 import ToolboxListing from '../ToolboxListing';
 
-import { SingleUseBlock_SingleUse } from '@/api/graphqlTypes';
 import { SectionId } from '@/atoms/Container/Container';
+import { SingleUseComponent } from '@/types/content';
 
 export interface SingleUseProps {
-    component?: SingleUseBlock_SingleUse | null;
+    component?: SingleUseComponent | null;
     sectionId?: SectionId;
 }
 const SingleUse: FC<SingleUseProps> = ({ component, sectionId }) => {

@@ -6,28 +6,27 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "loki:ci": "yarn run storybook:build; yarn run loki:test",
-    "loki:report": "yarn run reg-cli ./.loki/current ./.loki/reference ./.loki/diff --extendedErrors --enableAntialias --matchingThreshold .2 --report ./.loki/index.html --json ./.loki/report.json",
-    "loki:test": "loki test --requireReference --chromeTolerance 12 --reactUri file:./storybook-static; yarn run loki:report --chromeRetries 4",
-    "loki:update": "yarn run loki:ci; yarn run loki update --requireReference --chromeTolerance 12 --reactUri file:./storybook-static;",
+    "loki:ci": "pnpm storybook:build; pnpm loki:test",
+    "loki:report": "pnpm reg-cli ./.loki/current ./.loki/reference ./.loki/diff --extendedErrors --enableAntialias --matchingThreshold .2 --report ./.loki/index.html --json ./.loki/report.json",
+    "loki:test": "loki test --requireReference --chromeTolerance 12 --reactUri file:./storybook-static; pnpm loki:report --chromeRetries 4",
+    "loki:update": "pnpm loki:ci; pnpm loki update --requireReference --chromeTolerance 12 --reactUri file:./storybook-static;",
     "prepare": "husky install",
-    "reg-cli:update": "yarn run reg-cli ./.loki/current ./.loki/reference ./.loki/diff --json ./.loki/report.json -U",
-    "reg-cli:test": "yarn run reg-cli ./.loki/current ./.loki/reference ./.loki/diff --json ./.loki/report.json",
+    "reg-cli:update": "pnpm reg-cli ./.loki/current ./.loki/reference ./.loki/diff --json ./.loki/report.json -U",
+    "reg-cli:test": "pnpm reg-cli ./.loki/current ./.loki/reference ./.loki/diff --json ./.loki/report.json",
     "start": "next start",
     "storybook:build": "storybook build",
     "storybook": "storybook dev -p 6006",
     "test:coverage": "jest --coverage",
     "test:update": "jest --u",
-    "test": "jest --watch",
-    "update-types": "graphql-codegen"
+    "test": "jest --watch"
   },
   "dependencies": {
     "focus-trap-react": "^10.2.1",
     "framer-motion": "^10.16.1",
-    "graphql": "^16.8.0",
-    "graphql-request": "^6.1.0",
-    "lint-staged": "^14.0.1",
+    "gray-matter": "^4.0.3",
+"lint-staged": "^14.0.1",
     "next": "13.4.19",
+    "next-mdx-remote": "^4.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sharp": "^0.32.6",
@@ -35,14 +34,7 @@
     "zustand": "^4.4.1"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^5.0.0",
-    "@graphql-codegen/client-preset": "^4.1.0",
-    "@graphql-codegen/schema-ast": "^4.0.0",
-    "@graphql-codegen/typescript": "^4.0.1",
-    "@graphql-codegen/typescript-operations": "^4.0.1",
-    "@graphql-tools/jest-transform": "^2.0.0",
-    "@graphql-tools/mock": "^9.0.0",
-    "@storybook/addon-essentials": "^7.3.2",
+"@storybook/addon-essentials": "^7.3.2",
     "@storybook/addon-styling": "^1.3.6",
     "@storybook/blocks": "^7.3.2",
     "@storybook/nextjs": "^7.3.2",
@@ -78,8 +70,10 @@
     "storybook-css-modules-preset": "^1.1.1",
     "typescript": "5.1.6"
   },
-  "resolutions": {
-    "jackspeak": "2.1.1"
+  "pnpm": {
+    "overrides": {
+      "jackspeak": "2.1.1"
+    }
   },
   "lint-staged": {
     "*.{js,jsx,mjs,mts,ts,tsx,mdx}": [

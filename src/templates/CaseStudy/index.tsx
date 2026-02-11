@@ -3,40 +3,29 @@ import { FC } from 'react';
 import NotFound from '../404';
 import styles from '../Project/Project.module.scss';
 
-import { CASE_STUDY_CONTENT_QUERY } from '@/api/graphqlQueries';
-import {
-    CaseStudy_CaseStudySections,
-    CaseStudy_Intro
-} from '@/api/graphqlTypes';
 import Heading from '@/atoms/Heading';
 import Image from '@/atoms/Image';
 import Link from '@/atoms/Link';
+import Text from '@/atoms/Text';
+import { getCaseStudyContent } from '@/lib/content';
 import Breadcrumbs from '@/molecules/Breadcrumbs/Breadcrumbs';
 import Flex from '@/molecules/Flex';
-import RichText from '@/molecules/RichText';
 import Section from '@/molecules/Section';
-import { getData } from '@/utils/getData';
-import RenderComponents from '@/utils/RenderComponents';
 
 interface CaseStudyProps {
-    project: string;
+    projectSlug: string;
+    caseStudySlug: string;
 }
 
-let title: string;
-let intro: CaseStudy_Intro;
-const CaseStudy: FC<CaseStudyProps> = async ({ project }) => {
-    const { CaseStudies } = await getData(CASE_STUDY_CONTENT_QUERY, project);
-    const caseStudySections: CaseStudy_CaseStudySections[] = [];
-    CaseStudies?.docs?.forEach((caseStudy) => {
-        caseStudy?.title && (title = caseStudy.title);
-        caseStudy?.intro && (intro = caseStudy.intro);
-        caseStudy?.caseStudySections &&
-            caseStudySections.push(...caseStudy.caseStudySections);
-    });
+const CaseStudy: FC<CaseStudyProps> = ({ projectSlug, caseStudySlug }) => {
+    const caseStudy = getCaseStudyContent(projectSlug, caseStudySlug);
 
-    if (!intro && (!caseStudySections || !caseStudySections.length)) {
+    if (!caseStudy) {
         return <NotFound />;
     }
+
+    const { frontmatter } = caseStudy;
+    const { title, intro } = frontmatter;
 
     return (
         <Section className={styles['project']}>
@@ -44,7 +33,7 @@ const CaseStudy: FC<CaseStudyProps> = async ({ project }) => {
 
             <Flex className={styles['project-intro']}>
                 {title && <Heading as='h1'>{title}</Heading>}
-                {intro?.text && <RichText richText={intro.text} />}
+                {intro?.text && <Text>{intro.text}</Text>}
             </Flex>
             {intro?.cta &&
                 intro.cta?.map((cta) => (
@@ -55,14 +44,11 @@ const CaseStudy: FC<CaseStudyProps> = async ({ project }) => {
             {intro?.image?.url && (
                 <Image
                     src={intro.image.url}
-                    alt={intro.image.alt}
+                    alt={intro.image.alt || ''}
                     width={intro?.image.width || 1000}
                     height={intro?.image.height || 1000}
-                    base64={intro?.image.base64 || undefined}
                 />
             )}
-
-            <RenderComponents components={caseStudySections} />
         </Section>
     );
 };

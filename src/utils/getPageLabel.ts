@@ -1,6 +1,6 @@
-import { Nav_MenuItems } from '@/api/graphqlTypes';
+import { NavMenuItem } from '@/types/content';
 
-export const getPageLabel = (menuItem: Nav_MenuItems) => {
+export const getPageLabel = (menuItem: NavMenuItem) => {
     const customLabel =
         menuItem?.overridePageName &&
         menuItem?.customLabel !== null &&

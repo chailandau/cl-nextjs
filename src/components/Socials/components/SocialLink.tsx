@@ -1,16 +1,16 @@
 import { FC } from 'react';
 
-import { Social } from '@/api/graphqlTypes';
 import Image from '@/atoms/Image';
 import Link from '@/atoms/Link';
 import Text from '@/atoms/Text';
 import Flex from '@/molecules/Flex';
+import { SocialItem } from '@/types/content';
 
 // Prevent Storybook styling issues due to cascade order
 // eslint-disable-next-line import/order
 import styles from './SocialLink.module.scss';
 
-const SocialLink: FC<Social> = ({ icon, label, socialLink }) => {
+const SocialLink: FC<SocialItem> = ({ icon, label, socialLink }) => {
     if (!socialLink || !icon || !label) {
         return null;
     }

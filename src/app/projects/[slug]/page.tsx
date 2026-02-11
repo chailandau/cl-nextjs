@@ -1,7 +1,7 @@
-import { METADATA_QUERY, PROJECT_CONTENT_QUERY } from '@/api/graphqlQueries';
-import { Page_Meta } from '@/api/graphqlTypes';
+import { Metadata } from 'next';
+
+import { getAllProjectSlugs, getProjectContent } from '@/lib/content';
 import Project from '@/templates/Project';
-import { getData } from '@/utils/getData';
 import { getMetadataInfo } from '@/utils/getMetadataInfo';
 
 type Params = {
@@ -10,31 +10,19 @@ type Params = {
     };
 };
 
-export const generateStaticParams = async () => {
-    const { Projects } = await getData(METADATA_QUERY);
+export const generateStaticParams = () =>
+    getAllProjectSlugs().map((slug) => ({ slug }));
 
-    if (!Projects?.docs || Projects.docs.length === 0) {
-        return [];
+export const generateMetadata = ({ params: { slug } }: Params): Metadata => {
+    const project = getProjectContent(slug);
+
+    if (!project?.frontmatter?.meta) {
+        return { title: project?.frontmatter?.title || slug };
     }
 
-    return Projects.docs
-        .filter((project) => typeof project?.slug === 'string')
-        .map((project) => ({
-            params: {
-                slug: project?.slug
-            }
-        }));
+    return getMetadataInfo(project.frontmatter.meta);
 };
 
-export const generateMetadata = async ({ params: { slug } }: Params) => {
-    const { Projects } = await getData(PROJECT_CONTENT_QUERY, slug);
-    const meta = Projects?.docs?.map((doc) => doc?.meta) as Page_Meta[];
-
-    return getMetadataInfo(meta);
-};
-
-const NextPage = async ({ params: { slug } }: Params) => (
-    <Project slug={slug} />
-);
+const NextPage = ({ params: { slug } }: Params) => <Project slug={slug} />;
 
 export default NextPage;

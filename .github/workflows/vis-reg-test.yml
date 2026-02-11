@@ -3,8 +3,7 @@ on:
     pull_request:
         branches: 'main'
 
-env:
-    NEXT_PUBLIC_BASE_PAYLOAD_URL: '${{ secrets.NEXT_PUBLIC_BASE_PAYLOAD_URL }}'
+env: {}
 
 permissions:
     pages: write
@@ -23,15 +22,20 @@ jobs:
               with:
                   node-version: '16'
 
+            - name: Install pnpm
+              uses: pnpm/action-setup@v4
+              with:
+                  version: latest
+
             - name: Install reg-cli
-              run: yarn global add reg-cli
+              run: pnpm add -g reg-cli
 
             - name: Install dependencies
-              run: yarn install --frozen-lockfile
+              run: pnpm install --frozen-lockfile
 
             - name: Generate report with Loki and reg-cli
               id: loki
-              run: yarn loki:ci
+              run: pnpm loki:ci
               continue-on-error: true
 
             - name: Create report folder
@@ -60,7 +64,7 @@ jobs:
                       | View report | https://chailandau.github.io/cl-nextjs/ |
                       |---|---|
 
-                      <em>If visual regressions are as expected, run <code>yarn loki:update</code> and then <code>yarn reg-cli:update</code> twice on local and push up.</em>
+                      <em>If visual regressions are as expected, run <code>pnpm loki:update</code> and then <code>pnpm reg-cli:update</code> twice on local and push up.</em>
 
             - name: VRT no errors - Deploy Success Comment
               uses: mshick/add-pr-comment@v2

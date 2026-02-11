@@ -2,11 +2,11 @@ import { FC } from 'react';
 
 import styles from './Testimonial.module.scss';
 
-import { Testimonial as TestimonialType } from '@/api/graphqlTypes';
 import Image from '@/atoms/Image';
 import Link from '@/atoms/Link';
 import Text from '@/atoms/Text';
 import Flex from '@/molecules/Flex';
+import { TestimonialItem as TestimonialType } from '@/types/content';
 import { parseRichText } from '@/utils/parseRichText';
 
 interface TestimonialProps {

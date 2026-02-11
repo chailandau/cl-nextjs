@@ -1,24 +1,22 @@
-import { Page_Meta } from '@/api/graphqlTypes';
+import { Metadata } from 'next';
 
-/**
- * Retrieves the metadata information from the given array of Page_Meta objects.
- *
- * @param meta - An array of Page_Meta objects containing the metadata information.
- * @returns - An object containing the title, description, and openGraph properties.
- */
-export const getMetadataInfo = (meta: Page_Meta[]) => ({
-    title: meta[0]?.title,
-    description: meta[0]?.description,
+import { MetaData } from '@/types/content';
+
+export const getMetadataInfo = (meta: MetaData): Metadata => ({
+    title: meta?.title || undefined,
+    description: meta?.description || undefined,
     openGraph: {
-        title: meta[0]?.title,
-        description: meta[0]?.description,
+        title: meta?.title || undefined,
+        description: meta?.description || undefined,
         siteName: 'Chai Landau',
-        images: [
-            {
-                url: meta[0]?.image?.url,
-                width: meta[0]?.image?.width,
-                height: meta[0]?.image?.height
-            }
-        ]
+        images: meta?.image?.url
+            ? [
+                  {
+                      url: meta.image.url,
+                      width: meta.image.width || undefined,
+                      height: meta.image.height || undefined
+                  }
+              ]
+            : []
     }
 });

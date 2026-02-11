@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import Socials from './Socials';
 
-import { mockSocials } from '@/__mocks__/graphqlQueries.mock';
+import { mockSocials } from '@/__mocks__/content.mock';
 
 const meta: Meta<typeof Socials> = {
     title: 'Components/Socials',

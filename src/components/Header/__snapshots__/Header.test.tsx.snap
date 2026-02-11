@@ -10,10 +10,9 @@ exports[`Header DesktopNav matches snapshot 1`] = `
     >
       <li>
         <a
+          aria-label="Work"
           class="link menu-link"
-          href="/"
-          rel=""
-          target=""
+          href=""
         >
           <span
             class="link-text"
@@ -24,10 +23,9 @@ exports[`Header DesktopNav matches snapshot 1`] = `
       </li>
       <li>
         <a
+          aria-label="About"
           class="link menu-link"
-          href="/about"
-          rel=""
-          target=""
+          href=""
         >
           <span
             class="link-text"
@@ -38,10 +36,9 @@ exports[`Header DesktopNav matches snapshot 1`] = `
       </li>
       <li>
         <a
+          aria-label="Contact"
           class="link menu-link"
-          href="/contact"
-          rel=""
-          target=""
+          href=""
         >
           <span
             class="link-text"
@@ -58,6 +55,7 @@ exports[`Header DesktopNav matches snapshot 1`] = `
 exports[`Header Menu Toggle matches snapshot 1`] = `
 <DocumentFragment>
   <button
+    aria-expanded="true"
     aria-label="menu toggle"
     class="menu-toggle open"
   >
@@ -79,10 +77,9 @@ exports[`Header Menu matches snapshot 1`] = `
   >
     <li>
       <a
+        aria-label="Work"
         class="link menu-link"
-        href="/"
-        rel=""
-        target=""
+        href=""
       >
         <span
           class="link-text"
@@ -98,10 +95,9 @@ exports[`Header Menu matches snapshot 1`] = `
     </li>
     <li>
       <a
+        aria-label="About"
         class="link menu-link"
-        href="/about"
-        rel=""
-        target=""
+        href=""
       >
         <span
           class="link-text"
@@ -117,10 +113,9 @@ exports[`Header Menu matches snapshot 1`] = `
     </li>
     <li>
       <a
+        aria-label="Contact"
         class="link menu-link"
-        href="/contact"
-        rel=""
-        target=""
+        href=""
       >
         <span
           class="link-text"
@@ -149,10 +144,9 @@ exports[`Header Mobile Nav matches snapshot 1`] = `
     >
       <li>
         <a
+          aria-label="Work"
           class="link menu-link"
-          href="/"
-          rel=""
-          target=""
+          href=""
         >
           <span
             class="link-text"
@@ -168,10 +162,9 @@ exports[`Header Mobile Nav matches snapshot 1`] = `
       </li>
       <li>
         <a
+          aria-label="About"
           class="link menu-link"
-          href="/about"
-          rel=""
-          target=""
+          href=""
         >
           <span
             class="link-text"
@@ -187,10 +180,9 @@ exports[`Header Mobile Nav matches snapshot 1`] = `
       </li>
       <li>
         <a
+          aria-label="Contact"
           class="link menu-link"
-          href="/contact"
-          rel=""
-          target=""
+          href=""
         >
           <span
             class="link-text"

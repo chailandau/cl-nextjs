@@ -16,10 +16,9 @@ exports[`Footer matches snapshot 1`] = `
         >
           <li>
             <a
+              aria-label="Work"
               class="link menu-link"
-              href="/"
-              rel=""
-              target=""
+              href=""
             >
               <span
                 class="link-text"
@@ -30,10 +29,9 @@ exports[`Footer matches snapshot 1`] = `
           </li>
           <li>
             <a
+              aria-label="About"
               class="link menu-link"
-              href="/about"
-              rel=""
-              target=""
+              href=""
             >
               <span
                 class="link-text"
@@ -44,10 +42,9 @@ exports[`Footer matches snapshot 1`] = `
           </li>
           <li>
             <a
+              aria-label="Contact"
               class="link menu-link"
-              href="/contact"
-              rel=""
-              target=""
+              href=""
             >
               <span
                 class="link-text"
@@ -64,7 +61,7 @@ exports[`Footer matches snapshot 1`] = `
         <p
           class="text xs primary"
         >
-          copyright chai landau 2023
+          copyright chai landau 2026
         </p>
       </div>
     </div>
@@ -77,7 +74,7 @@ exports[`Footer matches snapshot 1`] = `
         <p
           class="text xs primary"
         >
-          copyright chai landau 2023
+          copyright chai landau 2026
         </p>
       </div>
       <div
@@ -88,10 +85,9 @@ exports[`Footer matches snapshot 1`] = `
         >
           <li>
             <a
+              aria-label="Work"
               class="link menu-link"
-              href="/"
-              rel=""
-              target=""
+              href=""
             >
               <span
                 class="link-text"
@@ -102,10 +98,9 @@ exports[`Footer matches snapshot 1`] = `
           </li>
           <li>
             <a
+              aria-label="About"
               class="link menu-link"
-              href="/about"
-              rel=""
-              target=""
+              href=""
             >
               <span
                 class="link-text"
@@ -116,10 +111,9 @@ exports[`Footer matches snapshot 1`] = `
           </li>
           <li>
             <a
+              aria-label="Contact"
               class="link menu-link"
-              href="/contact"
-              rel=""
-              target=""
+              href=""
             >
               <span
                 class="link-text"

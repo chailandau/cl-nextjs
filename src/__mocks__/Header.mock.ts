@@ -1,4 +1,4 @@
-import type { Nav_MenuItems } from '@/api/graphqlTypes';
+import type { NavMenuItem } from '@/types/content';
 
 export const menuItems = [
     {
@@ -28,7 +28,7 @@ export const menuItems = [
         overridePageName: null,
         customLabel: null
     }
-] as Nav_MenuItems[];
+] as NavMenuItem[];
 
 export const menuItemsNullPage = [
     {
@@ -36,4 +36,4 @@ export const menuItemsNullPage = [
         overridePageName: true,
         customLabel: 'Work'
     }
-] as Nav_MenuItems[];
+] as NavMenuItem[];

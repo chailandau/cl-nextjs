@@ -16,7 +16,8 @@ const customJestConfig = {
     ],
     coverageReporters: ['html', 'json', 'json-summary', 'text', 'text-summary'],
     moduleNameMapper: {
-        '^@/(.*)$': '<rootDir>/src/$1'
+        '^@/(.*)$': '<rootDir>/src/$1',
+        '^@content/(.*)$': '<rootDir>/content/$1'
     },
     setupFiles: ['<rootDir>/jest.setup.js'],
     setupFilesAfterEnv: [
@@ -25,10 +26,7 @@ const customJestConfig = {
         '<rootDir>/setupTests.js'
     ],
     testEnvironment: 'jest-environment-jsdom',
-    testRegex: '(/test/.*|\\.(test|spec))\\.(ts|tsx)$',
-    transform: {
-        '\\.(gql|graphql)$': '@graphql-tools/jest-transform'
-    }
+    testRegex: '(/test/.*|\\.(test|spec))\\.(ts|tsx)$'
 };
 
 export default createJestConfig(customJestConfig);

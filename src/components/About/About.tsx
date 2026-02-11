@@ -1,23 +1,22 @@
 import { FC } from 'react';
 
-import { ABOUT_QUERY } from '@/api/graphqlQueries';
-import { About as AboutType, Maybe } from '@/api/graphqlTypes';
 import Container from '@/atoms/Container';
 import { SectionId } from '@/atoms/Container/Container';
 import Heading from '@/atoms/Heading';
 import Image from '@/atoms/Image';
+import { getAboutData } from '@/lib/data';
 import ColoredSubhead from '@/molecules/ColoredSubhead';
 import Flex from '@/molecules/Flex';
 import RichText from '@/molecules/RichText';
 import Section from '@/molecules/Section';
-import { getData } from '@/utils/getData';
+import { AboutData, Maybe } from '@/types/content';
 
 // Prevent Storybook styling issues due to cascade order
 // eslint-disable-next-line import/order
 import styles from './About.module.scss';
 
 interface AboutContentProps {
-    data?: Maybe<AboutType> | undefined;
+    data?: Maybe<AboutData> | undefined;
     sectionId?: SectionId;
 }
 
@@ -111,8 +110,8 @@ interface AboutProps {
     sectionId?: SectionId;
 }
 
-const About: FC<AboutProps> = async ({ sectionId }) => {
-    const { About: aboutData } = await getData(ABOUT_QUERY);
+const About: FC<AboutProps> = ({ sectionId }) => {
+    const aboutData = getAboutData();
 
     return <AboutContent data={aboutData} sectionId={sectionId} />;
 };

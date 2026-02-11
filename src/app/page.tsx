@@ -1,16 +1,41 @@
-import { PAGE_CONTENT_QUERY } from '@/api/graphqlQueries';
-import { Page_Meta } from '@/api/graphqlTypes';
-import Page from '@/templates/Page';
-import { getData } from '@/utils/getData';
-import { getMetadataInfo } from '@/utils/getMetadataInfo';
+import { Metadata } from 'next';
 
-export const generateMetadata = async () => {
-    const { Pages } = await getData(PAGE_CONTENT_QUERY, 'home');
-    const meta = Pages?.docs?.map((doc) => doc?.meta) as Page_Meta[];
+import About from '@/components/About';
+import CaseStudyListing from '@/components/CaseStudyListing';
+import Hero from '@/components/Hero';
+import Socials from '@/components/Socials';
+import TestimonialListing from '@/components/TestimonialListing';
+import ToolboxListing from '@/components/ToolboxListing';
+import { getSocialsData } from '@/lib/data';
 
-    return getMetadataInfo(meta);
+export const metadata: Metadata = {
+    title: 'Chai Landau | Frontend Engineer',
+    description:
+        'Chai Landau is a frontend engineer with a passion for creating functional and delightful user experiences.',
+    openGraph: {
+        title: 'Chai Landau | Frontend Engineer',
+        description:
+            'Chai Landau is a frontend engineer with a passion for creating functional and delightful user experiences.',
+        siteName: 'Chai Landau'
+    }
 };
 
-export default async function Home() {
-    return <Page slug='home' />;
+export default function Home() {
+    const socials = getSocialsData();
+
+    return (
+        <>
+            <Hero
+                heading='Chai Landau'
+                subhead='Frontend Engineer'
+                doodles
+                homepage
+            />
+            <CaseStudyListing sectionId='work' />
+            <ToolboxListing sectionId='toolbox' />
+            <About sectionId='about' />
+            <TestimonialListing sectionId='testimonials' />
+            <Socials socials={socials} sectionId='contact' />
+        </>
+    );
 }

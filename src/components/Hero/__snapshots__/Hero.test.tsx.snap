@@ -65,9 +65,7 @@ exports[`Hero matches snapshot 1`] = `
     </div>
     <a
       class="link underline cta"
-      href="/about"
-      rel=""
-      target=""
+      href=""
     >
       <span
         class="link-text"
